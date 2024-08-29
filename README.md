@@ -2,6 +2,10 @@
 
 🎺 stdin & stdout API wrapper and protocol for Factorio & Minecraft server management
 
+## Demo
+
+https://github.com/nekomeowww/stdserve/blob/main/docs/demo.mp4
+
 ## Usage
 
 ### Factorio server
