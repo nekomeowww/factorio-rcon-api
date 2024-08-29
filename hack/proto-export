@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+SCRIPT_PATH=$(realpath "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+PROTO_VENDOR_DIR="$SCRIPT_DIR/../.temp/cache/buf.build/vendor/proto"
+
+buf dep update
+yq '.deps' buf.yaml | sed 's|^-*||' | xargs -I {} buf export {} --output $PROTO_VENDOR_DIR

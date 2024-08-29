@@ -1,0 +1,40 @@
+{
+  "go.useLanguageServer": true,
+  // "go.buildOnSave": "workspace",
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "workspace",
+  "go.coverOnSave": false,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--config=${workspaceFolder}/.golangci.yml",
+  ],
+  "go.inferGopath": true,
+  "go.alternateTools": {},
+  "go.coverOnSingleTest": true,
+  "go.testTimeout": "900s",
+  "go.testFlags": [
+    "-v",
+    "-count=1"
+  ],
+  "go.toolsManagement.autoUpdate": true,
+  "go.coverOnSingleTestFile": true,
+  "gopls": {
+    "build.buildFlags": [],
+    "ui.completion.usePlaceholders": true,
+    "ui.semanticTokens": true
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    },
+  },
+  // Consider integration with Buf · Issue #138 · zxh0/vscode-proto3
+  // https://github.com/zxh0/vscode-proto3/issues/138
+  "protoc": {
+    "options": [
+      "--proto_path=${workspaceFolder}/.temp/cache/buf.build/vendor/proto",
+    ]
+  },
+}

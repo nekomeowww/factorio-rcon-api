@@ -1,0 +1,72 @@
+# IDE
+.idea/
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+# Edit at https://www.gitignore.io/?templates=visualstudiocode
+
+### VisualStudioCode ###
+# Maybe .vscode/**/* instead - see comments
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
+
+# End of https://www.gitignore.io/api/visualstudiocode
+
+# Build / Release
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.db
+*.bin
+*.tar.gz
+/release/
+
+# Runtime / Compile Temporary Assets
+vendor/
+logs/
+
+# Credentials
+cert*/
+*.pem
+*.crt
+*.cer
+*.key
+*.p12
+
+# Test binary, build with `go test -c`
+*.test
+cover*
+coverage*
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# macOS
+.DS_Store
+
+# Configurations
+config.yaml
+config.yml
+.env
+
+# Local Configuration
+config.local.yaml
+
+# Temporary
+temp/
+.cache
+.temp
+
+# Local pgSQL db
+.postgres/
+
+# Debug
+__debug*

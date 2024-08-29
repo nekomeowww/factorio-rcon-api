@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+SCRIPT_PATH=$(realpath "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+PROTO_APIS_DIR="$SCRIPT_DIR/../apis"
+
+buf generate --path "$PROTO_APIS_DIR"
+
+
+go build \
+  -a \
+  -o "release/tools/openapiv2conv" \
+  "./cmd/tools/openapiv2conv"
+
+chmod +x release/tools/openapiv2conv
+
+./release/tools/openapiv2conv -i apis/coreapi/v1/v1.swagger.json -o apis/coreapi/v1/v1.swagger.v3.yaml
+./release/tools/openapiv2conv -i apis/managementapi/v1/v1.swagger.json -o apis/managementapi/v1/v1.swagger.v3.yaml

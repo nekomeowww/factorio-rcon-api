@@ -1,0 +1,191 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Stdserve API",
+    "version": "1.0"
+  },
+  "schemes": [
+    "http",
+    "https",
+    "wss"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/stdin/execute": {
+      "get": {
+        "summary": "Accept an input for stdin and return the output.",
+        "description": "Accept an input for stdin, execute the command, and return the output.",
+        "operationId": "StdinService_Execute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ExecuteResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "input",
+            "description": "The input for stdin.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "stdin"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "jsonapiErrorObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "BAD_REQUEST",
+          "description": "a unique identifier for this particular occurrence of the problem."
+        },
+        "links": {
+          "$ref": "#/definitions/jsonapiLinks",
+          "description": "a links object containing references to the source of the error."
+        },
+        "status": {
+          "type": "integer",
+          "format": "int64",
+          "example": "400",
+          "description": "the HTTP status code applicable to this problem, expressed as a string value."
+        },
+        "code": {
+          "type": "string",
+          "example": "USER_UPDATE_FAILED",
+          "description": "an application-specific error code, expressed as a string value."
+        },
+        "title": {
+          "type": "string",
+          "example": "Failed to update user's profile, invalid parameter(s) detected",
+          "title": "a short, human-readable summary of the problem"
+        },
+        "detail": {
+          "type": "string",
+          "example": "A field under /user/age is not correct, should be 'number' instead of 'string'",
+          "description": "a human-readable explanation specific to this occurrence of the problem. Like title."
+        },
+        "source": {
+          "$ref": "#/definitions/jsonapiErrorObjectSource",
+          "description": "an object containing references to the source of the error."
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/protobufAny"
+          },
+          "description": "a meta object containing non-standard meta-information about the error."
+        }
+      }
+    },
+    "jsonapiErrorObjectSource": {
+      "type": "object",
+      "properties": {
+        "pointer": {
+          "type": "string",
+          "example": "/user/age",
+          "description": "a JSON Pointer [RFC6901] to the value in the request document that caused the error\n[e.g. \"/data\" for a primary data object, or \"/data/attributes/title\" for a specific attribute]."
+        },
+        "parameter": {
+          "type": "string",
+          "example": "created_at.ASC",
+          "description": "a string indicating which URI query parameter caused the error."
+        },
+        "header": {
+          "type": "string",
+          "example": "X-SOME-HEADER",
+          "description": "a string indicating the name of a single request header which caused the error."
+        }
+      }
+    },
+    "jsonapiLinks": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "example": "https://apidocs.example.com/errors/BAD_REQUEST",
+          "description": "a string whose value is a URI-reference [RFC3986 Section 4.1] pointing to the link’s target."
+        },
+        "rel": {
+          "type": "string",
+          "example": "external",
+          "description": "a string indicating the link’s relation type."
+        },
+        "describedby": {
+          "type": "string",
+          "example": "OpenAPI",
+          "description": "a link to a description document (e.g. OpenAPI or JSON Schema) for the link target."
+        },
+        "title": {
+          "type": "string",
+          "example": "Learn more about BAD_REQUEST",
+          "description": "a string which serves as a label for the destination of a link\nsuch that it can be used as a human-readable identifier (e.g., a menu entry)."
+        },
+        "type": {
+          "type": "string",
+          "example": "text/html",
+          "description": "a string indicating the media type of the link’s target."
+        },
+        "hreflang": {
+          "type": "string",
+          "example": "en-US",
+          "description": "a string or an array of strings indicating the language(s) of the link’s target.\nAn array of strings indicates that the link’s target is available in multiple languages."
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/protobufAny"
+          },
+          "description": "a meta object containing non-standard meta-information about the link."
+        }
+      },
+      "description": "Where specified, a links member can be used to represent links."
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com. As of May 2023, there are no widely used type server\nimplementations and no plans to implement one.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
+        }
+      },
+      "additionalProperties": {},
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
+    },
+    "v1ExecuteResponse": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "type": "string",
+          "example": "/help",
+          "description": "The output from the command."
+        }
+      }
+    }
+  }
+}

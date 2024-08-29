@@ -1,0 +1,99 @@
+syntax = "proto3";
+
+package apis.jsonapi;
+
+import "google/protobuf/any.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+option go_package = "github.com/lingticio/core/apis/jsonapi";
+
+// Where specified, a links member can be used to represent links.
+message Links {
+  // a string whose value is a URI-reference [RFC3986 Section 4.1] pointing to the link’s target.
+  string href = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"https://apidocs.example.com/errors/BAD_REQUEST\""}];
+  // a string indicating the link’s relation type.
+  optional string rel = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"external\""}];
+  // a link to a description document (e.g. OpenAPI or JSON Schema) for the link target.
+  optional string describedby = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"OpenAPI\""}];
+  // a string which serves as a label for the destination of a link
+  // such that it can be used as a human-readable identifier (e.g., a menu entry).
+  optional string title = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Learn more about BAD_REQUEST\""}];
+  // a string indicating the media type of the link’s target.
+  optional string type = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"text/html\""}];
+  // a string or an array of strings indicating the language(s) of the link’s target.
+  // An array of strings indicates that the link’s target is available in multiple languages.
+  optional string hreflang = 6 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"en-US\""}];
+  // a meta object containing non-standard meta-information about the link.
+  map<string, google.protobuf.Any> meta = 7;
+}
+
+message Response {
+  // Data is the primary data for a response.
+  repeated google.protobuf.Any data = 1;
+  // Errors is an array of error objects.
+  repeated ErrorObject errors = 2;
+}
+
+message ErrorObjectSource {
+  // a JSON Pointer [RFC6901] to the value in the request document that caused the error
+  // [e.g. "/data" for a primary data object, or "/data/attributes/title" for a specific attribute].
+  string pointer = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"/user/age\""}];
+  // a string indicating which URI query parameter caused the error.
+  string parameter = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"created_at.ASC\""}];
+  // a string indicating the name of a single request header which caused the error.
+  string header = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"X-SOME-HEADER\""}];
+}
+
+message ErrorObject {
+  // a unique identifier for this particular occurrence of the problem.
+  string id = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"BAD_REQUEST\""}];
+  // a links object containing references to the source of the error.
+  optional Links links = 2;
+  // the HTTP status code applicable to this problem, expressed as a string value.
+  uint32 status = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"400\""}];
+  // an application-specific error code, expressed as a string value.
+  string code = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"USER_UPDATE_FAILED\""}];
+  // a short, human-readable summary of the problem
+  string title = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Failed to update user's profile, invalid parameter(s) detected\""}];
+  // a human-readable explanation specific to this occurrence of the problem. Like title.
+  string detail = 6 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"A field under /user/age is not correct, should be 'number' instead of 'string'\""}];
+  // an object containing references to the source of the error.
+  optional ErrorObjectSource source = 7;
+  // a meta object containing non-standard meta-information about the error.
+  map<string, google.protobuf.Any> meta = 8;
+}
+
+message ErrorCaller {
+  string file = 1;
+  int32 line = 2;
+  string function = 3;
+}
+
+// pageInfo is used to indicate whether more edges exist prior or following the set defined by the clients arguments.
+message PageInfo {
+  // hasPreviousPage is used to indicate whether more edges exist prior to the set defined by the clients arguments.
+  // If the client is paginating with last/before, then the server must return true if prior edges exist, otherwise false.
+  // If the client is paginating with first/after, then the client may return true if edges prior to after exist,
+  // if it can do so efficiently, otherwise may return false.
+  bool has_previous_page = 1;
+  // hasNextPage is used to indicate whether more edges exist following the set defined by the clients arguments.
+  // If the client is paginating with first/after, then the server must return true if further edges exist, otherwise false.
+  // If the client is paginating with last/before, then the client may return true if edges further from before exist,
+  // if it can do so efficiently, otherwise may return false.
+  bool has_next_page = 2;
+  // startCursor is the cursor to the first node in edges. Or the cursor of the representation of the first returned element.
+  optional string start_cursor = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"aGVsbG8=\""}];
+  // endCursor is the cursor to the last node in edges. Or the cursor of the representation of the last returned element.
+  optional string end_cursor = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"aGVsbG8=\""}];
+}
+
+message PaginationRequest {
+  // first is the number of items to return from the beginning of the list.
+  int64 first = 1;
+  // after is the cursor to the first node in edges that should be returned.
+  optional string after = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"aGVsbG8=\""}];
+  // last is the number of items to return from the end of the list.
+  int64 last = 3;
+  // before is the cursor to the last node in edges that should be returned.
+  optional string before = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"aGVsbG8=\""}];
+}
