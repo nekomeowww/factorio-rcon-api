@@ -17,3 +17,6 @@ go run ./cmd/stdserve serve -p factorio -- '~/Library/Application Support/Steam/
 ```shell
 curl -X POST -H "Content-Type: application/json" -d '{"input": "/help"}' http://localhost:10080/api/v1/stdin/execute
 ```
+
+- OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/stdserve/blob/main/apis/stdserveapi/v1/v1.swagger.json)
+- OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/stdserve/blob/main/apis/stdserveapi/v1/v1.swagger.v3.yaml)
