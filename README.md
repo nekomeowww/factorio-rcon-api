@@ -4,7 +4,7 @@
 
 ## Demo
 
-https://github.com/nekomeowww/stdserve/blob/main/docs/demo.mp4
+https://github.com/user-attachments/assets/1e955e70-a2da-488f-9622-cee753624c29
 
 ## Usage
 
