@@ -1,5 +1,7 @@
 # `stdserve`
 
+🎺 stdin & stdout API wrapper and protocol for Factorio & Minecraft server management
+
 ## Usage
 
 ### Factorio server
