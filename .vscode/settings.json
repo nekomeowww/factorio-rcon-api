@@ -37,4 +37,7 @@
       "--proto_path=${workspaceFolder}/.temp/cache/buf.build/vendor/proto",
     ]
   },
+  "cSpell.words": [
+    "mixtral"
+  ],
 }

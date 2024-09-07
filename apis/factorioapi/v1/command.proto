@@ -1,0 +1,505 @@
+syntax = "proto3";
+
+package apis.factorioapi.v1;
+
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+option go_package = "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1";
+
+message CommandRawRequest {
+  string input = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"/c game.player.zoom=0.1\""}]; // The input for the command. For example, it will be formatted and executed with `/c game.player.zoom=0.1`.
+}
+
+message CommandRawResponse {
+  string output = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Ok\""}]; // The output from the command.
+}
+
+message CommandMessageRequest {
+  string message = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Hello\""}]; // The message to send.
+}
+
+message CommandMessageResponse {
+}
+
+message CommandEvolutionRequest {
+}
+
+message CommandEvolutionResponse {
+  double evolution_factor = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "0.1"}]; // The current alien evolution factor.
+  double time = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
+  double pollution = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
+  double spawner_kills = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
+}
+
+message CommandTimeRequest {
+}
+
+message CommandTimeResponse {
+  double time = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // Get info about how old the map is.
+}
+
+message CommandSeedRequest {
+}
+
+message CommandSeedResponse {
+  string seed = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"123456\""}]; // The map seed.
+}
+
+message CommandVersionRequest {
+
+}
+
+message CommandVersionResponse {
+  string version = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"1.1.0\""}]; // The version of the current Factorio game server.
+}
+
+message Player {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username of the admin.
+  bool online = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "true"}]; // Whether the admin is online.
+}
+
+message CommandAdminsRequest {
+}
+
+message CommandAdminsResponse {
+  repeated Player admins = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The list of admins.
+}
+
+message CommandBanRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to ban.
+}
+
+message CommandBanResponse {
+}
+
+message CommandBansRequest {
+}
+
+message CommandBansResponse {
+  repeated Player bans = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The list of bans.
+}
+
+message CommandDemoteRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to demote.
+}
+
+message CommandDemoteResponse {
+}
+
+message CommandIgnoreRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to ignore.
+}
+
+message CommandIgnoreResponse {
+}
+
+message CommandKickRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to kick.
+  string reason = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Reason\""}]; // The reason for the kick.
+}
+
+message CommandKickResponse {
+}
+
+message CommandMuteRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to mute.
+}
+
+message CommandMuteResponse {
+}
+
+message CommandMutesRequest {
+}
+
+message CommandMutesResponse {
+  repeated Player mutes = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The list of mutes.
+}
+
+message CommandPlayersRequest {
+}
+
+message CommandPlayersResponse {
+  repeated Player players = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The list of players.
+}
+
+message CommandPromoteRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to promote.
+}
+
+message CommandPromoteResponse {
+}
+
+message CommandPurgeRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to purge.
+}
+
+message CommandPurgeResponse {
+}
+
+message CommandServerSaveRequest {
+}
+
+message CommandServerSaveResponse {
+}
+
+message CommandUnbanRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to unban.
+}
+
+message CommandUnbanResponse {
+}
+
+message CommandUnignoreRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to unignore.
+}
+
+message CommandUnignoreResponse {
+}
+
+message CommandUnmuteRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to unmute.
+}
+
+message CommandUnmuteResponse {
+}
+
+message CommandWhisperRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to whisper.
+  string message = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Hello\""}]; // The message to whisper.
+}
+
+message CommandWhisperResponse {
+}
+
+message CommandWhitelistAddRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to add to the whitelist.
+}
+
+message CommandWhitelistAddResponse {
+}
+
+message CommandWhitelistGetRequest {
+}
+
+message CommandWhitelistGetResponse {
+  repeated Player whitelist = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The list of whitelist.
+}
+
+message CommandWhitelistRemoveRequest {
+  string username = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"nekomeowww\""}]; // The username to remove from the whitelist.
+}
+
+message CommandWhitelistRemoveResponse {
+}
+
+message CommandWhitelistClearRequest {
+}
+
+message CommandWhitelistClearResponse {
+}
+
+service ConsoleService {
+  rpc CommandRaw(CommandRawRequest) returns (CommandRawResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/raw",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Executes a Lua command (if allowed).";
+      description: "Executes a Lua command (if allowed).";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandMessage(CommandMessageRequest) returns (CommandMessageResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/message",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Send a message to all players.";
+      description: "Send a message to all players.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandEvolution(CommandEvolutionRequest) returns (CommandEvolutionResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/evolution"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get info about the alien evolution factor.";
+      description: "Get info about the alien evolution factor.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandSeed(CommandSeedRequest) returns (CommandSeedResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/seed",
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the map seed.";
+      description: "Get the map seed.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandTime(CommandTimeRequest) returns (CommandTimeResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/time"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the current game time.";
+      description: "Get the current game time.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandVersion(CommandVersionRequest) returns (CommandVersionResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/version"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the version of the current Factorio game server.";
+      description: "Get the version of the current Factorio game server.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandAdmins(CommandAdminsRequest) returns (CommandAdminsResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/admins"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the list of admins.";
+      description: "Get the list of admins.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandBan(CommandBanRequest) returns (CommandBanResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/ban",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Ban a player.";
+      description: "Ban a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandBans(CommandBansRequest) returns (CommandBansResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/bans"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the list of bans.";
+      description: "Get the list of bans.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandDemote(CommandDemoteRequest) returns (CommandDemoteResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/demote",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Demote a player.";
+      description: "Demote a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandIgnore(CommandIgnoreRequest) returns (CommandIgnoreResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/ignore",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Ignore a player.";
+      description: "Ignore a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandKick(CommandKickRequest) returns (CommandKickResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/kick",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Kick a player.";
+      description: "Kick a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandMute(CommandMuteRequest) returns (CommandMuteResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/mute",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Mute a player.";
+      description: "Mute a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandMutes(CommandMutesRequest) returns (CommandMutesResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/mutes"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the list of mutes.";
+      description: "Get the list of mutes.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandPlayers(CommandPlayersRequest) returns (CommandPlayersResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/players"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the list of players.";
+      description: "Get the list of players.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandPromote(CommandPromoteRequest) returns (CommandPromoteResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/promote",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Promote a player.";
+      description: "Promote a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandPurge(CommandPurgeRequest) returns (CommandPurgeResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/purge",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Purge a player.";
+      description: "Purge a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandServerSave(CommandServerSaveRequest) returns (CommandServerSaveResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/server-save",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Save the game.";
+      description: "Save the game.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandUnban(CommandUnbanRequest) returns (CommandUnbanResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/unban",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Unban a player.";
+      description: "Unban a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandUnignore(CommandUnignoreRequest) returns (CommandUnignoreResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/unignore",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Unignore a player.";
+      description: "Unignore a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandUnmute(CommandUnmuteRequest) returns (CommandUnmuteResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/unmute",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Unmute a player.";
+      description: "Unmute a player.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandWhisper(CommandWhisperRequest) returns (CommandWhisperResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/whisper",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Whisper a message.";
+      description: "Whisper a message.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandWhitelistAdd(CommandWhitelistAddRequest) returns (CommandWhitelistAddResponse) {
+    option (google.api.http) = {
+      post: "/api/v1/factorio/console/command/whitelist/add",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Add a player to the whitelist.";
+      description: "Add a player to the whitelist.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandWhitelistGet(CommandWhitelistGetRequest) returns (CommandWhitelistGetResponse) {
+    option (google.api.http) = {
+      get: "/api/v1/factorio/console/command/whitelist"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Get the list of whitelist.";
+      description: "Get the list of whitelist.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandWhitelistRemove(CommandWhitelistRemoveRequest) returns (CommandWhitelistRemoveResponse) {
+    option (google.api.http) = {
+      patch: "/api/v1/factorio/console/command/whitelist",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Remove a player from the whitelist.";
+      description: "Remove a player from the whitelist.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandWhitelistClear(CommandWhitelistClearRequest) returns (CommandWhitelistClearResponse) {
+    option (google.api.http) = {
+      delete: "/api/v1/factorio/console/command/whitelist",
+      body: "*"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Clear the whitelist.";
+      description: "Clear the whitelist.";
+      tags: "Console";
+    };
+  }
+}

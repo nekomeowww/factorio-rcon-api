@@ -5,15 +5,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch stdserve",
+      "name": "Launch factorio-rcon-api/api-server",
       "type": "go",
       "request": "launch",
       "mode": "auto",
-      "program": "${workspaceFolder}/cmd/stdserve/main.go",
-      "args": [
-        "-e",
-        "${workspaceFolder}/cmd/stdserve/.env"
-      ]
+      "program": "${workspaceFolder}/cmd/api-server/main.go",
     }
   ]
 }

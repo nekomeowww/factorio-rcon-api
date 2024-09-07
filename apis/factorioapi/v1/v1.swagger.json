@@ -1,0 +1,1452 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Factorio Admin API",
+    "version": "1.0"
+  },
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/console/command/admins": {
+      "get": {
+        "summary": "Get the list of admins.",
+        "description": "Get the list of admins.",
+        "operationId": "ConsoleService_CommandAdmins",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandAdminsResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/ban": {
+      "post": {
+        "summary": "Ban a player.",
+        "description": "Ban a player.",
+        "operationId": "ConsoleService_CommandBan",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandBanResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandBanRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/bans": {
+      "get": {
+        "summary": "Get the list of bans.",
+        "description": "Get the list of bans.",
+        "operationId": "ConsoleService_CommandBans",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandBansResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/demote": {
+      "post": {
+        "summary": "Demote a player.",
+        "description": "Demote a player.",
+        "operationId": "ConsoleService_CommandDemote",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandDemoteResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandDemoteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/evolution": {
+      "get": {
+        "summary": "Get info about the alien evolution factor.",
+        "description": "Get info about the alien evolution factor.",
+        "operationId": "ConsoleService_CommandEvolution",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandEvolutionResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/ignore": {
+      "post": {
+        "summary": "Ignore a player.",
+        "description": "Ignore a player.",
+        "operationId": "ConsoleService_CommandIgnore",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandIgnoreResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandIgnoreRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/kick": {
+      "post": {
+        "summary": "Kick a player.",
+        "description": "Kick a player.",
+        "operationId": "ConsoleService_CommandKick",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandKickResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandKickRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/message": {
+      "post": {
+        "summary": "Send a message to all players.",
+        "description": "Send a message to all players.",
+        "operationId": "ConsoleService_CommandMessage",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandMessageResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandMessageRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/mute": {
+      "post": {
+        "summary": "Mute a player.",
+        "description": "Mute a player.",
+        "operationId": "ConsoleService_CommandMute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandMuteResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandMuteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/mutes": {
+      "get": {
+        "summary": "Get the list of mutes.",
+        "description": "Get the list of mutes.",
+        "operationId": "ConsoleService_CommandMutes",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandMutesResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/players": {
+      "get": {
+        "summary": "Get the list of players.",
+        "description": "Get the list of players.",
+        "operationId": "ConsoleService_CommandPlayers",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPlayersResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/promote": {
+      "post": {
+        "summary": "Promote a player.",
+        "description": "Promote a player.",
+        "operationId": "ConsoleService_CommandPromote",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPromoteResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPromoteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/purge": {
+      "post": {
+        "summary": "Purge a player.",
+        "description": "Purge a player.",
+        "operationId": "ConsoleService_CommandPurge",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPurgeResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPurgeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/raw": {
+      "post": {
+        "summary": "Executes a Lua command (if allowed).",
+        "description": "Executes a Lua command (if allowed).",
+        "operationId": "ConsoleService_CommandRaw",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandRawResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandRawRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/seed": {
+      "get": {
+        "summary": "Get the map seed.",
+        "description": "Get the map seed.",
+        "operationId": "ConsoleService_CommandSeed",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandSeedResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/server-save": {
+      "post": {
+        "summary": "Save the game.",
+        "description": "Save the game.",
+        "operationId": "ConsoleService_CommandServerSave",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandServerSaveResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandServerSaveRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/time": {
+      "get": {
+        "summary": "Get the current game time.",
+        "description": "Get the current game time.",
+        "operationId": "ConsoleService_CommandTime",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandTimeResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/unban": {
+      "post": {
+        "summary": "Unban a player.",
+        "description": "Unban a player.",
+        "operationId": "ConsoleService_CommandUnban",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnbanResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnbanRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/unignore": {
+      "post": {
+        "summary": "Unignore a player.",
+        "description": "Unignore a player.",
+        "operationId": "ConsoleService_CommandUnignore",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnignoreResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnignoreRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/unmute": {
+      "post": {
+        "summary": "Unmute a player.",
+        "description": "Unmute a player.",
+        "operationId": "ConsoleService_CommandUnmute",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnmuteResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnmuteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/version": {
+      "get": {
+        "summary": "Get the version of the current Factorio game server.",
+        "description": "Get the version of the current Factorio game server.",
+        "operationId": "ConsoleService_CommandVersion",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandVersionResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/whisper": {
+      "post": {
+        "summary": "Whisper a message.",
+        "description": "Whisper a message.",
+        "operationId": "ConsoleService_CommandWhisper",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhisperResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhisperRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/whitelist": {
+      "get": {
+        "summary": "Get the list of whitelist.",
+        "description": "Get the list of whitelist.",
+        "operationId": "ConsoleService_CommandWhitelistGet",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistGetResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      },
+      "delete": {
+        "summary": "Clear the whitelist.",
+        "description": "Clear the whitelist.",
+        "operationId": "ConsoleService_CommandWhitelistClear",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistClearResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistClearRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      },
+      "patch": {
+        "summary": "Remove a player from the whitelist.",
+        "description": "Remove a player from the whitelist.",
+        "operationId": "ConsoleService_CommandWhitelistRemove",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistRemoveResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistRemoveRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/console/command/whitelist/add": {
+      "post": {
+        "summary": "Add a player to the whitelist.",
+        "description": "Add a player to the whitelist.",
+        "operationId": "ConsoleService_CommandWhitelistAdd",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistAddResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistAddRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "jsonapiErrorObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "BAD_REQUEST",
+          "description": "a unique identifier for this particular occurrence of the problem."
+        },
+        "links": {
+          "$ref": "#/definitions/jsonapiLinks",
+          "description": "a links object containing references to the source of the error."
+        },
+        "status": {
+          "type": "integer",
+          "format": "int64",
+          "example": "400",
+          "description": "the HTTP status code applicable to this problem, expressed as a string value."
+        },
+        "code": {
+          "type": "string",
+          "example": "USER_UPDATE_FAILED",
+          "description": "an application-specific error code, expressed as a string value."
+        },
+        "title": {
+          "type": "string",
+          "example": "Failed to update user's profile, invalid parameter(s) detected",
+          "title": "a short, human-readable summary of the problem"
+        },
+        "detail": {
+          "type": "string",
+          "example": "A field under /user/age is not correct, should be 'number' instead of 'string'",
+          "description": "a human-readable explanation specific to this occurrence of the problem. Like title."
+        },
+        "source": {
+          "$ref": "#/definitions/jsonapiErrorObjectSource",
+          "description": "an object containing references to the source of the error."
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/protobufAny"
+          },
+          "description": "a meta object containing non-standard meta-information about the error."
+        }
+      }
+    },
+    "jsonapiErrorObjectSource": {
+      "type": "object",
+      "properties": {
+        "pointer": {
+          "type": "string",
+          "example": "/user/age",
+          "description": "a JSON Pointer [RFC6901] to the value in the request document that caused the error\n[e.g. \"/data\" for a primary data object, or \"/data/attributes/title\" for a specific attribute]."
+        },
+        "parameter": {
+          "type": "string",
+          "example": "created_at.ASC",
+          "description": "a string indicating which URI query parameter caused the error."
+        },
+        "header": {
+          "type": "string",
+          "example": "X-SOME-HEADER",
+          "description": "a string indicating the name of a single request header which caused the error."
+        }
+      }
+    },
+    "jsonapiLinks": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "example": "https://apidocs.example.com/errors/BAD_REQUEST",
+          "description": "a string whose value is a URI-reference [RFC3986 Section 4.1] pointing to the link’s target."
+        },
+        "rel": {
+          "type": "string",
+          "example": "external",
+          "description": "a string indicating the link’s relation type."
+        },
+        "describedby": {
+          "type": "string",
+          "example": "OpenAPI",
+          "description": "a link to a description document (e.g. OpenAPI or JSON Schema) for the link target."
+        },
+        "title": {
+          "type": "string",
+          "example": "Learn more about BAD_REQUEST",
+          "description": "a string which serves as a label for the destination of a link\nsuch that it can be used as a human-readable identifier (e.g., a menu entry)."
+        },
+        "type": {
+          "type": "string",
+          "example": "text/html",
+          "description": "a string indicating the media type of the link’s target."
+        },
+        "hreflang": {
+          "type": "string",
+          "example": "en-US",
+          "description": "a string or an array of strings indicating the language(s) of the link’s target.\nAn array of strings indicates that the link’s target is available in multiple languages."
+        },
+        "meta": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/protobufAny"
+          },
+          "description": "a meta object containing non-standard meta-information about the link."
+        }
+      },
+      "description": "Where specified, a links member can be used to represent links."
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com. As of May 2023, there are no widely used type server\nimplementations and no plans to implement one.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
+        }
+      },
+      "additionalProperties": {},
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
+    },
+    "v1CommandAdminsResponse": {
+      "type": "object",
+      "properties": {
+        "admins": {
+          "type": "array",
+          "example": "nekomeowww",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Player"
+          },
+          "description": "The list of admins."
+        }
+      }
+    },
+    "v1CommandBanRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to ban."
+        }
+      }
+    },
+    "v1CommandBanResponse": {
+      "type": "object"
+    },
+    "v1CommandBansResponse": {
+      "type": "object",
+      "properties": {
+        "bans": {
+          "type": "array",
+          "example": "nekomeowww",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Player"
+          },
+          "description": "The list of bans."
+        }
+      }
+    },
+    "v1CommandDemoteRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to demote."
+        }
+      }
+    },
+    "v1CommandDemoteResponse": {
+      "type": "object"
+    },
+    "v1CommandEvolutionResponse": {
+      "type": "object",
+      "properties": {
+        "evolutionFactor": {
+          "type": "number",
+          "format": "double",
+          "example": 0.1,
+          "description": "The current alien evolution factor."
+        },
+        "time": {
+          "type": "number",
+          "format": "double",
+          "example": 10,
+          "title": "in percentage"
+        },
+        "pollution": {
+          "type": "number",
+          "format": "double",
+          "example": 10,
+          "title": "in percentage"
+        },
+        "spawnerKills": {
+          "type": "number",
+          "format": "double",
+          "example": 10,
+          "title": "in percentage"
+        }
+      }
+    },
+    "v1CommandIgnoreRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to ignore."
+        }
+      }
+    },
+    "v1CommandIgnoreResponse": {
+      "type": "object"
+    },
+    "v1CommandKickRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to kick."
+        },
+        "reason": {
+          "type": "string",
+          "example": "Reason",
+          "description": "The reason for the kick."
+        }
+      }
+    },
+    "v1CommandKickResponse": {
+      "type": "object"
+    },
+    "v1CommandMessageRequest": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "Hello",
+          "description": "The message to send."
+        }
+      }
+    },
+    "v1CommandMessageResponse": {
+      "type": "object"
+    },
+    "v1CommandMuteRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to mute."
+        }
+      }
+    },
+    "v1CommandMuteResponse": {
+      "type": "object"
+    },
+    "v1CommandMutesResponse": {
+      "type": "object",
+      "properties": {
+        "mutes": {
+          "type": "array",
+          "example": "nekomeowww",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Player"
+          },
+          "description": "The list of mutes."
+        }
+      }
+    },
+    "v1CommandPlayersResponse": {
+      "type": "object",
+      "properties": {
+        "players": {
+          "type": "array",
+          "example": "nekomeowww",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Player"
+          },
+          "description": "The list of players."
+        }
+      }
+    },
+    "v1CommandPromoteRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to promote."
+        }
+      }
+    },
+    "v1CommandPromoteResponse": {
+      "type": "object"
+    },
+    "v1CommandPurgeRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to purge."
+        }
+      }
+    },
+    "v1CommandPurgeResponse": {
+      "type": "object"
+    },
+    "v1CommandRawRequest": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "type": "string",
+          "example": "/c game.player.zoom=0.1",
+          "description": "The input for the command. For example, it will be formatted and executed with `/c game.player.zoom=0.1`."
+        }
+      }
+    },
+    "v1CommandRawResponse": {
+      "type": "object",
+      "properties": {
+        "output": {
+          "type": "string",
+          "example": "Ok",
+          "description": "The output from the command."
+        }
+      }
+    },
+    "v1CommandSeedResponse": {
+      "type": "object",
+      "properties": {
+        "seed": {
+          "type": "string",
+          "example": "123456",
+          "description": "The map seed."
+        }
+      }
+    },
+    "v1CommandServerSaveRequest": {
+      "type": "object"
+    },
+    "v1CommandServerSaveResponse": {
+      "type": "object"
+    },
+    "v1CommandTimeResponse": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "number",
+          "format": "double",
+          "example": 10,
+          "description": "Get info about how old the map is."
+        }
+      }
+    },
+    "v1CommandUnbanRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to unban."
+        }
+      }
+    },
+    "v1CommandUnbanResponse": {
+      "type": "object"
+    },
+    "v1CommandUnignoreRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to unignore."
+        }
+      }
+    },
+    "v1CommandUnignoreResponse": {
+      "type": "object"
+    },
+    "v1CommandUnmuteRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to unmute."
+        }
+      }
+    },
+    "v1CommandUnmuteResponse": {
+      "type": "object"
+    },
+    "v1CommandVersionResponse": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "example": "1.1.0",
+          "description": "The version of the current Factorio game server."
+        }
+      }
+    },
+    "v1CommandWhisperRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to whisper."
+        },
+        "message": {
+          "type": "string",
+          "example": "Hello",
+          "description": "The message to whisper."
+        }
+      }
+    },
+    "v1CommandWhisperResponse": {
+      "type": "object"
+    },
+    "v1CommandWhitelistAddRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to add to the whitelist."
+        }
+      }
+    },
+    "v1CommandWhitelistAddResponse": {
+      "type": "object"
+    },
+    "v1CommandWhitelistClearRequest": {
+      "type": "object"
+    },
+    "v1CommandWhitelistClearResponse": {
+      "type": "object"
+    },
+    "v1CommandWhitelistGetResponse": {
+      "type": "object",
+      "properties": {
+        "whitelist": {
+          "type": "array",
+          "example": "nekomeowww",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1Player"
+          },
+          "description": "The list of whitelist."
+        }
+      }
+    },
+    "v1CommandWhitelistRemoveRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to remove from the whitelist."
+        }
+      }
+    },
+    "v1CommandWhitelistRemoveResponse": {
+      "type": "object"
+    },
+    "v1Player": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username of the admin."
+        },
+        "online": {
+          "type": "boolean",
+          "example": true,
+          "description": "Whether the admin is online."
+        }
+      }
+    }
+  }
+}
