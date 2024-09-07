@@ -5,12 +5,14 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 	"github.com/nekomeowww/factorio-rcon-api/internal/meta"
+	"github.com/nekomeowww/xo"
+	"github.com/samber/lo"
 	"github.com/spf13/viper"
 )
 
 type APIServer struct {
-	GrpcServerBind string `json:"grpc_server_bind" yaml:"grpc_server_bind"`
-	HttpServerBind string `json:"http_server_bind" yaml:"http_server_bind"`
+	GrpcServerAddr string `json:"grpc_server_addr" yaml:"grpc_server_addr"`
+	HttpServerAddr string `json:"http_server_addr" yaml:"http_server_addr"`
 }
 
 type Tracing struct {
@@ -40,8 +42,8 @@ func defaultConfig() Config {
 			OtelStdoutEnabled: false,
 		},
 		APIServer: APIServer{
-			GrpcServerBind: ":24181",
-			HttpServerBind: ":24180",
+			GrpcServerAddr: ":24181",
+			HttpServerAddr: ":24180",
 		},
 		Factorio: Factorio{
 			RCONHost:     "127.0.0.1",
@@ -54,6 +56,18 @@ func defaultConfig() Config {
 func NewConfig(namespace string, app string, configFilePath string, envFilePath string) func() (*Config, error) {
 	return func() (*Config, error) {
 		configPath := getConfigFilePath(configFilePath)
+
+		lo.Must0(viper.BindEnv("env"))
+
+		lo.Must0(viper.BindEnv("tracing.otel_collector_http"))
+		lo.Must0(viper.BindEnv("tracing.otel_stdout_enabled"))
+
+		lo.Must0(viper.BindEnv("api_server.grpc_server_bind"))
+		lo.Must0(viper.BindEnv("api_server.http_server_bind"))
+
+		lo.Must0(viper.BindEnv("factorio.rcon_host"))
+		lo.Must0(viper.BindEnv("factorio.rcon_port"))
+		lo.Must0(viper.BindEnv("factorio.rcon_password"))
 
 		err := loadEnvConfig(envFilePath)
 		if err != nil {
@@ -73,6 +87,8 @@ func NewConfig(namespace string, app string, configFilePath string, envFilePath 
 		if err != nil {
 			return nil, err
 		}
+
+		xo.PrintJSON(config)
 
 		meta.Env = config.Env
 		if meta.Env == "" {

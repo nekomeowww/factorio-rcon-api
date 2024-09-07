@@ -49,7 +49,7 @@ func NewGRPCServer() func(params NewGRPCServerParams) *GRPCServer {
 		})
 
 		return &GRPCServer{
-			ListenAddr: params.Config.APIServer.GrpcServerBind,
+			ListenAddr: params.Config.APIServer.GrpcServerAddr,
 			server:     server,
 			register:   params.Register,
 		}

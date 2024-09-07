@@ -3,7 +3,17 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - apiserver
   - Factorio
+  - grpcotel
+  - grpcpkg
+  - httppkg
+  - labstack
+  - nekomeowww
+  - opentelemetry
+  - Otel
+  - otelgrpc
+  - otelhttp
   - RCON
 ignoreWords: []
 import: []

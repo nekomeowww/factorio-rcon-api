@@ -58,11 +58,11 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 		}
 
 		server := &GatewayServer{
-			ListenAddr:     params.Config.APIServer.HttpServerBind,
-			GRPCServerAddr: params.Config.APIServer.GrpcServerBind,
+			ListenAddr:     params.Config.APIServer.HttpServerAddr,
+			GRPCServerAddr: params.Config.APIServer.GrpcServerAddr,
 			echo:           e,
 			server: &http.Server{
-				Addr:              params.Config.APIServer.HttpServerBind,
+				Addr:              params.Config.APIServer.HttpServerAddr,
 				ReadHeaderTimeout: time.Duration(30) * time.Second,
 			},
 		}
@@ -75,7 +75,7 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 		params.Lifecycle.Append(fx.Hook{
 			OnStart: func(ctx context.Context) error {
 				conn, err := grpc.NewClient(
-					params.Config.APIServer.GrpcServerBind,
+					params.Config.APIServer.GrpcServerAddr,
 					grpc.WithTransportCredentials(insecure.NewCredentials()),
 					grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
 				)
