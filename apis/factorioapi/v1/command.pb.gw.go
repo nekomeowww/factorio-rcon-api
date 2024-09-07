@@ -649,7 +649,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandRaw", runtime.WithHTTPPathPattern("/api/v1/console/command/raw"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandRaw", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/raw"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -674,7 +674,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMessage", runtime.WithHTTPPathPattern("/api/v1/console/command/message"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMessage", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/message"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -699,7 +699,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandEvolution", runtime.WithHTTPPathPattern("/api/v1/console/command/evolution"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandEvolution", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/evolution"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -724,7 +724,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandSeed", runtime.WithHTTPPathPattern("/api/v1/console/command/seed"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandSeed", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/seed"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -749,7 +749,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandTime", runtime.WithHTTPPathPattern("/api/v1/console/command/time"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandTime", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/time"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -774,7 +774,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandVersion", runtime.WithHTTPPathPattern("/api/v1/console/command/version"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandVersion", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/version"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -799,7 +799,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandAdmins", runtime.WithHTTPPathPattern("/api/v1/console/command/admins"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandAdmins", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/admins"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -824,7 +824,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBan", runtime.WithHTTPPathPattern("/api/v1/console/command/ban"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBan", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/ban"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -849,7 +849,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBans", runtime.WithHTTPPathPattern("/api/v1/console/command/bans"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBans", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/bans"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -874,7 +874,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandDemote", runtime.WithHTTPPathPattern("/api/v1/console/command/demote"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandDemote", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/demote"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -899,7 +899,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandIgnore", runtime.WithHTTPPathPattern("/api/v1/console/command/ignore"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandIgnore", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/ignore"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -924,7 +924,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandKick", runtime.WithHTTPPathPattern("/api/v1/console/command/kick"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandKick", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/kick"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -949,7 +949,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMute", runtime.WithHTTPPathPattern("/api/v1/console/command/mute"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMute", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/mute"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -974,7 +974,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMutes", runtime.WithHTTPPathPattern("/api/v1/console/command/mutes"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMutes", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/mutes"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -999,7 +999,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPlayers", runtime.WithHTTPPathPattern("/api/v1/console/command/players"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPlayers", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/players"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1024,7 +1024,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPromote", runtime.WithHTTPPathPattern("/api/v1/console/command/promote"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPromote", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/promote"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1049,7 +1049,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPurge", runtime.WithHTTPPathPattern("/api/v1/console/command/purge"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPurge", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/purge"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1074,7 +1074,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandServerSave", runtime.WithHTTPPathPattern("/api/v1/console/command/server-save"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandServerSave", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/server-save"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1099,7 +1099,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnban", runtime.WithHTTPPathPattern("/api/v1/console/command/unban"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnban", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/unban"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1124,7 +1124,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnignore", runtime.WithHTTPPathPattern("/api/v1/console/command/unignore"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnignore", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/unignore"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1149,7 +1149,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnmute", runtime.WithHTTPPathPattern("/api/v1/console/command/unmute"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnmute", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/unmute"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1174,7 +1174,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhisper", runtime.WithHTTPPathPattern("/api/v1/console/command/whisper"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhisper", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whisper"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1199,7 +1199,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistAdd", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist/add"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistAdd", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist/add"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1224,7 +1224,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistGet", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistGet", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1249,7 +1249,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistRemove", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistRemove", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1274,7 +1274,7 @@ func RegisterConsoleServiceHandlerServer(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistClear", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistClear", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1338,7 +1338,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandRaw", runtime.WithHTTPPathPattern("/api/v1/console/command/raw"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandRaw", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/raw"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1360,7 +1360,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMessage", runtime.WithHTTPPathPattern("/api/v1/console/command/message"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMessage", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/message"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1382,7 +1382,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandEvolution", runtime.WithHTTPPathPattern("/api/v1/console/command/evolution"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandEvolution", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/evolution"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1404,7 +1404,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandSeed", runtime.WithHTTPPathPattern("/api/v1/console/command/seed"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandSeed", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/seed"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1426,7 +1426,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandTime", runtime.WithHTTPPathPattern("/api/v1/console/command/time"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandTime", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/time"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1448,7 +1448,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandVersion", runtime.WithHTTPPathPattern("/api/v1/console/command/version"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandVersion", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/version"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1470,7 +1470,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandAdmins", runtime.WithHTTPPathPattern("/api/v1/console/command/admins"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandAdmins", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/admins"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1492,7 +1492,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBan", runtime.WithHTTPPathPattern("/api/v1/console/command/ban"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBan", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/ban"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1514,7 +1514,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBans", runtime.WithHTTPPathPattern("/api/v1/console/command/bans"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandBans", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/bans"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1536,7 +1536,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandDemote", runtime.WithHTTPPathPattern("/api/v1/console/command/demote"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandDemote", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/demote"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1558,7 +1558,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandIgnore", runtime.WithHTTPPathPattern("/api/v1/console/command/ignore"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandIgnore", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/ignore"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1580,7 +1580,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandKick", runtime.WithHTTPPathPattern("/api/v1/console/command/kick"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandKick", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/kick"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1602,7 +1602,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMute", runtime.WithHTTPPathPattern("/api/v1/console/command/mute"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMute", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/mute"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1624,7 +1624,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMutes", runtime.WithHTTPPathPattern("/api/v1/console/command/mutes"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandMutes", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/mutes"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1646,7 +1646,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPlayers", runtime.WithHTTPPathPattern("/api/v1/console/command/players"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPlayers", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/players"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1668,7 +1668,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPromote", runtime.WithHTTPPathPattern("/api/v1/console/command/promote"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPromote", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/promote"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1690,7 +1690,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPurge", runtime.WithHTTPPathPattern("/api/v1/console/command/purge"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandPurge", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/purge"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1712,7 +1712,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandServerSave", runtime.WithHTTPPathPattern("/api/v1/console/command/server-save"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandServerSave", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/server-save"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1734,7 +1734,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnban", runtime.WithHTTPPathPattern("/api/v1/console/command/unban"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnban", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/unban"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1756,7 +1756,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnignore", runtime.WithHTTPPathPattern("/api/v1/console/command/unignore"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnignore", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/unignore"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1778,7 +1778,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnmute", runtime.WithHTTPPathPattern("/api/v1/console/command/unmute"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandUnmute", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/unmute"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1800,7 +1800,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhisper", runtime.WithHTTPPathPattern("/api/v1/console/command/whisper"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhisper", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whisper"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1822,7 +1822,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistAdd", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist/add"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistAdd", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist/add"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1844,7 +1844,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistGet", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistGet", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1866,7 +1866,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistRemove", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistRemove", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1888,7 +1888,7 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistClear", runtime.WithHTTPPathPattern("/api/v1/console/command/whitelist"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/apis.factorioapi.v1.ConsoleService/CommandWhitelistClear", runtime.WithHTTPPathPattern("/api/v1/factorio/console/command/whitelist"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -1908,57 +1908,57 @@ func RegisterConsoleServiceHandlerClient(ctx context.Context, mux *runtime.Serve
 }
 
 var (
-	pattern_ConsoleService_CommandRaw_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "raw"}, ""))
+	pattern_ConsoleService_CommandRaw_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "raw"}, ""))
 
-	pattern_ConsoleService_CommandMessage_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "message"}, ""))
+	pattern_ConsoleService_CommandMessage_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "message"}, ""))
 
-	pattern_ConsoleService_CommandEvolution_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "evolution"}, ""))
+	pattern_ConsoleService_CommandEvolution_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "evolution"}, ""))
 
-	pattern_ConsoleService_CommandSeed_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "seed"}, ""))
+	pattern_ConsoleService_CommandSeed_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "seed"}, ""))
 
-	pattern_ConsoleService_CommandTime_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "time"}, ""))
+	pattern_ConsoleService_CommandTime_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "time"}, ""))
 
-	pattern_ConsoleService_CommandVersion_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "version"}, ""))
+	pattern_ConsoleService_CommandVersion_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "version"}, ""))
 
-	pattern_ConsoleService_CommandAdmins_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "admins"}, ""))
+	pattern_ConsoleService_CommandAdmins_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "admins"}, ""))
 
-	pattern_ConsoleService_CommandBan_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "ban"}, ""))
+	pattern_ConsoleService_CommandBan_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "ban"}, ""))
 
-	pattern_ConsoleService_CommandBans_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "bans"}, ""))
+	pattern_ConsoleService_CommandBans_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "bans"}, ""))
 
-	pattern_ConsoleService_CommandDemote_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "demote"}, ""))
+	pattern_ConsoleService_CommandDemote_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "demote"}, ""))
 
-	pattern_ConsoleService_CommandIgnore_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "ignore"}, ""))
+	pattern_ConsoleService_CommandIgnore_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "ignore"}, ""))
 
-	pattern_ConsoleService_CommandKick_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "kick"}, ""))
+	pattern_ConsoleService_CommandKick_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "kick"}, ""))
 
-	pattern_ConsoleService_CommandMute_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "mute"}, ""))
+	pattern_ConsoleService_CommandMute_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "mute"}, ""))
 
-	pattern_ConsoleService_CommandMutes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "mutes"}, ""))
+	pattern_ConsoleService_CommandMutes_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "mutes"}, ""))
 
-	pattern_ConsoleService_CommandPlayers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "players"}, ""))
+	pattern_ConsoleService_CommandPlayers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "players"}, ""))
 
-	pattern_ConsoleService_CommandPromote_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "promote"}, ""))
+	pattern_ConsoleService_CommandPromote_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "promote"}, ""))
 
-	pattern_ConsoleService_CommandPurge_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "purge"}, ""))
+	pattern_ConsoleService_CommandPurge_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "purge"}, ""))
 
-	pattern_ConsoleService_CommandServerSave_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "server-save"}, ""))
+	pattern_ConsoleService_CommandServerSave_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "server-save"}, ""))
 
-	pattern_ConsoleService_CommandUnban_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "unban"}, ""))
+	pattern_ConsoleService_CommandUnban_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "unban"}, ""))
 
-	pattern_ConsoleService_CommandUnignore_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "unignore"}, ""))
+	pattern_ConsoleService_CommandUnignore_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "unignore"}, ""))
 
-	pattern_ConsoleService_CommandUnmute_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "unmute"}, ""))
+	pattern_ConsoleService_CommandUnmute_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "unmute"}, ""))
 
-	pattern_ConsoleService_CommandWhisper_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "whisper"}, ""))
+	pattern_ConsoleService_CommandWhisper_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "whisper"}, ""))
 
-	pattern_ConsoleService_CommandWhitelistAdd_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "console", "command", "whitelist", "add"}, ""))
+	pattern_ConsoleService_CommandWhitelistAdd_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5, 2, 6}, []string{"api", "v1", "factorio", "console", "command", "whitelist", "add"}, ""))
 
-	pattern_ConsoleService_CommandWhitelistGet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "whitelist"}, ""))
+	pattern_ConsoleService_CommandWhitelistGet_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "whitelist"}, ""))
 
-	pattern_ConsoleService_CommandWhitelistRemove_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "whitelist"}, ""))
+	pattern_ConsoleService_CommandWhitelistRemove_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "whitelist"}, ""))
 
-	pattern_ConsoleService_CommandWhitelistClear_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "v1", "console", "command", "whitelist"}, ""))
+	pattern_ConsoleService_CommandWhitelistClear_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4, 2, 5}, []string{"api", "v1", "factorio", "console", "command", "whitelist"}, ""))
 )
 
 var (

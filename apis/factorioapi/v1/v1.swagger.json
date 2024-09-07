@@ -11,7 +11,7 @@
     "application/json"
   ],
   "paths": {
-    "/api/v1/console/command/admins": {
+    "/api/v1/factorio/console/command/admins": {
       "get": {
         "summary": "Get the list of admins.",
         "description": "Get the list of admins.",
@@ -41,7 +41,7 @@
         ]
       }
     },
-    "/api/v1/console/command/ban": {
+    "/api/v1/factorio/console/command/ban": {
       "post": {
         "summary": "Ban a player.",
         "description": "Ban a player.",
@@ -81,7 +81,7 @@
         ]
       }
     },
-    "/api/v1/console/command/bans": {
+    "/api/v1/factorio/console/command/bans": {
       "get": {
         "summary": "Get the list of bans.",
         "description": "Get the list of bans.",
@@ -111,7 +111,7 @@
         ]
       }
     },
-    "/api/v1/console/command/demote": {
+    "/api/v1/factorio/console/command/demote": {
       "post": {
         "summary": "Demote a player.",
         "description": "Demote a player.",
@@ -151,7 +151,7 @@
         ]
       }
     },
-    "/api/v1/console/command/evolution": {
+    "/api/v1/factorio/console/command/evolution": {
       "get": {
         "summary": "Get info about the alien evolution factor.",
         "description": "Get info about the alien evolution factor.",
@@ -181,7 +181,7 @@
         ]
       }
     },
-    "/api/v1/console/command/ignore": {
+    "/api/v1/factorio/console/command/ignore": {
       "post": {
         "summary": "Ignore a player.",
         "description": "Ignore a player.",
@@ -221,7 +221,7 @@
         ]
       }
     },
-    "/api/v1/console/command/kick": {
+    "/api/v1/factorio/console/command/kick": {
       "post": {
         "summary": "Kick a player.",
         "description": "Kick a player.",
@@ -261,7 +261,7 @@
         ]
       }
     },
-    "/api/v1/console/command/message": {
+    "/api/v1/factorio/console/command/message": {
       "post": {
         "summary": "Send a message to all players.",
         "description": "Send a message to all players.",
@@ -301,7 +301,7 @@
         ]
       }
     },
-    "/api/v1/console/command/mute": {
+    "/api/v1/factorio/console/command/mute": {
       "post": {
         "summary": "Mute a player.",
         "description": "Mute a player.",
@@ -341,7 +341,7 @@
         ]
       }
     },
-    "/api/v1/console/command/mutes": {
+    "/api/v1/factorio/console/command/mutes": {
       "get": {
         "summary": "Get the list of mutes.",
         "description": "Get the list of mutes.",
@@ -371,7 +371,7 @@
         ]
       }
     },
-    "/api/v1/console/command/players": {
+    "/api/v1/factorio/console/command/players": {
       "get": {
         "summary": "Get the list of players.",
         "description": "Get the list of players.",
@@ -401,7 +401,7 @@
         ]
       }
     },
-    "/api/v1/console/command/promote": {
+    "/api/v1/factorio/console/command/promote": {
       "post": {
         "summary": "Promote a player.",
         "description": "Promote a player.",
@@ -441,7 +441,7 @@
         ]
       }
     },
-    "/api/v1/console/command/purge": {
+    "/api/v1/factorio/console/command/purge": {
       "post": {
         "summary": "Purge a player.",
         "description": "Purge a player.",
@@ -481,7 +481,7 @@
         ]
       }
     },
-    "/api/v1/console/command/raw": {
+    "/api/v1/factorio/console/command/raw": {
       "post": {
         "summary": "Executes a Lua command (if allowed).",
         "description": "Executes a Lua command (if allowed).",
@@ -521,7 +521,7 @@
         ]
       }
     },
-    "/api/v1/console/command/seed": {
+    "/api/v1/factorio/console/command/seed": {
       "get": {
         "summary": "Get the map seed.",
         "description": "Get the map seed.",
@@ -551,7 +551,7 @@
         ]
       }
     },
-    "/api/v1/console/command/server-save": {
+    "/api/v1/factorio/console/command/server-save": {
       "post": {
         "summary": "Save the game.",
         "description": "Save the game.",
@@ -591,7 +591,7 @@
         ]
       }
     },
-    "/api/v1/console/command/time": {
+    "/api/v1/factorio/console/command/time": {
       "get": {
         "summary": "Get the current game time.",
         "description": "Get the current game time.",
@@ -621,7 +621,7 @@
         ]
       }
     },
-    "/api/v1/console/command/unban": {
+    "/api/v1/factorio/console/command/unban": {
       "post": {
         "summary": "Unban a player.",
         "description": "Unban a player.",
@@ -661,7 +661,7 @@
         ]
       }
     },
-    "/api/v1/console/command/unignore": {
+    "/api/v1/factorio/console/command/unignore": {
       "post": {
         "summary": "Unignore a player.",
         "description": "Unignore a player.",
@@ -701,7 +701,7 @@
         ]
       }
     },
-    "/api/v1/console/command/unmute": {
+    "/api/v1/factorio/console/command/unmute": {
       "post": {
         "summary": "Unmute a player.",
         "description": "Unmute a player.",
@@ -741,7 +741,7 @@
         ]
       }
     },
-    "/api/v1/console/command/version": {
+    "/api/v1/factorio/console/command/version": {
       "get": {
         "summary": "Get the version of the current Factorio game server.",
         "description": "Get the version of the current Factorio game server.",
@@ -771,7 +771,7 @@
         ]
       }
     },
-    "/api/v1/console/command/whisper": {
+    "/api/v1/factorio/console/command/whisper": {
       "post": {
         "summary": "Whisper a message.",
         "description": "Whisper a message.",
@@ -811,7 +811,7 @@
         ]
       }
     },
-    "/api/v1/console/command/whitelist": {
+    "/api/v1/factorio/console/command/whitelist": {
       "get": {
         "summary": "Get the list of whitelist.",
         "description": "Get the list of whitelist.",
@@ -917,7 +917,7 @@
         ]
       }
     },
-    "/api/v1/console/command/whitelist/add": {
+    "/api/v1/factorio/console/command/whitelist/add": {
       "post": {
         "summary": "Add a player to the whitelist.",
         "description": "Add a player to the whitelist.",

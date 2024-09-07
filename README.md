@@ -79,7 +79,17 @@ docker run \
   ghcr.io/nekomeowww/factorio-rcon-api:unstable
 ```
 
+### Call the API
+
+That's it, you can now call the API with the following command:
+
+```shell
+curl -X POST http://localhost:24180/api/v1/factorio/command/version
+```
+
+to get the version of the Factorio game server.
+
 ## API
 
-- OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/stdserve/blob/main/apis/stdserveapi/v1/v1.swagger.json)
-- OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/stdserve/blob/main/apis/stdserveapi/v1/v1.swagger.v3.yaml)
+- OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.json)
+- OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.v3.yaml)
