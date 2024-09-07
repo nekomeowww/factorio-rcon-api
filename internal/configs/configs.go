@@ -1,6 +1,7 @@
 package configs
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/mitchellh/mapstructure"
@@ -88,7 +89,10 @@ func NewConfig(namespace string, app string, configFilePath string, envFilePath 
 			return nil, err
 		}
 
+		// For debugging for users, otherwise it's hard to know what's wrong with the config
+		fmt.Println("read config:")
 		xo.PrintJSON(config)
+		fmt.Println("")
 
 		meta.Env = config.Env
 		if meta.Env == "" {
