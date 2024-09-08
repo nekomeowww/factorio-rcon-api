@@ -3,6 +3,7 @@ package libs
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/nekomeowww/xo"
@@ -31,7 +32,7 @@ func NewLogger() func() (*logger.Logger, error) {
 			logger.WithLevel(logLevel),
 			logger.WithAppName("factorio-rcon-api"),
 			logger.WithNamespace("nekomeowww"),
-			logger.WithLogFilePath(xo.RelativePathBasedOnPwdOf("./logs/"+"factorio-rcon-api")),
+			logger.WithLogFilePath(xo.RelativePathBasedOnPwdOf(filepath.Join("logs", "logs.log"))),
 			logger.WithFormat(logFormat),
 			logger.WithLokiRemoteConfig(lo.Ternary(os.Getenv("LOG_LOKI_REMOTE_URL") != "", &loki.Config{
 				Url:          os.Getenv("LOG_LOKI_REMOTE_URL"),
