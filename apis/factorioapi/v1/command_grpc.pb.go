@@ -19,32 +19,49 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	ConsoleService_CommandRaw_FullMethodName             = "/apis.factorioapi.v1.ConsoleService/CommandRaw"
-	ConsoleService_CommandMessage_FullMethodName         = "/apis.factorioapi.v1.ConsoleService/CommandMessage"
-	ConsoleService_CommandEvolution_FullMethodName       = "/apis.factorioapi.v1.ConsoleService/CommandEvolution"
-	ConsoleService_CommandSeed_FullMethodName            = "/apis.factorioapi.v1.ConsoleService/CommandSeed"
-	ConsoleService_CommandTime_FullMethodName            = "/apis.factorioapi.v1.ConsoleService/CommandTime"
-	ConsoleService_CommandVersion_FullMethodName         = "/apis.factorioapi.v1.ConsoleService/CommandVersion"
-	ConsoleService_CommandAdmins_FullMethodName          = "/apis.factorioapi.v1.ConsoleService/CommandAdmins"
-	ConsoleService_CommandBan_FullMethodName             = "/apis.factorioapi.v1.ConsoleService/CommandBan"
-	ConsoleService_CommandBans_FullMethodName            = "/apis.factorioapi.v1.ConsoleService/CommandBans"
-	ConsoleService_CommandDemote_FullMethodName          = "/apis.factorioapi.v1.ConsoleService/CommandDemote"
-	ConsoleService_CommandIgnore_FullMethodName          = "/apis.factorioapi.v1.ConsoleService/CommandIgnore"
-	ConsoleService_CommandKick_FullMethodName            = "/apis.factorioapi.v1.ConsoleService/CommandKick"
-	ConsoleService_CommandMute_FullMethodName            = "/apis.factorioapi.v1.ConsoleService/CommandMute"
-	ConsoleService_CommandMutes_FullMethodName           = "/apis.factorioapi.v1.ConsoleService/CommandMutes"
-	ConsoleService_CommandPlayers_FullMethodName         = "/apis.factorioapi.v1.ConsoleService/CommandPlayers"
-	ConsoleService_CommandPromote_FullMethodName         = "/apis.factorioapi.v1.ConsoleService/CommandPromote"
-	ConsoleService_CommandPurge_FullMethodName           = "/apis.factorioapi.v1.ConsoleService/CommandPurge"
-	ConsoleService_CommandServerSave_FullMethodName      = "/apis.factorioapi.v1.ConsoleService/CommandServerSave"
-	ConsoleService_CommandUnban_FullMethodName           = "/apis.factorioapi.v1.ConsoleService/CommandUnban"
-	ConsoleService_CommandUnignore_FullMethodName        = "/apis.factorioapi.v1.ConsoleService/CommandUnignore"
-	ConsoleService_CommandUnmute_FullMethodName          = "/apis.factorioapi.v1.ConsoleService/CommandUnmute"
-	ConsoleService_CommandWhisper_FullMethodName         = "/apis.factorioapi.v1.ConsoleService/CommandWhisper"
-	ConsoleService_CommandWhitelistAdd_FullMethodName    = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistAdd"
-	ConsoleService_CommandWhitelistGet_FullMethodName    = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistGet"
-	ConsoleService_CommandWhitelistRemove_FullMethodName = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistRemove"
-	ConsoleService_CommandWhitelistClear_FullMethodName  = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistClear"
+	ConsoleService_CommandRaw_FullMethodName                                  = "/apis.factorioapi.v1.ConsoleService/CommandRaw"
+	ConsoleService_CommandMessage_FullMethodName                              = "/apis.factorioapi.v1.ConsoleService/CommandMessage"
+	ConsoleService_CommandAlerts_FullMethodName                               = "/apis.factorioapi.v1.ConsoleService/CommandAlerts"
+	ConsoleService_CommandEnableResearchQueue_FullMethodName                  = "/apis.factorioapi.v1.ConsoleService/CommandEnableResearchQueue"
+	ConsoleService_CommandMuteProgrammableSpeakerForEveryone_FullMethodName   = "/apis.factorioapi.v1.ConsoleService/CommandMuteProgrammableSpeakerForEveryone"
+	ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone_FullMethodName = "/apis.factorioapi.v1.ConsoleService/CommandUnmuteProgrammableSpeakerForEveryone"
+	ConsoleService_CommandPermissions_FullMethodName                          = "/apis.factorioapi.v1.ConsoleService/CommandPermissions"
+	ConsoleService_CommandPermissionsAddPlayer_FullMethodName                 = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsAddPlayer"
+	ConsoleService_CommandPermissionsCreateGroup_FullMethodName               = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsCreateGroup"
+	ConsoleService_CommandPermissionsDeleteGroup_FullMethodName               = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsDeleteGroup"
+	ConsoleService_CommandPermissionsEditGroup_FullMethodName                 = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsEditGroup"
+	ConsoleService_CommandPermissionsGetPlayerGroup_FullMethodName            = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsGetPlayerGroup"
+	ConsoleService_CommandPermissionsRemovePlayerGroup_FullMethodName         = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsRemovePlayerGroup"
+	ConsoleService_CommandPermissionsRenameGroup_FullMethodName               = "/apis.factorioapi.v1.ConsoleService/CommandPermissionsRenameGroup"
+	ConsoleService_CommandResetTips_FullMethodName                            = "/apis.factorioapi.v1.ConsoleService/CommandResetTips"
+	ConsoleService_CommandEvolution_FullMethodName                            = "/apis.factorioapi.v1.ConsoleService/CommandEvolution"
+	ConsoleService_CommandSeed_FullMethodName                                 = "/apis.factorioapi.v1.ConsoleService/CommandSeed"
+	ConsoleService_CommandTime_FullMethodName                                 = "/apis.factorioapi.v1.ConsoleService/CommandTime"
+	ConsoleService_CommandToggleActionLogging_FullMethodName                  = "/apis.factorioapi.v1.ConsoleService/CommandToggleActionLogging"
+	ConsoleService_CommandToggleHeavyMode_FullMethodName                      = "/apis.factorioapi.v1.ConsoleService/CommandToggleHeavyMode"
+	ConsoleService_CommandUnlockShortcutBar_FullMethodName                    = "/apis.factorioapi.v1.ConsoleService/CommandUnlockShortcutBar"
+	ConsoleService_CommandUnlockTips_FullMethodName                           = "/apis.factorioapi.v1.ConsoleService/CommandUnlockTips"
+	ConsoleService_CommandVersion_FullMethodName                              = "/apis.factorioapi.v1.ConsoleService/CommandVersion"
+	ConsoleService_CommandAdmins_FullMethodName                               = "/apis.factorioapi.v1.ConsoleService/CommandAdmins"
+	ConsoleService_CommandBan_FullMethodName                                  = "/apis.factorioapi.v1.ConsoleService/CommandBan"
+	ConsoleService_CommandBans_FullMethodName                                 = "/apis.factorioapi.v1.ConsoleService/CommandBans"
+	ConsoleService_CommandDemote_FullMethodName                               = "/apis.factorioapi.v1.ConsoleService/CommandDemote"
+	ConsoleService_CommandIgnore_FullMethodName                               = "/apis.factorioapi.v1.ConsoleService/CommandIgnore"
+	ConsoleService_CommandKick_FullMethodName                                 = "/apis.factorioapi.v1.ConsoleService/CommandKick"
+	ConsoleService_CommandMute_FullMethodName                                 = "/apis.factorioapi.v1.ConsoleService/CommandMute"
+	ConsoleService_CommandMutes_FullMethodName                                = "/apis.factorioapi.v1.ConsoleService/CommandMutes"
+	ConsoleService_CommandPlayers_FullMethodName                              = "/apis.factorioapi.v1.ConsoleService/CommandPlayers"
+	ConsoleService_CommandPromote_FullMethodName                              = "/apis.factorioapi.v1.ConsoleService/CommandPromote"
+	ConsoleService_CommandPurge_FullMethodName                                = "/apis.factorioapi.v1.ConsoleService/CommandPurge"
+	ConsoleService_CommandServerSave_FullMethodName                           = "/apis.factorioapi.v1.ConsoleService/CommandServerSave"
+	ConsoleService_CommandUnban_FullMethodName                                = "/apis.factorioapi.v1.ConsoleService/CommandUnban"
+	ConsoleService_CommandUnignore_FullMethodName                             = "/apis.factorioapi.v1.ConsoleService/CommandUnignore"
+	ConsoleService_CommandUnmute_FullMethodName                               = "/apis.factorioapi.v1.ConsoleService/CommandUnmute"
+	ConsoleService_CommandWhisper_FullMethodName                              = "/apis.factorioapi.v1.ConsoleService/CommandWhisper"
+	ConsoleService_CommandWhitelistAdd_FullMethodName                         = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistAdd"
+	ConsoleService_CommandWhitelistGet_FullMethodName                         = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistGet"
+	ConsoleService_CommandWhitelistRemove_FullMethodName                      = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistRemove"
+	ConsoleService_CommandWhitelistClear_FullMethodName                       = "/apis.factorioapi.v1.ConsoleService/CommandWhitelistClear"
 )
 
 // ConsoleServiceClient is the client API for ConsoleService service.
@@ -53,9 +70,26 @@ const (
 type ConsoleServiceClient interface {
 	CommandRaw(ctx context.Context, in *CommandRawRequest, opts ...grpc.CallOption) (*CommandRawResponse, error)
 	CommandMessage(ctx context.Context, in *CommandMessageRequest, opts ...grpc.CallOption) (*CommandMessageResponse, error)
+	CommandAlerts(ctx context.Context, in *CommandAlertsRequest, opts ...grpc.CallOption) (*CommandAlertsResponse, error)
+	CommandEnableResearchQueue(ctx context.Context, in *CommandEnableResearchQueueRequest, opts ...grpc.CallOption) (*CommandEnableResearchQueueResponse, error)
+	CommandMuteProgrammableSpeakerForEveryone(ctx context.Context, in *CommandMuteProgrammableSpeakerForEveryoneRequest, opts ...grpc.CallOption) (*CommandMuteProgrammableSpeakerForEveryoneResponse, error)
+	CommandUnmuteProgrammableSpeakerForEveryone(ctx context.Context, in *CommandUnmuteProgrammableSpeakerForEveryoneRequest, opts ...grpc.CallOption) (*CommandUnmuteProgrammableSpeakerForEveryoneResponse, error)
+	CommandPermissions(ctx context.Context, in *CommandPermissionsRequest, opts ...grpc.CallOption) (*CommandPermissionsResponse, error)
+	CommandPermissionsAddPlayer(ctx context.Context, in *CommandPermissionsAddPlayerRequest, opts ...grpc.CallOption) (*CommandPermissionsAddPlayerResponse, error)
+	CommandPermissionsCreateGroup(ctx context.Context, in *CommandPermissionsCreateGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsCreateGroupResponse, error)
+	CommandPermissionsDeleteGroup(ctx context.Context, in *CommandPermissionsDeleteGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsDeleteGroupResponse, error)
+	CommandPermissionsEditGroup(ctx context.Context, in *CommandPermissionsEditGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsEditGroupResponse, error)
+	CommandPermissionsGetPlayerGroup(ctx context.Context, in *CommandPermissionsGetPlayerGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsGetPlayerGroupResponse, error)
+	CommandPermissionsRemovePlayerGroup(ctx context.Context, in *CommandPermissionsRemovePlayerGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsRemovePlayerGroupResponse, error)
+	CommandPermissionsRenameGroup(ctx context.Context, in *CommandPermissionsRenameGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsRenameGroupResponse, error)
+	CommandResetTips(ctx context.Context, in *CommandResetTipsRequest, opts ...grpc.CallOption) (*CommandResetTipsResponse, error)
 	CommandEvolution(ctx context.Context, in *CommandEvolutionRequest, opts ...grpc.CallOption) (*CommandEvolutionResponse, error)
 	CommandSeed(ctx context.Context, in *CommandSeedRequest, opts ...grpc.CallOption) (*CommandSeedResponse, error)
 	CommandTime(ctx context.Context, in *CommandTimeRequest, opts ...grpc.CallOption) (*CommandTimeResponse, error)
+	CommandToggleActionLogging(ctx context.Context, in *CommandToggleActionLoggingRequest, opts ...grpc.CallOption) (*CommandToggleActionLoggingResponse, error)
+	CommandToggleHeavyMode(ctx context.Context, in *CommandToggleHeavyModeRequest, opts ...grpc.CallOption) (*CommandToggleHeavyModeResponse, error)
+	CommandUnlockShortcutBar(ctx context.Context, in *CommandUnlockShortcutBarRequest, opts ...grpc.CallOption) (*CommandUnlockShortcutBarResponse, error)
+	CommandUnlockTips(ctx context.Context, in *CommandUnlockTipsRequest, opts ...grpc.CallOption) (*CommandUnlockTipsResponse, error)
 	CommandVersion(ctx context.Context, in *CommandVersionRequest, opts ...grpc.CallOption) (*CommandVersionResponse, error)
 	CommandAdmins(ctx context.Context, in *CommandAdminsRequest, opts ...grpc.CallOption) (*CommandAdminsResponse, error)
 	CommandBan(ctx context.Context, in *CommandBanRequest, opts ...grpc.CallOption) (*CommandBanResponse, error)
@@ -105,6 +139,123 @@ func (c *consoleServiceClient) CommandMessage(ctx context.Context, in *CommandMe
 	return out, nil
 }
 
+func (c *consoleServiceClient) CommandAlerts(ctx context.Context, in *CommandAlertsRequest, opts ...grpc.CallOption) (*CommandAlertsResponse, error) {
+	out := new(CommandAlertsResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandAlerts_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandEnableResearchQueue(ctx context.Context, in *CommandEnableResearchQueueRequest, opts ...grpc.CallOption) (*CommandEnableResearchQueueResponse, error) {
+	out := new(CommandEnableResearchQueueResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandEnableResearchQueue_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandMuteProgrammableSpeakerForEveryone(ctx context.Context, in *CommandMuteProgrammableSpeakerForEveryoneRequest, opts ...grpc.CallOption) (*CommandMuteProgrammableSpeakerForEveryoneResponse, error) {
+	out := new(CommandMuteProgrammableSpeakerForEveryoneResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandMuteProgrammableSpeakerForEveryone_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandUnmuteProgrammableSpeakerForEveryone(ctx context.Context, in *CommandUnmuteProgrammableSpeakerForEveryoneRequest, opts ...grpc.CallOption) (*CommandUnmuteProgrammableSpeakerForEveryoneResponse, error) {
+	out := new(CommandUnmuteProgrammableSpeakerForEveryoneResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissions(ctx context.Context, in *CommandPermissionsRequest, opts ...grpc.CallOption) (*CommandPermissionsResponse, error) {
+	out := new(CommandPermissionsResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissions_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsAddPlayer(ctx context.Context, in *CommandPermissionsAddPlayerRequest, opts ...grpc.CallOption) (*CommandPermissionsAddPlayerResponse, error) {
+	out := new(CommandPermissionsAddPlayerResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsAddPlayer_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsCreateGroup(ctx context.Context, in *CommandPermissionsCreateGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsCreateGroupResponse, error) {
+	out := new(CommandPermissionsCreateGroupResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsCreateGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsDeleteGroup(ctx context.Context, in *CommandPermissionsDeleteGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsDeleteGroupResponse, error) {
+	out := new(CommandPermissionsDeleteGroupResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsDeleteGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsEditGroup(ctx context.Context, in *CommandPermissionsEditGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsEditGroupResponse, error) {
+	out := new(CommandPermissionsEditGroupResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsEditGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsGetPlayerGroup(ctx context.Context, in *CommandPermissionsGetPlayerGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsGetPlayerGroupResponse, error) {
+	out := new(CommandPermissionsGetPlayerGroupResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsGetPlayerGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsRemovePlayerGroup(ctx context.Context, in *CommandPermissionsRemovePlayerGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsRemovePlayerGroupResponse, error) {
+	out := new(CommandPermissionsRemovePlayerGroupResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsRemovePlayerGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandPermissionsRenameGroup(ctx context.Context, in *CommandPermissionsRenameGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsRenameGroupResponse, error) {
+	out := new(CommandPermissionsRenameGroupResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandPermissionsRenameGroup_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandResetTips(ctx context.Context, in *CommandResetTipsRequest, opts ...grpc.CallOption) (*CommandResetTipsResponse, error) {
+	out := new(CommandResetTipsResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandResetTips_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *consoleServiceClient) CommandEvolution(ctx context.Context, in *CommandEvolutionRequest, opts ...grpc.CallOption) (*CommandEvolutionResponse, error) {
 	out := new(CommandEvolutionResponse)
 	err := c.cc.Invoke(ctx, ConsoleService_CommandEvolution_FullMethodName, in, out, opts...)
@@ -126,6 +277,42 @@ func (c *consoleServiceClient) CommandSeed(ctx context.Context, in *CommandSeedR
 func (c *consoleServiceClient) CommandTime(ctx context.Context, in *CommandTimeRequest, opts ...grpc.CallOption) (*CommandTimeResponse, error) {
 	out := new(CommandTimeResponse)
 	err := c.cc.Invoke(ctx, ConsoleService_CommandTime_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandToggleActionLogging(ctx context.Context, in *CommandToggleActionLoggingRequest, opts ...grpc.CallOption) (*CommandToggleActionLoggingResponse, error) {
+	out := new(CommandToggleActionLoggingResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandToggleActionLogging_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandToggleHeavyMode(ctx context.Context, in *CommandToggleHeavyModeRequest, opts ...grpc.CallOption) (*CommandToggleHeavyModeResponse, error) {
+	out := new(CommandToggleHeavyModeResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandToggleHeavyMode_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandUnlockShortcutBar(ctx context.Context, in *CommandUnlockShortcutBarRequest, opts ...grpc.CallOption) (*CommandUnlockShortcutBarResponse, error) {
+	out := new(CommandUnlockShortcutBarResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandUnlockShortcutBar_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandUnlockTips(ctx context.Context, in *CommandUnlockTipsRequest, opts ...grpc.CallOption) (*CommandUnlockTipsResponse, error) {
+	out := new(CommandUnlockTipsResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandUnlockTips_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -327,9 +514,26 @@ func (c *consoleServiceClient) CommandWhitelistClear(ctx context.Context, in *Co
 type ConsoleServiceServer interface {
 	CommandRaw(context.Context, *CommandRawRequest) (*CommandRawResponse, error)
 	CommandMessage(context.Context, *CommandMessageRequest) (*CommandMessageResponse, error)
+	CommandAlerts(context.Context, *CommandAlertsRequest) (*CommandAlertsResponse, error)
+	CommandEnableResearchQueue(context.Context, *CommandEnableResearchQueueRequest) (*CommandEnableResearchQueueResponse, error)
+	CommandMuteProgrammableSpeakerForEveryone(context.Context, *CommandMuteProgrammableSpeakerForEveryoneRequest) (*CommandMuteProgrammableSpeakerForEveryoneResponse, error)
+	CommandUnmuteProgrammableSpeakerForEveryone(context.Context, *CommandUnmuteProgrammableSpeakerForEveryoneRequest) (*CommandUnmuteProgrammableSpeakerForEveryoneResponse, error)
+	CommandPermissions(context.Context, *CommandPermissionsRequest) (*CommandPermissionsResponse, error)
+	CommandPermissionsAddPlayer(context.Context, *CommandPermissionsAddPlayerRequest) (*CommandPermissionsAddPlayerResponse, error)
+	CommandPermissionsCreateGroup(context.Context, *CommandPermissionsCreateGroupRequest) (*CommandPermissionsCreateGroupResponse, error)
+	CommandPermissionsDeleteGroup(context.Context, *CommandPermissionsDeleteGroupRequest) (*CommandPermissionsDeleteGroupResponse, error)
+	CommandPermissionsEditGroup(context.Context, *CommandPermissionsEditGroupRequest) (*CommandPermissionsEditGroupResponse, error)
+	CommandPermissionsGetPlayerGroup(context.Context, *CommandPermissionsGetPlayerGroupRequest) (*CommandPermissionsGetPlayerGroupResponse, error)
+	CommandPermissionsRemovePlayerGroup(context.Context, *CommandPermissionsRemovePlayerGroupRequest) (*CommandPermissionsRemovePlayerGroupResponse, error)
+	CommandPermissionsRenameGroup(context.Context, *CommandPermissionsRenameGroupRequest) (*CommandPermissionsRenameGroupResponse, error)
+	CommandResetTips(context.Context, *CommandResetTipsRequest) (*CommandResetTipsResponse, error)
 	CommandEvolution(context.Context, *CommandEvolutionRequest) (*CommandEvolutionResponse, error)
 	CommandSeed(context.Context, *CommandSeedRequest) (*CommandSeedResponse, error)
 	CommandTime(context.Context, *CommandTimeRequest) (*CommandTimeResponse, error)
+	CommandToggleActionLogging(context.Context, *CommandToggleActionLoggingRequest) (*CommandToggleActionLoggingResponse, error)
+	CommandToggleHeavyMode(context.Context, *CommandToggleHeavyModeRequest) (*CommandToggleHeavyModeResponse, error)
+	CommandUnlockShortcutBar(context.Context, *CommandUnlockShortcutBarRequest) (*CommandUnlockShortcutBarResponse, error)
+	CommandUnlockTips(context.Context, *CommandUnlockTipsRequest) (*CommandUnlockTipsResponse, error)
 	CommandVersion(context.Context, *CommandVersionRequest) (*CommandVersionResponse, error)
 	CommandAdmins(context.Context, *CommandAdminsRequest) (*CommandAdminsResponse, error)
 	CommandBan(context.Context, *CommandBanRequest) (*CommandBanResponse, error)
@@ -364,6 +568,45 @@ func (UnimplementedConsoleServiceServer) CommandRaw(context.Context, *CommandRaw
 func (UnimplementedConsoleServiceServer) CommandMessage(context.Context, *CommandMessageRequest) (*CommandMessageResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandMessage not implemented")
 }
+func (UnimplementedConsoleServiceServer) CommandAlerts(context.Context, *CommandAlertsRequest) (*CommandAlertsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandAlerts not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandEnableResearchQueue(context.Context, *CommandEnableResearchQueueRequest) (*CommandEnableResearchQueueResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandEnableResearchQueue not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandMuteProgrammableSpeakerForEveryone(context.Context, *CommandMuteProgrammableSpeakerForEveryoneRequest) (*CommandMuteProgrammableSpeakerForEveryoneResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandMuteProgrammableSpeakerForEveryone not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandUnmuteProgrammableSpeakerForEveryone(context.Context, *CommandUnmuteProgrammableSpeakerForEveryoneRequest) (*CommandUnmuteProgrammableSpeakerForEveryoneResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandUnmuteProgrammableSpeakerForEveryone not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissions(context.Context, *CommandPermissionsRequest) (*CommandPermissionsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissions not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsAddPlayer(context.Context, *CommandPermissionsAddPlayerRequest) (*CommandPermissionsAddPlayerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsAddPlayer not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsCreateGroup(context.Context, *CommandPermissionsCreateGroupRequest) (*CommandPermissionsCreateGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsCreateGroup not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsDeleteGroup(context.Context, *CommandPermissionsDeleteGroupRequest) (*CommandPermissionsDeleteGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsDeleteGroup not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsEditGroup(context.Context, *CommandPermissionsEditGroupRequest) (*CommandPermissionsEditGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsEditGroup not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsGetPlayerGroup(context.Context, *CommandPermissionsGetPlayerGroupRequest) (*CommandPermissionsGetPlayerGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsGetPlayerGroup not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsRemovePlayerGroup(context.Context, *CommandPermissionsRemovePlayerGroupRequest) (*CommandPermissionsRemovePlayerGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsRemovePlayerGroup not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandPermissionsRenameGroup(context.Context, *CommandPermissionsRenameGroupRequest) (*CommandPermissionsRenameGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsRenameGroup not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandResetTips(context.Context, *CommandResetTipsRequest) (*CommandResetTipsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandResetTips not implemented")
+}
 func (UnimplementedConsoleServiceServer) CommandEvolution(context.Context, *CommandEvolutionRequest) (*CommandEvolutionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandEvolution not implemented")
 }
@@ -372,6 +615,18 @@ func (UnimplementedConsoleServiceServer) CommandSeed(context.Context, *CommandSe
 }
 func (UnimplementedConsoleServiceServer) CommandTime(context.Context, *CommandTimeRequest) (*CommandTimeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandTime not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandToggleActionLogging(context.Context, *CommandToggleActionLoggingRequest) (*CommandToggleActionLoggingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandToggleActionLogging not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandToggleHeavyMode(context.Context, *CommandToggleHeavyModeRequest) (*CommandToggleHeavyModeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandToggleHeavyMode not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandUnlockShortcutBar(context.Context, *CommandUnlockShortcutBarRequest) (*CommandUnlockShortcutBarResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandUnlockShortcutBar not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandUnlockTips(context.Context, *CommandUnlockTipsRequest) (*CommandUnlockTipsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandUnlockTips not implemented")
 }
 func (UnimplementedConsoleServiceServer) CommandVersion(context.Context, *CommandVersionRequest) (*CommandVersionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandVersion not implemented")
@@ -485,6 +740,240 @@ func _ConsoleService_CommandMessage_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ConsoleService_CommandAlerts_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandAlertsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandAlerts(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandAlerts_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandAlerts(ctx, req.(*CommandAlertsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandEnableResearchQueue_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandEnableResearchQueueRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandEnableResearchQueue(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandEnableResearchQueue_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandEnableResearchQueue(ctx, req.(*CommandEnableResearchQueueRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandMuteProgrammableSpeakerForEveryone_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandMuteProgrammableSpeakerForEveryoneRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandMuteProgrammableSpeakerForEveryone(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandMuteProgrammableSpeakerForEveryone_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandMuteProgrammableSpeakerForEveryone(ctx, req.(*CommandMuteProgrammableSpeakerForEveryoneRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandUnmuteProgrammableSpeakerForEveryoneRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandUnmuteProgrammableSpeakerForEveryone(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandUnmuteProgrammableSpeakerForEveryone(ctx, req.(*CommandUnmuteProgrammableSpeakerForEveryoneRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissions(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissions_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissions(ctx, req.(*CommandPermissionsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsAddPlayer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsAddPlayerRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsAddPlayer(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsAddPlayer_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsAddPlayer(ctx, req.(*CommandPermissionsAddPlayerRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsCreateGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsCreateGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsCreateGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsCreateGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsCreateGroup(ctx, req.(*CommandPermissionsCreateGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsDeleteGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsDeleteGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsDeleteGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsDeleteGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsDeleteGroup(ctx, req.(*CommandPermissionsDeleteGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsEditGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsEditGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsEditGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsEditGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsEditGroup(ctx, req.(*CommandPermissionsEditGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsGetPlayerGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsGetPlayerGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsGetPlayerGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsGetPlayerGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsGetPlayerGroup(ctx, req.(*CommandPermissionsGetPlayerGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsRemovePlayerGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsRemovePlayerGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsRemovePlayerGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsRemovePlayerGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsRemovePlayerGroup(ctx, req.(*CommandPermissionsRemovePlayerGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandPermissionsRenameGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandPermissionsRenameGroupRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandPermissionsRenameGroup(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandPermissionsRenameGroup_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandPermissionsRenameGroup(ctx, req.(*CommandPermissionsRenameGroupRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandResetTips_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandResetTipsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandResetTips(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandResetTips_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandResetTips(ctx, req.(*CommandResetTipsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _ConsoleService_CommandEvolution_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CommandEvolutionRequest)
 	if err := dec(in); err != nil {
@@ -535,6 +1024,78 @@ func _ConsoleService_CommandTime_Handler(srv interface{}, ctx context.Context, d
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ConsoleServiceServer).CommandTime(ctx, req.(*CommandTimeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandToggleActionLogging_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandToggleActionLoggingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandToggleActionLogging(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandToggleActionLogging_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandToggleActionLogging(ctx, req.(*CommandToggleActionLoggingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandToggleHeavyMode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandToggleHeavyModeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandToggleHeavyMode(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandToggleHeavyMode_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandToggleHeavyMode(ctx, req.(*CommandToggleHeavyModeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandUnlockShortcutBar_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandUnlockShortcutBarRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandUnlockShortcutBar(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandUnlockShortcutBar_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandUnlockShortcutBar(ctx, req.(*CommandUnlockShortcutBarRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandUnlockTips_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandUnlockTipsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandUnlockTips(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandUnlockTips_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandUnlockTips(ctx, req.(*CommandUnlockTipsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -933,6 +1494,58 @@ var ConsoleService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _ConsoleService_CommandMessage_Handler,
 		},
 		{
+			MethodName: "CommandAlerts",
+			Handler:    _ConsoleService_CommandAlerts_Handler,
+		},
+		{
+			MethodName: "CommandEnableResearchQueue",
+			Handler:    _ConsoleService_CommandEnableResearchQueue_Handler,
+		},
+		{
+			MethodName: "CommandMuteProgrammableSpeakerForEveryone",
+			Handler:    _ConsoleService_CommandMuteProgrammableSpeakerForEveryone_Handler,
+		},
+		{
+			MethodName: "CommandUnmuteProgrammableSpeakerForEveryone",
+			Handler:    _ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone_Handler,
+		},
+		{
+			MethodName: "CommandPermissions",
+			Handler:    _ConsoleService_CommandPermissions_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsAddPlayer",
+			Handler:    _ConsoleService_CommandPermissionsAddPlayer_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsCreateGroup",
+			Handler:    _ConsoleService_CommandPermissionsCreateGroup_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsDeleteGroup",
+			Handler:    _ConsoleService_CommandPermissionsDeleteGroup_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsEditGroup",
+			Handler:    _ConsoleService_CommandPermissionsEditGroup_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsGetPlayerGroup",
+			Handler:    _ConsoleService_CommandPermissionsGetPlayerGroup_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsRemovePlayerGroup",
+			Handler:    _ConsoleService_CommandPermissionsRemovePlayerGroup_Handler,
+		},
+		{
+			MethodName: "CommandPermissionsRenameGroup",
+			Handler:    _ConsoleService_CommandPermissionsRenameGroup_Handler,
+		},
+		{
+			MethodName: "CommandResetTips",
+			Handler:    _ConsoleService_CommandResetTips_Handler,
+		},
+		{
 			MethodName: "CommandEvolution",
 			Handler:    _ConsoleService_CommandEvolution_Handler,
 		},
@@ -943,6 +1556,22 @@ var ConsoleService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CommandTime",
 			Handler:    _ConsoleService_CommandTime_Handler,
+		},
+		{
+			MethodName: "CommandToggleActionLogging",
+			Handler:    _ConsoleService_CommandToggleActionLogging_Handler,
+		},
+		{
+			MethodName: "CommandToggleHeavyMode",
+			Handler:    _ConsoleService_CommandToggleHeavyMode_Handler,
+		},
+		{
+			MethodName: "CommandUnlockShortcutBar",
+			Handler:    _ConsoleService_CommandUnlockShortcutBar_Handler,
+		},
+		{
+			MethodName: "CommandUnlockTips",
+			Handler:    _ConsoleService_CommandUnlockTips_Handler,
 		},
 		{
 			MethodName: "CommandVersion",

@@ -41,6 +41,36 @@
         ]
       }
     },
+    "/api/v1/factorio/console/command/alerts": {
+      "get": {
+        "summary": "Get the list of alerts.",
+        "description": "Get the list of alerts.",
+        "operationId": "ConsoleService_CommandAlerts",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandAlertsResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
     "/api/v1/factorio/console/command/ban": {
       "post": {
         "summary": "Ban a player.",
@@ -143,6 +173,46 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/v1CommandDemoteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/enable-research-queue": {
+      "post": {
+        "summary": "Enable the research queue.",
+        "description": "Enable the research queue.",
+        "operationId": "ConsoleService_CommandEnableResearchQueue",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandEnableResearchQueueResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandEnableResearchQueueRequest"
             }
           }
         ],
@@ -341,6 +411,46 @@
         ]
       }
     },
+    "/api/v1/factorio/console/command/mute-programmable-speaker-for-everyone": {
+      "post": {
+        "summary": "Mute all programmable speakers.",
+        "description": "Mute all programmable speakers.",
+        "operationId": "ConsoleService_CommandMuteProgrammableSpeakerForEveryone",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandMuteProgrammableSpeakerForEveryoneResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandMuteProgrammableSpeakerForEveryoneRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
     "/api/v1/factorio/console/command/mutes": {
       "get": {
         "summary": "Get the list of mutes.",
@@ -366,6 +476,307 @@
             }
           }
         },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/permissions": {
+      "get": {
+        "summary": "Get the list of permissions.",
+        "description": "Get the list of permissions.",
+        "operationId": "ConsoleService_CommandPermissions",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/permissions/group": {
+      "delete": {
+        "summary": "Delete a group.",
+        "description": "Delete a group.",
+        "operationId": "ConsoleService_CommandPermissionsDeleteGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsDeleteGroupResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsDeleteGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      },
+      "post": {
+        "summary": "Create a group.",
+        "description": "Create a group.",
+        "operationId": "ConsoleService_CommandPermissionsCreateGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsCreateGroupResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsCreateGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      },
+      "put": {
+        "summary": "Rename a group.",
+        "description": "Rename a group.",
+        "operationId": "ConsoleService_CommandPermissionsRenameGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsRenameGroupResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsRenameGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      },
+      "patch": {
+        "summary": "Edit a group.",
+        "description": "Edit a group.",
+        "operationId": "ConsoleService_CommandPermissionsEditGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsEditGroupResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsEditGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/permissions/group/player": {
+      "delete": {
+        "summary": "Remove a player from a group.",
+        "description": "Remove a player from a group.",
+        "operationId": "ConsoleService_CommandPermissionsRemovePlayerGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsRemovePlayerGroupResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsRemovePlayerGroupRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      },
+      "post": {
+        "summary": "Add a player to a group.",
+        "description": "Add a player to a group.",
+        "operationId": "ConsoleService_CommandPermissionsAddPlayer",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsAddPlayerResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsAddPlayerRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/permissions/group/players": {
+      "get": {
+        "summary": "Get the groups for a player.",
+        "description": "Get the groups for a player.",
+        "operationId": "ConsoleService_CommandPermissionsGetPlayerGroup",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandPermissionsGetPlayerGroupResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "username",
+            "description": "The username to get the groups for.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
         "tags": [
           "Console"
         ]
@@ -521,6 +932,46 @@
         ]
       }
     },
+    "/api/v1/factorio/console/command/reset-tips": {
+      "post": {
+        "summary": "Reset the tips.",
+        "description": "Reset the tips.",
+        "operationId": "ConsoleService_CommandResetTips",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandResetTipsResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandResetTipsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
     "/api/v1/factorio/console/command/seed": {
       "get": {
         "summary": "Get the map seed.",
@@ -621,6 +1072,86 @@
         ]
       }
     },
+    "/api/v1/factorio/console/command/toggle-action-logging": {
+      "post": {
+        "summary": "Toggle the action logging.",
+        "description": "Toggle the action logging.",
+        "operationId": "ConsoleService_CommandToggleActionLogging",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandToggleActionLoggingResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandToggleActionLoggingRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/toggle-heavy-mode": {
+      "post": {
+        "summary": "Toggle the heavy mode.",
+        "description": "Toggle the heavy mode.",
+        "operationId": "ConsoleService_CommandToggleHeavyMode",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandToggleHeavyModeResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandToggleHeavyModeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
     "/api/v1/factorio/console/command/unban": {
       "post": {
         "summary": "Unban a player.",
@@ -701,6 +1232,86 @@
         ]
       }
     },
+    "/api/v1/factorio/console/command/unlock-shortcut-bar": {
+      "post": {
+        "summary": "Unlock the shortcut bar.",
+        "description": "Unlock the shortcut bar.",
+        "operationId": "ConsoleService_CommandUnlockShortcutBar",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnlockShortcutBarResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnlockShortcutBarRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/unlock-tips": {
+      "post": {
+        "summary": "Unlock the tips.",
+        "description": "Unlock the tips.",
+        "operationId": "ConsoleService_CommandUnlockTips",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnlockTipsResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnlockTipsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
     "/api/v1/factorio/console/command/unmute": {
       "post": {
         "summary": "Unmute a player.",
@@ -733,6 +1344,46 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/v1CommandUnmuteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      }
+    },
+    "/api/v1/factorio/console/command/unmute-programmable-speaker-for-everyone": {
+      "post": {
+        "summary": "Unmute all programmable speakers.",
+        "description": "Unmute all programmable speakers.",
+        "operationId": "ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnmuteProgrammableSpeakerForEveryoneResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandUnmuteProgrammableSpeakerForEveryoneRequest"
             }
           }
         ],
@@ -878,46 +1529,6 @@
           "Console"
         ]
       },
-      "patch": {
-        "summary": "Remove a player from the whitelist.",
-        "description": "Remove a player from the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistRemove",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/v1CommandWhitelistRemoveResponse"
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "schema": {
-              "$ref": "#/definitions/jsonapiErrorObject"
-            }
-          },
-          "503": {
-            "description": "Service Unavailable",
-            "schema": {
-              "$ref": "#/definitions/jsonapiErrorObject"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/v1CommandWhitelistRemoveRequest"
-            }
-          }
-        ],
-        "tags": [
-          "Console"
-        ]
-      }
-    },
-    "/api/v1/factorio/console/command/whitelist/add": {
       "post": {
         "summary": "Add a player to the whitelist.",
         "description": "Add a player to the whitelist.",
@@ -949,6 +1560,44 @@
             "required": true,
             "schema": {
               "$ref": "#/definitions/v1CommandWhitelistAddRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Console"
+        ]
+      },
+      "patch": {
+        "summary": "Remove a player from the whitelist.",
+        "description": "Remove a player from the whitelist.",
+        "operationId": "ConsoleService_CommandWhitelistRemove",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistRemoveResponse"
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "schema": {
+              "$ref": "#/definitions/jsonapiErrorObject"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CommandWhitelistRemoveRequest"
             }
           }
         ],
@@ -1093,6 +1742,19 @@
         }
       }
     },
+    "v1CommandAlertsResponse": {
+      "type": "object",
+      "properties": {
+        "alerts": {
+          "type": "array",
+          "example": "Hello",
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of alerts."
+        }
+      }
+    },
     "v1CommandBanRequest": {
       "type": "object",
       "properties": {
@@ -1131,6 +1793,12 @@
       }
     },
     "v1CommandDemoteResponse": {
+      "type": "object"
+    },
+    "v1CommandEnableResearchQueueRequest": {
+      "type": "object"
+    },
+    "v1CommandEnableResearchQueueResponse": {
       "type": "object"
     },
     "v1CommandEvolutionResponse": {
@@ -1206,6 +1874,12 @@
     "v1CommandMessageResponse": {
       "type": "object"
     },
+    "v1CommandMuteProgrammableSpeakerForEveryoneRequest": {
+      "type": "object"
+    },
+    "v1CommandMuteProgrammableSpeakerForEveryoneResponse": {
+      "type": "object"
+    },
     "v1CommandMuteRequest": {
       "type": "object",
       "properties": {
@@ -1232,6 +1906,125 @@
           "description": "The list of mutes."
         }
       }
+    },
+    "v1CommandPermissionsAddPlayerRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to add."
+        },
+        "group": {
+          "type": "string",
+          "example": "admin",
+          "description": "The group to add."
+        }
+      }
+    },
+    "v1CommandPermissionsAddPlayerResponse": {
+      "type": "object"
+    },
+    "v1CommandPermissionsCreateGroupRequest": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string",
+          "example": "admin",
+          "description": "The group to create."
+        }
+      }
+    },
+    "v1CommandPermissionsCreateGroupResponse": {
+      "type": "object"
+    },
+    "v1CommandPermissionsDeleteGroupRequest": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string",
+          "example": "admin",
+          "description": "The group to delete."
+        }
+      }
+    },
+    "v1CommandPermissionsDeleteGroupResponse": {
+      "type": "object"
+    },
+    "v1CommandPermissionsEditGroupRequest": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string",
+          "example": "admin",
+          "description": "The group to edit."
+        },
+        "action": {
+          "type": "string",
+          "example": "add",
+          "description": "The action to take."
+        },
+        "value": {
+          "type": "boolean",
+          "example": true,
+          "description": "The value to set."
+        }
+      }
+    },
+    "v1CommandPermissionsEditGroupResponse": {
+      "type": "object"
+    },
+    "v1CommandPermissionsGetPlayerGroupResponse": {
+      "type": "object",
+      "properties": {
+        "groups": {
+          "type": "array",
+          "example": "admin",
+          "items": {
+            "type": "string"
+          },
+          "description": "The list of groups."
+        }
+      }
+    },
+    "v1CommandPermissionsRemovePlayerGroupRequest": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string",
+          "example": "nekomeowww",
+          "description": "The username to remove."
+        },
+        "group": {
+          "type": "string",
+          "example": "admin",
+          "description": "The group to remove."
+        }
+      }
+    },
+    "v1CommandPermissionsRemovePlayerGroupResponse": {
+      "type": "object"
+    },
+    "v1CommandPermissionsRenameGroupRequest": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string",
+          "example": "admin",
+          "description": "The group to rename."
+        },
+        "newGroup": {
+          "type": "string",
+          "example": "admin2",
+          "description": "The new group name."
+        }
+      }
+    },
+    "v1CommandPermissionsRenameGroupResponse": {
+      "type": "object"
+    },
+    "v1CommandPermissionsResponse": {
+      "type": "object"
     },
     "v1CommandPlayersResponse": {
       "type": "object",
@@ -1293,6 +2086,12 @@
         }
       }
     },
+    "v1CommandResetTipsRequest": {
+      "type": "object"
+    },
+    "v1CommandResetTipsResponse": {
+      "type": "object"
+    },
     "v1CommandSeedResponse": {
       "type": "object",
       "properties": {
@@ -1320,6 +2119,18 @@
         }
       }
     },
+    "v1CommandToggleActionLoggingRequest": {
+      "type": "object"
+    },
+    "v1CommandToggleActionLoggingResponse": {
+      "type": "object"
+    },
+    "v1CommandToggleHeavyModeRequest": {
+      "type": "object"
+    },
+    "v1CommandToggleHeavyModeResponse": {
+      "type": "object"
+    },
     "v1CommandUnbanRequest": {
       "type": "object",
       "properties": {
@@ -1344,6 +2155,24 @@
       }
     },
     "v1CommandUnignoreResponse": {
+      "type": "object"
+    },
+    "v1CommandUnlockShortcutBarRequest": {
+      "type": "object"
+    },
+    "v1CommandUnlockShortcutBarResponse": {
+      "type": "object"
+    },
+    "v1CommandUnlockTipsRequest": {
+      "type": "object"
+    },
+    "v1CommandUnlockTipsResponse": {
+      "type": "object"
+    },
+    "v1CommandUnmuteProgrammableSpeakerForEveryoneRequest": {
+      "type": "object"
+    },
+    "v1CommandUnmuteProgrammableSpeakerForEveryoneResponse": {
       "type": "object"
     },
     "v1CommandUnmuteRequest": {

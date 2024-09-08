@@ -12,6 +12,8 @@ import (
 	"github.com/nekomeowww/xo/logger"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 )
 
 type NewConsoleServiceParams struct {
@@ -61,6 +63,58 @@ func (s *ConsoleService) CommandMessage(ctx context.Context, req *v1.CommandMess
 	s.logger.Info("executed command message and got response", zap.String("response", resp), zap.String("message", req.Message))
 
 	return &v1.CommandMessageResponse{}, nil
+}
+
+func (s *ConsoleService) CommandAlerts(ctx context.Context, req *v1.CommandAlertsRequest) (*v1.CommandAlertsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandAlerts not implemented")
+}
+
+func (s *ConsoleService) CommandEnableResearchQueue(ctx context.Context, req *v1.CommandEnableResearchQueueRequest) (*v1.CommandEnableResearchQueueResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandEnableResearchQueue not implemented")
+}
+
+func (s *ConsoleService) CommandMuteProgrammableSpeakerForEveryone(ctx context.Context, req *v1.CommandMuteProgrammableSpeakerForEveryoneRequest) (*v1.CommandMuteProgrammableSpeakerForEveryoneResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandMuteProgrammableSpeakerForEveryone not implemented")
+}
+
+func (s *ConsoleService) CommandUnmuteProgrammableSpeakerForEveryone(ctx context.Context, req *v1.CommandUnmuteProgrammableSpeakerForEveryoneRequest) (*v1.CommandUnmuteProgrammableSpeakerForEveryoneResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandUnmuteProgrammableSpeakerForEveryone not implemented")
+}
+
+func (s *ConsoleService) CommandPermissions(ctx context.Context, req *v1.CommandPermissionsRequest) (*v1.CommandPermissionsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissions not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsAddPlayer(ctx context.Context, req *v1.CommandPermissionsAddPlayerRequest) (*v1.CommandPermissionsAddPlayerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsAddPlayer not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsCreateGroup(ctx context.Context, req *v1.CommandPermissionsCreateGroupRequest) (*v1.CommandPermissionsCreateGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsCreateGroup not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsDeleteGroup(ctx context.Context, req *v1.CommandPermissionsDeleteGroupRequest) (*v1.CommandPermissionsDeleteGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsDeleteGroup not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsEditGroup(ctx context.Context, req *v1.CommandPermissionsEditGroupRequest) (*v1.CommandPermissionsEditGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsEditGroup not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsGetPlayerGroup(ctx context.Context, req *v1.CommandPermissionsGetPlayerGroupRequest) (*v1.CommandPermissionsGetPlayerGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsGetPlayerGroup not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsRemovePlayerGroup(ctx context.Context, req *v1.CommandPermissionsRemovePlayerGroupRequest) (*v1.CommandPermissionsRemovePlayerGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsRemovePlayerGroup not implemented")
+}
+
+func (s *ConsoleService) CommandPermissionsRenameGroup(ctx context.Context, req *v1.CommandPermissionsRenameGroupRequest) (*v1.CommandPermissionsRenameGroupResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsRenameGroup not implemented")
+}
+
+func (s *ConsoleService) CommandResetTips(ctx context.Context, req *v1.CommandResetTipsRequest) (*v1.CommandResetTipsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandResetTips not implemented")
 }
 
 var (
@@ -141,6 +195,22 @@ func (s *ConsoleService) CommandTime(ctx context.Context, req *v1.CommandTimeReq
 	}
 
 	return &v1.CommandTimeResponse{}, nil
+}
+
+func (s *ConsoleService) CommandToggleActionLogging(ctx context.Context, req *v1.CommandToggleActionLoggingRequest) (*v1.CommandToggleActionLoggingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandToggleActionLogging not implemented")
+}
+
+func (s *ConsoleService) CommandToggleHeavyMode(ctx context.Context, req *v1.CommandToggleHeavyModeRequest) (*v1.CommandToggleHeavyModeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandToggleHeavyMode not implemented")
+}
+
+func (s *ConsoleService) CommandUnlockShortcutBar(ctx context.Context, req *v1.CommandUnlockShortcutBarRequest) (*v1.CommandUnlockShortcutBarResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandUnlockShortcutBar not implemented")
+}
+
+func (s *ConsoleService) CommandUnlockTips(ctx context.Context, req *v1.CommandUnlockTipsRequest) (*v1.CommandUnlockTipsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandUnlockTips not implemented")
 }
 
 func (s *ConsoleService) CommandVersion(ctx context.Context, req *v1.CommandVersionRequest) (*v1.CommandVersionResponse, error) {

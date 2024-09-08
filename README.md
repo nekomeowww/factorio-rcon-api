@@ -2,6 +2,54 @@
 
 🏭 Fully implemented wrapper for Factorio headless server console as RESTful and gRPC for easier management through APIs
 
+## Features
+
+- ✅ 100% type safe, no extra type conversion needed
+- ↔️ Out of the box RESTful and gRPC support
+- 🎺 Native RCON protocol
+- 📖 Fully API Documented
+
+## Supported Commands
+
+  - [x] Raw command
+  - [x] Message
+  - [ ] `/alerts`
+  - [ ] `/enable-research-queue`
+  - [ ] `/mute-programmable-speaker`
+  - [ ] `/perf-avg-frames`
+  - [ ] `/permissions`
+  - [ ] `/reset-tips`
+  - [x] `/evolution`
+  - [x] `/seed`
+  - [x] `/time`
+  - [ ] `/toggle-action-logging`
+  - [ ] `/toggle-heavy-mode`
+  - [ ] `/unlock-shortcut-bar`
+  - [ ] `/unlock-tips`
+  - [x] `/version`
+  - [x] `/admins`
+  - [x] `/ban`
+  - [x] `/bans`
+  - [ ] `/config`
+  - [ ] `/delete-blueprint-library`
+  - [x] `/demote`
+  - [x] `/ignore`
+  - [x] `/kick`
+  - [x] `/mute`
+  - [x] `/mutes`
+  - [x] `/promote`
+  - [x] `/purge`
+  - [x] `/server-save`
+  - [x] `/unban`
+  - [x] `/unignore`
+  - [x] `/unmute`
+  - [x] `/whisper`
+  - [x] `/whitelist`
+  - [ ] `/cheat`
+  - [ ] `/command` / `/c`
+  - [ ] `/measured-command`
+  - [ ] `/silent-command`
+
 ## Usage
 
 ### Pull the image
@@ -93,3 +141,17 @@ to get the version of the Factorio game server.
 
 - OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.json)
 - OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.v3.yaml)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=nekomeowww/factorio-rcon-api&type=Date)](https://star-history.com/#nekomeowww/factorio-rcon-api&Date)
+
+## Project Status
+
+![Repobeats analytics image](https://repobeats.axiom.co/api/embed/422f7e142085eeb0c7ef854046101bf90927de91.svg "Repobeats analytics image")
+
+## Contributors
+
+Thanks to all the contributors!
+
+[![contributors](https://contrib.rocks/image?repo=nekomeowww/factorio-rcon-api)](https://github.com/nekomeowww/factorio-rcon-api/graphs/contributors)
