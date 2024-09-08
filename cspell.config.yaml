@@ -15,5 +15,6 @@ words:
   - otelgrpc
   - otelhttp
   - RCON
+  - samber
 ignoreWords: []
 import: []

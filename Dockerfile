@@ -34,7 +34,8 @@ COPY --from=builder /app/api-server/release/api-server /app/api-server/release/a
 RUN mkdir -p /usr/local/bin
 RUN ln -s /app/api-server/release/api-server /usr/local/bin/factorio-rcon-api
 
-ENV LOG_FILE_PATH /var/log/api-server-services/api-server.log
+RUN mkdir -p /var/log/api-server
+ENV LOG_FILE_PATH /var/log/api-server/logs.log
 
 EXPOSE 24181
 EXPOSE 24180
