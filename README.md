@@ -146,10 +146,6 @@ to get the version of the Factorio game server.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=nekomeowww/factorio-rcon-api&type=Date)](https://star-history.com/#nekomeowww/factorio-rcon-api&Date)
 
-## Project Status
-
-![Repobeats analytics image](https://repobeats.axiom.co/api/embed/422f7e142085eeb0c7ef854046101bf90927de91.svg "Repobeats analytics image")
-
 ## Contributors
 
 Thanks to all the contributors!
