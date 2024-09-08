@@ -49,7 +49,7 @@ func defaultConfig() Config {
 		Factorio: Factorio{
 			RCONHost:     "127.0.0.1",
 			RCONPort:     "27015",
-			RCONPassword: "123456",
+			RCONPassword: "",
 		},
 	}
 }
