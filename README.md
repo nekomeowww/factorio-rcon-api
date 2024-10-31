@@ -2,6 +2,13 @@
 
 🏭 Fully implemented wrapper for Factorio headless server console as RESTful and gRPC for easier management through APIs
 
+## Compatible matrix
+
+| Factorio RCON API | Factorio Server |
+|-------------------|-----------------|
+| 0.1.0             | 1.x             |
+| 0.2.0 (WIP)       | 2.x             |
+
 ## Features
 
 - ✅ 100% type safe, no extra type conversion needed
@@ -132,7 +139,7 @@ docker run \
 That's it, you can now call the API with the following command:
 
 ```shell
-curl -X POST http://localhost:24180/api/v1/factorio/command/version
+curl -X GET http://localhost:24180/api/v1/factorio/console/command/version
 ```
 
 to get the version of the Factorio game server.
