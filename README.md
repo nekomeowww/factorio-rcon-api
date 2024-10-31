@@ -1,8 +1,8 @@
 # Factorio RCON API
 
-🏭 Fully implemented wrapper for Factorio headless server console as RESTful and gRPC for easier management through APIs
+> [Live API Docs](https://factorio-rcon-api.ayaka.io/apis/docs)
 
-> [Full list of APIs / API Documentation](https://factorio-rcon-api.ayaka.io/apis/docs)
+🏭 Fully implemented wrapper for Factorio headless server console as RESTful and gRPC for easier management through APIs
 
 ## Compatible matrix
 
