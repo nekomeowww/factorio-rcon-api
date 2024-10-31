@@ -65,3 +65,9 @@ func NewErrForbidden() *Error {
 		WithTitle("Forbidden").
 		WithDetail("You do not have permission to access the requested resources")
 }
+
+func NewErrTimeout() *Error {
+	return NewError(http.StatusRequestTimeout, codes.DeadlineExceeded, "TIMEOUT").
+		WithTitle("Request Timeout").
+		WithDetail("The request has timed out")
+}

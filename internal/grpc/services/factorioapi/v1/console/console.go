@@ -2,12 +2,13 @@ package consolev1
 
 import (
 	"context"
+	"errors"
 	"regexp"
 	"strconv"
 	"strings"
 
-	"github.com/gorcon/rcon"
 	v1 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1"
+	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"
 	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
 	"github.com/nekomeowww/xo/logger"
 	"go.uber.org/fx"
@@ -20,14 +21,14 @@ type NewConsoleServiceParams struct {
 	fx.In
 
 	Logger *logger.Logger
-	RCON   *rcon.Conn
+	RCON   *rcon.RCON
 }
 
 type ConsoleService struct {
 	v1.UnimplementedConsoleServiceServer
 
 	logger *logger.Logger
-	rcon   *rcon.Conn
+	rcon   *rcon.RCON
 }
 
 func NewConsoleService() func(NewConsoleServiceParams) *ConsoleService {
@@ -40,8 +41,12 @@ func NewConsoleService() func(NewConsoleServiceParams) *ConsoleService {
 }
 
 func (s *ConsoleService) CommandRaw(ctx context.Context, req *v1.CommandRawRequest) (*v1.CommandRawResponse, error) {
-	resp, err := s.rcon.Execute(req.Input)
+	resp, err := s.rcon.Execute(ctx, req.Input)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -55,8 +60,12 @@ func (s *ConsoleService) CommandMessage(ctx context.Context, req *v1.CommandMess
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("message should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute(req.Message)
+	resp, err := s.rcon.Execute(ctx, req.Message)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -122,8 +131,12 @@ var (
 )
 
 func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v1.CommandEvolutionRequest) (*v1.CommandEvolutionResponse, error) {
-	resp, err := s.rcon.Execute("/evolution")
+	resp, err := s.rcon.Execute(ctx, "/evolution")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -168,8 +181,12 @@ func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v1.CommandEv
 }
 
 func (s *ConsoleService) CommandSeed(ctx context.Context, req *v1.CommandSeedRequest) (*v1.CommandSeedResponse, error) {
-	resp, err := s.rcon.Execute("/seed")
+	resp, err := s.rcon.Execute(ctx, "/seed")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -184,8 +201,12 @@ func (s *ConsoleService) CommandSeed(ctx context.Context, req *v1.CommandSeedReq
 }
 
 func (s *ConsoleService) CommandTime(ctx context.Context, req *v1.CommandTimeRequest) (*v1.CommandTimeResponse, error) {
-	resp, err := s.rcon.Execute("/time")
+	resp, err := s.rcon.Execute(ctx, "/time")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -214,8 +235,12 @@ func (s *ConsoleService) CommandUnlockTips(ctx context.Context, req *v1.CommandU
 }
 
 func (s *ConsoleService) CommandVersion(ctx context.Context, req *v1.CommandVersionRequest) (*v1.CommandVersionResponse, error) {
-	resp, err := s.rcon.Execute("/version")
+	resp, err := s.rcon.Execute(ctx, "/version")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -225,8 +250,12 @@ func (s *ConsoleService) CommandVersion(ctx context.Context, req *v1.CommandVers
 }
 
 func (s *ConsoleService) CommandAdmins(ctx context.Context, req *v1.CommandAdminsRequest) (*v1.CommandAdminsResponse, error) {
-	resp, err := s.rcon.Execute("/admins")
+	resp, err := s.rcon.Execute(ctx, "/admins")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
@@ -247,8 +276,12 @@ func (s *ConsoleService) CommandBan(ctx context.Context, req *v1.CommandBanReque
 
 	cmd := "/ban " + req.Username
 
-	resp, err := s.rcon.Execute(cmd)
+	resp, err := s.rcon.Execute(ctx, cmd)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -258,8 +291,12 @@ func (s *ConsoleService) CommandBan(ctx context.Context, req *v1.CommandBanReque
 }
 
 func (s *ConsoleService) CommandBans(ctx context.Context, req *v1.CommandBansRequest) (*v1.CommandBansResponse, error) {
-	resp, err := s.rcon.Execute("/bans")
+	resp, err := s.rcon.Execute(ctx, "/bans")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
@@ -278,8 +315,12 @@ func (s *ConsoleService) CommandDemote(ctx context.Context, req *v1.CommandDemot
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/demote " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/demote "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -293,8 +334,12 @@ func (s *ConsoleService) CommandIgnore(ctx context.Context, req *v1.CommandIgnor
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/ignore " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/ignore "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -313,8 +358,12 @@ func (s *ConsoleService) CommandKick(ctx context.Context, req *v1.CommandKickReq
 		cmd += " " + req.Reason
 	}
 
-	resp, err := s.rcon.Execute(cmd)
+	resp, err := s.rcon.Execute(ctx, cmd)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -328,8 +377,12 @@ func (s *ConsoleService) CommandMute(ctx context.Context, req *v1.CommandMuteReq
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/mute " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/mute "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -339,8 +392,12 @@ func (s *ConsoleService) CommandMute(ctx context.Context, req *v1.CommandMuteReq
 }
 
 func (s *ConsoleService) CommandMutes(ctx context.Context, req *v1.CommandMutesRequest) (*v1.CommandMutesResponse, error) {
-	resp, err := s.rcon.Execute("/mutes")
+	resp, err := s.rcon.Execute(ctx, "/mutes")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
@@ -355,8 +412,12 @@ func (s *ConsoleService) CommandMutes(ctx context.Context, req *v1.CommandMutesR
 }
 
 func (s *ConsoleService) CommandPlayers(ctx context.Context, req *v1.CommandPlayersRequest) (*v1.CommandPlayersResponse, error) {
-	resp, err := s.rcon.Execute("/players")
+	resp, err := s.rcon.Execute(ctx, "/players")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
@@ -375,8 +436,12 @@ func (s *ConsoleService) CommandPromote(ctx context.Context, req *v1.CommandProm
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/promote " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/promote "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -390,8 +455,12 @@ func (s *ConsoleService) CommandPurge(ctx context.Context, req *v1.CommandPurgeR
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/purge" + " " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/purge"+" "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -401,8 +470,12 @@ func (s *ConsoleService) CommandPurge(ctx context.Context, req *v1.CommandPurgeR
 }
 
 func (s *ConsoleService) CommandServerSave(ctx context.Context, req *v1.CommandServerSaveRequest) (*v1.CommandServerSaveResponse, error) {
-	resp, err := s.rcon.Execute("/server-save")
+	resp, err := s.rcon.Execute(ctx, "/server-save")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -416,8 +489,12 @@ func (s *ConsoleService) CommandUnban(ctx context.Context, req *v1.CommandUnbanR
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/unban " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/unban "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -431,8 +508,12 @@ func (s *ConsoleService) CommandUnignore(ctx context.Context, req *v1.CommandUni
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/unignore " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/unignore "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -446,8 +527,12 @@ func (s *ConsoleService) CommandUnmute(ctx context.Context, req *v1.CommandUnmut
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/unmute " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/unmute "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -464,8 +549,12 @@ func (s *ConsoleService) CommandWhisper(ctx context.Context, req *v1.CommandWhis
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("message should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/whisper " + req.Username + " " + req.Message)
+	resp, err := s.rcon.Execute(ctx, "/whisper "+req.Username+" "+req.Message)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -479,8 +568,12 @@ func (s *ConsoleService) CommandWhitelistAdd(ctx context.Context, req *v1.Comman
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/whitelist add " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/whitelist add "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -490,8 +583,12 @@ func (s *ConsoleService) CommandWhitelistAdd(ctx context.Context, req *v1.Comman
 }
 
 func (s *ConsoleService) CommandWhitelistGet(ctx context.Context, req *v1.CommandWhitelistGetRequest) (*v1.CommandWhitelistGetResponse, error) {
-	resp, err := s.rcon.Execute("/whitelist get")
+	resp, err := s.rcon.Execute(ctx, "/whitelist get")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
@@ -510,8 +607,12 @@ func (s *ConsoleService) CommandWhitelistRemove(ctx context.Context, req *v1.Com
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
 
-	resp, err := s.rcon.Execute("/whitelist remove " + req.Username)
+	resp, err := s.rcon.Execute(ctx, "/whitelist remove "+req.Username)
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
@@ -521,8 +622,12 @@ func (s *ConsoleService) CommandWhitelistRemove(ctx context.Context, req *v1.Com
 }
 
 func (s *ConsoleService) CommandWhitelistClear(ctx context.Context, req *v1.CommandWhitelistClearRequest) (*v1.CommandWhitelistClearResponse, error) {
-	resp, err := s.rcon.Execute("/whitelist clear")
+	resp, err := s.rcon.Execute(ctx, "/whitelist clear")
 	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 

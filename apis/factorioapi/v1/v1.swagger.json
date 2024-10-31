@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Factorio Admin API",
+    "title": "Factorio RCON API",
     "version": "1.0"
   },
   "consumes": [

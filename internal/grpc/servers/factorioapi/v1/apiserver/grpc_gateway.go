@@ -51,6 +51,8 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 		e := echo.New()
 		e.RouteNotFound("/*", middlewares.NotFound)
 
+		e.GET("/apis/docs", middlewares.ScalarDocumentation("Factorio RCON API", "/swagger.json"))
+
 		for path, methodHandlers := range params.Register.EchoHandlers {
 			for method, handler := range methodHandlers {
 				e.Add(method, path, handler)

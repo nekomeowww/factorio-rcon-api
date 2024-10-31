@@ -592,7 +592,7 @@ components:
           type: string
       type: object
 info:
-  title: Factorio Admin API
+  title: Factorio RCON API
   version: "1.0"
 openapi: 3.0.3
 paths:

@@ -3,7 +3,9 @@ module github.com/nekomeowww/factorio-rcon-api
 go 1.22.6
 
 require (
+	github.com/MarceloPetrucio/go-scalar-api-reference v0.0.0-20240521013641-ce5d2efe0e06
 	github.com/bufbuild/protovalidate-go v0.6.5
+	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/getkin/kin-openapi v0.127.0
 	github.com/gorcon/rcon v1.3.5
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0
@@ -37,7 +39,6 @@ require (
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.34.2-20240717164558-a6c49f84cc0f.2 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.1 // indirect
-	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect

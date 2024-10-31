@@ -15,8 +15,10 @@ import (
 )
 
 var (
-	input  string
-	output string
+	input        string
+	inputFormat  string
+	output       string
+	outputFormat string
 )
 
 func main() {
@@ -34,9 +36,19 @@ func main() {
 
 			var openapiV2Doc openapi2.T
 
-			err = json.Unmarshal(openapiV2DocContent, &openapiV2Doc)
-			if err != nil {
-				return fmt.Errorf("failed to unmarshal input file %s: %w", input, err)
+			switch inputFormat {
+			case "json":
+				err = json.Unmarshal(openapiV2DocContent, &openapiV2Doc)
+				if err != nil {
+					return fmt.Errorf("failed to unmarshal input file %s: %w", input, err)
+				}
+			case "yaml":
+				err = yaml.Unmarshal(openapiV2DocContent, &openapiV2Doc)
+				if err != nil {
+					return fmt.Errorf("failed to unmarshal input file %s: %w", input, err)
+				}
+			default:
+				return fmt.Errorf("unsupported input format: %s", inputFormat)
 			}
 
 			openapiV3Doc, err := openapi2conv.ToV3(&openapiV2Doc)
@@ -45,12 +57,26 @@ func main() {
 			}
 
 			openapiV3DocBuffer := new(bytes.Buffer)
-			encoder := yaml.NewEncoder(openapiV3DocBuffer)
-			encoder.SetIndent(2)
 
-			err = encoder.Encode(openapiV3Doc)
-			if err != nil {
-				return fmt.Errorf("failed to encode openapi v3 doc: %w", err)
+			switch outputFormat {
+			case "json":
+				encoder := json.NewEncoder(openapiV3DocBuffer)
+				encoder.SetIndent("", "  ")
+
+				err = encoder.Encode(openapiV3Doc)
+				if err != nil {
+					return fmt.Errorf("failed to encode openapi v3 doc: %w", err)
+				}
+			case "yaml":
+				encoder := yaml.NewEncoder(openapiV3DocBuffer)
+				encoder.SetIndent(2)
+
+				err = encoder.Encode(openapiV3Doc)
+				if err != nil {
+					return fmt.Errorf("failed to encode openapi v3 doc: %w", err)
+				}
+			default:
+				return fmt.Errorf("unsupported output format: %s", outputFormat)
 			}
 
 			if !strings.HasPrefix(output, "/") {
@@ -67,7 +93,9 @@ func main() {
 	}
 
 	root.Flags().StringVarP(&input, "input", "i", "", "input file path")
+	root.Flags().StringVar(&inputFormat, "input-format", "json", "input file format")
 	root.Flags().StringVarP(&output, "output", "o", "", "output file path")
+	root.Flags().StringVar(&outputFormat, "output-format", "yaml", "output file format")
 
 	err := root.Execute()
 	if err != nil {

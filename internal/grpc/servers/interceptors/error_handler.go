@@ -50,6 +50,12 @@ func handleStatusError(s *status.Status, logger *logger.Logger, err error) *apie
 		logger.Error("unimplemented error", zap.Error(err))
 
 		return apierrors.NewErrNotFound().WithDetail("route not found or method not allowed").AsResponse()
+	case codes.DeadlineExceeded:
+		if len(s.Details()) > 0 {
+			break
+		}
+
+		return apierrors.NewErrTimeout().AsResponse()
 	default:
 		break
 	}
