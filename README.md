@@ -8,8 +8,8 @@
 
 | Factorio RCON API | Factorio Server |
 |-------------------|-----------------|
-| 1.1.0             | 1.x             |
-| 2.0.0 (WIP)       | 2.x             |
+| 1.1.0 (`/api/v1`) | 1.x             |
+| 2.0.0 (`/api/v2`) | 2.x             |
 
 ## Features
 
@@ -170,7 +170,7 @@ docker run \
 That's it, you can now call the API with the following command:
 
 ```shell
-curl -X GET http://localhost:24180/api/v1/factorio/console/command/version
+curl -X GET http://localhost:24180/api/v2/factorio/console/command/version
 ```
 
 to get the version of the Factorio game server.
@@ -183,8 +183,8 @@ With the demo server at [https://factorio-rcon-api.ayaka.io/apis/docs/v2](https:
 
 Alternatively, we ship the OpenAPI v2 and v3 spec in the repository:
 
-- OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.json)
-- OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.v3.yaml)
+- OpenAPI v2 spec: [v2.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v2/v2.swagger.json)
+- OpenAPI v3 spec: [v2.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v2/v2.swagger.v3.yaml)
 
 > [!TIP]
 > Additionally, we can ship the SDKs for Lua, TypeScript and Python (widely used for mods, admin panels, bots) in the future, you are welcome to contribute to the project.
