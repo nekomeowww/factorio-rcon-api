@@ -9,7 +9,7 @@ import (
 
 	"github.com/nekomeowww/factorio-rcon-api/internal/configs"
 	grpcservers "github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers"
-	apiserver "github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/factorioapi/v1/apiserver"
+	apiserver "github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/factorioapi/apiserver"
 	grpcservices "github.com/nekomeowww/factorio-rcon-api/internal/grpc/services"
 	"github.com/nekomeowww/factorio-rcon-api/internal/libs"
 	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"

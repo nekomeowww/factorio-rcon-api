@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.34.0
 // 	protoc        (unknown)
-// source: apis/factorioapi/v1/command.proto
+// source: apis/factorioapi/v2/command.proto
 
-package v1
+package v2
 
 import (
 	_ "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
@@ -33,7 +33,7 @@ type CommandRawRequest struct {
 func (x *CommandRawRequest) Reset() {
 	*x = CommandRawRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[0]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -46,7 +46,7 @@ func (x *CommandRawRequest) String() string {
 func (*CommandRawRequest) ProtoMessage() {}
 
 func (x *CommandRawRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[0]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -59,7 +59,7 @@ func (x *CommandRawRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandRawRequest.ProtoReflect.Descriptor instead.
 func (*CommandRawRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{0}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CommandRawRequest) GetInput() string {
@@ -80,7 +80,7 @@ type CommandRawResponse struct {
 func (x *CommandRawResponse) Reset() {
 	*x = CommandRawResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[1]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -93,7 +93,7 @@ func (x *CommandRawResponse) String() string {
 func (*CommandRawResponse) ProtoMessage() {}
 
 func (x *CommandRawResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[1]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -106,7 +106,7 @@ func (x *CommandRawResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandRawResponse.ProtoReflect.Descriptor instead.
 func (*CommandRawResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{1}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *CommandRawResponse) GetOutput() string {
@@ -127,7 +127,7 @@ type CommandMessageRequest struct {
 func (x *CommandMessageRequest) Reset() {
 	*x = CommandMessageRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[2]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -140,7 +140,7 @@ func (x *CommandMessageRequest) String() string {
 func (*CommandMessageRequest) ProtoMessage() {}
 
 func (x *CommandMessageRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[2]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -153,7 +153,7 @@ func (x *CommandMessageRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandMessageRequest.ProtoReflect.Descriptor instead.
 func (*CommandMessageRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{2}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *CommandMessageRequest) GetMessage() string {
@@ -172,7 +172,7 @@ type CommandMessageResponse struct {
 func (x *CommandMessageResponse) Reset() {
 	*x = CommandMessageResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[3]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -185,7 +185,7 @@ func (x *CommandMessageResponse) String() string {
 func (*CommandMessageResponse) ProtoMessage() {}
 
 func (x *CommandMessageResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[3]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -198,7 +198,7 @@ func (x *CommandMessageResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandMessageResponse.ProtoReflect.Descriptor instead.
 func (*CommandMessageResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{3}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{3}
 }
 
 type CommandAlertsRequest struct {
@@ -210,7 +210,7 @@ type CommandAlertsRequest struct {
 func (x *CommandAlertsRequest) Reset() {
 	*x = CommandAlertsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[4]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -223,7 +223,7 @@ func (x *CommandAlertsRequest) String() string {
 func (*CommandAlertsRequest) ProtoMessage() {}
 
 func (x *CommandAlertsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[4]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -236,7 +236,7 @@ func (x *CommandAlertsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandAlertsRequest.ProtoReflect.Descriptor instead.
 func (*CommandAlertsRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{4}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{4}
 }
 
 type CommandAlertsResponse struct {
@@ -250,7 +250,7 @@ type CommandAlertsResponse struct {
 func (x *CommandAlertsResponse) Reset() {
 	*x = CommandAlertsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[5]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -263,7 +263,7 @@ func (x *CommandAlertsResponse) String() string {
 func (*CommandAlertsResponse) ProtoMessage() {}
 
 func (x *CommandAlertsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[5]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -276,7 +276,7 @@ func (x *CommandAlertsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandAlertsResponse.ProtoReflect.Descriptor instead.
 func (*CommandAlertsResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{5}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *CommandAlertsResponse) GetAlerts() []string {
@@ -295,7 +295,7 @@ type CommandEnableResearchQueueRequest struct {
 func (x *CommandEnableResearchQueueRequest) Reset() {
 	*x = CommandEnableResearchQueueRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[6]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -308,7 +308,7 @@ func (x *CommandEnableResearchQueueRequest) String() string {
 func (*CommandEnableResearchQueueRequest) ProtoMessage() {}
 
 func (x *CommandEnableResearchQueueRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[6]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -321,7 +321,7 @@ func (x *CommandEnableResearchQueueRequest) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use CommandEnableResearchQueueRequest.ProtoReflect.Descriptor instead.
 func (*CommandEnableResearchQueueRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{6}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{6}
 }
 
 type CommandEnableResearchQueueResponse struct {
@@ -333,7 +333,7 @@ type CommandEnableResearchQueueResponse struct {
 func (x *CommandEnableResearchQueueResponse) Reset() {
 	*x = CommandEnableResearchQueueResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[7]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -346,7 +346,7 @@ func (x *CommandEnableResearchQueueResponse) String() string {
 func (*CommandEnableResearchQueueResponse) ProtoMessage() {}
 
 func (x *CommandEnableResearchQueueResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[7]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -359,7 +359,7 @@ func (x *CommandEnableResearchQueueResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use CommandEnableResearchQueueResponse.ProtoReflect.Descriptor instead.
 func (*CommandEnableResearchQueueResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{7}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{7}
 }
 
 type CommandMuteProgrammableSpeakerForEveryoneRequest struct {
@@ -371,7 +371,7 @@ type CommandMuteProgrammableSpeakerForEveryoneRequest struct {
 func (x *CommandMuteProgrammableSpeakerForEveryoneRequest) Reset() {
 	*x = CommandMuteProgrammableSpeakerForEveryoneRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[8]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -384,7 +384,7 @@ func (x *CommandMuteProgrammableSpeakerForEveryoneRequest) String() string {
 func (*CommandMuteProgrammableSpeakerForEveryoneRequest) ProtoMessage() {}
 
 func (x *CommandMuteProgrammableSpeakerForEveryoneRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[8]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -397,7 +397,7 @@ func (x *CommandMuteProgrammableSpeakerForEveryoneRequest) ProtoReflect() protor
 
 // Deprecated: Use CommandMuteProgrammableSpeakerForEveryoneRequest.ProtoReflect.Descriptor instead.
 func (*CommandMuteProgrammableSpeakerForEveryoneRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{8}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{8}
 }
 
 type CommandMuteProgrammableSpeakerForEveryoneResponse struct {
@@ -409,7 +409,7 @@ type CommandMuteProgrammableSpeakerForEveryoneResponse struct {
 func (x *CommandMuteProgrammableSpeakerForEveryoneResponse) Reset() {
 	*x = CommandMuteProgrammableSpeakerForEveryoneResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[9]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -422,7 +422,7 @@ func (x *CommandMuteProgrammableSpeakerForEveryoneResponse) String() string {
 func (*CommandMuteProgrammableSpeakerForEveryoneResponse) ProtoMessage() {}
 
 func (x *CommandMuteProgrammableSpeakerForEveryoneResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[9]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -435,7 +435,7 @@ func (x *CommandMuteProgrammableSpeakerForEveryoneResponse) ProtoReflect() proto
 
 // Deprecated: Use CommandMuteProgrammableSpeakerForEveryoneResponse.ProtoReflect.Descriptor instead.
 func (*CommandMuteProgrammableSpeakerForEveryoneResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{9}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{9}
 }
 
 type CommandUnmuteProgrammableSpeakerForEveryoneRequest struct {
@@ -447,7 +447,7 @@ type CommandUnmuteProgrammableSpeakerForEveryoneRequest struct {
 func (x *CommandUnmuteProgrammableSpeakerForEveryoneRequest) Reset() {
 	*x = CommandUnmuteProgrammableSpeakerForEveryoneRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[10]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -460,7 +460,7 @@ func (x *CommandUnmuteProgrammableSpeakerForEveryoneRequest) String() string {
 func (*CommandUnmuteProgrammableSpeakerForEveryoneRequest) ProtoMessage() {}
 
 func (x *CommandUnmuteProgrammableSpeakerForEveryoneRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[10]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -473,7 +473,7 @@ func (x *CommandUnmuteProgrammableSpeakerForEveryoneRequest) ProtoReflect() prot
 
 // Deprecated: Use CommandUnmuteProgrammableSpeakerForEveryoneRequest.ProtoReflect.Descriptor instead.
 func (*CommandUnmuteProgrammableSpeakerForEveryoneRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{10}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{10}
 }
 
 type CommandUnmuteProgrammableSpeakerForEveryoneResponse struct {
@@ -485,7 +485,7 @@ type CommandUnmuteProgrammableSpeakerForEveryoneResponse struct {
 func (x *CommandUnmuteProgrammableSpeakerForEveryoneResponse) Reset() {
 	*x = CommandUnmuteProgrammableSpeakerForEveryoneResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[11]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -498,7 +498,7 @@ func (x *CommandUnmuteProgrammableSpeakerForEveryoneResponse) String() string {
 func (*CommandUnmuteProgrammableSpeakerForEveryoneResponse) ProtoMessage() {}
 
 func (x *CommandUnmuteProgrammableSpeakerForEveryoneResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[11]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -511,7 +511,7 @@ func (x *CommandUnmuteProgrammableSpeakerForEveryoneResponse) ProtoReflect() pro
 
 // Deprecated: Use CommandUnmuteProgrammableSpeakerForEveryoneResponse.ProtoReflect.Descriptor instead.
 func (*CommandUnmuteProgrammableSpeakerForEveryoneResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{11}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{11}
 }
 
 type CommandPermissionsRequest struct {
@@ -523,7 +523,7 @@ type CommandPermissionsRequest struct {
 func (x *CommandPermissionsRequest) Reset() {
 	*x = CommandPermissionsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[12]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -536,7 +536,7 @@ func (x *CommandPermissionsRequest) String() string {
 func (*CommandPermissionsRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[12]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -549,7 +549,7 @@ func (x *CommandPermissionsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPermissionsRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{12}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{12}
 }
 
 type CommandPermissionsResponse struct {
@@ -561,7 +561,7 @@ type CommandPermissionsResponse struct {
 func (x *CommandPermissionsResponse) Reset() {
 	*x = CommandPermissionsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[13]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -574,7 +574,7 @@ func (x *CommandPermissionsResponse) String() string {
 func (*CommandPermissionsResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[13]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -587,7 +587,7 @@ func (x *CommandPermissionsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPermissionsResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{13}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{13}
 }
 
 type CommandPermissionsAddPlayerRequest struct {
@@ -602,7 +602,7 @@ type CommandPermissionsAddPlayerRequest struct {
 func (x *CommandPermissionsAddPlayerRequest) Reset() {
 	*x = CommandPermissionsAddPlayerRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[14]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -615,7 +615,7 @@ func (x *CommandPermissionsAddPlayerRequest) String() string {
 func (*CommandPermissionsAddPlayerRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsAddPlayerRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[14]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -628,7 +628,7 @@ func (x *CommandPermissionsAddPlayerRequest) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use CommandPermissionsAddPlayerRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsAddPlayerRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{14}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *CommandPermissionsAddPlayerRequest) GetUsername() string {
@@ -654,7 +654,7 @@ type CommandPermissionsAddPlayerResponse struct {
 func (x *CommandPermissionsAddPlayerResponse) Reset() {
 	*x = CommandPermissionsAddPlayerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[15]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -667,7 +667,7 @@ func (x *CommandPermissionsAddPlayerResponse) String() string {
 func (*CommandPermissionsAddPlayerResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsAddPlayerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[15]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -680,7 +680,7 @@ func (x *CommandPermissionsAddPlayerResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use CommandPermissionsAddPlayerResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsAddPlayerResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{15}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{15}
 }
 
 type CommandPermissionsCreateGroupRequest struct {
@@ -694,7 +694,7 @@ type CommandPermissionsCreateGroupRequest struct {
 func (x *CommandPermissionsCreateGroupRequest) Reset() {
 	*x = CommandPermissionsCreateGroupRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[16]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -707,7 +707,7 @@ func (x *CommandPermissionsCreateGroupRequest) String() string {
 func (*CommandPermissionsCreateGroupRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsCreateGroupRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[16]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -720,7 +720,7 @@ func (x *CommandPermissionsCreateGroupRequest) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use CommandPermissionsCreateGroupRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsCreateGroupRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{16}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *CommandPermissionsCreateGroupRequest) GetGroup() string {
@@ -739,7 +739,7 @@ type CommandPermissionsCreateGroupResponse struct {
 func (x *CommandPermissionsCreateGroupResponse) Reset() {
 	*x = CommandPermissionsCreateGroupResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[17]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -752,7 +752,7 @@ func (x *CommandPermissionsCreateGroupResponse) String() string {
 func (*CommandPermissionsCreateGroupResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsCreateGroupResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[17]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -765,7 +765,7 @@ func (x *CommandPermissionsCreateGroupResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use CommandPermissionsCreateGroupResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsCreateGroupResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{17}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{17}
 }
 
 type CommandPermissionsDeleteGroupRequest struct {
@@ -779,7 +779,7 @@ type CommandPermissionsDeleteGroupRequest struct {
 func (x *CommandPermissionsDeleteGroupRequest) Reset() {
 	*x = CommandPermissionsDeleteGroupRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[18]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -792,7 +792,7 @@ func (x *CommandPermissionsDeleteGroupRequest) String() string {
 func (*CommandPermissionsDeleteGroupRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsDeleteGroupRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[18]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -805,7 +805,7 @@ func (x *CommandPermissionsDeleteGroupRequest) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use CommandPermissionsDeleteGroupRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsDeleteGroupRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{18}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *CommandPermissionsDeleteGroupRequest) GetGroup() string {
@@ -824,7 +824,7 @@ type CommandPermissionsDeleteGroupResponse struct {
 func (x *CommandPermissionsDeleteGroupResponse) Reset() {
 	*x = CommandPermissionsDeleteGroupResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[19]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -837,7 +837,7 @@ func (x *CommandPermissionsDeleteGroupResponse) String() string {
 func (*CommandPermissionsDeleteGroupResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsDeleteGroupResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[19]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -850,7 +850,7 @@ func (x *CommandPermissionsDeleteGroupResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use CommandPermissionsDeleteGroupResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsDeleteGroupResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{19}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{19}
 }
 
 type CommandPermissionsEditGroupRequest struct {
@@ -866,7 +866,7 @@ type CommandPermissionsEditGroupRequest struct {
 func (x *CommandPermissionsEditGroupRequest) Reset() {
 	*x = CommandPermissionsEditGroupRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[20]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -879,7 +879,7 @@ func (x *CommandPermissionsEditGroupRequest) String() string {
 func (*CommandPermissionsEditGroupRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsEditGroupRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[20]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -892,7 +892,7 @@ func (x *CommandPermissionsEditGroupRequest) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use CommandPermissionsEditGroupRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsEditGroupRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{20}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *CommandPermissionsEditGroupRequest) GetGroup() string {
@@ -925,7 +925,7 @@ type CommandPermissionsEditGroupResponse struct {
 func (x *CommandPermissionsEditGroupResponse) Reset() {
 	*x = CommandPermissionsEditGroupResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[21]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -938,7 +938,7 @@ func (x *CommandPermissionsEditGroupResponse) String() string {
 func (*CommandPermissionsEditGroupResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsEditGroupResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[21]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -951,7 +951,7 @@ func (x *CommandPermissionsEditGroupResponse) ProtoReflect() protoreflect.Messag
 
 // Deprecated: Use CommandPermissionsEditGroupResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsEditGroupResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{21}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{21}
 }
 
 type CommandPermissionsGetPlayerGroupRequest struct {
@@ -965,7 +965,7 @@ type CommandPermissionsGetPlayerGroupRequest struct {
 func (x *CommandPermissionsGetPlayerGroupRequest) Reset() {
 	*x = CommandPermissionsGetPlayerGroupRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[22]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -978,7 +978,7 @@ func (x *CommandPermissionsGetPlayerGroupRequest) String() string {
 func (*CommandPermissionsGetPlayerGroupRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsGetPlayerGroupRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[22]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -991,7 +991,7 @@ func (x *CommandPermissionsGetPlayerGroupRequest) ProtoReflect() protoreflect.Me
 
 // Deprecated: Use CommandPermissionsGetPlayerGroupRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsGetPlayerGroupRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{22}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *CommandPermissionsGetPlayerGroupRequest) GetUsername() string {
@@ -1012,7 +1012,7 @@ type CommandPermissionsGetPlayerGroupResponse struct {
 func (x *CommandPermissionsGetPlayerGroupResponse) Reset() {
 	*x = CommandPermissionsGetPlayerGroupResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[23]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1025,7 +1025,7 @@ func (x *CommandPermissionsGetPlayerGroupResponse) String() string {
 func (*CommandPermissionsGetPlayerGroupResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsGetPlayerGroupResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[23]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1038,7 +1038,7 @@ func (x *CommandPermissionsGetPlayerGroupResponse) ProtoReflect() protoreflect.M
 
 // Deprecated: Use CommandPermissionsGetPlayerGroupResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsGetPlayerGroupResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{23}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *CommandPermissionsGetPlayerGroupResponse) GetGroups() []string {
@@ -1060,7 +1060,7 @@ type CommandPermissionsRemovePlayerGroupRequest struct {
 func (x *CommandPermissionsRemovePlayerGroupRequest) Reset() {
 	*x = CommandPermissionsRemovePlayerGroupRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[24]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1073,7 +1073,7 @@ func (x *CommandPermissionsRemovePlayerGroupRequest) String() string {
 func (*CommandPermissionsRemovePlayerGroupRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsRemovePlayerGroupRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[24]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1086,7 +1086,7 @@ func (x *CommandPermissionsRemovePlayerGroupRequest) ProtoReflect() protoreflect
 
 // Deprecated: Use CommandPermissionsRemovePlayerGroupRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsRemovePlayerGroupRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{24}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *CommandPermissionsRemovePlayerGroupRequest) GetUsername() string {
@@ -1112,7 +1112,7 @@ type CommandPermissionsRemovePlayerGroupResponse struct {
 func (x *CommandPermissionsRemovePlayerGroupResponse) Reset() {
 	*x = CommandPermissionsRemovePlayerGroupResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[25]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1125,7 +1125,7 @@ func (x *CommandPermissionsRemovePlayerGroupResponse) String() string {
 func (*CommandPermissionsRemovePlayerGroupResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsRemovePlayerGroupResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[25]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1138,7 +1138,7 @@ func (x *CommandPermissionsRemovePlayerGroupResponse) ProtoReflect() protoreflec
 
 // Deprecated: Use CommandPermissionsRemovePlayerGroupResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsRemovePlayerGroupResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{25}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{25}
 }
 
 type CommandPermissionsRenameGroupRequest struct {
@@ -1153,7 +1153,7 @@ type CommandPermissionsRenameGroupRequest struct {
 func (x *CommandPermissionsRenameGroupRequest) Reset() {
 	*x = CommandPermissionsRenameGroupRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[26]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1166,7 +1166,7 @@ func (x *CommandPermissionsRenameGroupRequest) String() string {
 func (*CommandPermissionsRenameGroupRequest) ProtoMessage() {}
 
 func (x *CommandPermissionsRenameGroupRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[26]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1179,7 +1179,7 @@ func (x *CommandPermissionsRenameGroupRequest) ProtoReflect() protoreflect.Messa
 
 // Deprecated: Use CommandPermissionsRenameGroupRequest.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsRenameGroupRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{26}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *CommandPermissionsRenameGroupRequest) GetGroup() string {
@@ -1205,7 +1205,7 @@ type CommandPermissionsRenameGroupResponse struct {
 func (x *CommandPermissionsRenameGroupResponse) Reset() {
 	*x = CommandPermissionsRenameGroupResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[27]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1218,7 +1218,7 @@ func (x *CommandPermissionsRenameGroupResponse) String() string {
 func (*CommandPermissionsRenameGroupResponse) ProtoMessage() {}
 
 func (x *CommandPermissionsRenameGroupResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[27]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1231,7 +1231,7 @@ func (x *CommandPermissionsRenameGroupResponse) ProtoReflect() protoreflect.Mess
 
 // Deprecated: Use CommandPermissionsRenameGroupResponse.ProtoReflect.Descriptor instead.
 func (*CommandPermissionsRenameGroupResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{27}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{27}
 }
 
 type CommandResetTipsRequest struct {
@@ -1243,7 +1243,7 @@ type CommandResetTipsRequest struct {
 func (x *CommandResetTipsRequest) Reset() {
 	*x = CommandResetTipsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[28]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1256,7 +1256,7 @@ func (x *CommandResetTipsRequest) String() string {
 func (*CommandResetTipsRequest) ProtoMessage() {}
 
 func (x *CommandResetTipsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[28]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1269,7 +1269,7 @@ func (x *CommandResetTipsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandResetTipsRequest.ProtoReflect.Descriptor instead.
 func (*CommandResetTipsRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{28}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{28}
 }
 
 type CommandResetTipsResponse struct {
@@ -1281,7 +1281,7 @@ type CommandResetTipsResponse struct {
 func (x *CommandResetTipsResponse) Reset() {
 	*x = CommandResetTipsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[29]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1294,7 +1294,7 @@ func (x *CommandResetTipsResponse) String() string {
 func (*CommandResetTipsResponse) ProtoMessage() {}
 
 func (x *CommandResetTipsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[29]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1307,7 +1307,7 @@ func (x *CommandResetTipsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandResetTipsResponse.ProtoReflect.Descriptor instead.
 func (*CommandResetTipsResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{29}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{29}
 }
 
 type CommandEvolutionRequest struct {
@@ -1319,7 +1319,7 @@ type CommandEvolutionRequest struct {
 func (x *CommandEvolutionRequest) Reset() {
 	*x = CommandEvolutionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[30]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1332,7 +1332,7 @@ func (x *CommandEvolutionRequest) String() string {
 func (*CommandEvolutionRequest) ProtoMessage() {}
 
 func (x *CommandEvolutionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[30]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1345,7 +1345,7 @@ func (x *CommandEvolutionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandEvolutionRequest.ProtoReflect.Descriptor instead.
 func (*CommandEvolutionRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{30}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{30}
 }
 
 type CommandEvolutionResponse struct {
@@ -1357,12 +1357,13 @@ type CommandEvolutionResponse struct {
 	Time            float64 `protobuf:"fixed64,2,opt,name=time,proto3" json:"time,omitempty"`                                              // in percentage
 	Pollution       float64 `protobuf:"fixed64,3,opt,name=pollution,proto3" json:"pollution,omitempty"`                                    // in percentage
 	SpawnerKills    float64 `protobuf:"fixed64,4,opt,name=spawner_kills,json=spawnerKills,proto3" json:"spawner_kills,omitempty"`          // in percentage
+	PlanetName      string  `protobuf:"bytes,5,opt,name=planet_name,json=planetName,proto3" json:"planet_name,omitempty"`                  // The current planet name.
 }
 
 func (x *CommandEvolutionResponse) Reset() {
 	*x = CommandEvolutionResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[31]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1375,7 +1376,7 @@ func (x *CommandEvolutionResponse) String() string {
 func (*CommandEvolutionResponse) ProtoMessage() {}
 
 func (x *CommandEvolutionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[31]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1388,7 +1389,7 @@ func (x *CommandEvolutionResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandEvolutionResponse.ProtoReflect.Descriptor instead.
 func (*CommandEvolutionResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{31}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *CommandEvolutionResponse) GetEvolutionFactor() float64 {
@@ -1419,6 +1420,13 @@ func (x *CommandEvolutionResponse) GetSpawnerKills() float64 {
 	return 0
 }
 
+func (x *CommandEvolutionResponse) GetPlanetName() string {
+	if x != nil {
+		return x.PlanetName
+	}
+	return ""
+}
+
 type CommandTimeRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1428,7 +1436,7 @@ type CommandTimeRequest struct {
 func (x *CommandTimeRequest) Reset() {
 	*x = CommandTimeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[32]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1441,7 +1449,7 @@ func (x *CommandTimeRequest) String() string {
 func (*CommandTimeRequest) ProtoMessage() {}
 
 func (x *CommandTimeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[32]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1454,7 +1462,7 @@ func (x *CommandTimeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandTimeRequest.ProtoReflect.Descriptor instead.
 func (*CommandTimeRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{32}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{32}
 }
 
 type CommandTimeResponse struct {
@@ -1468,7 +1476,7 @@ type CommandTimeResponse struct {
 func (x *CommandTimeResponse) Reset() {
 	*x = CommandTimeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[33]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1481,7 +1489,7 @@ func (x *CommandTimeResponse) String() string {
 func (*CommandTimeResponse) ProtoMessage() {}
 
 func (x *CommandTimeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[33]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1494,7 +1502,7 @@ func (x *CommandTimeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandTimeResponse.ProtoReflect.Descriptor instead.
 func (*CommandTimeResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{33}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *CommandTimeResponse) GetTime() float64 {
@@ -1513,7 +1521,7 @@ type CommandSeedRequest struct {
 func (x *CommandSeedRequest) Reset() {
 	*x = CommandSeedRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[34]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1526,7 +1534,7 @@ func (x *CommandSeedRequest) String() string {
 func (*CommandSeedRequest) ProtoMessage() {}
 
 func (x *CommandSeedRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[34]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1539,7 +1547,7 @@ func (x *CommandSeedRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandSeedRequest.ProtoReflect.Descriptor instead.
 func (*CommandSeedRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{34}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{34}
 }
 
 type CommandSeedResponse struct {
@@ -1553,7 +1561,7 @@ type CommandSeedResponse struct {
 func (x *CommandSeedResponse) Reset() {
 	*x = CommandSeedResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[35]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1566,7 +1574,7 @@ func (x *CommandSeedResponse) String() string {
 func (*CommandSeedResponse) ProtoMessage() {}
 
 func (x *CommandSeedResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[35]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1579,7 +1587,7 @@ func (x *CommandSeedResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandSeedResponse.ProtoReflect.Descriptor instead.
 func (*CommandSeedResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{35}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{35}
 }
 
 func (x *CommandSeedResponse) GetSeed() string {
@@ -1598,7 +1606,7 @@ type CommandToggleActionLoggingRequest struct {
 func (x *CommandToggleActionLoggingRequest) Reset() {
 	*x = CommandToggleActionLoggingRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[36]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[36]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1611,7 +1619,7 @@ func (x *CommandToggleActionLoggingRequest) String() string {
 func (*CommandToggleActionLoggingRequest) ProtoMessage() {}
 
 func (x *CommandToggleActionLoggingRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[36]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[36]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1624,7 +1632,7 @@ func (x *CommandToggleActionLoggingRequest) ProtoReflect() protoreflect.Message 
 
 // Deprecated: Use CommandToggleActionLoggingRequest.ProtoReflect.Descriptor instead.
 func (*CommandToggleActionLoggingRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{36}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{36}
 }
 
 type CommandToggleActionLoggingResponse struct {
@@ -1636,7 +1644,7 @@ type CommandToggleActionLoggingResponse struct {
 func (x *CommandToggleActionLoggingResponse) Reset() {
 	*x = CommandToggleActionLoggingResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[37]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[37]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1649,7 +1657,7 @@ func (x *CommandToggleActionLoggingResponse) String() string {
 func (*CommandToggleActionLoggingResponse) ProtoMessage() {}
 
 func (x *CommandToggleActionLoggingResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[37]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[37]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1662,7 +1670,7 @@ func (x *CommandToggleActionLoggingResponse) ProtoReflect() protoreflect.Message
 
 // Deprecated: Use CommandToggleActionLoggingResponse.ProtoReflect.Descriptor instead.
 func (*CommandToggleActionLoggingResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{37}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{37}
 }
 
 type CommandToggleHeavyModeRequest struct {
@@ -1674,7 +1682,7 @@ type CommandToggleHeavyModeRequest struct {
 func (x *CommandToggleHeavyModeRequest) Reset() {
 	*x = CommandToggleHeavyModeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[38]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[38]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1687,7 +1695,7 @@ func (x *CommandToggleHeavyModeRequest) String() string {
 func (*CommandToggleHeavyModeRequest) ProtoMessage() {}
 
 func (x *CommandToggleHeavyModeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[38]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[38]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1700,7 +1708,7 @@ func (x *CommandToggleHeavyModeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandToggleHeavyModeRequest.ProtoReflect.Descriptor instead.
 func (*CommandToggleHeavyModeRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{38}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{38}
 }
 
 type CommandToggleHeavyModeResponse struct {
@@ -1712,7 +1720,7 @@ type CommandToggleHeavyModeResponse struct {
 func (x *CommandToggleHeavyModeResponse) Reset() {
 	*x = CommandToggleHeavyModeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[39]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[39]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1725,7 +1733,7 @@ func (x *CommandToggleHeavyModeResponse) String() string {
 func (*CommandToggleHeavyModeResponse) ProtoMessage() {}
 
 func (x *CommandToggleHeavyModeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[39]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[39]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1738,7 +1746,7 @@ func (x *CommandToggleHeavyModeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandToggleHeavyModeResponse.ProtoReflect.Descriptor instead.
 func (*CommandToggleHeavyModeResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{39}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{39}
 }
 
 type CommandUnlockShortcutBarRequest struct {
@@ -1750,7 +1758,7 @@ type CommandUnlockShortcutBarRequest struct {
 func (x *CommandUnlockShortcutBarRequest) Reset() {
 	*x = CommandUnlockShortcutBarRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[40]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[40]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1763,7 +1771,7 @@ func (x *CommandUnlockShortcutBarRequest) String() string {
 func (*CommandUnlockShortcutBarRequest) ProtoMessage() {}
 
 func (x *CommandUnlockShortcutBarRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[40]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[40]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1776,7 +1784,7 @@ func (x *CommandUnlockShortcutBarRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnlockShortcutBarRequest.ProtoReflect.Descriptor instead.
 func (*CommandUnlockShortcutBarRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{40}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{40}
 }
 
 type CommandUnlockShortcutBarResponse struct {
@@ -1788,7 +1796,7 @@ type CommandUnlockShortcutBarResponse struct {
 func (x *CommandUnlockShortcutBarResponse) Reset() {
 	*x = CommandUnlockShortcutBarResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[41]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[41]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1801,7 +1809,7 @@ func (x *CommandUnlockShortcutBarResponse) String() string {
 func (*CommandUnlockShortcutBarResponse) ProtoMessage() {}
 
 func (x *CommandUnlockShortcutBarResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[41]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[41]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1814,7 +1822,7 @@ func (x *CommandUnlockShortcutBarResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnlockShortcutBarResponse.ProtoReflect.Descriptor instead.
 func (*CommandUnlockShortcutBarResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{41}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{41}
 }
 
 type CommandUnlockTipsRequest struct {
@@ -1826,7 +1834,7 @@ type CommandUnlockTipsRequest struct {
 func (x *CommandUnlockTipsRequest) Reset() {
 	*x = CommandUnlockTipsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[42]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[42]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1839,7 +1847,7 @@ func (x *CommandUnlockTipsRequest) String() string {
 func (*CommandUnlockTipsRequest) ProtoMessage() {}
 
 func (x *CommandUnlockTipsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[42]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[42]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1852,7 +1860,7 @@ func (x *CommandUnlockTipsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnlockTipsRequest.ProtoReflect.Descriptor instead.
 func (*CommandUnlockTipsRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{42}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{42}
 }
 
 type CommandUnlockTipsResponse struct {
@@ -1864,7 +1872,7 @@ type CommandUnlockTipsResponse struct {
 func (x *CommandUnlockTipsResponse) Reset() {
 	*x = CommandUnlockTipsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[43]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[43]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1877,7 +1885,7 @@ func (x *CommandUnlockTipsResponse) String() string {
 func (*CommandUnlockTipsResponse) ProtoMessage() {}
 
 func (x *CommandUnlockTipsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[43]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[43]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1890,7 +1898,7 @@ func (x *CommandUnlockTipsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnlockTipsResponse.ProtoReflect.Descriptor instead.
 func (*CommandUnlockTipsResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{43}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{43}
 }
 
 type CommandVersionRequest struct {
@@ -1902,7 +1910,7 @@ type CommandVersionRequest struct {
 func (x *CommandVersionRequest) Reset() {
 	*x = CommandVersionRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[44]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[44]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1915,7 +1923,7 @@ func (x *CommandVersionRequest) String() string {
 func (*CommandVersionRequest) ProtoMessage() {}
 
 func (x *CommandVersionRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[44]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[44]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1928,7 +1936,7 @@ func (x *CommandVersionRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandVersionRequest.ProtoReflect.Descriptor instead.
 func (*CommandVersionRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{44}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{44}
 }
 
 type CommandVersionResponse struct {
@@ -1942,7 +1950,7 @@ type CommandVersionResponse struct {
 func (x *CommandVersionResponse) Reset() {
 	*x = CommandVersionResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[45]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[45]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1955,7 +1963,7 @@ func (x *CommandVersionResponse) String() string {
 func (*CommandVersionResponse) ProtoMessage() {}
 
 func (x *CommandVersionResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[45]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[45]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1968,7 +1976,7 @@ func (x *CommandVersionResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandVersionResponse.ProtoReflect.Descriptor instead.
 func (*CommandVersionResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{45}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{45}
 }
 
 func (x *CommandVersionResponse) GetVersion() string {
@@ -1990,7 +1998,7 @@ type Player struct {
 func (x *Player) Reset() {
 	*x = Player{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[46]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[46]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2003,7 +2011,7 @@ func (x *Player) String() string {
 func (*Player) ProtoMessage() {}
 
 func (x *Player) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[46]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[46]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2016,7 +2024,7 @@ func (x *Player) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Player.ProtoReflect.Descriptor instead.
 func (*Player) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{46}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{46}
 }
 
 func (x *Player) GetUsername() string {
@@ -2042,7 +2050,7 @@ type CommandAdminsRequest struct {
 func (x *CommandAdminsRequest) Reset() {
 	*x = CommandAdminsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[47]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[47]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2055,7 +2063,7 @@ func (x *CommandAdminsRequest) String() string {
 func (*CommandAdminsRequest) ProtoMessage() {}
 
 func (x *CommandAdminsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[47]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[47]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2068,7 +2076,7 @@ func (x *CommandAdminsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandAdminsRequest.ProtoReflect.Descriptor instead.
 func (*CommandAdminsRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{47}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{47}
 }
 
 type CommandAdminsResponse struct {
@@ -2082,7 +2090,7 @@ type CommandAdminsResponse struct {
 func (x *CommandAdminsResponse) Reset() {
 	*x = CommandAdminsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[48]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[48]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2095,7 +2103,7 @@ func (x *CommandAdminsResponse) String() string {
 func (*CommandAdminsResponse) ProtoMessage() {}
 
 func (x *CommandAdminsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[48]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[48]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2108,7 +2116,7 @@ func (x *CommandAdminsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandAdminsResponse.ProtoReflect.Descriptor instead.
 func (*CommandAdminsResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{48}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{48}
 }
 
 func (x *CommandAdminsResponse) GetAdmins() []*Player {
@@ -2129,7 +2137,7 @@ type CommandBanRequest struct {
 func (x *CommandBanRequest) Reset() {
 	*x = CommandBanRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[49]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[49]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2142,7 +2150,7 @@ func (x *CommandBanRequest) String() string {
 func (*CommandBanRequest) ProtoMessage() {}
 
 func (x *CommandBanRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[49]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[49]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2155,7 +2163,7 @@ func (x *CommandBanRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandBanRequest.ProtoReflect.Descriptor instead.
 func (*CommandBanRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{49}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{49}
 }
 
 func (x *CommandBanRequest) GetUsername() string {
@@ -2174,7 +2182,7 @@ type CommandBanResponse struct {
 func (x *CommandBanResponse) Reset() {
 	*x = CommandBanResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[50]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[50]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2187,7 +2195,7 @@ func (x *CommandBanResponse) String() string {
 func (*CommandBanResponse) ProtoMessage() {}
 
 func (x *CommandBanResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[50]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[50]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2200,7 +2208,7 @@ func (x *CommandBanResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandBanResponse.ProtoReflect.Descriptor instead.
 func (*CommandBanResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{50}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{50}
 }
 
 type CommandBansRequest struct {
@@ -2212,7 +2220,7 @@ type CommandBansRequest struct {
 func (x *CommandBansRequest) Reset() {
 	*x = CommandBansRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[51]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[51]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2225,7 +2233,7 @@ func (x *CommandBansRequest) String() string {
 func (*CommandBansRequest) ProtoMessage() {}
 
 func (x *CommandBansRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[51]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[51]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2238,7 +2246,7 @@ func (x *CommandBansRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandBansRequest.ProtoReflect.Descriptor instead.
 func (*CommandBansRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{51}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{51}
 }
 
 type CommandBansResponse struct {
@@ -2252,7 +2260,7 @@ type CommandBansResponse struct {
 func (x *CommandBansResponse) Reset() {
 	*x = CommandBansResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[52]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[52]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2265,7 +2273,7 @@ func (x *CommandBansResponse) String() string {
 func (*CommandBansResponse) ProtoMessage() {}
 
 func (x *CommandBansResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[52]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[52]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2278,7 +2286,7 @@ func (x *CommandBansResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandBansResponse.ProtoReflect.Descriptor instead.
 func (*CommandBansResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{52}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{52}
 }
 
 func (x *CommandBansResponse) GetBans() []*Player {
@@ -2299,7 +2307,7 @@ type CommandDemoteRequest struct {
 func (x *CommandDemoteRequest) Reset() {
 	*x = CommandDemoteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[53]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[53]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2312,7 +2320,7 @@ func (x *CommandDemoteRequest) String() string {
 func (*CommandDemoteRequest) ProtoMessage() {}
 
 func (x *CommandDemoteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[53]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[53]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2325,7 +2333,7 @@ func (x *CommandDemoteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandDemoteRequest.ProtoReflect.Descriptor instead.
 func (*CommandDemoteRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{53}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{53}
 }
 
 func (x *CommandDemoteRequest) GetUsername() string {
@@ -2344,7 +2352,7 @@ type CommandDemoteResponse struct {
 func (x *CommandDemoteResponse) Reset() {
 	*x = CommandDemoteResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[54]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[54]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2357,7 +2365,7 @@ func (x *CommandDemoteResponse) String() string {
 func (*CommandDemoteResponse) ProtoMessage() {}
 
 func (x *CommandDemoteResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[54]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[54]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2370,7 +2378,7 @@ func (x *CommandDemoteResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandDemoteResponse.ProtoReflect.Descriptor instead.
 func (*CommandDemoteResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{54}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{54}
 }
 
 type CommandIgnoreRequest struct {
@@ -2384,7 +2392,7 @@ type CommandIgnoreRequest struct {
 func (x *CommandIgnoreRequest) Reset() {
 	*x = CommandIgnoreRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[55]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[55]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2397,7 +2405,7 @@ func (x *CommandIgnoreRequest) String() string {
 func (*CommandIgnoreRequest) ProtoMessage() {}
 
 func (x *CommandIgnoreRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[55]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[55]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2410,7 +2418,7 @@ func (x *CommandIgnoreRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandIgnoreRequest.ProtoReflect.Descriptor instead.
 func (*CommandIgnoreRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{55}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{55}
 }
 
 func (x *CommandIgnoreRequest) GetUsername() string {
@@ -2429,7 +2437,7 @@ type CommandIgnoreResponse struct {
 func (x *CommandIgnoreResponse) Reset() {
 	*x = CommandIgnoreResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[56]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[56]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2442,7 +2450,7 @@ func (x *CommandIgnoreResponse) String() string {
 func (*CommandIgnoreResponse) ProtoMessage() {}
 
 func (x *CommandIgnoreResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[56]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[56]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2455,7 +2463,7 @@ func (x *CommandIgnoreResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandIgnoreResponse.ProtoReflect.Descriptor instead.
 func (*CommandIgnoreResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{56}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{56}
 }
 
 type CommandKickRequest struct {
@@ -2470,7 +2478,7 @@ type CommandKickRequest struct {
 func (x *CommandKickRequest) Reset() {
 	*x = CommandKickRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[57]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[57]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2483,7 +2491,7 @@ func (x *CommandKickRequest) String() string {
 func (*CommandKickRequest) ProtoMessage() {}
 
 func (x *CommandKickRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[57]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[57]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2496,7 +2504,7 @@ func (x *CommandKickRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandKickRequest.ProtoReflect.Descriptor instead.
 func (*CommandKickRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{57}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{57}
 }
 
 func (x *CommandKickRequest) GetUsername() string {
@@ -2522,7 +2530,7 @@ type CommandKickResponse struct {
 func (x *CommandKickResponse) Reset() {
 	*x = CommandKickResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[58]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[58]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2535,7 +2543,7 @@ func (x *CommandKickResponse) String() string {
 func (*CommandKickResponse) ProtoMessage() {}
 
 func (x *CommandKickResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[58]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[58]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2548,7 +2556,7 @@ func (x *CommandKickResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandKickResponse.ProtoReflect.Descriptor instead.
 func (*CommandKickResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{58}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{58}
 }
 
 type CommandMuteRequest struct {
@@ -2562,7 +2570,7 @@ type CommandMuteRequest struct {
 func (x *CommandMuteRequest) Reset() {
 	*x = CommandMuteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[59]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[59]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2575,7 +2583,7 @@ func (x *CommandMuteRequest) String() string {
 func (*CommandMuteRequest) ProtoMessage() {}
 
 func (x *CommandMuteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[59]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[59]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2588,7 +2596,7 @@ func (x *CommandMuteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandMuteRequest.ProtoReflect.Descriptor instead.
 func (*CommandMuteRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{59}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{59}
 }
 
 func (x *CommandMuteRequest) GetUsername() string {
@@ -2607,7 +2615,7 @@ type CommandMuteResponse struct {
 func (x *CommandMuteResponse) Reset() {
 	*x = CommandMuteResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[60]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[60]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2620,7 +2628,7 @@ func (x *CommandMuteResponse) String() string {
 func (*CommandMuteResponse) ProtoMessage() {}
 
 func (x *CommandMuteResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[60]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[60]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2633,7 +2641,7 @@ func (x *CommandMuteResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandMuteResponse.ProtoReflect.Descriptor instead.
 func (*CommandMuteResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{60}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{60}
 }
 
 type CommandMutesRequest struct {
@@ -2645,7 +2653,7 @@ type CommandMutesRequest struct {
 func (x *CommandMutesRequest) Reset() {
 	*x = CommandMutesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[61]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[61]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2658,7 +2666,7 @@ func (x *CommandMutesRequest) String() string {
 func (*CommandMutesRequest) ProtoMessage() {}
 
 func (x *CommandMutesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[61]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[61]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2671,7 +2679,7 @@ func (x *CommandMutesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandMutesRequest.ProtoReflect.Descriptor instead.
 func (*CommandMutesRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{61}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{61}
 }
 
 type CommandMutesResponse struct {
@@ -2685,7 +2693,7 @@ type CommandMutesResponse struct {
 func (x *CommandMutesResponse) Reset() {
 	*x = CommandMutesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[62]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[62]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2698,7 +2706,7 @@ func (x *CommandMutesResponse) String() string {
 func (*CommandMutesResponse) ProtoMessage() {}
 
 func (x *CommandMutesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[62]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[62]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2711,7 +2719,7 @@ func (x *CommandMutesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandMutesResponse.ProtoReflect.Descriptor instead.
 func (*CommandMutesResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{62}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{62}
 }
 
 func (x *CommandMutesResponse) GetMutes() []*Player {
@@ -2730,7 +2738,7 @@ type CommandPlayersRequest struct {
 func (x *CommandPlayersRequest) Reset() {
 	*x = CommandPlayersRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[63]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[63]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2743,7 +2751,7 @@ func (x *CommandPlayersRequest) String() string {
 func (*CommandPlayersRequest) ProtoMessage() {}
 
 func (x *CommandPlayersRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[63]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[63]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2756,7 +2764,7 @@ func (x *CommandPlayersRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPlayersRequest.ProtoReflect.Descriptor instead.
 func (*CommandPlayersRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{63}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{63}
 }
 
 type CommandPlayersResponse struct {
@@ -2770,7 +2778,7 @@ type CommandPlayersResponse struct {
 func (x *CommandPlayersResponse) Reset() {
 	*x = CommandPlayersResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[64]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[64]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2783,7 +2791,7 @@ func (x *CommandPlayersResponse) String() string {
 func (*CommandPlayersResponse) ProtoMessage() {}
 
 func (x *CommandPlayersResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[64]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[64]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2796,7 +2804,7 @@ func (x *CommandPlayersResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPlayersResponse.ProtoReflect.Descriptor instead.
 func (*CommandPlayersResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{64}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{64}
 }
 
 func (x *CommandPlayersResponse) GetPlayers() []*Player {
@@ -2817,7 +2825,7 @@ type CommandPromoteRequest struct {
 func (x *CommandPromoteRequest) Reset() {
 	*x = CommandPromoteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[65]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[65]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2830,7 +2838,7 @@ func (x *CommandPromoteRequest) String() string {
 func (*CommandPromoteRequest) ProtoMessage() {}
 
 func (x *CommandPromoteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[65]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[65]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2843,7 +2851,7 @@ func (x *CommandPromoteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPromoteRequest.ProtoReflect.Descriptor instead.
 func (*CommandPromoteRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{65}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{65}
 }
 
 func (x *CommandPromoteRequest) GetUsername() string {
@@ -2862,7 +2870,7 @@ type CommandPromoteResponse struct {
 func (x *CommandPromoteResponse) Reset() {
 	*x = CommandPromoteResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[66]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[66]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2875,7 +2883,7 @@ func (x *CommandPromoteResponse) String() string {
 func (*CommandPromoteResponse) ProtoMessage() {}
 
 func (x *CommandPromoteResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[66]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[66]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2888,7 +2896,7 @@ func (x *CommandPromoteResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPromoteResponse.ProtoReflect.Descriptor instead.
 func (*CommandPromoteResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{66}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{66}
 }
 
 type CommandPurgeRequest struct {
@@ -2902,7 +2910,7 @@ type CommandPurgeRequest struct {
 func (x *CommandPurgeRequest) Reset() {
 	*x = CommandPurgeRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[67]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[67]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2915,7 +2923,7 @@ func (x *CommandPurgeRequest) String() string {
 func (*CommandPurgeRequest) ProtoMessage() {}
 
 func (x *CommandPurgeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[67]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[67]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2928,7 +2936,7 @@ func (x *CommandPurgeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPurgeRequest.ProtoReflect.Descriptor instead.
 func (*CommandPurgeRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{67}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{67}
 }
 
 func (x *CommandPurgeRequest) GetUsername() string {
@@ -2947,7 +2955,7 @@ type CommandPurgeResponse struct {
 func (x *CommandPurgeResponse) Reset() {
 	*x = CommandPurgeResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[68]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[68]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2960,7 +2968,7 @@ func (x *CommandPurgeResponse) String() string {
 func (*CommandPurgeResponse) ProtoMessage() {}
 
 func (x *CommandPurgeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[68]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[68]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2973,7 +2981,7 @@ func (x *CommandPurgeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandPurgeResponse.ProtoReflect.Descriptor instead.
 func (*CommandPurgeResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{68}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{68}
 }
 
 type CommandServerSaveRequest struct {
@@ -2985,7 +2993,7 @@ type CommandServerSaveRequest struct {
 func (x *CommandServerSaveRequest) Reset() {
 	*x = CommandServerSaveRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[69]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[69]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2998,7 +3006,7 @@ func (x *CommandServerSaveRequest) String() string {
 func (*CommandServerSaveRequest) ProtoMessage() {}
 
 func (x *CommandServerSaveRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[69]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[69]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3011,7 +3019,7 @@ func (x *CommandServerSaveRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandServerSaveRequest.ProtoReflect.Descriptor instead.
 func (*CommandServerSaveRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{69}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{69}
 }
 
 type CommandServerSaveResponse struct {
@@ -3023,7 +3031,7 @@ type CommandServerSaveResponse struct {
 func (x *CommandServerSaveResponse) Reset() {
 	*x = CommandServerSaveResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[70]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[70]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3036,7 +3044,7 @@ func (x *CommandServerSaveResponse) String() string {
 func (*CommandServerSaveResponse) ProtoMessage() {}
 
 func (x *CommandServerSaveResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[70]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[70]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3049,7 +3057,7 @@ func (x *CommandServerSaveResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandServerSaveResponse.ProtoReflect.Descriptor instead.
 func (*CommandServerSaveResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{70}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{70}
 }
 
 type CommandUnbanRequest struct {
@@ -3063,7 +3071,7 @@ type CommandUnbanRequest struct {
 func (x *CommandUnbanRequest) Reset() {
 	*x = CommandUnbanRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[71]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[71]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3076,7 +3084,7 @@ func (x *CommandUnbanRequest) String() string {
 func (*CommandUnbanRequest) ProtoMessage() {}
 
 func (x *CommandUnbanRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[71]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[71]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3089,7 +3097,7 @@ func (x *CommandUnbanRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnbanRequest.ProtoReflect.Descriptor instead.
 func (*CommandUnbanRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{71}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{71}
 }
 
 func (x *CommandUnbanRequest) GetUsername() string {
@@ -3108,7 +3116,7 @@ type CommandUnbanResponse struct {
 func (x *CommandUnbanResponse) Reset() {
 	*x = CommandUnbanResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[72]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[72]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3121,7 +3129,7 @@ func (x *CommandUnbanResponse) String() string {
 func (*CommandUnbanResponse) ProtoMessage() {}
 
 func (x *CommandUnbanResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[72]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[72]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3134,7 +3142,7 @@ func (x *CommandUnbanResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnbanResponse.ProtoReflect.Descriptor instead.
 func (*CommandUnbanResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{72}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{72}
 }
 
 type CommandUnignoreRequest struct {
@@ -3148,7 +3156,7 @@ type CommandUnignoreRequest struct {
 func (x *CommandUnignoreRequest) Reset() {
 	*x = CommandUnignoreRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[73]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[73]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3161,7 +3169,7 @@ func (x *CommandUnignoreRequest) String() string {
 func (*CommandUnignoreRequest) ProtoMessage() {}
 
 func (x *CommandUnignoreRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[73]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[73]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3174,7 +3182,7 @@ func (x *CommandUnignoreRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnignoreRequest.ProtoReflect.Descriptor instead.
 func (*CommandUnignoreRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{73}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{73}
 }
 
 func (x *CommandUnignoreRequest) GetUsername() string {
@@ -3193,7 +3201,7 @@ type CommandUnignoreResponse struct {
 func (x *CommandUnignoreResponse) Reset() {
 	*x = CommandUnignoreResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[74]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[74]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3206,7 +3214,7 @@ func (x *CommandUnignoreResponse) String() string {
 func (*CommandUnignoreResponse) ProtoMessage() {}
 
 func (x *CommandUnignoreResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[74]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[74]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3219,7 +3227,7 @@ func (x *CommandUnignoreResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnignoreResponse.ProtoReflect.Descriptor instead.
 func (*CommandUnignoreResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{74}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{74}
 }
 
 type CommandUnmuteRequest struct {
@@ -3233,7 +3241,7 @@ type CommandUnmuteRequest struct {
 func (x *CommandUnmuteRequest) Reset() {
 	*x = CommandUnmuteRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[75]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[75]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3246,7 +3254,7 @@ func (x *CommandUnmuteRequest) String() string {
 func (*CommandUnmuteRequest) ProtoMessage() {}
 
 func (x *CommandUnmuteRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[75]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[75]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3259,7 +3267,7 @@ func (x *CommandUnmuteRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnmuteRequest.ProtoReflect.Descriptor instead.
 func (*CommandUnmuteRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{75}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{75}
 }
 
 func (x *CommandUnmuteRequest) GetUsername() string {
@@ -3278,7 +3286,7 @@ type CommandUnmuteResponse struct {
 func (x *CommandUnmuteResponse) Reset() {
 	*x = CommandUnmuteResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[76]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[76]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3291,7 +3299,7 @@ func (x *CommandUnmuteResponse) String() string {
 func (*CommandUnmuteResponse) ProtoMessage() {}
 
 func (x *CommandUnmuteResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[76]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[76]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3304,7 +3312,7 @@ func (x *CommandUnmuteResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandUnmuteResponse.ProtoReflect.Descriptor instead.
 func (*CommandUnmuteResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{76}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{76}
 }
 
 type CommandWhisperRequest struct {
@@ -3319,7 +3327,7 @@ type CommandWhisperRequest struct {
 func (x *CommandWhisperRequest) Reset() {
 	*x = CommandWhisperRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[77]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[77]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3332,7 +3340,7 @@ func (x *CommandWhisperRequest) String() string {
 func (*CommandWhisperRequest) ProtoMessage() {}
 
 func (x *CommandWhisperRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[77]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[77]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3345,7 +3353,7 @@ func (x *CommandWhisperRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhisperRequest.ProtoReflect.Descriptor instead.
 func (*CommandWhisperRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{77}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{77}
 }
 
 func (x *CommandWhisperRequest) GetUsername() string {
@@ -3371,7 +3379,7 @@ type CommandWhisperResponse struct {
 func (x *CommandWhisperResponse) Reset() {
 	*x = CommandWhisperResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[78]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[78]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3384,7 +3392,7 @@ func (x *CommandWhisperResponse) String() string {
 func (*CommandWhisperResponse) ProtoMessage() {}
 
 func (x *CommandWhisperResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[78]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[78]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3397,7 +3405,7 @@ func (x *CommandWhisperResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhisperResponse.ProtoReflect.Descriptor instead.
 func (*CommandWhisperResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{78}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{78}
 }
 
 type CommandWhitelistAddRequest struct {
@@ -3411,7 +3419,7 @@ type CommandWhitelistAddRequest struct {
 func (x *CommandWhitelistAddRequest) Reset() {
 	*x = CommandWhitelistAddRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[79]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[79]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3424,7 +3432,7 @@ func (x *CommandWhitelistAddRequest) String() string {
 func (*CommandWhitelistAddRequest) ProtoMessage() {}
 
 func (x *CommandWhitelistAddRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[79]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[79]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3437,7 +3445,7 @@ func (x *CommandWhitelistAddRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistAddRequest.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistAddRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{79}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{79}
 }
 
 func (x *CommandWhitelistAddRequest) GetUsername() string {
@@ -3456,7 +3464,7 @@ type CommandWhitelistAddResponse struct {
 func (x *CommandWhitelistAddResponse) Reset() {
 	*x = CommandWhitelistAddResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[80]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[80]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3469,7 +3477,7 @@ func (x *CommandWhitelistAddResponse) String() string {
 func (*CommandWhitelistAddResponse) ProtoMessage() {}
 
 func (x *CommandWhitelistAddResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[80]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[80]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3482,7 +3490,7 @@ func (x *CommandWhitelistAddResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistAddResponse.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistAddResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{80}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{80}
 }
 
 type CommandWhitelistGetRequest struct {
@@ -3494,7 +3502,7 @@ type CommandWhitelistGetRequest struct {
 func (x *CommandWhitelistGetRequest) Reset() {
 	*x = CommandWhitelistGetRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[81]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[81]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3507,7 +3515,7 @@ func (x *CommandWhitelistGetRequest) String() string {
 func (*CommandWhitelistGetRequest) ProtoMessage() {}
 
 func (x *CommandWhitelistGetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[81]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[81]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3520,7 +3528,7 @@ func (x *CommandWhitelistGetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistGetRequest.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistGetRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{81}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{81}
 }
 
 type CommandWhitelistGetResponse struct {
@@ -3534,7 +3542,7 @@ type CommandWhitelistGetResponse struct {
 func (x *CommandWhitelistGetResponse) Reset() {
 	*x = CommandWhitelistGetResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[82]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[82]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3547,7 +3555,7 @@ func (x *CommandWhitelistGetResponse) String() string {
 func (*CommandWhitelistGetResponse) ProtoMessage() {}
 
 func (x *CommandWhitelistGetResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[82]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[82]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3560,7 +3568,7 @@ func (x *CommandWhitelistGetResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistGetResponse.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistGetResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{82}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{82}
 }
 
 func (x *CommandWhitelistGetResponse) GetWhitelist() []*Player {
@@ -3581,7 +3589,7 @@ type CommandWhitelistRemoveRequest struct {
 func (x *CommandWhitelistRemoveRequest) Reset() {
 	*x = CommandWhitelistRemoveRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[83]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[83]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3594,7 +3602,7 @@ func (x *CommandWhitelistRemoveRequest) String() string {
 func (*CommandWhitelistRemoveRequest) ProtoMessage() {}
 
 func (x *CommandWhitelistRemoveRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[83]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[83]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3607,7 +3615,7 @@ func (x *CommandWhitelistRemoveRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistRemoveRequest.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistRemoveRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{83}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{83}
 }
 
 func (x *CommandWhitelistRemoveRequest) GetUsername() string {
@@ -3626,7 +3634,7 @@ type CommandWhitelistRemoveResponse struct {
 func (x *CommandWhitelistRemoveResponse) Reset() {
 	*x = CommandWhitelistRemoveResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[84]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[84]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3639,7 +3647,7 @@ func (x *CommandWhitelistRemoveResponse) String() string {
 func (*CommandWhitelistRemoveResponse) ProtoMessage() {}
 
 func (x *CommandWhitelistRemoveResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[84]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[84]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3652,7 +3660,7 @@ func (x *CommandWhitelistRemoveResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistRemoveResponse.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistRemoveResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{84}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{84}
 }
 
 type CommandWhitelistClearRequest struct {
@@ -3664,7 +3672,7 @@ type CommandWhitelistClearRequest struct {
 func (x *CommandWhitelistClearRequest) Reset() {
 	*x = CommandWhitelistClearRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[85]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[85]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3677,7 +3685,7 @@ func (x *CommandWhitelistClearRequest) String() string {
 func (*CommandWhitelistClearRequest) ProtoMessage() {}
 
 func (x *CommandWhitelistClearRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[85]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[85]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3690,7 +3698,7 @@ func (x *CommandWhitelistClearRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistClearRequest.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistClearRequest) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{85}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{85}
 }
 
 type CommandWhitelistClearResponse struct {
@@ -3702,7 +3710,7 @@ type CommandWhitelistClearResponse struct {
 func (x *CommandWhitelistClearResponse) Reset() {
 	*x = CommandWhitelistClearResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_apis_factorioapi_v1_command_proto_msgTypes[86]
+		mi := &file_apis_factorioapi_v2_command_proto_msgTypes[86]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3715,7 +3723,7 @@ func (x *CommandWhitelistClearResponse) String() string {
 func (*CommandWhitelistClearResponse) ProtoMessage() {}
 
 func (x *CommandWhitelistClearResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_apis_factorioapi_v1_command_proto_msgTypes[86]
+	mi := &file_apis_factorioapi_v2_command_proto_msgTypes[86]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3728,16 +3736,16 @@ func (x *CommandWhitelistClearResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CommandWhitelistClearResponse.ProtoReflect.Descriptor instead.
 func (*CommandWhitelistClearResponse) Descriptor() ([]byte, []int) {
-	return file_apis_factorioapi_v1_command_proto_rawDescGZIP(), []int{86}
+	return file_apis_factorioapi_v2_command_proto_rawDescGZIP(), []int{86}
 }
 
-var File_apis_factorioapi_v1_command_proto protoreflect.FileDescriptor
+var File_apis_factorioapi_v2_command_proto protoreflect.FileDescriptor
 
-var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
+var file_apis_factorioapi_v2_command_proto_rawDesc = []byte{
 	0x0a, 0x21, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61,
-	0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2e, 0x70, 0x72,
+	0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x12, 0x13, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73,
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x2d, 0x67,
 	0x65, 0x6e, 0x2d, 0x6f, 0x70, 0x65, 0x6e, 0x61, 0x70, 0x69, 0x76, 0x32, 0x2f, 0x6f, 0x70, 0x74,
@@ -3856,7 +3864,7 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x74, 0x22, 0x1a, 0x0a, 0x18, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52, 0x65, 0x73, 0x65,
 	0x74, 0x54, 0x69, 0x70, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x19, 0x0a,
 	0x17, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69, 0x6f,
-	0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0xc1, 0x01, 0x0a, 0x18, 0x43, 0x6f, 0x6d,
+	0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0xf1, 0x01, 0x0a, 0x18, 0x43, 0x6f, 0x6d,
 	0x6d, 0x61, 0x6e, 0x64, 0x45, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73,
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x33, 0x0a, 0x10, 0x65, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69,
 	0x6f, 0x6e, 0x5f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x01, 0x42,
@@ -3868,7 +3876,10 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x02, 0x31, 0x30, 0x52, 0x09, 0x70, 0x6f, 0x6c, 0x6c, 0x75, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x2c,
 	0x0a, 0x0d, 0x73, 0x70, 0x61, 0x77, 0x6e, 0x65, 0x72, 0x5f, 0x6b, 0x69, 0x6c, 0x6c, 0x73, 0x18,
 	0x04, 0x20, 0x01, 0x28, 0x01, 0x42, 0x07, 0x92, 0x41, 0x04, 0x4a, 0x02, 0x31, 0x30, 0x52, 0x0c,
-	0x73, 0x70, 0x61, 0x77, 0x6e, 0x65, 0x72, 0x4b, 0x69, 0x6c, 0x6c, 0x73, 0x22, 0x14, 0x0a, 0x12,
+	0x73, 0x70, 0x61, 0x77, 0x6e, 0x65, 0x72, 0x4b, 0x69, 0x6c, 0x6c, 0x73, 0x12, 0x2e, 0x0a, 0x0b,
+	0x70, 0x6c, 0x61, 0x6e, 0x65, 0x74, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28,
+	0x09, 0x42, 0x0d, 0x92, 0x41, 0x0a, 0x4a, 0x08, 0x22, 0x4e, 0x61, 0x75, 0x76, 0x69, 0x73, 0x22,
+	0x52, 0x0a, 0x70, 0x6c, 0x61, 0x6e, 0x65, 0x74, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x14, 0x0a, 0x12,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x69, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x22, 0x32, 0x0a, 0x13, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x69, 0x6d,
 	0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x1b, 0x0a, 0x04, 0x74, 0x69, 0x6d,
@@ -3912,7 +3923,7 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x6d, 0x69, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x46, 0x0a, 0x06,
 	0x61, 0x64, 0x6d, 0x69, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11, 0x92, 0x41, 0x0e, 0x4a, 0x0c,
+	0x76, 0x32, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11, 0x92, 0x41, 0x0e, 0x4a, 0x0c,
 	0x22, 0x6e, 0x65, 0x6b, 0x6f, 0x6d, 0x65, 0x6f, 0x77, 0x77, 0x77, 0x22, 0x52, 0x06, 0x61, 0x64,
 	0x6d, 0x69, 0x6e, 0x73, 0x22, 0x42, 0x0a, 0x11, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42,
 	0x61, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x2d, 0x0a, 0x08, 0x75, 0x73, 0x65,
@@ -3924,7 +3935,7 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x75, 0x65, 0x73, 0x74, 0x22, 0x59, 0x0a, 0x13, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42,
 	0x61, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x42, 0x0a, 0x04, 0x62,
 	0x61, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x61, 0x70, 0x69, 0x73,
-	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e,
+	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e,
 	0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11, 0x92, 0x41, 0x0e, 0x4a, 0x0c, 0x22, 0x6e, 0x65,
 	0x6b, 0x6f, 0x6d, 0x65, 0x6f, 0x77, 0x77, 0x77, 0x22, 0x52, 0x04, 0x62, 0x61, 0x6e, 0x73, 0x22,
 	0x45, 0x0a, 0x14, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6d, 0x6f, 0x74, 0x65,
@@ -3958,14 +3969,14 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x4d, 0x75, 0x74, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x44, 0x0a,
 	0x05, 0x6d, 0x75, 0x74, 0x65, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11, 0x92, 0x41, 0x0e, 0x4a, 0x0c,
+	0x76, 0x32, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11, 0x92, 0x41, 0x0e, 0x4a, 0x0c,
 	0x22, 0x6e, 0x65, 0x6b, 0x6f, 0x6d, 0x65, 0x6f, 0x77, 0x77, 0x77, 0x22, 0x52, 0x05, 0x6d, 0x75,
 	0x74, 0x65, 0x73, 0x22, 0x17, 0x0a, 0x15, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x62, 0x0a, 0x16,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x52, 0x65,
 	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x48, 0x0a, 0x07, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72,
 	0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66,
-	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x6c,
+	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x42, 0x11, 0x92, 0x41, 0x0e, 0x4a, 0x0c, 0x22, 0x6e, 0x65, 0x6b, 0x6f,
 	0x6d, 0x65, 0x6f, 0x77, 0x77, 0x77, 0x22, 0x52, 0x07, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73,
 	0x22, 0x46, 0x0a, 0x15, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x72, 0x6f, 0x6d, 0x6f,
@@ -4023,7 +4034,7 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x69, 0x73, 0x74, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4c,
 	0x0a, 0x09, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x18, 0x01, 0x20, 0x03, 0x28,
 	0x0b, 0x32, 0x1b, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x42, 0x11,
 	0x92, 0x41, 0x0e, 0x4a, 0x0c, 0x22, 0x6e, 0x65, 0x6b, 0x6f, 0x6d, 0x65, 0x6f, 0x77, 0x77, 0x77,
 	0x22, 0x52, 0x09, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x22, 0x4e, 0x0a, 0x1d,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74,
@@ -4040,9 +4051,9 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x95, 0x51, 0x0a, 0x0e, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69,
 	0x63, 0x65, 0x12, 0xe7, 0x01, 0x0a, 0x0a, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52, 0x61,
 	0x77, 0x12, 0x26, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52,
 	0x61, 0x77, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x27, 0x2e, 0x61, 0x70, 0x69, 0x73,
-	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e,
+	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52, 0x61, 0x77, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
 	0x73, 0x65, 0x22, 0x87, 0x01, 0x92, 0x41, 0x55, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c,
 	0x65, 0x12, 0x24, 0x45, 0x78, 0x65, 0x63, 0x75, 0x74, 0x65, 0x73, 0x20, 0x61, 0x20, 0x4c, 0x75,
@@ -4050,44 +4061,44 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x6c, 0x6f, 0x77, 0x65, 0x64, 0x29, 0x2e, 0x1a, 0x24, 0x45, 0x78, 0x65, 0x63, 0x75, 0x74, 0x65,
 	0x73, 0x20, 0x61, 0x20, 0x4c, 0x75, 0x61, 0x20, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x20,
 	0x28, 0x69, 0x66, 0x20, 0x61, 0x6c, 0x6c, 0x6f, 0x77, 0x65, 0x64, 0x29, 0x2e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x29, 0x3a, 0x01, 0x2a, 0x22, 0x24, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f,
+	0x93, 0x02, 0x29, 0x3a, 0x01, 0x2a, 0x22, 0x24, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f,
 	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x72, 0x61, 0x77, 0x12, 0xea, 0x01, 0x0a,
 	0x0e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12,
 	0x2a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61,
-	0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x65, 0x73,
+	0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x65, 0x73,
 	0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x7f, 0x92, 0x41, 0x49, 0x0a, 0x07, 0x43,
 	0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1e, 0x53, 0x65, 0x6e, 0x64, 0x20, 0x61, 0x20, 0x6d,
 	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x20, 0x74, 0x6f, 0x20, 0x61, 0x6c, 0x6c, 0x20, 0x70, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x73, 0x2e, 0x1a, 0x1e, 0x53, 0x65, 0x6e, 0x64, 0x20, 0x61, 0x20, 0x6d,
 	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x20, 0x74, 0x6f, 0x20, 0x61, 0x6c, 0x6c, 0x20, 0x70, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2d, 0x3a, 0x01, 0x2a, 0x22,
-	0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
+	0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
 	0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0xd5, 0x01, 0x0a, 0x0d, 0x43, 0x6f,
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x6c, 0x65, 0x72, 0x74, 0x73, 0x12, 0x29, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x6c, 0x65, 0x72, 0x74, 0x73, 0x52,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x6c, 0x65, 0x72, 0x74, 0x73, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61,
-	0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d,
+	0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d,
 	0x6d, 0x61, 0x6e, 0x64, 0x41, 0x6c, 0x65, 0x72, 0x74, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
 	0x73, 0x65, 0x22, 0x6d, 0x92, 0x41, 0x3b, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x12, 0x17, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f,
 	0x66, 0x20, 0x61, 0x6c, 0x65, 0x72, 0x74, 0x73, 0x2e, 0x1a, 0x17, 0x47, 0x65, 0x74, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x61, 0x6c, 0x65, 0x72, 0x74,
 	0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x29, 0x12, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76,
-	0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f,
+	0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f,
 	0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x61, 0x6c, 0x65, 0x72, 0x74,
 	0x73, 0x12, 0x95, 0x02, 0x0a, 0x1a, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x6e, 0x61,
 	0x62, 0x6c, 0x65, 0x52, 0x65, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x51, 0x75, 0x65, 0x75, 0x65,
 	0x12, 0x36, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
-	0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x6e,
+	0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x6e,
 	0x61, 0x62, 0x6c, 0x65, 0x52, 0x65, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x51, 0x75, 0x65, 0x75,
 	0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x37, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e,
-	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43,
+	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x6e, 0x61, 0x62, 0x6c, 0x65, 0x52, 0x65, 0x73, 0x65,
 	0x61, 0x72, 0x63, 0x68, 0x51, 0x75, 0x65, 0x75, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
 	0x65, 0x22, 0x85, 0x01, 0x92, 0x41, 0x41, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
@@ -4095,19 +4106,19 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x65, 0x61, 0x72, 0x63, 0x68, 0x20, 0x71, 0x75, 0x65, 0x75, 0x65, 0x2e, 0x1a, 0x1a, 0x45, 0x6e,
 	0x61, 0x62, 0x6c, 0x65, 0x20, 0x74, 0x68, 0x65, 0x20, 0x72, 0x65, 0x73, 0x65, 0x61, 0x72, 0x63,
 	0x68, 0x20, 0x71, 0x75, 0x65, 0x75, 0x65, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3b, 0x3a, 0x01,
-	0x2a, 0x22, 0x36, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f,
+	0x2a, 0x22, 0x36, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f,
 	0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x2f, 0x65, 0x6e, 0x61, 0x62, 0x6c, 0x65, 0x2d, 0x72, 0x65, 0x73, 0x65, 0x61,
 	0x72, 0x63, 0x68, 0x2d, 0x71, 0x75, 0x65, 0x75, 0x65, 0x12, 0xdd, 0x02, 0x0a, 0x29, 0x43, 0x6f,
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x50, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d,
 	0x6d, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x46, 0x6f, 0x72, 0x45,
 	0x76, 0x65, 0x72, 0x79, 0x6f, 0x6e, 0x65, 0x12, 0x45, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66,
-	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f,
+	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f,
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x50, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d,
 	0x6d, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x46, 0x6f, 0x72, 0x45,
 	0x76, 0x65, 0x72, 0x79, 0x6f, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x46,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65,
 	0x50, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d, 0x6d, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x70, 0x65, 0x61,
 	0x6b, 0x65, 0x72, 0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x72, 0x79, 0x6f, 0x6e, 0x65, 0x52, 0x65,
 	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0xa0, 0x01, 0x92, 0x41, 0x4b, 0x0a, 0x07, 0x43, 0x6f,
@@ -4116,7 +4127,7 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x61, 0x6b, 0x65, 0x72, 0x73, 0x2e, 0x1a, 0x1f, 0x4d, 0x75, 0x74, 0x65, 0x20, 0x61, 0x6c, 0x6c,
 	0x20, 0x70, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d, 0x6d, 0x61, 0x62, 0x6c, 0x65, 0x20, 0x73, 0x70,
 	0x65, 0x61, 0x6b, 0x65, 0x72, 0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x4c, 0x3a, 0x01, 0x2a,
-	0x22, 0x47, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
+	0x22, 0x47, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
 	0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x2f, 0x6d, 0x75, 0x74, 0x65, 0x2d, 0x70, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d, 0x6d,
 	0x61, 0x62, 0x6c, 0x65, 0x2d, 0x73, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x2d, 0x66, 0x6f, 0x72,
@@ -4124,12 +4135,12 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6d, 0x75, 0x74, 0x65, 0x50, 0x72, 0x6f, 0x67, 0x72,
 	0x61, 0x6d, 0x6d, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x46, 0x6f,
 	0x72, 0x45, 0x76, 0x65, 0x72, 0x79, 0x6f, 0x6e, 0x65, 0x12, 0x47, 0x2e, 0x61, 0x70, 0x69, 0x73,
-	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e,
+	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6d, 0x75, 0x74, 0x65, 0x50, 0x72, 0x6f,
 	0x67, 0x72, 0x61, 0x6d, 0x6d, 0x61, 0x62, 0x6c, 0x65, 0x53, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72,
 	0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x72, 0x79, 0x6f, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x48, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x55, 0x6e, 0x6d, 0x75, 0x74, 0x65, 0x50, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d, 0x6d, 0x61, 0x62,
 	0x6c, 0x65, 0x53, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x46, 0x6f, 0x72, 0x45, 0x76, 0x65, 0x72,
 	0x79, 0x6f, 0x6e, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0xa6, 0x01, 0x92,
@@ -4139,33 +4150,33 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x55, 0x6e, 0x6d, 0x75, 0x74, 0x65, 0x20, 0x61, 0x6c, 0x6c, 0x20, 0x70, 0x72, 0x6f, 0x67, 0x72,
 	0x61, 0x6d, 0x6d, 0x61, 0x62, 0x6c, 0x65, 0x20, 0x73, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x73,
 	0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x4e, 0x3a, 0x01, 0x2a, 0x22, 0x49, 0x2f, 0x61, 0x70, 0x69,
-	0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
+	0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
 	0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x75, 0x6e, 0x6d,
 	0x75, 0x74, 0x65, 0x2d, 0x70, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d, 0x6d, 0x61, 0x62, 0x6c, 0x65,
 	0x2d, 0x73, 0x70, 0x65, 0x61, 0x6b, 0x65, 0x72, 0x2d, 0x66, 0x6f, 0x72, 0x2d, 0x65, 0x76, 0x65,
 	0x72, 0x79, 0x6f, 0x6e, 0x65, 0x12, 0xf3, 0x01, 0x0a, 0x12, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x2e, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73,
 	0x73, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2f, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73,
 	0x73, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x7c, 0x92,
 	0x41, 0x45, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1c, 0x47, 0x65, 0x74,
 	0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x70, 0x65, 0x72,
 	0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x1a, 0x1c, 0x47, 0x65, 0x74, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x70, 0x65, 0x72, 0x6d, 0x69,
 	0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2e, 0x12, 0x2c, 0x2f,
-	0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
+	0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
 	0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f,
 	0x70, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x12, 0x97, 0x02, 0x0a, 0x1b,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f,
 	0x6e, 0x73, 0x41, 0x64, 0x64, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x12, 0x37, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73,
 	0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x71,
 	0x75, 0x65, 0x73, 0x74, 0x1a, 0x38, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74,
-	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
+	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x41, 0x64, 0x64,
 	0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x84,
 	0x01, 0x92, 0x41, 0x3d, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x18, 0x41,
@@ -4173,66 +4184,66 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x20, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x2e, 0x1a, 0x18, 0x41, 0x64, 0x64, 0x20, 0x61, 0x20, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70,
 	0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3e, 0x3a, 0x01, 0x2a, 0x22, 0x39, 0x2f, 0x61, 0x70, 0x69,
-	0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
+	0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
 	0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x70, 0x65, 0x72,
 	0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x2f, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x12, 0x83, 0x02, 0x0a, 0x1d, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x43, 0x72, 0x65, 0x61,
 	0x74, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x12, 0x39, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66,
-	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f,
+	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f,
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73,
 	0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x3a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x43, 0x72, 0x65, 0x61, 0x74,
 	0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x6b,
 	0x92, 0x41, 0x2b, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0f, 0x43, 0x72,
 	0x65, 0x61, 0x74, 0x65, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x2e, 0x1a, 0x0f, 0x43,
 	0x72, 0x65, 0x61, 0x74, 0x65, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x2e, 0x82, 0xd3,
-	0xe4, 0x93, 0x02, 0x37, 0x3a, 0x01, 0x2a, 0x22, 0x32, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31,
+	0xe4, 0x93, 0x02, 0x37, 0x3a, 0x01, 0x2a, 0x22, 0x32, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32,
 	0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c,
 	0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x70, 0x65, 0x72, 0x6d, 0x69, 0x73,
 	0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x12, 0x83, 0x02, 0x0a, 0x1d,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f,
 	0x6e, 0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x12, 0x39, 0x2e,
 	0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69,
-	0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69,
+	0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69,
 	0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x6f, 0x75,
 	0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x3a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e,
-	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43,
+	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e,
 	0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x6b, 0x92, 0x41, 0x2b, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f,
 	0x6c, 0x65, 0x12, 0x0f, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f,
 	0x75, 0x70, 0x2e, 0x1a, 0x0f, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x20, 0x61, 0x20, 0x67, 0x72,
 	0x6f, 0x75, 0x70, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x37, 0x3a, 0x01, 0x2a, 0x2a, 0x32, 0x2f,
-	0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
+	0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
 	0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f,
 	0x70, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67, 0x72, 0x6f, 0x75,
 	0x70, 0x12, 0xf9, 0x01, 0x0a, 0x1b, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72,
 	0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x45, 0x64, 0x69, 0x74, 0x47, 0x72, 0x6f, 0x75,
 	0x70, 0x12, 0x37, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50,
 	0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x45, 0x64, 0x69, 0x74, 0x47, 0x72,
 	0x6f, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x38, 0x2e, 0x61, 0x70, 0x69,
-	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31,
+	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32,
 	0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69,
 	0x6f, 0x6e, 0x73, 0x45, 0x64, 0x69, 0x74, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x67, 0x92, 0x41, 0x27, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f,
 	0x6c, 0x65, 0x12, 0x0d, 0x45, 0x64, 0x69, 0x74, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70,
 	0x2e, 0x1a, 0x0d, 0x45, 0x64, 0x69, 0x74, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x2e,
 	0x82, 0xd3, 0xe4, 0x93, 0x02, 0x37, 0x3a, 0x01, 0x2a, 0x32, 0x32, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
+	0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
 	0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x70, 0x65, 0x72, 0x6d,
 	0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x12, 0xac, 0x02,
 	0x0a, 0x20, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73,
 	0x69, 0x6f, 0x6e, 0x73, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x72, 0x6f,
 	0x75, 0x70, 0x12, 0x3c, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x47, 0x65, 0x74, 0x50, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x1a, 0x3d, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
-	0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65,
+	0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65,
 	0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x47, 0x65, 0x74, 0x50, 0x6c, 0x61, 0x79,
 	0x65, 0x72, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
 	0x8a, 0x01, 0x92, 0x41, 0x45, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1c,
@@ -4240,18 +4251,18 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x6f, 0x72, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x1c, 0x47, 0x65,
 	0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x73, 0x20, 0x66, 0x6f, 0x72,
 	0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3c,
-	0x12, 0x3a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
+	0x12, 0x3a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
 	0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x2f, 0x70, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67,
 	0x72, 0x6f, 0x75, 0x70, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x12, 0xb9, 0x02, 0x0a,
 	0x23, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69,
 	0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47,
 	0x72, 0x6f, 0x75, 0x70, 0x12, 0x3f, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74,
-	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
+	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6d,
 	0x6f, 0x76, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x40, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63,
-	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
+	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65,
 	0x6d, 0x6f, 0x76, 0x65, 0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x8e, 0x01, 0x92, 0x41, 0x47, 0x0a, 0x07, 0x43,
@@ -4260,45 +4271,45 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x72, 0x6f, 0x75, 0x70, 0x2e, 0x1a, 0x1d, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x20, 0x61, 0x20,
 	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x61, 0x20, 0x67, 0x72,
 	0x6f, 0x75, 0x70, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3e, 0x3a, 0x01, 0x2a, 0x2a, 0x39, 0x2f,
-	0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
+	0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
 	0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f,
 	0x70, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67, 0x72, 0x6f, 0x75,
 	0x70, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x12, 0x83, 0x02, 0x0a, 0x1d, 0x43, 0x6f, 0x6d,
 	0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x52,
 	0x65, 0x6e, 0x61, 0x6d, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x12, 0x39, 0x2e, 0x61, 0x70, 0x69,
-	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31,
+	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32,
 	0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69,
 	0x6f, 0x6e, 0x73, 0x52, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x3a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63,
-	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
+	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x50, 0x65, 0x72, 0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x52, 0x65,
 	0x6e, 0x61, 0x6d, 0x65, 0x47, 0x72, 0x6f, 0x75, 0x70, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
 	0x65, 0x22, 0x6b, 0x92, 0x41, 0x2b, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12,
 	0x0f, 0x52, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x2e,
 	0x1a, 0x0f, 0x52, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x20, 0x61, 0x20, 0x67, 0x72, 0x6f, 0x75, 0x70,
 	0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x37, 0x3a, 0x01, 0x2a, 0x1a, 0x32, 0x2f, 0x61, 0x70, 0x69,
-	0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
+	0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
 	0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x70, 0x65, 0x72,
 	0x6d, 0x69, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x73, 0x2f, 0x67, 0x72, 0x6f, 0x75, 0x70, 0x12, 0xd5,
 	0x01, 0x0a, 0x10, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52, 0x65, 0x73, 0x65, 0x74, 0x54,
 	0x69, 0x70, 0x73, 0x12, 0x2c, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f,
-	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
+	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x52, 0x65, 0x73, 0x65, 0x74, 0x54, 0x69, 0x70, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x1a, 0x2d, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x52,
 	0x65, 0x73, 0x65, 0x74, 0x54, 0x69, 0x70, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
 	0x22, 0x64, 0x92, 0x41, 0x2b, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0f,
 	0x52, 0x65, 0x73, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x74, 0x69, 0x70, 0x73, 0x2e, 0x1a,
 	0x0f, 0x52, 0x65, 0x73, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x74, 0x69, 0x70, 0x73, 0x2e,
 	0x82, 0xd3, 0xe4, 0x93, 0x02, 0x30, 0x3a, 0x01, 0x2a, 0x22, 0x2b, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
+	0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
 	0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x72, 0x65, 0x73, 0x65,
 	0x74, 0x2d, 0x74, 0x69, 0x70, 0x73, 0x12, 0x88, 0x02, 0x0a, 0x10, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x45, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x2c, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69,
 	0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2d, 0x2e, 0x61, 0x70, 0x69, 0x73,
-	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e,
+	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x45, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69, 0x6f, 0x6e,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x96, 0x01, 0x92, 0x41, 0x61, 0x0a, 0x07,
 	0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x2a, 0x47, 0x65, 0x74, 0x20, 0x69, 0x6e, 0x66,
@@ -4307,42 +4318,42 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x6f, 0x72, 0x2e, 0x1a, 0x2a, 0x47, 0x65, 0x74, 0x20, 0x69, 0x6e, 0x66, 0x6f, 0x20, 0x61, 0x62,
 	0x6f, 0x75, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x61, 0x6c, 0x69, 0x65, 0x6e, 0x20, 0x65, 0x76,
 	0x6f, 0x6c, 0x75, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x82,
-	0xd3, 0xe4, 0x93, 0x02, 0x2c, 0x12, 0x2a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66,
+	0xd3, 0xe4, 0x93, 0x02, 0x2c, 0x12, 0x2a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66,
 	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f,
 	0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x65, 0x76, 0x6f, 0x6c, 0x75, 0x74, 0x69, 0x6f,
 	0x6e, 0x12, 0xc1, 0x01, 0x0a, 0x0b, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x65,
 	0x64, 0x12, 0x27, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53,
 	0x65, 0x65, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x28, 0x2e, 0x61, 0x70, 0x69,
-	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31,
+	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32,
 	0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x65, 0x64, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5f, 0x92, 0x41, 0x2f, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f,
 	0x6c, 0x65, 0x12, 0x11, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6d, 0x61, 0x70, 0x20,
 	0x73, 0x65, 0x65, 0x64, 0x2e, 0x1a, 0x11, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6d,
 	0x61, 0x70, 0x20, 0x73, 0x65, 0x65, 0x64, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x27, 0x12, 0x25,
-	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
+	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
 	0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x2f, 0x73, 0x65, 0x65, 0x64, 0x12, 0xd3, 0x01, 0x0a, 0x0b, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x27, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63,
-	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
+	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x54, 0x69, 0x6d, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x28,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x69, 0x6d, 0x65,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x69, 0x6d, 0x65,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x71, 0x92, 0x41, 0x41, 0x0a, 0x07, 0x43,
 	0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1a, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20,
 	0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x20, 0x67, 0x61, 0x6d, 0x65, 0x20, 0x74, 0x69, 0x6d,
 	0x65, 0x2e, 0x1a, 0x1a, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x63, 0x75, 0x72, 0x72,
 	0x65, 0x6e, 0x74, 0x20, 0x67, 0x61, 0x6d, 0x65, 0x20, 0x74, 0x69, 0x6d, 0x65, 0x2e, 0x82, 0xd3,
-	0xe4, 0x93, 0x02, 0x27, 0x12, 0x25, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61,
+	0xe4, 0x93, 0x02, 0x27, 0x12, 0x25, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61,
 	0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x12, 0x95, 0x02, 0x0a, 0x1a,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x41, 0x63, 0x74,
 	0x69, 0x6f, 0x6e, 0x4c, 0x6f, 0x67, 0x67, 0x69, 0x6e, 0x67, 0x12, 0x36, 0x2e, 0x61, 0x70, 0x69,
-	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31,
+	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32,
 	0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x41, 0x63,
 	0x74, 0x69, 0x6f, 0x6e, 0x4c, 0x6f, 0x67, 0x67, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x37, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x54, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x41, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x4c, 0x6f, 0x67, 0x67,
 	0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x85, 0x01, 0x92, 0x41,
 	0x41, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1a, 0x54, 0x6f, 0x67, 0x67,
@@ -4350,61 +4361,61 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x67, 0x67, 0x69, 0x6e, 0x67, 0x2e, 0x1a, 0x1a, 0x54, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x6c, 0x6f, 0x67, 0x67, 0x69, 0x6e,
 	0x67, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x3b, 0x3a, 0x01, 0x2a, 0x22, 0x36, 0x2f, 0x61, 0x70,
-	0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f,
+	0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x74, 0x6f,
 	0x67, 0x67, 0x6c, 0x65, 0x2d, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2d, 0x6c, 0x6f, 0x67, 0x67,
 	0x69, 0x6e, 0x67, 0x12, 0xfc, 0x01, 0x0a, 0x16, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54,
 	0x6f, 0x67, 0x67, 0x6c, 0x65, 0x48, 0x65, 0x61, 0x76, 0x79, 0x4d, 0x6f, 0x64, 0x65, 0x12, 0x32,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x6f, 0x67, 0x67,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x54, 0x6f, 0x67, 0x67,
 	0x6c, 0x65, 0x48, 0x65, 0x61, 0x76, 0x79, 0x4d, 0x6f, 0x64, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x33, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x54, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x48, 0x65, 0x61, 0x76, 0x79, 0x4d, 0x6f, 0x64, 0x65, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x79, 0x92, 0x41, 0x39, 0x0a, 0x07, 0x43, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x16, 0x54, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x20, 0x74, 0x68,
 	0x65, 0x20, 0x68, 0x65, 0x61, 0x76, 0x79, 0x20, 0x6d, 0x6f, 0x64, 0x65, 0x2e, 0x1a, 0x16, 0x54,
 	0x6f, 0x67, 0x67, 0x6c, 0x65, 0x20, 0x74, 0x68, 0x65, 0x20, 0x68, 0x65, 0x61, 0x76, 0x79, 0x20,
 	0x6d, 0x6f, 0x64, 0x65, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x37, 0x3a, 0x01, 0x2a, 0x22, 0x32,
-	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
+	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
 	0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x2f, 0x74, 0x6f, 0x67, 0x67, 0x6c, 0x65, 0x2d, 0x68, 0x65, 0x61, 0x76, 0x79, 0x2d, 0x6d, 0x6f,
 	0x64, 0x65, 0x12, 0x88, 0x02, 0x0a, 0x18, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e,
 	0x6c, 0x6f, 0x63, 0x6b, 0x53, 0x68, 0x6f, 0x72, 0x74, 0x63, 0x75, 0x74, 0x42, 0x61, 0x72, 0x12,
 	0x34, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61,
-	0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6c,
+	0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6c,
 	0x6f, 0x63, 0x6b, 0x53, 0x68, 0x6f, 0x72, 0x74, 0x63, 0x75, 0x74, 0x42, 0x61, 0x72, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x35, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63,
-	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
+	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x53, 0x68, 0x6f, 0x72, 0x74, 0x63, 0x75,
 	0x74, 0x42, 0x61, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x7f, 0x92, 0x41,
 	0x3d, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x18, 0x55, 0x6e, 0x6c, 0x6f,
 	0x63, 0x6b, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x68, 0x6f, 0x72, 0x74, 0x63, 0x75, 0x74, 0x20,
 	0x62, 0x61, 0x72, 0x2e, 0x1a, 0x18, 0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x20, 0x74, 0x68, 0x65,
 	0x20, 0x73, 0x68, 0x6f, 0x72, 0x74, 0x63, 0x75, 0x74, 0x20, 0x62, 0x61, 0x72, 0x2e, 0x82, 0xd3,
-	0xe4, 0x93, 0x02, 0x39, 0x3a, 0x01, 0x2a, 0x22, 0x34, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31,
+	0xe4, 0x93, 0x02, 0x39, 0x3a, 0x01, 0x2a, 0x22, 0x34, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32,
 	0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c,
 	0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x75, 0x6e, 0x6c, 0x6f, 0x63, 0x6b,
 	0x2d, 0x73, 0x68, 0x6f, 0x72, 0x74, 0x63, 0x75, 0x74, 0x2d, 0x62, 0x61, 0x72, 0x12, 0xdb, 0x01,
 	0x0a, 0x11, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x54,
 	0x69, 0x70, 0x73, 0x12, 0x2d, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f,
-	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
+	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x54, 0x69, 0x70, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65,
 	0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x54, 0x69, 0x70, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
 	0x73, 0x65, 0x22, 0x67, 0x92, 0x41, 0x2d, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x12, 0x10, 0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x20, 0x74, 0x68, 0x65, 0x20, 0x74, 0x69, 0x70,
 	0x73, 0x2e, 0x1a, 0x10, 0x55, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x20, 0x74, 0x68, 0x65, 0x20, 0x74,
 	0x69, 0x70, 0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x31, 0x3a, 0x01, 0x2a, 0x22, 0x2c, 0x2f,
-	0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
+	0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f,
 	0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f,
 	0x75, 0x6e, 0x6c, 0x6f, 0x63, 0x6b, 0x2d, 0x74, 0x69, 0x70, 0x73, 0x12, 0x94, 0x02, 0x0a, 0x0e,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x2a,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x73,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x73,
 	0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e, 0x61, 0x70, 0x69,
-	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31,
+	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32,
 	0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0xa8, 0x01, 0x92, 0x41, 0x75, 0x0a, 0x07, 0x43,
 	0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x34, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20,
@@ -4415,252 +4426,252 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x20, 0x74, 0x68, 0x65, 0x20, 0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x20, 0x46, 0x61, 0x63,
 	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x20, 0x67, 0x61, 0x6d, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65,
 	0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2a, 0x12, 0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76,
-	0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f,
+	0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f,
 	0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x76, 0x65, 0x72, 0x73, 0x69,
 	0x6f, 0x6e, 0x12, 0xd5, 0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x64,
 	0x6d, 0x69, 0x6e, 0x73, 0x12, 0x29, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74,
-	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
+	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x41, 0x64, 0x6d, 0x69, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
 	0x2a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61,
-	0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x64, 0x6d,
+	0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x41, 0x64, 0x6d,
 	0x69, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x6d, 0x92, 0x41, 0x3b,
 	0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x17, 0x47, 0x65, 0x74, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x61, 0x64, 0x6d, 0x69, 0x6e,
 	0x73, 0x2e, 0x1a, 0x17, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74,
 	0x20, 0x6f, 0x66, 0x20, 0x61, 0x64, 0x6d, 0x69, 0x6e, 0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02,
-	0x29, 0x12, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f,
+	0x29, 0x12, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f,
 	0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x2f, 0x61, 0x64, 0x6d, 0x69, 0x6e, 0x73, 0x12, 0xb8, 0x01, 0x0a, 0x0a, 0x43,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42, 0x61, 0x6e, 0x12, 0x26, 0x2e, 0x61, 0x70, 0x69, 0x73,
-	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e,
+	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42, 0x61, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
 	0x74, 0x1a, 0x27, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42,
 	0x61, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x59, 0x92, 0x41, 0x27, 0x0a,
 	0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0d, 0x42, 0x61, 0x6e, 0x20, 0x61, 0x20,
 	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x0d, 0x42, 0x61, 0x6e, 0x20, 0x61, 0x20, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x29, 0x3a, 0x01, 0x2a, 0x22,
-	0x24, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
+	0x24, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
 	0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x2f, 0x62, 0x61, 0x6e, 0x12, 0xc9, 0x01, 0x0a, 0x0b, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x42, 0x61, 0x6e, 0x73, 0x12, 0x27, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63,
-	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
+	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x42, 0x61, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x28,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42, 0x61, 0x6e, 0x73,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42, 0x61, 0x6e, 0x73,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x67, 0x92, 0x41, 0x37, 0x0a, 0x07, 0x43,
 	0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x15, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20,
 	0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x62, 0x61, 0x6e, 0x73, 0x2e, 0x1a, 0x15, 0x47,
 	0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x62,
 	0x61, 0x6e, 0x73, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x27, 0x12, 0x25, 0x2f, 0x61, 0x70, 0x69,
-	0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
+	0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e,
 	0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x62, 0x61, 0x6e,
 	0x73, 0x12, 0xca, 0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6d,
 	0x6f, 0x74, 0x65, 0x12, 0x29, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f,
-	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
+	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x44, 0x65, 0x6d, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6d, 0x6f,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x44, 0x65, 0x6d, 0x6f,
 	0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x62, 0x92, 0x41, 0x2d, 0x0a,
 	0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x10, 0x44, 0x65, 0x6d, 0x6f, 0x74, 0x65,
 	0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x10, 0x44, 0x65, 0x6d, 0x6f,
 	0x74, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93,
-	0x02, 0x2c, 0x3a, 0x01, 0x2a, 0x22, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66,
+	0x02, 0x2c, 0x3a, 0x01, 0x2a, 0x22, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66,
 	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f,
 	0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x64, 0x65, 0x6d, 0x6f, 0x74, 0x65, 0x12, 0xca,
 	0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65,
 	0x12, 0x29, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
-	0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x49, 0x67,
+	0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x49, 0x67,
 	0x6e, 0x6f, 0x72, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x52,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x62, 0x92, 0x41, 0x2d, 0x0a, 0x07, 0x43, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x10, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x20, 0x61, 0x20,
 	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x10, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x20,
 	0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2c, 0x3a,
-	0x01, 0x2a, 0x22, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74,
+	0x01, 0x2a, 0x22, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74,
 	0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d,
 	0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x69, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x12, 0xbe, 0x01, 0x0a, 0x0b,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4b, 0x69, 0x63, 0x6b, 0x12, 0x27, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4b, 0x69, 0x63, 0x6b, 0x52, 0x65, 0x71,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4b, 0x69, 0x63, 0x6b, 0x52, 0x65, 0x71,
 	0x75, 0x65, 0x73, 0x74, 0x1a, 0x28, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74,
-	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
+	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x4b, 0x69, 0x63, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5c,
 	0x92, 0x41, 0x29, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0e, 0x4b, 0x69,
 	0x63, 0x6b, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x0e, 0x4b, 0x69,
 	0x63, 0x6b, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93,
-	0x02, 0x2a, 0x3a, 0x01, 0x2a, 0x22, 0x25, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66,
+	0x02, 0x2a, 0x3a, 0x01, 0x2a, 0x22, 0x25, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66,
 	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f,
 	0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x6b, 0x69, 0x63, 0x6b, 0x12, 0xbe, 0x01, 0x0a,
 	0x0b, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x12, 0x27, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x52, 0x65,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x28, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63,
-	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
+	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22,
 	0x5c, 0x92, 0x41, 0x29, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0e, 0x4d,
 	0x75, 0x74, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x0e, 0x4d,
 	0x75, 0x74, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x2a, 0x3a, 0x01, 0x2a, 0x22, 0x25, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f,
+	0x93, 0x02, 0x2a, 0x3a, 0x01, 0x2a, 0x22, 0x25, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f,
 	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x6d, 0x75, 0x74, 0x65, 0x12, 0xcf, 0x01,
 	0x0a, 0x0c, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x73, 0x12, 0x28,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65,
 	0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e,
-	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43,
+	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43,
 	0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x4d, 0x75, 0x74, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x22, 0x6a, 0x92, 0x41, 0x39, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c,
 	0x65, 0x12, 0x16, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20,
 	0x6f, 0x66, 0x20, 0x6d, 0x75, 0x74, 0x65, 0x73, 0x2e, 0x1a, 0x16, 0x47, 0x65, 0x74, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d, 0x75, 0x74, 0x65, 0x73,
-	0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x28, 0x12, 0x26, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31,
+	0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x28, 0x12, 0x26, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32,
 	0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c,
 	0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x6d, 0x75, 0x74, 0x65, 0x73, 0x12,
 	0xdb, 0x01, 0x0a, 0x0e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x6c, 0x61, 0x79, 0x65,
 	0x72, 0x73, 0x12, 0x2a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x50, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x6c, 0x61, 0x79,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x6c, 0x61, 0x79,
 	0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x70, 0x92, 0x41, 0x3d,
 	0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x18, 0x47, 0x65, 0x74, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65,
 	0x72, 0x73, 0x2e, 0x1a, 0x18, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73,
 	0x74, 0x20, 0x6f, 0x66, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x2e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x2a, 0x12, 0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63,
+	0x93, 0x02, 0x2a, 0x12, 0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63,
 	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f,
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x12, 0xd0, 0x01,
 	0x0a, 0x0e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x72, 0x6f, 0x6d, 0x6f, 0x74, 0x65,
 	0x12, 0x2a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
-	0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x72,
+	0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x72,
 	0x6f, 0x6d, 0x6f, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x72, 0x6f, 0x6d, 0x6f, 0x74,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x72, 0x6f, 0x6d, 0x6f, 0x74,
 	0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x65, 0x92, 0x41, 0x2f, 0x0a, 0x07,
 	0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x11, 0x50, 0x72, 0x6f, 0x6d, 0x6f, 0x74, 0x65,
 	0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x11, 0x50, 0x72, 0x6f, 0x6d,
 	0x6f, 0x74, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x2d, 0x3a, 0x01, 0x2a, 0x22, 0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f,
+	0x93, 0x02, 0x2d, 0x3a, 0x01, 0x2a, 0x22, 0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f,
 	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x70, 0x72, 0x6f, 0x6d, 0x6f, 0x74, 0x65,
 	0x12, 0xc4, 0x01, 0x0a, 0x0c, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x75, 0x72, 0x67,
 	0x65, 0x12, 0x28, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50,
 	0x75, 0x72, 0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x75, 0x72, 0x67, 0x65, 0x52, 0x65,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x50, 0x75, 0x72, 0x67, 0x65, 0x52, 0x65,
 	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5f, 0x92, 0x41, 0x2b, 0x0a, 0x07, 0x43, 0x6f, 0x6e,
 	0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0f, 0x50, 0x75, 0x72, 0x67, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c,
 	0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x0f, 0x50, 0x75, 0x72, 0x67, 0x65, 0x20, 0x61, 0x20, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2b, 0x3a, 0x01, 0x2a, 0x22,
-	0x26, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
+	0x26, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
 	0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x2f, 0x70, 0x75, 0x72, 0x67, 0x65, 0x12, 0xd7, 0x01, 0x0a, 0x11, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x53, 0x61, 0x76, 0x65, 0x12, 0x2d, 0x2e,
 	0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69,
-	0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x65,
+	0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x65,
 	0x72, 0x53, 0x61, 0x76, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72,
 	0x53, 0x61, 0x76, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x63, 0x92, 0x41,
 	0x29, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0e, 0x53, 0x61, 0x76, 0x65,
 	0x20, 0x74, 0x68, 0x65, 0x20, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x1a, 0x0e, 0x53, 0x61, 0x76, 0x65,
 	0x20, 0x74, 0x68, 0x65, 0x20, 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x31,
-	0x3a, 0x01, 0x2a, 0x22, 0x2c, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63,
+	0x3a, 0x01, 0x2a, 0x22, 0x2c, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63,
 	0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f,
 	0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2d, 0x73, 0x61, 0x76,
 	0x65, 0x12, 0xc4, 0x01, 0x0a, 0x0c, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x62,
 	0x61, 0x6e, 0x12, 0x28, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
-	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
+	0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64,
 	0x55, 0x6e, 0x62, 0x61, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x62, 0x61, 0x6e, 0x52,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x62, 0x61, 0x6e, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x5f, 0x92, 0x41, 0x2b, 0x0a, 0x07, 0x43, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x0f, 0x55, 0x6e, 0x62, 0x61, 0x6e, 0x20, 0x61, 0x20, 0x70,
 	0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x0f, 0x55, 0x6e, 0x62, 0x61, 0x6e, 0x20, 0x61, 0x20,
 	0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2b, 0x3a, 0x01, 0x2a,
-	0x22, 0x26, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
+	0x22, 0x26, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72,
 	0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x2f, 0x75, 0x6e, 0x62, 0x61, 0x6e, 0x12, 0xd6, 0x01, 0x0a, 0x0f, 0x43, 0x6f, 0x6d,
 	0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x69, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x12, 0x2b, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x69, 0x67, 0x6e, 0x6f,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x69, 0x67, 0x6e, 0x6f,
 	0x72, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2c, 0x2e, 0x61, 0x70, 0x69, 0x73,
-	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e,
+	0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e,
 	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x69, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x52,
 	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x68, 0x92, 0x41, 0x31, 0x0a, 0x07, 0x43, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x12, 0x55, 0x6e, 0x69, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x20,
 	0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x12, 0x55, 0x6e, 0x69, 0x67, 0x6e,
 	0x6f, 0x72, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x2e, 0x3a, 0x01, 0x2a, 0x22, 0x29, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f,
+	0x93, 0x02, 0x2e, 0x3a, 0x01, 0x2a, 0x22, 0x29, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f,
 	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x75, 0x6e, 0x69, 0x67, 0x6e, 0x6f, 0x72,
 	0x65, 0x12, 0xca, 0x01, 0x0a, 0x0d, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6d,
 	0x75, 0x74, 0x65, 0x12, 0x29, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f,
-	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
+	0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x55, 0x6e, 0x6d, 0x75, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a,
 	0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70,
-	0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6d, 0x75,
+	0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x55, 0x6e, 0x6d, 0x75,
 	0x74, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x62, 0x92, 0x41, 0x2d, 0x0a,
 	0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x10, 0x55, 0x6e, 0x6d, 0x75, 0x74, 0x65,
 	0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x1a, 0x10, 0x55, 0x6e, 0x6d, 0x75,
 	0x74, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x2e, 0x82, 0xd3, 0xe4, 0x93,
-	0x02, 0x2c, 0x3a, 0x01, 0x2a, 0x22, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66,
+	0x02, 0x2c, 0x3a, 0x01, 0x2a, 0x22, 0x27, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66,
 	0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f,
 	0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x75, 0x6e, 0x6d, 0x75, 0x74, 0x65, 0x12, 0xd2,
 	0x01, 0x0a, 0x0e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x73, 0x70, 0x65,
 	0x72, 0x12, 0x2a, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57,
 	0x68, 0x69, 0x73, 0x70, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2b, 0x2e,
 	0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69,
-	0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x73, 0x70,
+	0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x73, 0x70,
 	0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x67, 0x92, 0x41, 0x31, 0x0a,
 	0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x12, 0x57, 0x68, 0x69, 0x73, 0x70, 0x65,
 	0x72, 0x20, 0x61, 0x20, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e, 0x1a, 0x12, 0x57, 0x68,
 	0x69, 0x73, 0x70, 0x65, 0x72, 0x20, 0x61, 0x20, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e,
 	0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2d, 0x3a, 0x01, 0x2a, 0x22, 0x28, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
+	0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
 	0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x77, 0x68, 0x69, 0x73,
 	0x70, 0x65, 0x72, 0x12, 0xfc, 0x01, 0x0a, 0x13, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57,
 	0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x41, 0x64, 0x64, 0x12, 0x2f, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69,
 	0x73, 0x74, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x30, 0x2e, 0x61,
 	0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e,
-	0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c,
+	0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c,
 	0x69, 0x73, 0x74, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x81,
 	0x01, 0x92, 0x41, 0x49, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1e, 0x41,
 	0x64, 0x64, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x2e, 0x1a, 0x1e, 0x41,
 	0x64, 0x64, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x20, 0x74, 0x6f, 0x20, 0x74,
 	0x68, 0x65, 0x20, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x2e, 0x82, 0xd3, 0xe4,
-	0x93, 0x02, 0x2f, 0x3a, 0x01, 0x2a, 0x22, 0x2a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x2f,
+	0x93, 0x02, 0x2f, 0x3a, 0x01, 0x2a, 0x22, 0x2a, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x2f,
 	0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65,
 	0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69,
 	0x73, 0x74, 0x12, 0xf0, 0x01, 0x0a, 0x13, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68,
 	0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x47, 0x65, 0x74, 0x12, 0x2f, 0x2e, 0x61, 0x70, 0x69,
-	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31,
+	0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32,
 	0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73,
 	0x74, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x30, 0x2e, 0x61, 0x70,
 	0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76,
-	0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69,
+	0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69,
 	0x73, 0x74, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x76, 0x92,
 	0x41, 0x41, 0x0a, 0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x1a, 0x47, 0x65, 0x74,
 	0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x77, 0x68, 0x69,
 	0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x2e, 0x1a, 0x1a, 0x47, 0x65, 0x74, 0x20, 0x74, 0x68, 0x65,
 	0x20, 0x6c, 0x69, 0x73, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69,
 	0x73, 0x74, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2c, 0x12, 0x2a, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
+	0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f, 0x6e, 0x73,
 	0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x77, 0x68, 0x69, 0x74,
 	0x65, 0x6c, 0x69, 0x73, 0x74, 0x12, 0x8f, 0x02, 0x0a, 0x16, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e,
 	0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65,
 	0x12, 0x32, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
-	0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68,
+	0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57, 0x68,
 	0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x52, 0x65, 0x71,
 	0x75, 0x65, 0x73, 0x74, 0x1a, 0x33, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74,
-	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
+	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x6d, 0x6f, 0x76,
 	0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x8b, 0x01, 0x92, 0x41, 0x53, 0x0a,
 	0x07, 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x23, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65,
@@ -4669,224 +4680,224 @@ var file_apis_factorioapi_v1_command_proto_rawDesc = []byte{
 	0x65, 0x6d, 0x6f, 0x76, 0x65, 0x20, 0x61, 0x20, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x20, 0x66,
 	0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73,
 	0x74, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2f, 0x3a, 0x01, 0x2a, 0x32, 0x2a, 0x2f, 0x61, 0x70,
-	0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f,
+	0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x77, 0x68,
 	0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x12, 0xed, 0x01, 0x0a, 0x15, 0x43, 0x6f, 0x6d, 0x6d,
 	0x61, 0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x43, 0x6c, 0x65, 0x61,
 	0x72, 0x12, 0x31, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69,
-	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57,
+	0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x57,
 	0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x43, 0x6c, 0x65, 0x61, 0x72, 0x52, 0x65, 0x71,
 	0x75, 0x65, 0x73, 0x74, 0x1a, 0x32, 0x2e, 0x61, 0x70, 0x69, 0x73, 0x2e, 0x66, 0x61, 0x63, 0x74,
-	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x31, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
+	0x6f, 0x72, 0x69, 0x6f, 0x61, 0x70, 0x69, 0x2e, 0x76, 0x32, 0x2e, 0x43, 0x6f, 0x6d, 0x6d, 0x61,
 	0x6e, 0x64, 0x57, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x43, 0x6c, 0x65, 0x61, 0x72,
 	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x6d, 0x92, 0x41, 0x35, 0x0a, 0x07, 0x43,
 	0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x12, 0x14, 0x43, 0x6c, 0x65, 0x61, 0x72, 0x20, 0x74, 0x68,
 	0x65, 0x20, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x2e, 0x1a, 0x14, 0x43, 0x6c,
 	0x65, 0x61, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x77, 0x68, 0x69, 0x74, 0x65, 0x6c, 0x69, 0x73,
 	0x74, 0x2e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x2f, 0x3a, 0x01, 0x2a, 0x2a, 0x2a, 0x2f, 0x61, 0x70,
-	0x69, 0x2f, 0x76, 0x31, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f,
+	0x69, 0x2f, 0x76, 0x32, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2f, 0x63, 0x6f,
 	0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x2f, 0x77, 0x68,
 	0x69, 0x74, 0x65, 0x6c, 0x69, 0x73, 0x74, 0x42, 0x3d, 0x5a, 0x3b, 0x67, 0x69, 0x74, 0x68, 0x75,
 	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6e, 0x65, 0x6b, 0x6f, 0x6d, 0x65, 0x6f, 0x77, 0x77, 0x77,
 	0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f, 0x2d, 0x72, 0x63, 0x6f, 0x6e, 0x2d, 0x61,
 	0x70, 0x69, 0x2f, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x66, 0x61, 0x63, 0x74, 0x6f, 0x72, 0x69, 0x6f,
-	0x61, 0x70, 0x69, 0x2f, 0x76, 0x31, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x70, 0x69, 0x2f, 0x76, 0x32, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_apis_factorioapi_v1_command_proto_rawDescOnce sync.Once
-	file_apis_factorioapi_v1_command_proto_rawDescData = file_apis_factorioapi_v1_command_proto_rawDesc
+	file_apis_factorioapi_v2_command_proto_rawDescOnce sync.Once
+	file_apis_factorioapi_v2_command_proto_rawDescData = file_apis_factorioapi_v2_command_proto_rawDesc
 )
 
-func file_apis_factorioapi_v1_command_proto_rawDescGZIP() []byte {
-	file_apis_factorioapi_v1_command_proto_rawDescOnce.Do(func() {
-		file_apis_factorioapi_v1_command_proto_rawDescData = protoimpl.X.CompressGZIP(file_apis_factorioapi_v1_command_proto_rawDescData)
+func file_apis_factorioapi_v2_command_proto_rawDescGZIP() []byte {
+	file_apis_factorioapi_v2_command_proto_rawDescOnce.Do(func() {
+		file_apis_factorioapi_v2_command_proto_rawDescData = protoimpl.X.CompressGZIP(file_apis_factorioapi_v2_command_proto_rawDescData)
 	})
-	return file_apis_factorioapi_v1_command_proto_rawDescData
+	return file_apis_factorioapi_v2_command_proto_rawDescData
 }
 
-var file_apis_factorioapi_v1_command_proto_msgTypes = make([]protoimpl.MessageInfo, 87)
-var file_apis_factorioapi_v1_command_proto_goTypes = []interface{}{
-	(*CommandRawRequest)(nil),                                   // 0: apis.factorioapi.v1.CommandRawRequest
-	(*CommandRawResponse)(nil),                                  // 1: apis.factorioapi.v1.CommandRawResponse
-	(*CommandMessageRequest)(nil),                               // 2: apis.factorioapi.v1.CommandMessageRequest
-	(*CommandMessageResponse)(nil),                              // 3: apis.factorioapi.v1.CommandMessageResponse
-	(*CommandAlertsRequest)(nil),                                // 4: apis.factorioapi.v1.CommandAlertsRequest
-	(*CommandAlertsResponse)(nil),                               // 5: apis.factorioapi.v1.CommandAlertsResponse
-	(*CommandEnableResearchQueueRequest)(nil),                   // 6: apis.factorioapi.v1.CommandEnableResearchQueueRequest
-	(*CommandEnableResearchQueueResponse)(nil),                  // 7: apis.factorioapi.v1.CommandEnableResearchQueueResponse
-	(*CommandMuteProgrammableSpeakerForEveryoneRequest)(nil),    // 8: apis.factorioapi.v1.CommandMuteProgrammableSpeakerForEveryoneRequest
-	(*CommandMuteProgrammableSpeakerForEveryoneResponse)(nil),   // 9: apis.factorioapi.v1.CommandMuteProgrammableSpeakerForEveryoneResponse
-	(*CommandUnmuteProgrammableSpeakerForEveryoneRequest)(nil),  // 10: apis.factorioapi.v1.CommandUnmuteProgrammableSpeakerForEveryoneRequest
-	(*CommandUnmuteProgrammableSpeakerForEveryoneResponse)(nil), // 11: apis.factorioapi.v1.CommandUnmuteProgrammableSpeakerForEveryoneResponse
-	(*CommandPermissionsRequest)(nil),                           // 12: apis.factorioapi.v1.CommandPermissionsRequest
-	(*CommandPermissionsResponse)(nil),                          // 13: apis.factorioapi.v1.CommandPermissionsResponse
-	(*CommandPermissionsAddPlayerRequest)(nil),                  // 14: apis.factorioapi.v1.CommandPermissionsAddPlayerRequest
-	(*CommandPermissionsAddPlayerResponse)(nil),                 // 15: apis.factorioapi.v1.CommandPermissionsAddPlayerResponse
-	(*CommandPermissionsCreateGroupRequest)(nil),                // 16: apis.factorioapi.v1.CommandPermissionsCreateGroupRequest
-	(*CommandPermissionsCreateGroupResponse)(nil),               // 17: apis.factorioapi.v1.CommandPermissionsCreateGroupResponse
-	(*CommandPermissionsDeleteGroupRequest)(nil),                // 18: apis.factorioapi.v1.CommandPermissionsDeleteGroupRequest
-	(*CommandPermissionsDeleteGroupResponse)(nil),               // 19: apis.factorioapi.v1.CommandPermissionsDeleteGroupResponse
-	(*CommandPermissionsEditGroupRequest)(nil),                  // 20: apis.factorioapi.v1.CommandPermissionsEditGroupRequest
-	(*CommandPermissionsEditGroupResponse)(nil),                 // 21: apis.factorioapi.v1.CommandPermissionsEditGroupResponse
-	(*CommandPermissionsGetPlayerGroupRequest)(nil),             // 22: apis.factorioapi.v1.CommandPermissionsGetPlayerGroupRequest
-	(*CommandPermissionsGetPlayerGroupResponse)(nil),            // 23: apis.factorioapi.v1.CommandPermissionsGetPlayerGroupResponse
-	(*CommandPermissionsRemovePlayerGroupRequest)(nil),          // 24: apis.factorioapi.v1.CommandPermissionsRemovePlayerGroupRequest
-	(*CommandPermissionsRemovePlayerGroupResponse)(nil),         // 25: apis.factorioapi.v1.CommandPermissionsRemovePlayerGroupResponse
-	(*CommandPermissionsRenameGroupRequest)(nil),                // 26: apis.factorioapi.v1.CommandPermissionsRenameGroupRequest
-	(*CommandPermissionsRenameGroupResponse)(nil),               // 27: apis.factorioapi.v1.CommandPermissionsRenameGroupResponse
-	(*CommandResetTipsRequest)(nil),                             // 28: apis.factorioapi.v1.CommandResetTipsRequest
-	(*CommandResetTipsResponse)(nil),                            // 29: apis.factorioapi.v1.CommandResetTipsResponse
-	(*CommandEvolutionRequest)(nil),                             // 30: apis.factorioapi.v1.CommandEvolutionRequest
-	(*CommandEvolutionResponse)(nil),                            // 31: apis.factorioapi.v1.CommandEvolutionResponse
-	(*CommandTimeRequest)(nil),                                  // 32: apis.factorioapi.v1.CommandTimeRequest
-	(*CommandTimeResponse)(nil),                                 // 33: apis.factorioapi.v1.CommandTimeResponse
-	(*CommandSeedRequest)(nil),                                  // 34: apis.factorioapi.v1.CommandSeedRequest
-	(*CommandSeedResponse)(nil),                                 // 35: apis.factorioapi.v1.CommandSeedResponse
-	(*CommandToggleActionLoggingRequest)(nil),                   // 36: apis.factorioapi.v1.CommandToggleActionLoggingRequest
-	(*CommandToggleActionLoggingResponse)(nil),                  // 37: apis.factorioapi.v1.CommandToggleActionLoggingResponse
-	(*CommandToggleHeavyModeRequest)(nil),                       // 38: apis.factorioapi.v1.CommandToggleHeavyModeRequest
-	(*CommandToggleHeavyModeResponse)(nil),                      // 39: apis.factorioapi.v1.CommandToggleHeavyModeResponse
-	(*CommandUnlockShortcutBarRequest)(nil),                     // 40: apis.factorioapi.v1.CommandUnlockShortcutBarRequest
-	(*CommandUnlockShortcutBarResponse)(nil),                    // 41: apis.factorioapi.v1.CommandUnlockShortcutBarResponse
-	(*CommandUnlockTipsRequest)(nil),                            // 42: apis.factorioapi.v1.CommandUnlockTipsRequest
-	(*CommandUnlockTipsResponse)(nil),                           // 43: apis.factorioapi.v1.CommandUnlockTipsResponse
-	(*CommandVersionRequest)(nil),                               // 44: apis.factorioapi.v1.CommandVersionRequest
-	(*CommandVersionResponse)(nil),                              // 45: apis.factorioapi.v1.CommandVersionResponse
-	(*Player)(nil),                                              // 46: apis.factorioapi.v1.Player
-	(*CommandAdminsRequest)(nil),                                // 47: apis.factorioapi.v1.CommandAdminsRequest
-	(*CommandAdminsResponse)(nil),                               // 48: apis.factorioapi.v1.CommandAdminsResponse
-	(*CommandBanRequest)(nil),                                   // 49: apis.factorioapi.v1.CommandBanRequest
-	(*CommandBanResponse)(nil),                                  // 50: apis.factorioapi.v1.CommandBanResponse
-	(*CommandBansRequest)(nil),                                  // 51: apis.factorioapi.v1.CommandBansRequest
-	(*CommandBansResponse)(nil),                                 // 52: apis.factorioapi.v1.CommandBansResponse
-	(*CommandDemoteRequest)(nil),                                // 53: apis.factorioapi.v1.CommandDemoteRequest
-	(*CommandDemoteResponse)(nil),                               // 54: apis.factorioapi.v1.CommandDemoteResponse
-	(*CommandIgnoreRequest)(nil),                                // 55: apis.factorioapi.v1.CommandIgnoreRequest
-	(*CommandIgnoreResponse)(nil),                               // 56: apis.factorioapi.v1.CommandIgnoreResponse
-	(*CommandKickRequest)(nil),                                  // 57: apis.factorioapi.v1.CommandKickRequest
-	(*CommandKickResponse)(nil),                                 // 58: apis.factorioapi.v1.CommandKickResponse
-	(*CommandMuteRequest)(nil),                                  // 59: apis.factorioapi.v1.CommandMuteRequest
-	(*CommandMuteResponse)(nil),                                 // 60: apis.factorioapi.v1.CommandMuteResponse
-	(*CommandMutesRequest)(nil),                                 // 61: apis.factorioapi.v1.CommandMutesRequest
-	(*CommandMutesResponse)(nil),                                // 62: apis.factorioapi.v1.CommandMutesResponse
-	(*CommandPlayersRequest)(nil),                               // 63: apis.factorioapi.v1.CommandPlayersRequest
-	(*CommandPlayersResponse)(nil),                              // 64: apis.factorioapi.v1.CommandPlayersResponse
-	(*CommandPromoteRequest)(nil),                               // 65: apis.factorioapi.v1.CommandPromoteRequest
-	(*CommandPromoteResponse)(nil),                              // 66: apis.factorioapi.v1.CommandPromoteResponse
-	(*CommandPurgeRequest)(nil),                                 // 67: apis.factorioapi.v1.CommandPurgeRequest
-	(*CommandPurgeResponse)(nil),                                // 68: apis.factorioapi.v1.CommandPurgeResponse
-	(*CommandServerSaveRequest)(nil),                            // 69: apis.factorioapi.v1.CommandServerSaveRequest
-	(*CommandServerSaveResponse)(nil),                           // 70: apis.factorioapi.v1.CommandServerSaveResponse
-	(*CommandUnbanRequest)(nil),                                 // 71: apis.factorioapi.v1.CommandUnbanRequest
-	(*CommandUnbanResponse)(nil),                                // 72: apis.factorioapi.v1.CommandUnbanResponse
-	(*CommandUnignoreRequest)(nil),                              // 73: apis.factorioapi.v1.CommandUnignoreRequest
-	(*CommandUnignoreResponse)(nil),                             // 74: apis.factorioapi.v1.CommandUnignoreResponse
-	(*CommandUnmuteRequest)(nil),                                // 75: apis.factorioapi.v1.CommandUnmuteRequest
-	(*CommandUnmuteResponse)(nil),                               // 76: apis.factorioapi.v1.CommandUnmuteResponse
-	(*CommandWhisperRequest)(nil),                               // 77: apis.factorioapi.v1.CommandWhisperRequest
-	(*CommandWhisperResponse)(nil),                              // 78: apis.factorioapi.v1.CommandWhisperResponse
-	(*CommandWhitelistAddRequest)(nil),                          // 79: apis.factorioapi.v1.CommandWhitelistAddRequest
-	(*CommandWhitelistAddResponse)(nil),                         // 80: apis.factorioapi.v1.CommandWhitelistAddResponse
-	(*CommandWhitelistGetRequest)(nil),                          // 81: apis.factorioapi.v1.CommandWhitelistGetRequest
-	(*CommandWhitelistGetResponse)(nil),                         // 82: apis.factorioapi.v1.CommandWhitelistGetResponse
-	(*CommandWhitelistRemoveRequest)(nil),                       // 83: apis.factorioapi.v1.CommandWhitelistRemoveRequest
-	(*CommandWhitelistRemoveResponse)(nil),                      // 84: apis.factorioapi.v1.CommandWhitelistRemoveResponse
-	(*CommandWhitelistClearRequest)(nil),                        // 85: apis.factorioapi.v1.CommandWhitelistClearRequest
-	(*CommandWhitelistClearResponse)(nil),                       // 86: apis.factorioapi.v1.CommandWhitelistClearResponse
+var file_apis_factorioapi_v2_command_proto_msgTypes = make([]protoimpl.MessageInfo, 87)
+var file_apis_factorioapi_v2_command_proto_goTypes = []interface{}{
+	(*CommandRawRequest)(nil),                                   // 0: apis.factorioapi.v2.CommandRawRequest
+	(*CommandRawResponse)(nil),                                  // 1: apis.factorioapi.v2.CommandRawResponse
+	(*CommandMessageRequest)(nil),                               // 2: apis.factorioapi.v2.CommandMessageRequest
+	(*CommandMessageResponse)(nil),                              // 3: apis.factorioapi.v2.CommandMessageResponse
+	(*CommandAlertsRequest)(nil),                                // 4: apis.factorioapi.v2.CommandAlertsRequest
+	(*CommandAlertsResponse)(nil),                               // 5: apis.factorioapi.v2.CommandAlertsResponse
+	(*CommandEnableResearchQueueRequest)(nil),                   // 6: apis.factorioapi.v2.CommandEnableResearchQueueRequest
+	(*CommandEnableResearchQueueResponse)(nil),                  // 7: apis.factorioapi.v2.CommandEnableResearchQueueResponse
+	(*CommandMuteProgrammableSpeakerForEveryoneRequest)(nil),    // 8: apis.factorioapi.v2.CommandMuteProgrammableSpeakerForEveryoneRequest
+	(*CommandMuteProgrammableSpeakerForEveryoneResponse)(nil),   // 9: apis.factorioapi.v2.CommandMuteProgrammableSpeakerForEveryoneResponse
+	(*CommandUnmuteProgrammableSpeakerForEveryoneRequest)(nil),  // 10: apis.factorioapi.v2.CommandUnmuteProgrammableSpeakerForEveryoneRequest
+	(*CommandUnmuteProgrammableSpeakerForEveryoneResponse)(nil), // 11: apis.factorioapi.v2.CommandUnmuteProgrammableSpeakerForEveryoneResponse
+	(*CommandPermissionsRequest)(nil),                           // 12: apis.factorioapi.v2.CommandPermissionsRequest
+	(*CommandPermissionsResponse)(nil),                          // 13: apis.factorioapi.v2.CommandPermissionsResponse
+	(*CommandPermissionsAddPlayerRequest)(nil),                  // 14: apis.factorioapi.v2.CommandPermissionsAddPlayerRequest
+	(*CommandPermissionsAddPlayerResponse)(nil),                 // 15: apis.factorioapi.v2.CommandPermissionsAddPlayerResponse
+	(*CommandPermissionsCreateGroupRequest)(nil),                // 16: apis.factorioapi.v2.CommandPermissionsCreateGroupRequest
+	(*CommandPermissionsCreateGroupResponse)(nil),               // 17: apis.factorioapi.v2.CommandPermissionsCreateGroupResponse
+	(*CommandPermissionsDeleteGroupRequest)(nil),                // 18: apis.factorioapi.v2.CommandPermissionsDeleteGroupRequest
+	(*CommandPermissionsDeleteGroupResponse)(nil),               // 19: apis.factorioapi.v2.CommandPermissionsDeleteGroupResponse
+	(*CommandPermissionsEditGroupRequest)(nil),                  // 20: apis.factorioapi.v2.CommandPermissionsEditGroupRequest
+	(*CommandPermissionsEditGroupResponse)(nil),                 // 21: apis.factorioapi.v2.CommandPermissionsEditGroupResponse
+	(*CommandPermissionsGetPlayerGroupRequest)(nil),             // 22: apis.factorioapi.v2.CommandPermissionsGetPlayerGroupRequest
+	(*CommandPermissionsGetPlayerGroupResponse)(nil),            // 23: apis.factorioapi.v2.CommandPermissionsGetPlayerGroupResponse
+	(*CommandPermissionsRemovePlayerGroupRequest)(nil),          // 24: apis.factorioapi.v2.CommandPermissionsRemovePlayerGroupRequest
+	(*CommandPermissionsRemovePlayerGroupResponse)(nil),         // 25: apis.factorioapi.v2.CommandPermissionsRemovePlayerGroupResponse
+	(*CommandPermissionsRenameGroupRequest)(nil),                // 26: apis.factorioapi.v2.CommandPermissionsRenameGroupRequest
+	(*CommandPermissionsRenameGroupResponse)(nil),               // 27: apis.factorioapi.v2.CommandPermissionsRenameGroupResponse
+	(*CommandResetTipsRequest)(nil),                             // 28: apis.factorioapi.v2.CommandResetTipsRequest
+	(*CommandResetTipsResponse)(nil),                            // 29: apis.factorioapi.v2.CommandResetTipsResponse
+	(*CommandEvolutionRequest)(nil),                             // 30: apis.factorioapi.v2.CommandEvolutionRequest
+	(*CommandEvolutionResponse)(nil),                            // 31: apis.factorioapi.v2.CommandEvolutionResponse
+	(*CommandTimeRequest)(nil),                                  // 32: apis.factorioapi.v2.CommandTimeRequest
+	(*CommandTimeResponse)(nil),                                 // 33: apis.factorioapi.v2.CommandTimeResponse
+	(*CommandSeedRequest)(nil),                                  // 34: apis.factorioapi.v2.CommandSeedRequest
+	(*CommandSeedResponse)(nil),                                 // 35: apis.factorioapi.v2.CommandSeedResponse
+	(*CommandToggleActionLoggingRequest)(nil),                   // 36: apis.factorioapi.v2.CommandToggleActionLoggingRequest
+	(*CommandToggleActionLoggingResponse)(nil),                  // 37: apis.factorioapi.v2.CommandToggleActionLoggingResponse
+	(*CommandToggleHeavyModeRequest)(nil),                       // 38: apis.factorioapi.v2.CommandToggleHeavyModeRequest
+	(*CommandToggleHeavyModeResponse)(nil),                      // 39: apis.factorioapi.v2.CommandToggleHeavyModeResponse
+	(*CommandUnlockShortcutBarRequest)(nil),                     // 40: apis.factorioapi.v2.CommandUnlockShortcutBarRequest
+	(*CommandUnlockShortcutBarResponse)(nil),                    // 41: apis.factorioapi.v2.CommandUnlockShortcutBarResponse
+	(*CommandUnlockTipsRequest)(nil),                            // 42: apis.factorioapi.v2.CommandUnlockTipsRequest
+	(*CommandUnlockTipsResponse)(nil),                           // 43: apis.factorioapi.v2.CommandUnlockTipsResponse
+	(*CommandVersionRequest)(nil),                               // 44: apis.factorioapi.v2.CommandVersionRequest
+	(*CommandVersionResponse)(nil),                              // 45: apis.factorioapi.v2.CommandVersionResponse
+	(*Player)(nil),                                              // 46: apis.factorioapi.v2.Player
+	(*CommandAdminsRequest)(nil),                                // 47: apis.factorioapi.v2.CommandAdminsRequest
+	(*CommandAdminsResponse)(nil),                               // 48: apis.factorioapi.v2.CommandAdminsResponse
+	(*CommandBanRequest)(nil),                                   // 49: apis.factorioapi.v2.CommandBanRequest
+	(*CommandBanResponse)(nil),                                  // 50: apis.factorioapi.v2.CommandBanResponse
+	(*CommandBansRequest)(nil),                                  // 51: apis.factorioapi.v2.CommandBansRequest
+	(*CommandBansResponse)(nil),                                 // 52: apis.factorioapi.v2.CommandBansResponse
+	(*CommandDemoteRequest)(nil),                                // 53: apis.factorioapi.v2.CommandDemoteRequest
+	(*CommandDemoteResponse)(nil),                               // 54: apis.factorioapi.v2.CommandDemoteResponse
+	(*CommandIgnoreRequest)(nil),                                // 55: apis.factorioapi.v2.CommandIgnoreRequest
+	(*CommandIgnoreResponse)(nil),                               // 56: apis.factorioapi.v2.CommandIgnoreResponse
+	(*CommandKickRequest)(nil),                                  // 57: apis.factorioapi.v2.CommandKickRequest
+	(*CommandKickResponse)(nil),                                 // 58: apis.factorioapi.v2.CommandKickResponse
+	(*CommandMuteRequest)(nil),                                  // 59: apis.factorioapi.v2.CommandMuteRequest
+	(*CommandMuteResponse)(nil),                                 // 60: apis.factorioapi.v2.CommandMuteResponse
+	(*CommandMutesRequest)(nil),                                 // 61: apis.factorioapi.v2.CommandMutesRequest
+	(*CommandMutesResponse)(nil),                                // 62: apis.factorioapi.v2.CommandMutesResponse
+	(*CommandPlayersRequest)(nil),                               // 63: apis.factorioapi.v2.CommandPlayersRequest
+	(*CommandPlayersResponse)(nil),                              // 64: apis.factorioapi.v2.CommandPlayersResponse
+	(*CommandPromoteRequest)(nil),                               // 65: apis.factorioapi.v2.CommandPromoteRequest
+	(*CommandPromoteResponse)(nil),                              // 66: apis.factorioapi.v2.CommandPromoteResponse
+	(*CommandPurgeRequest)(nil),                                 // 67: apis.factorioapi.v2.CommandPurgeRequest
+	(*CommandPurgeResponse)(nil),                                // 68: apis.factorioapi.v2.CommandPurgeResponse
+	(*CommandServerSaveRequest)(nil),                            // 69: apis.factorioapi.v2.CommandServerSaveRequest
+	(*CommandServerSaveResponse)(nil),                           // 70: apis.factorioapi.v2.CommandServerSaveResponse
+	(*CommandUnbanRequest)(nil),                                 // 71: apis.factorioapi.v2.CommandUnbanRequest
+	(*CommandUnbanResponse)(nil),                                // 72: apis.factorioapi.v2.CommandUnbanResponse
+	(*CommandUnignoreRequest)(nil),                              // 73: apis.factorioapi.v2.CommandUnignoreRequest
+	(*CommandUnignoreResponse)(nil),                             // 74: apis.factorioapi.v2.CommandUnignoreResponse
+	(*CommandUnmuteRequest)(nil),                                // 75: apis.factorioapi.v2.CommandUnmuteRequest
+	(*CommandUnmuteResponse)(nil),                               // 76: apis.factorioapi.v2.CommandUnmuteResponse
+	(*CommandWhisperRequest)(nil),                               // 77: apis.factorioapi.v2.CommandWhisperRequest
+	(*CommandWhisperResponse)(nil),                              // 78: apis.factorioapi.v2.CommandWhisperResponse
+	(*CommandWhitelistAddRequest)(nil),                          // 79: apis.factorioapi.v2.CommandWhitelistAddRequest
+	(*CommandWhitelistAddResponse)(nil),                         // 80: apis.factorioapi.v2.CommandWhitelistAddResponse
+	(*CommandWhitelistGetRequest)(nil),                          // 81: apis.factorioapi.v2.CommandWhitelistGetRequest
+	(*CommandWhitelistGetResponse)(nil),                         // 82: apis.factorioapi.v2.CommandWhitelistGetResponse
+	(*CommandWhitelistRemoveRequest)(nil),                       // 83: apis.factorioapi.v2.CommandWhitelistRemoveRequest
+	(*CommandWhitelistRemoveResponse)(nil),                      // 84: apis.factorioapi.v2.CommandWhitelistRemoveResponse
+	(*CommandWhitelistClearRequest)(nil),                        // 85: apis.factorioapi.v2.CommandWhitelistClearRequest
+	(*CommandWhitelistClearResponse)(nil),                       // 86: apis.factorioapi.v2.CommandWhitelistClearResponse
 }
-var file_apis_factorioapi_v1_command_proto_depIdxs = []int32{
-	46, // 0: apis.factorioapi.v1.CommandAdminsResponse.admins:type_name -> apis.factorioapi.v1.Player
-	46, // 1: apis.factorioapi.v1.CommandBansResponse.bans:type_name -> apis.factorioapi.v1.Player
-	46, // 2: apis.factorioapi.v1.CommandMutesResponse.mutes:type_name -> apis.factorioapi.v1.Player
-	46, // 3: apis.factorioapi.v1.CommandPlayersResponse.players:type_name -> apis.factorioapi.v1.Player
-	46, // 4: apis.factorioapi.v1.CommandWhitelistGetResponse.whitelist:type_name -> apis.factorioapi.v1.Player
-	0,  // 5: apis.factorioapi.v1.ConsoleService.CommandRaw:input_type -> apis.factorioapi.v1.CommandRawRequest
-	2,  // 6: apis.factorioapi.v1.ConsoleService.CommandMessage:input_type -> apis.factorioapi.v1.CommandMessageRequest
-	4,  // 7: apis.factorioapi.v1.ConsoleService.CommandAlerts:input_type -> apis.factorioapi.v1.CommandAlertsRequest
-	6,  // 8: apis.factorioapi.v1.ConsoleService.CommandEnableResearchQueue:input_type -> apis.factorioapi.v1.CommandEnableResearchQueueRequest
-	8,  // 9: apis.factorioapi.v1.ConsoleService.CommandMuteProgrammableSpeakerForEveryone:input_type -> apis.factorioapi.v1.CommandMuteProgrammableSpeakerForEveryoneRequest
-	10, // 10: apis.factorioapi.v1.ConsoleService.CommandUnmuteProgrammableSpeakerForEveryone:input_type -> apis.factorioapi.v1.CommandUnmuteProgrammableSpeakerForEveryoneRequest
-	12, // 11: apis.factorioapi.v1.ConsoleService.CommandPermissions:input_type -> apis.factorioapi.v1.CommandPermissionsRequest
-	14, // 12: apis.factorioapi.v1.ConsoleService.CommandPermissionsAddPlayer:input_type -> apis.factorioapi.v1.CommandPermissionsAddPlayerRequest
-	16, // 13: apis.factorioapi.v1.ConsoleService.CommandPermissionsCreateGroup:input_type -> apis.factorioapi.v1.CommandPermissionsCreateGroupRequest
-	18, // 14: apis.factorioapi.v1.ConsoleService.CommandPermissionsDeleteGroup:input_type -> apis.factorioapi.v1.CommandPermissionsDeleteGroupRequest
-	20, // 15: apis.factorioapi.v1.ConsoleService.CommandPermissionsEditGroup:input_type -> apis.factorioapi.v1.CommandPermissionsEditGroupRequest
-	22, // 16: apis.factorioapi.v1.ConsoleService.CommandPermissionsGetPlayerGroup:input_type -> apis.factorioapi.v1.CommandPermissionsGetPlayerGroupRequest
-	24, // 17: apis.factorioapi.v1.ConsoleService.CommandPermissionsRemovePlayerGroup:input_type -> apis.factorioapi.v1.CommandPermissionsRemovePlayerGroupRequest
-	26, // 18: apis.factorioapi.v1.ConsoleService.CommandPermissionsRenameGroup:input_type -> apis.factorioapi.v1.CommandPermissionsRenameGroupRequest
-	28, // 19: apis.factorioapi.v1.ConsoleService.CommandResetTips:input_type -> apis.factorioapi.v1.CommandResetTipsRequest
-	30, // 20: apis.factorioapi.v1.ConsoleService.CommandEvolution:input_type -> apis.factorioapi.v1.CommandEvolutionRequest
-	34, // 21: apis.factorioapi.v1.ConsoleService.CommandSeed:input_type -> apis.factorioapi.v1.CommandSeedRequest
-	32, // 22: apis.factorioapi.v1.ConsoleService.CommandTime:input_type -> apis.factorioapi.v1.CommandTimeRequest
-	36, // 23: apis.factorioapi.v1.ConsoleService.CommandToggleActionLogging:input_type -> apis.factorioapi.v1.CommandToggleActionLoggingRequest
-	38, // 24: apis.factorioapi.v1.ConsoleService.CommandToggleHeavyMode:input_type -> apis.factorioapi.v1.CommandToggleHeavyModeRequest
-	40, // 25: apis.factorioapi.v1.ConsoleService.CommandUnlockShortcutBar:input_type -> apis.factorioapi.v1.CommandUnlockShortcutBarRequest
-	42, // 26: apis.factorioapi.v1.ConsoleService.CommandUnlockTips:input_type -> apis.factorioapi.v1.CommandUnlockTipsRequest
-	44, // 27: apis.factorioapi.v1.ConsoleService.CommandVersion:input_type -> apis.factorioapi.v1.CommandVersionRequest
-	47, // 28: apis.factorioapi.v1.ConsoleService.CommandAdmins:input_type -> apis.factorioapi.v1.CommandAdminsRequest
-	49, // 29: apis.factorioapi.v1.ConsoleService.CommandBan:input_type -> apis.factorioapi.v1.CommandBanRequest
-	51, // 30: apis.factorioapi.v1.ConsoleService.CommandBans:input_type -> apis.factorioapi.v1.CommandBansRequest
-	53, // 31: apis.factorioapi.v1.ConsoleService.CommandDemote:input_type -> apis.factorioapi.v1.CommandDemoteRequest
-	55, // 32: apis.factorioapi.v1.ConsoleService.CommandIgnore:input_type -> apis.factorioapi.v1.CommandIgnoreRequest
-	57, // 33: apis.factorioapi.v1.ConsoleService.CommandKick:input_type -> apis.factorioapi.v1.CommandKickRequest
-	59, // 34: apis.factorioapi.v1.ConsoleService.CommandMute:input_type -> apis.factorioapi.v1.CommandMuteRequest
-	61, // 35: apis.factorioapi.v1.ConsoleService.CommandMutes:input_type -> apis.factorioapi.v1.CommandMutesRequest
-	63, // 36: apis.factorioapi.v1.ConsoleService.CommandPlayers:input_type -> apis.factorioapi.v1.CommandPlayersRequest
-	65, // 37: apis.factorioapi.v1.ConsoleService.CommandPromote:input_type -> apis.factorioapi.v1.CommandPromoteRequest
-	67, // 38: apis.factorioapi.v1.ConsoleService.CommandPurge:input_type -> apis.factorioapi.v1.CommandPurgeRequest
-	69, // 39: apis.factorioapi.v1.ConsoleService.CommandServerSave:input_type -> apis.factorioapi.v1.CommandServerSaveRequest
-	71, // 40: apis.factorioapi.v1.ConsoleService.CommandUnban:input_type -> apis.factorioapi.v1.CommandUnbanRequest
-	73, // 41: apis.factorioapi.v1.ConsoleService.CommandUnignore:input_type -> apis.factorioapi.v1.CommandUnignoreRequest
-	75, // 42: apis.factorioapi.v1.ConsoleService.CommandUnmute:input_type -> apis.factorioapi.v1.CommandUnmuteRequest
-	77, // 43: apis.factorioapi.v1.ConsoleService.CommandWhisper:input_type -> apis.factorioapi.v1.CommandWhisperRequest
-	79, // 44: apis.factorioapi.v1.ConsoleService.CommandWhitelistAdd:input_type -> apis.factorioapi.v1.CommandWhitelistAddRequest
-	81, // 45: apis.factorioapi.v1.ConsoleService.CommandWhitelistGet:input_type -> apis.factorioapi.v1.CommandWhitelistGetRequest
-	83, // 46: apis.factorioapi.v1.ConsoleService.CommandWhitelistRemove:input_type -> apis.factorioapi.v1.CommandWhitelistRemoveRequest
-	85, // 47: apis.factorioapi.v1.ConsoleService.CommandWhitelistClear:input_type -> apis.factorioapi.v1.CommandWhitelistClearRequest
-	1,  // 48: apis.factorioapi.v1.ConsoleService.CommandRaw:output_type -> apis.factorioapi.v1.CommandRawResponse
-	3,  // 49: apis.factorioapi.v1.ConsoleService.CommandMessage:output_type -> apis.factorioapi.v1.CommandMessageResponse
-	5,  // 50: apis.factorioapi.v1.ConsoleService.CommandAlerts:output_type -> apis.factorioapi.v1.CommandAlertsResponse
-	7,  // 51: apis.factorioapi.v1.ConsoleService.CommandEnableResearchQueue:output_type -> apis.factorioapi.v1.CommandEnableResearchQueueResponse
-	9,  // 52: apis.factorioapi.v1.ConsoleService.CommandMuteProgrammableSpeakerForEveryone:output_type -> apis.factorioapi.v1.CommandMuteProgrammableSpeakerForEveryoneResponse
-	11, // 53: apis.factorioapi.v1.ConsoleService.CommandUnmuteProgrammableSpeakerForEveryone:output_type -> apis.factorioapi.v1.CommandUnmuteProgrammableSpeakerForEveryoneResponse
-	13, // 54: apis.factorioapi.v1.ConsoleService.CommandPermissions:output_type -> apis.factorioapi.v1.CommandPermissionsResponse
-	15, // 55: apis.factorioapi.v1.ConsoleService.CommandPermissionsAddPlayer:output_type -> apis.factorioapi.v1.CommandPermissionsAddPlayerResponse
-	17, // 56: apis.factorioapi.v1.ConsoleService.CommandPermissionsCreateGroup:output_type -> apis.factorioapi.v1.CommandPermissionsCreateGroupResponse
-	19, // 57: apis.factorioapi.v1.ConsoleService.CommandPermissionsDeleteGroup:output_type -> apis.factorioapi.v1.CommandPermissionsDeleteGroupResponse
-	21, // 58: apis.factorioapi.v1.ConsoleService.CommandPermissionsEditGroup:output_type -> apis.factorioapi.v1.CommandPermissionsEditGroupResponse
-	23, // 59: apis.factorioapi.v1.ConsoleService.CommandPermissionsGetPlayerGroup:output_type -> apis.factorioapi.v1.CommandPermissionsGetPlayerGroupResponse
-	25, // 60: apis.factorioapi.v1.ConsoleService.CommandPermissionsRemovePlayerGroup:output_type -> apis.factorioapi.v1.CommandPermissionsRemovePlayerGroupResponse
-	27, // 61: apis.factorioapi.v1.ConsoleService.CommandPermissionsRenameGroup:output_type -> apis.factorioapi.v1.CommandPermissionsRenameGroupResponse
-	29, // 62: apis.factorioapi.v1.ConsoleService.CommandResetTips:output_type -> apis.factorioapi.v1.CommandResetTipsResponse
-	31, // 63: apis.factorioapi.v1.ConsoleService.CommandEvolution:output_type -> apis.factorioapi.v1.CommandEvolutionResponse
-	35, // 64: apis.factorioapi.v1.ConsoleService.CommandSeed:output_type -> apis.factorioapi.v1.CommandSeedResponse
-	33, // 65: apis.factorioapi.v1.ConsoleService.CommandTime:output_type -> apis.factorioapi.v1.CommandTimeResponse
-	37, // 66: apis.factorioapi.v1.ConsoleService.CommandToggleActionLogging:output_type -> apis.factorioapi.v1.CommandToggleActionLoggingResponse
-	39, // 67: apis.factorioapi.v1.ConsoleService.CommandToggleHeavyMode:output_type -> apis.factorioapi.v1.CommandToggleHeavyModeResponse
-	41, // 68: apis.factorioapi.v1.ConsoleService.CommandUnlockShortcutBar:output_type -> apis.factorioapi.v1.CommandUnlockShortcutBarResponse
-	43, // 69: apis.factorioapi.v1.ConsoleService.CommandUnlockTips:output_type -> apis.factorioapi.v1.CommandUnlockTipsResponse
-	45, // 70: apis.factorioapi.v1.ConsoleService.CommandVersion:output_type -> apis.factorioapi.v1.CommandVersionResponse
-	48, // 71: apis.factorioapi.v1.ConsoleService.CommandAdmins:output_type -> apis.factorioapi.v1.CommandAdminsResponse
-	50, // 72: apis.factorioapi.v1.ConsoleService.CommandBan:output_type -> apis.factorioapi.v1.CommandBanResponse
-	52, // 73: apis.factorioapi.v1.ConsoleService.CommandBans:output_type -> apis.factorioapi.v1.CommandBansResponse
-	54, // 74: apis.factorioapi.v1.ConsoleService.CommandDemote:output_type -> apis.factorioapi.v1.CommandDemoteResponse
-	56, // 75: apis.factorioapi.v1.ConsoleService.CommandIgnore:output_type -> apis.factorioapi.v1.CommandIgnoreResponse
-	58, // 76: apis.factorioapi.v1.ConsoleService.CommandKick:output_type -> apis.factorioapi.v1.CommandKickResponse
-	60, // 77: apis.factorioapi.v1.ConsoleService.CommandMute:output_type -> apis.factorioapi.v1.CommandMuteResponse
-	62, // 78: apis.factorioapi.v1.ConsoleService.CommandMutes:output_type -> apis.factorioapi.v1.CommandMutesResponse
-	64, // 79: apis.factorioapi.v1.ConsoleService.CommandPlayers:output_type -> apis.factorioapi.v1.CommandPlayersResponse
-	66, // 80: apis.factorioapi.v1.ConsoleService.CommandPromote:output_type -> apis.factorioapi.v1.CommandPromoteResponse
-	68, // 81: apis.factorioapi.v1.ConsoleService.CommandPurge:output_type -> apis.factorioapi.v1.CommandPurgeResponse
-	70, // 82: apis.factorioapi.v1.ConsoleService.CommandServerSave:output_type -> apis.factorioapi.v1.CommandServerSaveResponse
-	72, // 83: apis.factorioapi.v1.ConsoleService.CommandUnban:output_type -> apis.factorioapi.v1.CommandUnbanResponse
-	74, // 84: apis.factorioapi.v1.ConsoleService.CommandUnignore:output_type -> apis.factorioapi.v1.CommandUnignoreResponse
-	76, // 85: apis.factorioapi.v1.ConsoleService.CommandUnmute:output_type -> apis.factorioapi.v1.CommandUnmuteResponse
-	78, // 86: apis.factorioapi.v1.ConsoleService.CommandWhisper:output_type -> apis.factorioapi.v1.CommandWhisperResponse
-	80, // 87: apis.factorioapi.v1.ConsoleService.CommandWhitelistAdd:output_type -> apis.factorioapi.v1.CommandWhitelistAddResponse
-	82, // 88: apis.factorioapi.v1.ConsoleService.CommandWhitelistGet:output_type -> apis.factorioapi.v1.CommandWhitelistGetResponse
-	84, // 89: apis.factorioapi.v1.ConsoleService.CommandWhitelistRemove:output_type -> apis.factorioapi.v1.CommandWhitelistRemoveResponse
-	86, // 90: apis.factorioapi.v1.ConsoleService.CommandWhitelistClear:output_type -> apis.factorioapi.v1.CommandWhitelistClearResponse
+var file_apis_factorioapi_v2_command_proto_depIdxs = []int32{
+	46, // 0: apis.factorioapi.v2.CommandAdminsResponse.admins:type_name -> apis.factorioapi.v2.Player
+	46, // 1: apis.factorioapi.v2.CommandBansResponse.bans:type_name -> apis.factorioapi.v2.Player
+	46, // 2: apis.factorioapi.v2.CommandMutesResponse.mutes:type_name -> apis.factorioapi.v2.Player
+	46, // 3: apis.factorioapi.v2.CommandPlayersResponse.players:type_name -> apis.factorioapi.v2.Player
+	46, // 4: apis.factorioapi.v2.CommandWhitelistGetResponse.whitelist:type_name -> apis.factorioapi.v2.Player
+	0,  // 5: apis.factorioapi.v2.ConsoleService.CommandRaw:input_type -> apis.factorioapi.v2.CommandRawRequest
+	2,  // 6: apis.factorioapi.v2.ConsoleService.CommandMessage:input_type -> apis.factorioapi.v2.CommandMessageRequest
+	4,  // 7: apis.factorioapi.v2.ConsoleService.CommandAlerts:input_type -> apis.factorioapi.v2.CommandAlertsRequest
+	6,  // 8: apis.factorioapi.v2.ConsoleService.CommandEnableResearchQueue:input_type -> apis.factorioapi.v2.CommandEnableResearchQueueRequest
+	8,  // 9: apis.factorioapi.v2.ConsoleService.CommandMuteProgrammableSpeakerForEveryone:input_type -> apis.factorioapi.v2.CommandMuteProgrammableSpeakerForEveryoneRequest
+	10, // 10: apis.factorioapi.v2.ConsoleService.CommandUnmuteProgrammableSpeakerForEveryone:input_type -> apis.factorioapi.v2.CommandUnmuteProgrammableSpeakerForEveryoneRequest
+	12, // 11: apis.factorioapi.v2.ConsoleService.CommandPermissions:input_type -> apis.factorioapi.v2.CommandPermissionsRequest
+	14, // 12: apis.factorioapi.v2.ConsoleService.CommandPermissionsAddPlayer:input_type -> apis.factorioapi.v2.CommandPermissionsAddPlayerRequest
+	16, // 13: apis.factorioapi.v2.ConsoleService.CommandPermissionsCreateGroup:input_type -> apis.factorioapi.v2.CommandPermissionsCreateGroupRequest
+	18, // 14: apis.factorioapi.v2.ConsoleService.CommandPermissionsDeleteGroup:input_type -> apis.factorioapi.v2.CommandPermissionsDeleteGroupRequest
+	20, // 15: apis.factorioapi.v2.ConsoleService.CommandPermissionsEditGroup:input_type -> apis.factorioapi.v2.CommandPermissionsEditGroupRequest
+	22, // 16: apis.factorioapi.v2.ConsoleService.CommandPermissionsGetPlayerGroup:input_type -> apis.factorioapi.v2.CommandPermissionsGetPlayerGroupRequest
+	24, // 17: apis.factorioapi.v2.ConsoleService.CommandPermissionsRemovePlayerGroup:input_type -> apis.factorioapi.v2.CommandPermissionsRemovePlayerGroupRequest
+	26, // 18: apis.factorioapi.v2.ConsoleService.CommandPermissionsRenameGroup:input_type -> apis.factorioapi.v2.CommandPermissionsRenameGroupRequest
+	28, // 19: apis.factorioapi.v2.ConsoleService.CommandResetTips:input_type -> apis.factorioapi.v2.CommandResetTipsRequest
+	30, // 20: apis.factorioapi.v2.ConsoleService.CommandEvolution:input_type -> apis.factorioapi.v2.CommandEvolutionRequest
+	34, // 21: apis.factorioapi.v2.ConsoleService.CommandSeed:input_type -> apis.factorioapi.v2.CommandSeedRequest
+	32, // 22: apis.factorioapi.v2.ConsoleService.CommandTime:input_type -> apis.factorioapi.v2.CommandTimeRequest
+	36, // 23: apis.factorioapi.v2.ConsoleService.CommandToggleActionLogging:input_type -> apis.factorioapi.v2.CommandToggleActionLoggingRequest
+	38, // 24: apis.factorioapi.v2.ConsoleService.CommandToggleHeavyMode:input_type -> apis.factorioapi.v2.CommandToggleHeavyModeRequest
+	40, // 25: apis.factorioapi.v2.ConsoleService.CommandUnlockShortcutBar:input_type -> apis.factorioapi.v2.CommandUnlockShortcutBarRequest
+	42, // 26: apis.factorioapi.v2.ConsoleService.CommandUnlockTips:input_type -> apis.factorioapi.v2.CommandUnlockTipsRequest
+	44, // 27: apis.factorioapi.v2.ConsoleService.CommandVersion:input_type -> apis.factorioapi.v2.CommandVersionRequest
+	47, // 28: apis.factorioapi.v2.ConsoleService.CommandAdmins:input_type -> apis.factorioapi.v2.CommandAdminsRequest
+	49, // 29: apis.factorioapi.v2.ConsoleService.CommandBan:input_type -> apis.factorioapi.v2.CommandBanRequest
+	51, // 30: apis.factorioapi.v2.ConsoleService.CommandBans:input_type -> apis.factorioapi.v2.CommandBansRequest
+	53, // 31: apis.factorioapi.v2.ConsoleService.CommandDemote:input_type -> apis.factorioapi.v2.CommandDemoteRequest
+	55, // 32: apis.factorioapi.v2.ConsoleService.CommandIgnore:input_type -> apis.factorioapi.v2.CommandIgnoreRequest
+	57, // 33: apis.factorioapi.v2.ConsoleService.CommandKick:input_type -> apis.factorioapi.v2.CommandKickRequest
+	59, // 34: apis.factorioapi.v2.ConsoleService.CommandMute:input_type -> apis.factorioapi.v2.CommandMuteRequest
+	61, // 35: apis.factorioapi.v2.ConsoleService.CommandMutes:input_type -> apis.factorioapi.v2.CommandMutesRequest
+	63, // 36: apis.factorioapi.v2.ConsoleService.CommandPlayers:input_type -> apis.factorioapi.v2.CommandPlayersRequest
+	65, // 37: apis.factorioapi.v2.ConsoleService.CommandPromote:input_type -> apis.factorioapi.v2.CommandPromoteRequest
+	67, // 38: apis.factorioapi.v2.ConsoleService.CommandPurge:input_type -> apis.factorioapi.v2.CommandPurgeRequest
+	69, // 39: apis.factorioapi.v2.ConsoleService.CommandServerSave:input_type -> apis.factorioapi.v2.CommandServerSaveRequest
+	71, // 40: apis.factorioapi.v2.ConsoleService.CommandUnban:input_type -> apis.factorioapi.v2.CommandUnbanRequest
+	73, // 41: apis.factorioapi.v2.ConsoleService.CommandUnignore:input_type -> apis.factorioapi.v2.CommandUnignoreRequest
+	75, // 42: apis.factorioapi.v2.ConsoleService.CommandUnmute:input_type -> apis.factorioapi.v2.CommandUnmuteRequest
+	77, // 43: apis.factorioapi.v2.ConsoleService.CommandWhisper:input_type -> apis.factorioapi.v2.CommandWhisperRequest
+	79, // 44: apis.factorioapi.v2.ConsoleService.CommandWhitelistAdd:input_type -> apis.factorioapi.v2.CommandWhitelistAddRequest
+	81, // 45: apis.factorioapi.v2.ConsoleService.CommandWhitelistGet:input_type -> apis.factorioapi.v2.CommandWhitelistGetRequest
+	83, // 46: apis.factorioapi.v2.ConsoleService.CommandWhitelistRemove:input_type -> apis.factorioapi.v2.CommandWhitelistRemoveRequest
+	85, // 47: apis.factorioapi.v2.ConsoleService.CommandWhitelistClear:input_type -> apis.factorioapi.v2.CommandWhitelistClearRequest
+	1,  // 48: apis.factorioapi.v2.ConsoleService.CommandRaw:output_type -> apis.factorioapi.v2.CommandRawResponse
+	3,  // 49: apis.factorioapi.v2.ConsoleService.CommandMessage:output_type -> apis.factorioapi.v2.CommandMessageResponse
+	5,  // 50: apis.factorioapi.v2.ConsoleService.CommandAlerts:output_type -> apis.factorioapi.v2.CommandAlertsResponse
+	7,  // 51: apis.factorioapi.v2.ConsoleService.CommandEnableResearchQueue:output_type -> apis.factorioapi.v2.CommandEnableResearchQueueResponse
+	9,  // 52: apis.factorioapi.v2.ConsoleService.CommandMuteProgrammableSpeakerForEveryone:output_type -> apis.factorioapi.v2.CommandMuteProgrammableSpeakerForEveryoneResponse
+	11, // 53: apis.factorioapi.v2.ConsoleService.CommandUnmuteProgrammableSpeakerForEveryone:output_type -> apis.factorioapi.v2.CommandUnmuteProgrammableSpeakerForEveryoneResponse
+	13, // 54: apis.factorioapi.v2.ConsoleService.CommandPermissions:output_type -> apis.factorioapi.v2.CommandPermissionsResponse
+	15, // 55: apis.factorioapi.v2.ConsoleService.CommandPermissionsAddPlayer:output_type -> apis.factorioapi.v2.CommandPermissionsAddPlayerResponse
+	17, // 56: apis.factorioapi.v2.ConsoleService.CommandPermissionsCreateGroup:output_type -> apis.factorioapi.v2.CommandPermissionsCreateGroupResponse
+	19, // 57: apis.factorioapi.v2.ConsoleService.CommandPermissionsDeleteGroup:output_type -> apis.factorioapi.v2.CommandPermissionsDeleteGroupResponse
+	21, // 58: apis.factorioapi.v2.ConsoleService.CommandPermissionsEditGroup:output_type -> apis.factorioapi.v2.CommandPermissionsEditGroupResponse
+	23, // 59: apis.factorioapi.v2.ConsoleService.CommandPermissionsGetPlayerGroup:output_type -> apis.factorioapi.v2.CommandPermissionsGetPlayerGroupResponse
+	25, // 60: apis.factorioapi.v2.ConsoleService.CommandPermissionsRemovePlayerGroup:output_type -> apis.factorioapi.v2.CommandPermissionsRemovePlayerGroupResponse
+	27, // 61: apis.factorioapi.v2.ConsoleService.CommandPermissionsRenameGroup:output_type -> apis.factorioapi.v2.CommandPermissionsRenameGroupResponse
+	29, // 62: apis.factorioapi.v2.ConsoleService.CommandResetTips:output_type -> apis.factorioapi.v2.CommandResetTipsResponse
+	31, // 63: apis.factorioapi.v2.ConsoleService.CommandEvolution:output_type -> apis.factorioapi.v2.CommandEvolutionResponse
+	35, // 64: apis.factorioapi.v2.ConsoleService.CommandSeed:output_type -> apis.factorioapi.v2.CommandSeedResponse
+	33, // 65: apis.factorioapi.v2.ConsoleService.CommandTime:output_type -> apis.factorioapi.v2.CommandTimeResponse
+	37, // 66: apis.factorioapi.v2.ConsoleService.CommandToggleActionLogging:output_type -> apis.factorioapi.v2.CommandToggleActionLoggingResponse
+	39, // 67: apis.factorioapi.v2.ConsoleService.CommandToggleHeavyMode:output_type -> apis.factorioapi.v2.CommandToggleHeavyModeResponse
+	41, // 68: apis.factorioapi.v2.ConsoleService.CommandUnlockShortcutBar:output_type -> apis.factorioapi.v2.CommandUnlockShortcutBarResponse
+	43, // 69: apis.factorioapi.v2.ConsoleService.CommandUnlockTips:output_type -> apis.factorioapi.v2.CommandUnlockTipsResponse
+	45, // 70: apis.factorioapi.v2.ConsoleService.CommandVersion:output_type -> apis.factorioapi.v2.CommandVersionResponse
+	48, // 71: apis.factorioapi.v2.ConsoleService.CommandAdmins:output_type -> apis.factorioapi.v2.CommandAdminsResponse
+	50, // 72: apis.factorioapi.v2.ConsoleService.CommandBan:output_type -> apis.factorioapi.v2.CommandBanResponse
+	52, // 73: apis.factorioapi.v2.ConsoleService.CommandBans:output_type -> apis.factorioapi.v2.CommandBansResponse
+	54, // 74: apis.factorioapi.v2.ConsoleService.CommandDemote:output_type -> apis.factorioapi.v2.CommandDemoteResponse
+	56, // 75: apis.factorioapi.v2.ConsoleService.CommandIgnore:output_type -> apis.factorioapi.v2.CommandIgnoreResponse
+	58, // 76: apis.factorioapi.v2.ConsoleService.CommandKick:output_type -> apis.factorioapi.v2.CommandKickResponse
+	60, // 77: apis.factorioapi.v2.ConsoleService.CommandMute:output_type -> apis.factorioapi.v2.CommandMuteResponse
+	62, // 78: apis.factorioapi.v2.ConsoleService.CommandMutes:output_type -> apis.factorioapi.v2.CommandMutesResponse
+	64, // 79: apis.factorioapi.v2.ConsoleService.CommandPlayers:output_type -> apis.factorioapi.v2.CommandPlayersResponse
+	66, // 80: apis.factorioapi.v2.ConsoleService.CommandPromote:output_type -> apis.factorioapi.v2.CommandPromoteResponse
+	68, // 81: apis.factorioapi.v2.ConsoleService.CommandPurge:output_type -> apis.factorioapi.v2.CommandPurgeResponse
+	70, // 82: apis.factorioapi.v2.ConsoleService.CommandServerSave:output_type -> apis.factorioapi.v2.CommandServerSaveResponse
+	72, // 83: apis.factorioapi.v2.ConsoleService.CommandUnban:output_type -> apis.factorioapi.v2.CommandUnbanResponse
+	74, // 84: apis.factorioapi.v2.ConsoleService.CommandUnignore:output_type -> apis.factorioapi.v2.CommandUnignoreResponse
+	76, // 85: apis.factorioapi.v2.ConsoleService.CommandUnmute:output_type -> apis.factorioapi.v2.CommandUnmuteResponse
+	78, // 86: apis.factorioapi.v2.ConsoleService.CommandWhisper:output_type -> apis.factorioapi.v2.CommandWhisperResponse
+	80, // 87: apis.factorioapi.v2.ConsoleService.CommandWhitelistAdd:output_type -> apis.factorioapi.v2.CommandWhitelistAddResponse
+	82, // 88: apis.factorioapi.v2.ConsoleService.CommandWhitelistGet:output_type -> apis.factorioapi.v2.CommandWhitelistGetResponse
+	84, // 89: apis.factorioapi.v2.ConsoleService.CommandWhitelistRemove:output_type -> apis.factorioapi.v2.CommandWhitelistRemoveResponse
+	86, // 90: apis.factorioapi.v2.ConsoleService.CommandWhitelistClear:output_type -> apis.factorioapi.v2.CommandWhitelistClearResponse
 	48, // [48:91] is the sub-list for method output_type
 	5,  // [5:48] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
@@ -4894,13 +4905,13 @@ var file_apis_factorioapi_v1_command_proto_depIdxs = []int32{
 	0,  // [0:5] is the sub-list for field type_name
 }
 
-func init() { file_apis_factorioapi_v1_command_proto_init() }
-func file_apis_factorioapi_v1_command_proto_init() {
-	if File_apis_factorioapi_v1_command_proto != nil {
+func init() { file_apis_factorioapi_v2_command_proto_init() }
+func file_apis_factorioapi_v2_command_proto_init() {
+	if File_apis_factorioapi_v2_command_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_apis_factorioapi_v1_command_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandRawRequest); i {
 			case 0:
 				return &v.state
@@ -4912,7 +4923,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandRawResponse); i {
 			case 0:
 				return &v.state
@@ -4924,7 +4935,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMessageRequest); i {
 			case 0:
 				return &v.state
@@ -4936,7 +4947,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMessageResponse); i {
 			case 0:
 				return &v.state
@@ -4948,7 +4959,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandAlertsRequest); i {
 			case 0:
 				return &v.state
@@ -4960,7 +4971,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandAlertsResponse); i {
 			case 0:
 				return &v.state
@@ -4972,7 +4983,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandEnableResearchQueueRequest); i {
 			case 0:
 				return &v.state
@@ -4984,7 +4995,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandEnableResearchQueueResponse); i {
 			case 0:
 				return &v.state
@@ -4996,7 +5007,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMuteProgrammableSpeakerForEveryoneRequest); i {
 			case 0:
 				return &v.state
@@ -5008,7 +5019,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMuteProgrammableSpeakerForEveryoneResponse); i {
 			case 0:
 				return &v.state
@@ -5020,7 +5031,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnmuteProgrammableSpeakerForEveryoneRequest); i {
 			case 0:
 				return &v.state
@@ -5032,7 +5043,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnmuteProgrammableSpeakerForEveryoneResponse); i {
 			case 0:
 				return &v.state
@@ -5044,7 +5055,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsRequest); i {
 			case 0:
 				return &v.state
@@ -5056,7 +5067,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsResponse); i {
 			case 0:
 				return &v.state
@@ -5068,7 +5079,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsAddPlayerRequest); i {
 			case 0:
 				return &v.state
@@ -5080,7 +5091,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsAddPlayerResponse); i {
 			case 0:
 				return &v.state
@@ -5092,7 +5103,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsCreateGroupRequest); i {
 			case 0:
 				return &v.state
@@ -5104,7 +5115,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsCreateGroupResponse); i {
 			case 0:
 				return &v.state
@@ -5116,7 +5127,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsDeleteGroupRequest); i {
 			case 0:
 				return &v.state
@@ -5128,7 +5139,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsDeleteGroupResponse); i {
 			case 0:
 				return &v.state
@@ -5140,7 +5151,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsEditGroupRequest); i {
 			case 0:
 				return &v.state
@@ -5152,7 +5163,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsEditGroupResponse); i {
 			case 0:
 				return &v.state
@@ -5164,7 +5175,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsGetPlayerGroupRequest); i {
 			case 0:
 				return &v.state
@@ -5176,7 +5187,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsGetPlayerGroupResponse); i {
 			case 0:
 				return &v.state
@@ -5188,7 +5199,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsRemovePlayerGroupRequest); i {
 			case 0:
 				return &v.state
@@ -5200,7 +5211,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsRemovePlayerGroupResponse); i {
 			case 0:
 				return &v.state
@@ -5212,7 +5223,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsRenameGroupRequest); i {
 			case 0:
 				return &v.state
@@ -5224,7 +5235,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPermissionsRenameGroupResponse); i {
 			case 0:
 				return &v.state
@@ -5236,7 +5247,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandResetTipsRequest); i {
 			case 0:
 				return &v.state
@@ -5248,7 +5259,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandResetTipsResponse); i {
 			case 0:
 				return &v.state
@@ -5260,7 +5271,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandEvolutionRequest); i {
 			case 0:
 				return &v.state
@@ -5272,7 +5283,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandEvolutionResponse); i {
 			case 0:
 				return &v.state
@@ -5284,7 +5295,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandTimeRequest); i {
 			case 0:
 				return &v.state
@@ -5296,7 +5307,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandTimeResponse); i {
 			case 0:
 				return &v.state
@@ -5308,7 +5319,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandSeedRequest); i {
 			case 0:
 				return &v.state
@@ -5320,7 +5331,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandSeedResponse); i {
 			case 0:
 				return &v.state
@@ -5332,7 +5343,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandToggleActionLoggingRequest); i {
 			case 0:
 				return &v.state
@@ -5344,7 +5355,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandToggleActionLoggingResponse); i {
 			case 0:
 				return &v.state
@@ -5356,7 +5367,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandToggleHeavyModeRequest); i {
 			case 0:
 				return &v.state
@@ -5368,7 +5379,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandToggleHeavyModeResponse); i {
 			case 0:
 				return &v.state
@@ -5380,7 +5391,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnlockShortcutBarRequest); i {
 			case 0:
 				return &v.state
@@ -5392,7 +5403,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnlockShortcutBarResponse); i {
 			case 0:
 				return &v.state
@@ -5404,7 +5415,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnlockTipsRequest); i {
 			case 0:
 				return &v.state
@@ -5416,7 +5427,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnlockTipsResponse); i {
 			case 0:
 				return &v.state
@@ -5428,7 +5439,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandVersionRequest); i {
 			case 0:
 				return &v.state
@@ -5440,7 +5451,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandVersionResponse); i {
 			case 0:
 				return &v.state
@@ -5452,7 +5463,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Player); i {
 			case 0:
 				return &v.state
@@ -5464,7 +5475,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[47].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandAdminsRequest); i {
 			case 0:
 				return &v.state
@@ -5476,7 +5487,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[48].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandAdminsResponse); i {
 			case 0:
 				return &v.state
@@ -5488,7 +5499,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[49].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandBanRequest); i {
 			case 0:
 				return &v.state
@@ -5500,7 +5511,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[50].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandBanResponse); i {
 			case 0:
 				return &v.state
@@ -5512,7 +5523,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[51].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandBansRequest); i {
 			case 0:
 				return &v.state
@@ -5524,7 +5535,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[52].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandBansResponse); i {
 			case 0:
 				return &v.state
@@ -5536,7 +5547,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[53].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandDemoteRequest); i {
 			case 0:
 				return &v.state
@@ -5548,7 +5559,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[54].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandDemoteResponse); i {
 			case 0:
 				return &v.state
@@ -5560,7 +5571,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[55].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandIgnoreRequest); i {
 			case 0:
 				return &v.state
@@ -5572,7 +5583,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[56].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandIgnoreResponse); i {
 			case 0:
 				return &v.state
@@ -5584,7 +5595,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[57].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[57].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandKickRequest); i {
 			case 0:
 				return &v.state
@@ -5596,7 +5607,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[58].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[58].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandKickResponse); i {
 			case 0:
 				return &v.state
@@ -5608,7 +5619,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[59].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMuteRequest); i {
 			case 0:
 				return &v.state
@@ -5620,7 +5631,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[60].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[60].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMuteResponse); i {
 			case 0:
 				return &v.state
@@ -5632,7 +5643,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[61].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[61].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMutesRequest); i {
 			case 0:
 				return &v.state
@@ -5644,7 +5655,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[62].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[62].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandMutesResponse); i {
 			case 0:
 				return &v.state
@@ -5656,7 +5667,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[63].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[63].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPlayersRequest); i {
 			case 0:
 				return &v.state
@@ -5668,7 +5679,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[64].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[64].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPlayersResponse); i {
 			case 0:
 				return &v.state
@@ -5680,7 +5691,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[65].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[65].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPromoteRequest); i {
 			case 0:
 				return &v.state
@@ -5692,7 +5703,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[66].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[66].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPromoteResponse); i {
 			case 0:
 				return &v.state
@@ -5704,7 +5715,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[67].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[67].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPurgeRequest); i {
 			case 0:
 				return &v.state
@@ -5716,7 +5727,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[68].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[68].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandPurgeResponse); i {
 			case 0:
 				return &v.state
@@ -5728,7 +5739,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[69].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[69].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandServerSaveRequest); i {
 			case 0:
 				return &v.state
@@ -5740,7 +5751,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[70].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[70].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandServerSaveResponse); i {
 			case 0:
 				return &v.state
@@ -5752,7 +5763,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[71].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[71].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnbanRequest); i {
 			case 0:
 				return &v.state
@@ -5764,7 +5775,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[72].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[72].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnbanResponse); i {
 			case 0:
 				return &v.state
@@ -5776,7 +5787,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[73].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[73].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnignoreRequest); i {
 			case 0:
 				return &v.state
@@ -5788,7 +5799,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[74].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[74].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnignoreResponse); i {
 			case 0:
 				return &v.state
@@ -5800,7 +5811,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[75].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[75].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnmuteRequest); i {
 			case 0:
 				return &v.state
@@ -5812,7 +5823,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[76].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[76].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandUnmuteResponse); i {
 			case 0:
 				return &v.state
@@ -5824,7 +5835,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[77].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[77].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhisperRequest); i {
 			case 0:
 				return &v.state
@@ -5836,7 +5847,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[78].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[78].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhisperResponse); i {
 			case 0:
 				return &v.state
@@ -5848,7 +5859,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[79].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[79].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistAddRequest); i {
 			case 0:
 				return &v.state
@@ -5860,7 +5871,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[80].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[80].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistAddResponse); i {
 			case 0:
 				return &v.state
@@ -5872,7 +5883,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[81].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[81].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistGetRequest); i {
 			case 0:
 				return &v.state
@@ -5884,7 +5895,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[82].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[82].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistGetResponse); i {
 			case 0:
 				return &v.state
@@ -5896,7 +5907,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[83].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[83].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistRemoveRequest); i {
 			case 0:
 				return &v.state
@@ -5908,7 +5919,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[84].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[84].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistRemoveResponse); i {
 			case 0:
 				return &v.state
@@ -5920,7 +5931,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[85].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[85].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistClearRequest); i {
 			case 0:
 				return &v.state
@@ -5932,7 +5943,7 @@ func file_apis_factorioapi_v1_command_proto_init() {
 				return nil
 			}
 		}
-		file_apis_factorioapi_v1_command_proto_msgTypes[86].Exporter = func(v interface{}, i int) interface{} {
+		file_apis_factorioapi_v2_command_proto_msgTypes[86].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CommandWhitelistClearResponse); i {
 			case 0:
 				return &v.state
@@ -5949,18 +5960,18 @@ func file_apis_factorioapi_v1_command_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_apis_factorioapi_v1_command_proto_rawDesc,
+			RawDescriptor: file_apis_factorioapi_v2_command_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   87,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_apis_factorioapi_v1_command_proto_goTypes,
-		DependencyIndexes: file_apis_factorioapi_v1_command_proto_depIdxs,
-		MessageInfos:      file_apis_factorioapi_v1_command_proto_msgTypes,
+		GoTypes:           file_apis_factorioapi_v2_command_proto_goTypes,
+		DependencyIndexes: file_apis_factorioapi_v2_command_proto_depIdxs,
+		MessageInfos:      file_apis_factorioapi_v2_command_proto_msgTypes,
 	}.Build()
-	File_apis_factorioapi_v1_command_proto = out.File
-	file_apis_factorioapi_v1_command_proto_rawDesc = nil
-	file_apis_factorioapi_v1_command_proto_goTypes = nil
-	file_apis_factorioapi_v1_command_proto_depIdxs = nil
+	File_apis_factorioapi_v2_command_proto = out.File
+	file_apis_factorioapi_v2_command_proto_rawDesc = nil
+	file_apis_factorioapi_v2_command_proto_goTypes = nil
+	file_apis_factorioapi_v2_command_proto_depIdxs = nil
 }

@@ -1,4 +1,4 @@
-package consolev1
+package consolev2
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	v1 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1"
+	v2 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v2"
 	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"
 	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
 	"github.com/nekomeowww/factorio-rcon-api/pkg/utils"
@@ -26,7 +26,7 @@ type NewConsoleServiceParams struct {
 }
 
 type ConsoleService struct {
-	v1.UnimplementedConsoleServiceServer
+	v2.UnimplementedConsoleServiceServer
 
 	logger *logger.Logger
 	rcon   *rcon.RCON
@@ -41,7 +41,7 @@ func NewConsoleService() func(NewConsoleServiceParams) *ConsoleService {
 	}
 }
 
-func (s *ConsoleService) CommandRaw(ctx context.Context, req *v1.CommandRawRequest) (*v1.CommandRawResponse, error) {
+func (s *ConsoleService) CommandRaw(ctx context.Context, req *v2.CommandRawRequest) (*v2.CommandRawResponse, error) {
 	resp, err := s.rcon.Execute(ctx, req.Input)
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -51,12 +51,12 @@ func (s *ConsoleService) CommandRaw(ctx context.Context, req *v1.CommandRawReque
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
-	return &v1.CommandRawResponse{
+	return &v2.CommandRawResponse{
 		Output: resp,
 	}, nil
 }
 
-func (s *ConsoleService) CommandMessage(ctx context.Context, req *v1.CommandMessageRequest) (*v1.CommandMessageResponse, error) {
+func (s *ConsoleService) CommandMessage(ctx context.Context, req *v2.CommandMessageRequest) (*v2.CommandMessageResponse, error) {
 	if req.Message == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("message should not be empty").AsStatus()
 	}
@@ -72,66 +72,66 @@ func (s *ConsoleService) CommandMessage(ctx context.Context, req *v1.CommandMess
 
 	s.logger.Info("executed command message and got response", zap.String("response", resp), zap.String("message", req.Message))
 
-	return &v1.CommandMessageResponse{}, nil
+	return &v2.CommandMessageResponse{}, nil
 }
 
-func (s *ConsoleService) CommandAlerts(ctx context.Context, req *v1.CommandAlertsRequest) (*v1.CommandAlertsResponse, error) {
+func (s *ConsoleService) CommandAlerts(ctx context.Context, req *v2.CommandAlertsRequest) (*v2.CommandAlertsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandAlerts not implemented")
 }
 
-func (s *ConsoleService) CommandEnableResearchQueue(ctx context.Context, req *v1.CommandEnableResearchQueueRequest) (*v1.CommandEnableResearchQueueResponse, error) {
+func (s *ConsoleService) CommandEnableResearchQueue(ctx context.Context, req *v2.CommandEnableResearchQueueRequest) (*v2.CommandEnableResearchQueueResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandEnableResearchQueue not implemented")
 }
 
-func (s *ConsoleService) CommandMuteProgrammableSpeakerForEveryone(ctx context.Context, req *v1.CommandMuteProgrammableSpeakerForEveryoneRequest) (*v1.CommandMuteProgrammableSpeakerForEveryoneResponse, error) {
+func (s *ConsoleService) CommandMuteProgrammableSpeakerForEveryone(ctx context.Context, req *v2.CommandMuteProgrammableSpeakerForEveryoneRequest) (*v2.CommandMuteProgrammableSpeakerForEveryoneResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandMuteProgrammableSpeakerForEveryone not implemented")
 }
 
-func (s *ConsoleService) CommandUnmuteProgrammableSpeakerForEveryone(ctx context.Context, req *v1.CommandUnmuteProgrammableSpeakerForEveryoneRequest) (*v1.CommandUnmuteProgrammableSpeakerForEveryoneResponse, error) {
+func (s *ConsoleService) CommandUnmuteProgrammableSpeakerForEveryone(ctx context.Context, req *v2.CommandUnmuteProgrammableSpeakerForEveryoneRequest) (*v2.CommandUnmuteProgrammableSpeakerForEveryoneResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandUnmuteProgrammableSpeakerForEveryone not implemented")
 }
 
-func (s *ConsoleService) CommandPermissions(ctx context.Context, req *v1.CommandPermissionsRequest) (*v1.CommandPermissionsResponse, error) {
+func (s *ConsoleService) CommandPermissions(ctx context.Context, req *v2.CommandPermissionsRequest) (*v2.CommandPermissionsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissions not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsAddPlayer(ctx context.Context, req *v1.CommandPermissionsAddPlayerRequest) (*v1.CommandPermissionsAddPlayerResponse, error) {
+func (s *ConsoleService) CommandPermissionsAddPlayer(ctx context.Context, req *v2.CommandPermissionsAddPlayerRequest) (*v2.CommandPermissionsAddPlayerResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsAddPlayer not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsCreateGroup(ctx context.Context, req *v1.CommandPermissionsCreateGroupRequest) (*v1.CommandPermissionsCreateGroupResponse, error) {
+func (s *ConsoleService) CommandPermissionsCreateGroup(ctx context.Context, req *v2.CommandPermissionsCreateGroupRequest) (*v2.CommandPermissionsCreateGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsCreateGroup not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsDeleteGroup(ctx context.Context, req *v1.CommandPermissionsDeleteGroupRequest) (*v1.CommandPermissionsDeleteGroupResponse, error) {
+func (s *ConsoleService) CommandPermissionsDeleteGroup(ctx context.Context, req *v2.CommandPermissionsDeleteGroupRequest) (*v2.CommandPermissionsDeleteGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsDeleteGroup not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsEditGroup(ctx context.Context, req *v1.CommandPermissionsEditGroupRequest) (*v1.CommandPermissionsEditGroupResponse, error) {
+func (s *ConsoleService) CommandPermissionsEditGroup(ctx context.Context, req *v2.CommandPermissionsEditGroupRequest) (*v2.CommandPermissionsEditGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsEditGroup not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsGetPlayerGroup(ctx context.Context, req *v1.CommandPermissionsGetPlayerGroupRequest) (*v1.CommandPermissionsGetPlayerGroupResponse, error) {
+func (s *ConsoleService) CommandPermissionsGetPlayerGroup(ctx context.Context, req *v2.CommandPermissionsGetPlayerGroupRequest) (*v2.CommandPermissionsGetPlayerGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsGetPlayerGroup not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsRemovePlayerGroup(ctx context.Context, req *v1.CommandPermissionsRemovePlayerGroupRequest) (*v1.CommandPermissionsRemovePlayerGroupResponse, error) {
+func (s *ConsoleService) CommandPermissionsRemovePlayerGroup(ctx context.Context, req *v2.CommandPermissionsRemovePlayerGroupRequest) (*v2.CommandPermissionsRemovePlayerGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsRemovePlayerGroup not implemented")
 }
 
-func (s *ConsoleService) CommandPermissionsRenameGroup(ctx context.Context, req *v1.CommandPermissionsRenameGroupRequest) (*v1.CommandPermissionsRenameGroupResponse, error) {
+func (s *ConsoleService) CommandPermissionsRenameGroup(ctx context.Context, req *v2.CommandPermissionsRenameGroupRequest) (*v2.CommandPermissionsRenameGroupResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandPermissionsRenameGroup not implemented")
 }
 
-func (s *ConsoleService) CommandResetTips(ctx context.Context, req *v1.CommandResetTipsRequest) (*v1.CommandResetTipsResponse, error) {
+func (s *ConsoleService) CommandResetTips(ctx context.Context, req *v2.CommandResetTipsRequest) (*v2.CommandResetTipsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandResetTips not implemented")
 }
 
 var (
-	regexpEvolutionFactor = regexp.MustCompile(`Evolution factor: ([0-9.]+)\. \(Time ([0-9.]+)%\) \(Pollution ([0-9.]+)%\) \(Spawner kills ([0-9.]+)%\)`)
+	regexpEvolutionFactor = regexp.MustCompile(`(.*) - Evolution factor: ([0-9.]+)\. \(Time ([0-9.]+)%\) \(Pollution ([0-9.]+)%\) \(Spawner kills ([0-9.]+)%\)`)
 )
 
-func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v1.CommandEvolutionRequest) (*v1.CommandEvolutionResponse, error) {
+func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v2.CommandEvolutionRequest) (*v2.CommandEvolutionResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/evolution")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -143,37 +143,41 @@ func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v1.CommandEv
 
 	normalized := strings.TrimSuffix(resp, "\n")
 
-	// output: Evolution factor: 0.0000. (Time 0%) (Pollution 0%) (Spawner kills 0%)
+	// output: Nauvis - Evolution factor: 0.0000. (Time 0%) (Pollution 0%) (Spawner kills 0%)
 	match := regexpEvolutionFactor.FindStringSubmatch(resp)
-	if len(match) != 5 {
-		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse evolution factor: %s due to matches not equals 5", normalized).AsStatus()
+	if len(match) != 6 {
+		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse evolution factor: %s due to matches not equals 6", normalized).AsStatus()
 	}
 
-	// match[1] is the evolution factor
-	evolutionFactor, err := strconv.ParseFloat(match[1], 64)
+	// match[1] is the name
+	planetName := match[1]
+
+	// match[2] is the evolution factor
+	evolutionFactor, err := strconv.ParseFloat(match[2], 64)
 	if err != nil {
 		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse evolution factor: %s from %s due to %v", match[1], normalized, err).AsStatus()
 	}
 
-	// match[2] is the time
-	time, err := strconv.ParseFloat(match[2], 64)
+	// match[3] is the time
+	time, err := strconv.ParseFloat(match[3], 64)
 	if err != nil {
 		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse time: %s from %s due to %v", match[2], normalized, err).AsStatus()
 	}
 
-	// match[3] is the pollution
-	pollution, err := strconv.ParseFloat(match[3], 64)
+	// match[4] is the pollution
+	pollution, err := strconv.ParseFloat(match[4], 64)
 	if err != nil {
 		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse pollution: %s from %s due to %v", match[3], normalized, err).AsStatus()
 	}
 
-	// match[4] is the spawner kills
-	spawnerKills, err := strconv.ParseFloat(match[4], 64)
+	// match[5] is the spawner kills
+	spawnerKills, err := strconv.ParseFloat(match[5], 64)
 	if err != nil {
 		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse spawner kills: %s from %s due to %v", match[4], normalized, err).AsStatus()
 	}
 
-	return &v1.CommandEvolutionResponse{
+	return &v2.CommandEvolutionResponse{
+		PlanetName:      planetName,
 		EvolutionFactor: evolutionFactor,
 		Time:            time,
 		Pollution:       pollution,
@@ -181,7 +185,7 @@ func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v1.CommandEv
 	}, nil
 }
 
-func (s *ConsoleService) CommandSeed(ctx context.Context, req *v1.CommandSeedRequest) (*v1.CommandSeedResponse, error) {
+func (s *ConsoleService) CommandSeed(ctx context.Context, req *v2.CommandSeedRequest) (*v2.CommandSeedResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/seed")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -193,15 +197,15 @@ func (s *ConsoleService) CommandSeed(ctx context.Context, req *v1.CommandSeedReq
 
 	normalized := strings.TrimSuffix(resp, "\n")
 	if normalized == "" {
-		return &v1.CommandSeedResponse{}, nil
+		return &v2.CommandSeedResponse{}, nil
 	}
 
-	return &v1.CommandSeedResponse{
+	return &v2.CommandSeedResponse{
 		Seed: normalized,
 	}, nil
 }
 
-func (s *ConsoleService) CommandTime(ctx context.Context, req *v1.CommandTimeRequest) (*v1.CommandTimeResponse, error) {
+func (s *ConsoleService) CommandTime(ctx context.Context, req *v2.CommandTimeRequest) (*v2.CommandTimeResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/time")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -213,7 +217,7 @@ func (s *ConsoleService) CommandTime(ctx context.Context, req *v1.CommandTimeReq
 
 	normalized := strings.TrimSuffix(resp, "\n")
 	if normalized == "" {
-		return &v1.CommandTimeResponse{}, nil
+		return &v2.CommandTimeResponse{}, nil
 	}
 
 	duration, err := utils.ParseDuration(normalized)
@@ -221,28 +225,28 @@ func (s *ConsoleService) CommandTime(ctx context.Context, req *v1.CommandTimeReq
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
-	return &v1.CommandTimeResponse{
+	return &v2.CommandTimeResponse{
 		Time: duration.Seconds(),
 	}, nil
 }
 
-func (s *ConsoleService) CommandToggleActionLogging(ctx context.Context, req *v1.CommandToggleActionLoggingRequest) (*v1.CommandToggleActionLoggingResponse, error) {
+func (s *ConsoleService) CommandToggleActionLogging(ctx context.Context, req *v2.CommandToggleActionLoggingRequest) (*v2.CommandToggleActionLoggingResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandToggleActionLogging not implemented")
 }
 
-func (s *ConsoleService) CommandToggleHeavyMode(ctx context.Context, req *v1.CommandToggleHeavyModeRequest) (*v1.CommandToggleHeavyModeResponse, error) {
+func (s *ConsoleService) CommandToggleHeavyMode(ctx context.Context, req *v2.CommandToggleHeavyModeRequest) (*v2.CommandToggleHeavyModeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandToggleHeavyMode not implemented")
 }
 
-func (s *ConsoleService) CommandUnlockShortcutBar(ctx context.Context, req *v1.CommandUnlockShortcutBarRequest) (*v1.CommandUnlockShortcutBarResponse, error) {
+func (s *ConsoleService) CommandUnlockShortcutBar(ctx context.Context, req *v2.CommandUnlockShortcutBarRequest) (*v2.CommandUnlockShortcutBarResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandUnlockShortcutBar not implemented")
 }
 
-func (s *ConsoleService) CommandUnlockTips(ctx context.Context, req *v1.CommandUnlockTipsRequest) (*v1.CommandUnlockTipsResponse, error) {
+func (s *ConsoleService) CommandUnlockTips(ctx context.Context, req *v2.CommandUnlockTipsRequest) (*v2.CommandUnlockTipsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandUnlockTips not implemented")
 }
 
-func (s *ConsoleService) CommandVersion(ctx context.Context, req *v1.CommandVersionRequest) (*v1.CommandVersionResponse, error) {
+func (s *ConsoleService) CommandVersion(ctx context.Context, req *v2.CommandVersionRequest) (*v2.CommandVersionResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/version")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -252,12 +256,12 @@ func (s *ConsoleService) CommandVersion(ctx context.Context, req *v1.CommandVers
 		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
 	}
 
-	return &v1.CommandVersionResponse{
+	return &v2.CommandVersionResponse{
 		Version: strings.TrimSuffix(resp, "\n"),
 	}, nil
 }
 
-func (s *ConsoleService) CommandAdmins(ctx context.Context, req *v1.CommandAdminsRequest) (*v1.CommandAdminsResponse, error) {
+func (s *ConsoleService) CommandAdmins(ctx context.Context, req *v2.CommandAdminsRequest) (*v2.CommandAdminsResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/admins")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -272,12 +276,12 @@ func (s *ConsoleService) CommandAdmins(ctx context.Context, req *v1.CommandAdmin
 		return nil, err
 	}
 
-	return &v1.CommandAdminsResponse{
-		Admins: admins,
+	return &v2.CommandAdminsResponse{
+		Admins: utils.MapV1PlayersToV2Players(admins),
 	}, nil
 }
 
-func (s *ConsoleService) CommandBan(ctx context.Context, req *v1.CommandBanRequest) (*v1.CommandBanResponse, error) {
+func (s *ConsoleService) CommandBan(ctx context.Context, req *v2.CommandBanRequest) (*v2.CommandBanResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -295,10 +299,10 @@ func (s *ConsoleService) CommandBan(ctx context.Context, req *v1.CommandBanReque
 
 	s.logger.Info("executed command ban and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandBanResponse{}, nil
+	return &v2.CommandBanResponse{}, nil
 }
 
-func (s *ConsoleService) CommandBans(ctx context.Context, req *v1.CommandBansRequest) (*v1.CommandBansResponse, error) {
+func (s *ConsoleService) CommandBans(ctx context.Context, req *v2.CommandBansRequest) (*v2.CommandBansResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/bans")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -313,12 +317,12 @@ func (s *ConsoleService) CommandBans(ctx context.Context, req *v1.CommandBansReq
 		return nil, err
 	}
 
-	return &v1.CommandBansResponse{
-		Bans: bans,
+	return &v2.CommandBansResponse{
+		Bans: utils.MapV1PlayersToV2Players(bans),
 	}, nil
 }
 
-func (s *ConsoleService) CommandDemote(ctx context.Context, req *v1.CommandDemoteRequest) (*v1.CommandDemoteResponse, error) {
+func (s *ConsoleService) CommandDemote(ctx context.Context, req *v2.CommandDemoteRequest) (*v2.CommandDemoteResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -334,10 +338,10 @@ func (s *ConsoleService) CommandDemote(ctx context.Context, req *v1.CommandDemot
 
 	s.logger.Info("executed command demote and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandDemoteResponse{}, nil
+	return &v2.CommandDemoteResponse{}, nil
 }
 
-func (s *ConsoleService) CommandIgnore(ctx context.Context, req *v1.CommandIgnoreRequest) (*v1.CommandIgnoreResponse, error) {
+func (s *ConsoleService) CommandIgnore(ctx context.Context, req *v2.CommandIgnoreRequest) (*v2.CommandIgnoreResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -353,10 +357,10 @@ func (s *ConsoleService) CommandIgnore(ctx context.Context, req *v1.CommandIgnor
 
 	s.logger.Info("executed command ignore and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandIgnoreResponse{}, nil
+	return &v2.CommandIgnoreResponse{}, nil
 }
 
-func (s *ConsoleService) CommandKick(ctx context.Context, req *v1.CommandKickRequest) (*v1.CommandKickResponse, error) {
+func (s *ConsoleService) CommandKick(ctx context.Context, req *v2.CommandKickRequest) (*v2.CommandKickResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -377,10 +381,10 @@ func (s *ConsoleService) CommandKick(ctx context.Context, req *v1.CommandKickReq
 
 	s.logger.Info("executed command kick and got response", zap.String("response", resp), zap.String("username", req.Username), zap.String("reason", req.Reason))
 
-	return &v1.CommandKickResponse{}, nil
+	return &v2.CommandKickResponse{}, nil
 }
 
-func (s *ConsoleService) CommandMute(ctx context.Context, req *v1.CommandMuteRequest) (*v1.CommandMuteResponse, error) {
+func (s *ConsoleService) CommandMute(ctx context.Context, req *v2.CommandMuteRequest) (*v2.CommandMuteResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -396,10 +400,10 @@ func (s *ConsoleService) CommandMute(ctx context.Context, req *v1.CommandMuteReq
 
 	s.logger.Info("executed command mute and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandMuteResponse{}, nil
+	return &v2.CommandMuteResponse{}, nil
 }
 
-func (s *ConsoleService) CommandMutes(ctx context.Context, req *v1.CommandMutesRequest) (*v1.CommandMutesResponse, error) {
+func (s *ConsoleService) CommandMutes(ctx context.Context, req *v2.CommandMutesRequest) (*v2.CommandMutesResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/mutes")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -414,12 +418,12 @@ func (s *ConsoleService) CommandMutes(ctx context.Context, req *v1.CommandMutesR
 		return nil, err
 	}
 
-	return &v1.CommandMutesResponse{
-		Mutes: mutes,
+	return &v2.CommandMutesResponse{
+		Mutes: utils.MapV1PlayersToV2Players(mutes),
 	}, nil
 }
 
-func (s *ConsoleService) CommandPlayers(ctx context.Context, req *v1.CommandPlayersRequest) (*v1.CommandPlayersResponse, error) {
+func (s *ConsoleService) CommandPlayers(ctx context.Context, req *v2.CommandPlayersRequest) (*v2.CommandPlayersResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/players")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -437,12 +441,12 @@ func (s *ConsoleService) CommandPlayers(ctx context.Context, req *v1.CommandPlay
 		return nil, err
 	}
 
-	return &v1.CommandPlayersResponse{
-		Players: players,
+	return &v2.CommandPlayersResponse{
+		Players: utils.MapV1PlayersToV2Players(players),
 	}, nil
 }
 
-func (s *ConsoleService) CommandPromote(ctx context.Context, req *v1.CommandPromoteRequest) (*v1.CommandPromoteResponse, error) {
+func (s *ConsoleService) CommandPromote(ctx context.Context, req *v2.CommandPromoteRequest) (*v2.CommandPromoteResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -458,10 +462,10 @@ func (s *ConsoleService) CommandPromote(ctx context.Context, req *v1.CommandProm
 
 	s.logger.Info("executed command promote and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandPromoteResponse{}, nil
+	return &v2.CommandPromoteResponse{}, nil
 }
 
-func (s *ConsoleService) CommandPurge(ctx context.Context, req *v1.CommandPurgeRequest) (*v1.CommandPurgeResponse, error) {
+func (s *ConsoleService) CommandPurge(ctx context.Context, req *v2.CommandPurgeRequest) (*v2.CommandPurgeResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -477,10 +481,10 @@ func (s *ConsoleService) CommandPurge(ctx context.Context, req *v1.CommandPurgeR
 
 	s.logger.Info("executed command purge and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandPurgeResponse{}, nil
+	return &v2.CommandPurgeResponse{}, nil
 }
 
-func (s *ConsoleService) CommandServerSave(ctx context.Context, req *v1.CommandServerSaveRequest) (*v1.CommandServerSaveResponse, error) {
+func (s *ConsoleService) CommandServerSave(ctx context.Context, req *v2.CommandServerSaveRequest) (*v2.CommandServerSaveResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/server-save")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -492,10 +496,10 @@ func (s *ConsoleService) CommandServerSave(ctx context.Context, req *v1.CommandS
 
 	s.logger.Info("executed command server-save and got response", zap.String("response", resp))
 
-	return &v1.CommandServerSaveResponse{}, nil
+	return &v2.CommandServerSaveResponse{}, nil
 }
 
-func (s *ConsoleService) CommandUnban(ctx context.Context, req *v1.CommandUnbanRequest) (*v1.CommandUnbanResponse, error) {
+func (s *ConsoleService) CommandUnban(ctx context.Context, req *v2.CommandUnbanRequest) (*v2.CommandUnbanResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -511,10 +515,10 @@ func (s *ConsoleService) CommandUnban(ctx context.Context, req *v1.CommandUnbanR
 
 	s.logger.Info("executed command unban and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandUnbanResponse{}, nil
+	return &v2.CommandUnbanResponse{}, nil
 }
 
-func (s *ConsoleService) CommandUnignore(ctx context.Context, req *v1.CommandUnignoreRequest) (*v1.CommandUnignoreResponse, error) {
+func (s *ConsoleService) CommandUnignore(ctx context.Context, req *v2.CommandUnignoreRequest) (*v2.CommandUnignoreResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -530,10 +534,10 @@ func (s *ConsoleService) CommandUnignore(ctx context.Context, req *v1.CommandUni
 
 	s.logger.Info("executed command unignore and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandUnignoreResponse{}, nil
+	return &v2.CommandUnignoreResponse{}, nil
 }
 
-func (s *ConsoleService) CommandUnmute(ctx context.Context, req *v1.CommandUnmuteRequest) (*v1.CommandUnmuteResponse, error) {
+func (s *ConsoleService) CommandUnmute(ctx context.Context, req *v2.CommandUnmuteRequest) (*v2.CommandUnmuteResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -549,10 +553,10 @@ func (s *ConsoleService) CommandUnmute(ctx context.Context, req *v1.CommandUnmut
 
 	s.logger.Info("executed command unmute and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandUnmuteResponse{}, nil
+	return &v2.CommandUnmuteResponse{}, nil
 }
 
-func (s *ConsoleService) CommandWhisper(ctx context.Context, req *v1.CommandWhisperRequest) (*v1.CommandWhisperResponse, error) {
+func (s *ConsoleService) CommandWhisper(ctx context.Context, req *v2.CommandWhisperRequest) (*v2.CommandWhisperResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -571,10 +575,10 @@ func (s *ConsoleService) CommandWhisper(ctx context.Context, req *v1.CommandWhis
 
 	s.logger.Info("executed command whisper and got response", zap.String("response", resp), zap.String("username", req.Username), zap.String("message", req.Message))
 
-	return &v1.CommandWhisperResponse{}, nil
+	return &v2.CommandWhisperResponse{}, nil
 }
 
-func (s *ConsoleService) CommandWhitelistAdd(ctx context.Context, req *v1.CommandWhitelistAddRequest) (*v1.CommandWhitelistAddResponse, error) {
+func (s *ConsoleService) CommandWhitelistAdd(ctx context.Context, req *v2.CommandWhitelistAddRequest) (*v2.CommandWhitelistAddResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -590,10 +594,10 @@ func (s *ConsoleService) CommandWhitelistAdd(ctx context.Context, req *v1.Comman
 
 	s.logger.Info("executed command whitelist add and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandWhitelistAddResponse{}, nil
+	return &v2.CommandWhitelistAddResponse{}, nil
 }
 
-func (s *ConsoleService) CommandWhitelistGet(ctx context.Context, req *v1.CommandWhitelistGetRequest) (*v1.CommandWhitelistGetResponse, error) {
+func (s *ConsoleService) CommandWhitelistGet(ctx context.Context, req *v2.CommandWhitelistGetRequest) (*v2.CommandWhitelistGetResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/whitelist get")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -608,12 +612,12 @@ func (s *ConsoleService) CommandWhitelistGet(ctx context.Context, req *v1.Comman
 		return nil, err
 	}
 
-	return &v1.CommandWhitelistGetResponse{
-		Whitelist: whitelist,
+	return &v2.CommandWhitelistGetResponse{
+		Whitelist: utils.MapV1PlayersToV2Players(whitelist),
 	}, nil
 }
 
-func (s *ConsoleService) CommandWhitelistRemove(ctx context.Context, req *v1.CommandWhitelistRemoveRequest) (*v1.CommandWhitelistRemoveResponse, error) {
+func (s *ConsoleService) CommandWhitelistRemove(ctx context.Context, req *v2.CommandWhitelistRemoveRequest) (*v2.CommandWhitelistRemoveResponse, error) {
 	if req.Username == "" {
 		return nil, apierrors.NewErrInvalidArgument().WithDetail("username should not be empty").AsStatus()
 	}
@@ -629,10 +633,10 @@ func (s *ConsoleService) CommandWhitelistRemove(ctx context.Context, req *v1.Com
 
 	s.logger.Info("executed command whitelist remove and got response", zap.String("response", resp), zap.String("username", req.Username))
 
-	return &v1.CommandWhitelistRemoveResponse{}, nil
+	return &v2.CommandWhitelistRemoveResponse{}, nil
 }
 
-func (s *ConsoleService) CommandWhitelistClear(ctx context.Context, req *v1.CommandWhitelistClearRequest) (*v1.CommandWhitelistClearResponse, error) {
+func (s *ConsoleService) CommandWhitelistClear(ctx context.Context, req *v2.CommandWhitelistClearRequest) (*v2.CommandWhitelistClearResponse, error) {
 	resp, err := s.rcon.Execute(ctx, "/whitelist clear")
 	if err != nil {
 		if errors.Is(err, rcon.ErrTimeout) {
@@ -644,5 +648,5 @@ func (s *ConsoleService) CommandWhitelistClear(ctx context.Context, req *v1.Comm
 
 	s.logger.Info("executed command whitelist clear and got response", zap.String("response", resp))
 
-	return &v1.CommandWhitelistClearResponse{}, nil
+	return &v2.CommandWhitelistClearResponse{}, nil
 }

@@ -55,7 +55,9 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 		e := echo.New()
 		e.RouteNotFound("/*", middlewares.NotFound)
 
-		e.GET("/apis/docs", middlewares.ScalarDocumentation("Factorio RCON API", "/swagger.json"))
+		e.GET("/apis/docs/v1", middlewares.ScalarDocumentation("Factorio RCON API"))
+		e.GET("/apis/docs/v2", middlewares.ScalarDocumentation("Factorio RCON API"))
+
 		e.GET("/healthz", middlewares.HealthCheck(
 			health.WithCheck(health.Check{
 				Name: "factorio rcon connection",
@@ -109,9 +111,9 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 				}
 
 				if params.Config.Tracing.OtelCollectorHTTP {
-					server.echo.Any("/api/v1/*", echo.WrapHandler(httppkg.NewTraceparentWrapper(gateway)))
+					server.echo.Any("/api/*", echo.WrapHandler(httppkg.NewTraceparentWrapper(gateway)))
 				} else {
-					server.echo.Any("/api/v1/*", echo.WrapHandler(gateway))
+					server.echo.Any("/api/*", echo.WrapHandler(gateway))
 				}
 
 				return nil

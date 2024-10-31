@@ -1,6 +1,6 @@
 # Factorio RCON API
 
-> [Live API Docs](https://factorio-rcon-api.ayaka.io/apis/docs)
+> [Live API Docs](https://factorio-rcon-api.ayaka.io/apis/docs/v2)
 
 🏭 Fully implemented wrapper for Factorio headless server console as RESTful and gRPC for easier management through APIs
 
@@ -179,7 +179,7 @@ to get the version of the Factorio game server.
 
 For API documentation, we offer Scalar powered OpenAPI UI under `/apis/docs` endpoint.
 
-With the demo server at [https://factorio-rcon-api.ayaka.io/apis/docs](https://factorio-rcon-api.ayaka.io/apis/docs) live, you can view the full API documentations there, or you can run the API server locally and access the documentation at [http://localhost:24180/apis/docs](http://localhost:24180/apis/docs).
+With the demo server at [https://factorio-rcon-api.ayaka.io/apis/docs/v2](https://factorio-rcon-api.ayaka.io/apis/docs/v2) live, you can view the full API documentations there, or you can run the API server locally and access the documentation at [http://localhost:24180/apis/docs/v2](http://localhost:24180/apis/docs/v2).
 
 Alternatively, we ship the OpenAPI v2 and v3 spec in the repository:
 

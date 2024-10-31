@@ -7,7 +7,7 @@ import (
 	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
 )
 
-func ScalarDocumentation(title string, specEndpoint string) echo.HandlerFunc {
+func ScalarDocumentation(title string) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		content, err := scalar.ApiReferenceHTML(&scalar.Options{
 			SpecContent: string(v1.OpenAPIV3SpecYaml()),

@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package apis.factorioapi.v1;
+package apis.factorioapi.v2;
 
 import "google/api/annotations.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 
-option go_package = "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1";
+option go_package = "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v2";
 
 message CommandRawRequest {
   string input = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"/c game.player.zoom=0.1\""}]; // The input for the command. For example, it will be formatted and executed with `/c game.player.zoom=0.1`.
@@ -122,6 +122,7 @@ message CommandEvolutionResponse {
   double time = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
   double pollution = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
   double spawner_kills = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
+  string planet_name = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Nauvis\""}]; // The current planet name.
 }
 
 message CommandTimeRequest {
@@ -318,7 +319,7 @@ message CommandWhitelistClearResponse {
 service ConsoleService {
   rpc CommandRaw(CommandRawRequest) returns (CommandRawResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/raw",
+      post: "/api/v2/factorio/console/command/raw",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -330,7 +331,7 @@ service ConsoleService {
 
   rpc CommandMessage(CommandMessageRequest) returns (CommandMessageResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/message",
+      post: "/api/v2/factorio/console/command/message",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -342,7 +343,7 @@ service ConsoleService {
 
   rpc CommandAlerts(CommandAlertsRequest) returns (CommandAlertsResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/alerts"
+      get: "/api/v2/factorio/console/command/alerts"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of alerts.";
@@ -353,7 +354,7 @@ service ConsoleService {
 
   rpc CommandEnableResearchQueue(CommandEnableResearchQueueRequest) returns (CommandEnableResearchQueueResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/enable-research-queue",
+      post: "/api/v2/factorio/console/command/enable-research-queue",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -365,7 +366,7 @@ service ConsoleService {
 
   rpc CommandMuteProgrammableSpeakerForEveryone(CommandMuteProgrammableSpeakerForEveryoneRequest) returns (CommandMuteProgrammableSpeakerForEveryoneResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/mute-programmable-speaker-for-everyone",
+      post: "/api/v2/factorio/console/command/mute-programmable-speaker-for-everyone",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -377,7 +378,7 @@ service ConsoleService {
 
   rpc CommandUnmuteProgrammableSpeakerForEveryone(CommandUnmuteProgrammableSpeakerForEveryoneRequest) returns (CommandUnmuteProgrammableSpeakerForEveryoneResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/unmute-programmable-speaker-for-everyone",
+      post: "/api/v2/factorio/console/command/unmute-programmable-speaker-for-everyone",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -389,7 +390,7 @@ service ConsoleService {
 
   rpc CommandPermissions(CommandPermissionsRequest) returns (CommandPermissionsResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/permissions"
+      get: "/api/v2/factorio/console/command/permissions"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of permissions.";
@@ -400,7 +401,7 @@ service ConsoleService {
 
   rpc CommandPermissionsAddPlayer(CommandPermissionsAddPlayerRequest) returns (CommandPermissionsAddPlayerResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/permissions/group/player",
+      post: "/api/v2/factorio/console/command/permissions/group/player",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -412,7 +413,7 @@ service ConsoleService {
 
   rpc CommandPermissionsCreateGroup(CommandPermissionsCreateGroupRequest) returns (CommandPermissionsCreateGroupResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/permissions/group",
+      post: "/api/v2/factorio/console/command/permissions/group",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -424,7 +425,7 @@ service ConsoleService {
 
   rpc CommandPermissionsDeleteGroup(CommandPermissionsDeleteGroupRequest) returns (CommandPermissionsDeleteGroupResponse) {
     option (google.api.http) = {
-      delete: "/api/v1/factorio/console/command/permissions/group",
+      delete: "/api/v2/factorio/console/command/permissions/group",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -436,7 +437,7 @@ service ConsoleService {
 
   rpc CommandPermissionsEditGroup(CommandPermissionsEditGroupRequest) returns (CommandPermissionsEditGroupResponse) {
     option (google.api.http) = {
-      patch: "/api/v1/factorio/console/command/permissions/group",
+      patch: "/api/v2/factorio/console/command/permissions/group",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -448,7 +449,7 @@ service ConsoleService {
 
   rpc CommandPermissionsGetPlayerGroup(CommandPermissionsGetPlayerGroupRequest) returns (CommandPermissionsGetPlayerGroupResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/permissions/group/players"
+      get: "/api/v2/factorio/console/command/permissions/group/players"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the groups for a player.";
@@ -459,7 +460,7 @@ service ConsoleService {
 
   rpc CommandPermissionsRemovePlayerGroup(CommandPermissionsRemovePlayerGroupRequest) returns (CommandPermissionsRemovePlayerGroupResponse) {
     option (google.api.http) = {
-      delete: "/api/v1/factorio/console/command/permissions/group/player",
+      delete: "/api/v2/factorio/console/command/permissions/group/player",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -471,7 +472,7 @@ service ConsoleService {
 
   rpc CommandPermissionsRenameGroup(CommandPermissionsRenameGroupRequest) returns (CommandPermissionsRenameGroupResponse) {
     option (google.api.http) = {
-      put: "/api/v1/factorio/console/command/permissions/group",
+      put: "/api/v2/factorio/console/command/permissions/group",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -483,7 +484,7 @@ service ConsoleService {
 
   rpc CommandResetTips(CommandResetTipsRequest) returns (CommandResetTipsResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/reset-tips",
+      post: "/api/v2/factorio/console/command/reset-tips",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -495,7 +496,7 @@ service ConsoleService {
 
   rpc CommandEvolution(CommandEvolutionRequest) returns (CommandEvolutionResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/evolution"
+      get: "/api/v2/factorio/console/command/evolution"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get info about the alien evolution factor.";
@@ -506,7 +507,7 @@ service ConsoleService {
 
   rpc CommandSeed(CommandSeedRequest) returns (CommandSeedResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/seed",
+      get: "/api/v2/factorio/console/command/seed",
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the map seed.";
@@ -517,7 +518,7 @@ service ConsoleService {
 
   rpc CommandTime(CommandTimeRequest) returns (CommandTimeResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/time"
+      get: "/api/v2/factorio/console/command/time"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the current game time.";
@@ -528,7 +529,7 @@ service ConsoleService {
 
   rpc CommandToggleActionLogging(CommandToggleActionLoggingRequest) returns (CommandToggleActionLoggingResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/toggle-action-logging",
+      post: "/api/v2/factorio/console/command/toggle-action-logging",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -540,7 +541,7 @@ service ConsoleService {
 
   rpc CommandToggleHeavyMode(CommandToggleHeavyModeRequest) returns (CommandToggleHeavyModeResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/toggle-heavy-mode",
+      post: "/api/v2/factorio/console/command/toggle-heavy-mode",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -552,7 +553,7 @@ service ConsoleService {
 
   rpc CommandUnlockShortcutBar(CommandUnlockShortcutBarRequest) returns (CommandUnlockShortcutBarResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/unlock-shortcut-bar",
+      post: "/api/v2/factorio/console/command/unlock-shortcut-bar",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -564,7 +565,7 @@ service ConsoleService {
 
   rpc CommandUnlockTips(CommandUnlockTipsRequest) returns (CommandUnlockTipsResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/unlock-tips",
+      post: "/api/v2/factorio/console/command/unlock-tips",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -576,7 +577,7 @@ service ConsoleService {
 
   rpc CommandVersion(CommandVersionRequest) returns (CommandVersionResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/version"
+      get: "/api/v2/factorio/console/command/version"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the version of the current Factorio game server.";
@@ -587,7 +588,7 @@ service ConsoleService {
 
   rpc CommandAdmins(CommandAdminsRequest) returns (CommandAdminsResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/admins"
+      get: "/api/v2/factorio/console/command/admins"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of admins.";
@@ -598,7 +599,7 @@ service ConsoleService {
 
   rpc CommandBan(CommandBanRequest) returns (CommandBanResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/ban",
+      post: "/api/v2/factorio/console/command/ban",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -610,7 +611,7 @@ service ConsoleService {
 
   rpc CommandBans(CommandBansRequest) returns (CommandBansResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/bans"
+      get: "/api/v2/factorio/console/command/bans"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of bans.";
@@ -621,7 +622,7 @@ service ConsoleService {
 
   rpc CommandDemote(CommandDemoteRequest) returns (CommandDemoteResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/demote",
+      post: "/api/v2/factorio/console/command/demote",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -633,7 +634,7 @@ service ConsoleService {
 
   rpc CommandIgnore(CommandIgnoreRequest) returns (CommandIgnoreResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/ignore",
+      post: "/api/v2/factorio/console/command/ignore",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -645,7 +646,7 @@ service ConsoleService {
 
   rpc CommandKick(CommandKickRequest) returns (CommandKickResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/kick",
+      post: "/api/v2/factorio/console/command/kick",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -657,7 +658,7 @@ service ConsoleService {
 
   rpc CommandMute(CommandMuteRequest) returns (CommandMuteResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/mute",
+      post: "/api/v2/factorio/console/command/mute",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -669,7 +670,7 @@ service ConsoleService {
 
   rpc CommandMutes(CommandMutesRequest) returns (CommandMutesResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/mutes"
+      get: "/api/v2/factorio/console/command/mutes"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of mutes.";
@@ -680,7 +681,7 @@ service ConsoleService {
 
   rpc CommandPlayers(CommandPlayersRequest) returns (CommandPlayersResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/players"
+      get: "/api/v2/factorio/console/command/players"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of players.";
@@ -691,7 +692,7 @@ service ConsoleService {
 
   rpc CommandPromote(CommandPromoteRequest) returns (CommandPromoteResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/promote",
+      post: "/api/v2/factorio/console/command/promote",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -703,7 +704,7 @@ service ConsoleService {
 
   rpc CommandPurge(CommandPurgeRequest) returns (CommandPurgeResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/purge",
+      post: "/api/v2/factorio/console/command/purge",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -715,7 +716,7 @@ service ConsoleService {
 
   rpc CommandServerSave(CommandServerSaveRequest) returns (CommandServerSaveResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/server-save",
+      post: "/api/v2/factorio/console/command/server-save",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -727,7 +728,7 @@ service ConsoleService {
 
   rpc CommandUnban(CommandUnbanRequest) returns (CommandUnbanResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/unban",
+      post: "/api/v2/factorio/console/command/unban",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -739,7 +740,7 @@ service ConsoleService {
 
   rpc CommandUnignore(CommandUnignoreRequest) returns (CommandUnignoreResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/unignore",
+      post: "/api/v2/factorio/console/command/unignore",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -751,7 +752,7 @@ service ConsoleService {
 
   rpc CommandUnmute(CommandUnmuteRequest) returns (CommandUnmuteResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/unmute",
+      post: "/api/v2/factorio/console/command/unmute",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -763,7 +764,7 @@ service ConsoleService {
 
   rpc CommandWhisper(CommandWhisperRequest) returns (CommandWhisperResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/whisper",
+      post: "/api/v2/factorio/console/command/whisper",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -775,7 +776,7 @@ service ConsoleService {
 
   rpc CommandWhitelistAdd(CommandWhitelistAddRequest) returns (CommandWhitelistAddResponse) {
     option (google.api.http) = {
-      post: "/api/v1/factorio/console/command/whitelist",
+      post: "/api/v2/factorio/console/command/whitelist",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -787,7 +788,7 @@ service ConsoleService {
 
   rpc CommandWhitelistGet(CommandWhitelistGetRequest) returns (CommandWhitelistGetResponse) {
     option (google.api.http) = {
-      get: "/api/v1/factorio/console/command/whitelist"
+      get: "/api/v2/factorio/console/command/whitelist"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get the list of whitelist.";
@@ -798,7 +799,7 @@ service ConsoleService {
 
   rpc CommandWhitelistRemove(CommandWhitelistRemoveRequest) returns (CommandWhitelistRemoveResponse) {
     option (google.api.http) = {
-      patch: "/api/v1/factorio/console/command/whitelist",
+      patch: "/api/v2/factorio/console/command/whitelist",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
@@ -810,7 +811,7 @@ service ConsoleService {
 
   rpc CommandWhitelistClear(CommandWhitelistClearRequest) returns (CommandWhitelistClearResponse) {
     option (google.api.http) = {
-      delete: "/api/v1/factorio/console/command/whitelist",
+      delete: "/api/v2/factorio/console/command/whitelist",
       body: "*"
     };
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {

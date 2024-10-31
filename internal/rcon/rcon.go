@@ -46,7 +46,7 @@ func NewRCON() func(NewRCONParams) (*RCON, error) {
 		var err error
 		var conn *rcon.Conn
 
-		connWrapper := RCON{
+		connWrapper := &RCON{
 			Conn:  nil,
 			mutex: sync.RWMutex{},
 		}
@@ -86,7 +86,7 @@ func NewRCON() func(NewRCONParams) (*RCON, error) {
 			},
 		})
 
-		return &RCON{Conn: conn}, nil
+		return connWrapper, nil
 	}
 }
 

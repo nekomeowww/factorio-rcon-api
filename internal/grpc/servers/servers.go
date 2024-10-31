@@ -1,7 +1,7 @@
 package servers
 
 import (
-	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/factorioapi/v1/apiserver"
+	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/factorioapi/apiserver"
 	"go.uber.org/fx"
 )
 

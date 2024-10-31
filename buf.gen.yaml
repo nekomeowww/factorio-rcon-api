@@ -25,5 +25,16 @@ plugins:
       - disable_service_tags=true
     #   - output_format=yaml
 
+  - remote: buf.build/grpc-ecosystem/openapiv2:v2.19.1
+    out: ./apis/factorioapi/v2
+    opt:
+      - file=./apis/factorioapi/v2
+      - merge_file_name=v2
+      - allow_merge=true
+      - allow_delete_body=true
+      - disable_default_errors=true
+      - disable_service_tags=true
+    #   - output_format=yaml
+
   # - name: grpc-gateway-ts
   #   out: ./clients/typescript
