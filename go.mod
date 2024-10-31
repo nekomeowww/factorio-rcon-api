@@ -4,6 +4,7 @@ go 1.22.6
 
 require (
 	github.com/MarceloPetrucio/go-scalar-api-reference v0.0.0-20240521013641-ce5d2efe0e06
+	github.com/alexliesenfeld/health v0.8.0
 	github.com/bufbuild/protovalidate-go v0.6.5
 	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/getkin/kin-openapi v0.127.0

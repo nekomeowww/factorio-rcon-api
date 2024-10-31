@@ -8,9 +8,11 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/alexliesenfeld/health"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"github.com/labstack/echo/v4"
 	"github.com/nekomeowww/xo/logger"
+	"github.com/samber/lo"
 	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 	"go.uber.org/fx"
@@ -22,6 +24,7 @@ import (
 	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/interceptors"
 	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/middlewares"
 	"github.com/nekomeowww/factorio-rcon-api/internal/libs"
+	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"
 	grpcpkg "github.com/nekomeowww/factorio-rcon-api/pkg/grpc"
 	httppkg "github.com/nekomeowww/factorio-rcon-api/pkg/http"
 )
@@ -34,6 +37,7 @@ type NewGatewayServerParams struct {
 	Register  *grpcpkg.Register
 	Logger    *logger.Logger
 	Otel      *libs.Otel
+	RCON      *rcon.RCON
 }
 
 type GatewayServer struct {
@@ -52,6 +56,14 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 		e.RouteNotFound("/*", middlewares.NotFound)
 
 		e.GET("/apis/docs", middlewares.ScalarDocumentation("Factorio RCON API", "/swagger.json"))
+		e.GET("/healthz", middlewares.HealthCheck(
+			health.WithCheck(health.Check{
+				Name: "factorio rcon connection",
+				Check: func(ctx context.Context) error {
+					return lo.Ternary(params.RCON.Conn != nil, nil, fmt.Errorf("rcon connection is not available"))
+				},
+			}),
+		))
 
 		for path, methodHandlers := range params.Register.EchoHandlers {
 			for method, handler := range methodHandlers {
