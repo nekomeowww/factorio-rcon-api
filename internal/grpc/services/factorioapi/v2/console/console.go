@@ -12,6 +12,7 @@ import (
 	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
 	"github.com/nekomeowww/factorio-rcon-api/pkg/utils"
 	"github.com/nekomeowww/xo/logger"
+	"github.com/samber/lo"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
 	"google.golang.org/grpc/codes"
@@ -607,13 +608,34 @@ func (s *ConsoleService) CommandWhitelistGet(ctx context.Context, req *v2.Comman
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
-	whitelist, err := utils.StringListToPlayers(resp)
+	resp = strings.TrimPrefix(resp, "Whitelisted players:")
+	resp = strings.TrimSpace(resp)
+
+	playerNames := utils.ParseWhitelistedPlayers(resp)
+
+	players := lo.Map(playerNames, func(player string, _ int) *v2.Player {
+		return &v2.Player{
+			Username: player,
+		}
+	})
+
+	savePlayers, err := s.CommandPlayers(ctx, &v2.CommandPlayersRequest{})
 	if err != nil {
 		return nil, err
 	}
 
+	mPlayers := lo.SliceToMap(savePlayers.Players, func(player *v2.Player) (string, *v2.Player) {
+		return player.Username, player
+	})
+
+	for _, player := range players {
+		if p, ok := mPlayers[player.Username]; ok {
+			player.Online = p.Online
+		}
+	}
+
 	return &v2.CommandWhitelistGetResponse{
-		Whitelist: utils.MapV1PlayersToV2Players(whitelist),
+		Whitelist: players,
 	}, nil
 }
 

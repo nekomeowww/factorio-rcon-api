@@ -99,3 +99,16 @@ func ParseDuration(input string) (time.Duration, error) {
 
 	return totalDuration, nil
 }
+
+func ParseWhitelistedPlayers(input string) []string {
+	// Replace " and " with a comma to unify the delimiters
+	input = strings.ReplaceAll(input, " and ", ", ")
+
+	// Split the players by commas and trim spaces
+	players := strings.Split(input, ", ")
+	for i := range players {
+		players[i] = strings.TrimSpace(players[i])
+	}
+
+	return players
+}
