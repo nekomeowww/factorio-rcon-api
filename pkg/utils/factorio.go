@@ -20,14 +20,18 @@ func StringListToPlayers(list string) ([]*v1.Player, error) {
 	for _, line := range split {
 		line = strings.TrimSpace(line)
 		parts := strings.Split(line, " ")
-		if len(parts) != 2 {
+		if len(parts) > 2 {
 			return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse admins: %s due to parts not equals 2", line).AsStatus()
 		}
 
-		players = append(players, &v1.Player{
+		player := &v1.Player{
 			Username: parts[0],
-			Online:   parts[1] == "(online)",
-		})
+		}
+		if len(parts) == 2 {
+			player.Online = parts[1] == "(online)"
+		}
+
+		players = append(players, player)
 	}
 
 	return players, nil

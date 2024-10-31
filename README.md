@@ -8,8 +8,8 @@
 
 | Factorio RCON API | Factorio Server |
 |-------------------|-----------------|
-| 1.1.0 (`/api/v1`) | 1.x             |
-| 2.0.0 (`/api/v2`) | 2.x             |
+| `/api/v1`         | 1.x             |
+| `/api/v2`         | 2.x             |
 
 ## Features
 

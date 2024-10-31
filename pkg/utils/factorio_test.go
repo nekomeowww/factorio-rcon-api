@@ -7,7 +7,7 @@ import (
 )
 
 func TestStringListToPlayers(t *testing.T) {
-	players, err := StringListToPlayers("  NekoMeow (online)\n  NekoMeow2 (offline)\n")
+	players, err := StringListToPlayers("  NekoMeow (online)\n  NekoMeow2\n")
 	require.NoError(t, err)
 	require.Len(t, players, 2)
 }
