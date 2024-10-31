@@ -2,6 +2,8 @@
 
 🏭 Fully implemented wrapper for Factorio headless server console as RESTful and gRPC for easier management through APIs
 
+> [Full list of APIs / API Documentation](https://factorio-rcon-api.ayaka.io/apis/docs)
+
 ## Compatible matrix
 
 | Factorio RCON API | Factorio Server |
@@ -59,18 +61,41 @@
 
 ## Usage
 
+> [!CAUTION] Before you proceed - Security concerns
+> This API implementation will allow any of the users that can ACCESS the endpoint to control over & perform admin operations to Factorio server it connected to, while API server doesn't come out with any security features (e.g. Basic Auth or Authorization header based authentication).
+>
+> You are responsible for securing your Factorio server and the API server by either:
+>
+> - use Nginx/Caddy or similar servers for authentication
+> - use Cloudflare Tunnel or TailScale for secure tunneling
+> - use this project only for internal communication (e.g. Bots, API wrappers, admin UI, etc.)
+>
+> Otherwise, we are not responsible for any data loss, security breaches, save corruptions, or any other issues caused by the outside attackers.
+
 ### Pull the image
 
 ```shell
 docker pull ghcr.io/nekomeowww/factorio-rcon-api
 ```
 
-### Setup servers
+### Setup Factorio servers
+
+> [!NOTE] About RCON
+> [RCON](https://wiki.vg/RCON) is a TCP/IP-based protocol that allows server administrators to remotely execute commands, developed by Valve for Source Engine. It is widely used in game servers, including Factorio, Minecraft.
+
+> [!CAUTION] Before you proceed - Security concerns
+> Since RCON protocol will give administrators access to the server console, it is recommended to:
+>
+> - do not expose the RCON port to the public internet
+> - use RCON with password authentication
+> - rotate the password once a month to prevent attackers from accessing the server
 
 When bootstraping the server, you need to specify the RCON port and password for the server to listen to with
 
 - `--rcon-port` for the port number
 - `--rcon-password` for the password
+
+> Documentation of these parameters can be found at [Command line parameters - Factorio Wiki](https://wiki.factorio.com/Command_line_parameters)
 
 The command may look like this:
 
@@ -155,14 +180,14 @@ Alternatively, we ship the OpenAPI v2 and v3 spec in the repository:
 - OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.json)
 - OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.v3.yaml)
 
+> [!TIP]
+> Additionally, we can ship the SDKs for Lua, TypeScript and Python (widely used for mods, admin panels, bots) in the future, you are welcome to contribute to the project.
+
 For developers working with the APIs from Factorio RCON API, you can either use the above OpenAPI specs or use Protobuf files to generate types for TypeScript, Python, Go, and many more languages' SDKs with code generators. We are not going to cover all of these in this README, but you can find more information on the internet:
 
 - [Stainless | Generate best-in-class SDKs](https://www.stainlessapi.com/) (used by OpenAI, Cloudflare, etc.)
 - [Generated SDKs](https://buf.build/docs/bsr/generated-sdks/overview/)
 - [Hey API](https://heyapi.dev/)
-
-> [!TIP]
-> Additionally, we can ship the SDKs for Lua, TypeScript and Python (widely used for mods, admin panels, bots) in the future, you are welcome to contribute to the project.
 
 ## Star History
 
