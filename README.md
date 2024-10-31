@@ -53,7 +53,7 @@
   - [x] `/whisper`
   - [x] `/whitelist`
   - [ ] `/cheat`
-  - [ ] `/command` / `/c`
+  - [x] `/command` / `/c`
   - [ ] `/measured-command`
   - [ ] `/silent-command`
 
@@ -146,8 +146,23 @@ to get the version of the Factorio game server.
 
 ## API
 
+For API documentation, we offer Scalar powered OpenAPI UI under `/apis/docs` endpoint.
+
+With the demo server at [https://factorio-rcon-api.ayaka.io/apis/docs](https://factorio-rcon-api.ayaka.io/apis/docs) live, you can view the full API documentations there, or you can run the API server locally and access the documentation at [http://localhost:24180/apis/docs](http://localhost:24180/apis/docs).
+
+Alternatively, we ship the OpenAPI v2 and v3 spec in the repository:
+
 - OpenAPI v2 spec: [v1.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.json)
 - OpenAPI v3 spec: [v1.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v1/v1.swagger.v3.yaml)
+
+For developers working with the APIs from Factorio RCON API, you can either use the above OpenAPI specs or use Protobuf files to generate types for TypeScript, Python, Go, and many more languages' SDKs with code generators. We are not going to cover all of these in this README, but you can find more information on the internet:
+
+- [Stainless | Generate best-in-class SDKs](https://www.stainlessapi.com/) (used by OpenAI, Cloudflare, etc.)
+- [Generated SDKs](https://buf.build/docs/bsr/generated-sdks/overview/)
+- [Hey API](https://heyapi.dev/)
+
+> [!TIP]
+> Additionally, we can ship the SDKs for Lua, TypeScript and Python (widely used for mods, admin panels, bots) in the future, you are welcome to contribute to the project.
 
 ## Star History
 
