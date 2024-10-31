@@ -61,7 +61,9 @@
 
 ## Usage
 
-> [!CAUTION] Before you proceed - Security concerns
+> [!CAUTION]
+> **Before you proceed - Security concerns**
+>
 > This API implementation will allow any of the users that can ACCESS the endpoint to control over & perform admin operations to Factorio server it connected to, while API server doesn't come out with any security features (e.g. Basic Auth or Authorization header based authentication).
 >
 > You are responsible for securing your Factorio server and the API server by either:
@@ -80,10 +82,14 @@ docker pull ghcr.io/nekomeowww/factorio-rcon-api
 
 ### Setup Factorio servers
 
-> [!NOTE] About RCON
+> [!NOTE]
+> **About RCON**
+>
 > [RCON](https://wiki.vg/RCON) is a TCP/IP-based protocol that allows server administrators to remotely execute commands, developed by Valve for Source Engine. It is widely used in game servers, including Factorio, Minecraft.
 
-> [!CAUTION] Before you proceed - Security concerns
+> [!CAUTION]
+> **Before you proceed - Security concerns**
+>
 > Since RCON protocol will give administrators access to the server console, it is recommended to:
 >
 > - do not expose the RCON port to the public internet
