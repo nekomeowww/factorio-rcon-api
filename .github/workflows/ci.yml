@@ -46,7 +46,7 @@ jobs:
 
       # Build test
       - name: Test Build
-        run: go build -a -o "release/factorio-rcon-api" "github.com/nekomeowww/factorio-rcon-api/cmd/api-server"
+        run: go build -a -o "release/factorio-rcon-api" "github.com/nekomeowww/factorio-rcon-api/v2/cmd/api-server"
 
   lint:
     name: Lint
