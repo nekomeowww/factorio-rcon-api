@@ -23,14 +23,14 @@ type NewConsoleServiceParams struct {
 	fx.In
 
 	Logger *logger.Logger
-	RCON   *rcon.RCON
+	RCON   rcon.RCON
 }
 
 type ConsoleService struct {
 	v2.UnimplementedConsoleServiceServer
 
 	logger *logger.Logger
-	rcon   *rcon.RCON
+	rcon   rcon.RCON
 }
 
 func NewConsoleService() func(NewConsoleServiceParams) *ConsoleService {
@@ -132,16 +132,7 @@ var (
 	regexpEvolutionFactor = regexp.MustCompile(`(.*) - Evolution factor: ([0-9.]+)\. \(Time ([0-9.]+)%\) \(Pollution ([0-9.]+)%\) \(Spawner kills ([0-9.]+)%\)`)
 )
 
-func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v2.CommandEvolutionRequest) (*v2.CommandEvolutionResponse, error) {
-	resp, err := s.rcon.Execute(ctx, "/evolution")
-	if err != nil {
-		if errors.Is(err, rcon.ErrTimeout) {
-			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
-		}
-
-		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
-	}
-
+func parseEvolutionFactorLine(resp string) (*v2.Evolution, error) {
 	normalized := strings.TrimSuffix(resp, "\n")
 
 	// output: Nauvis - Evolution factor: 0.0000. (Time 0%) (Pollution 0%) (Spawner kills 0%)
@@ -177,12 +168,69 @@ func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v2.CommandEv
 		return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse spawner kills: %s from %s due to %v", match[4], normalized, err).AsStatus()
 	}
 
-	return &v2.CommandEvolutionResponse{
-		PlanetName:      planetName,
+	return &v2.Evolution{
+		SurfaceName:     planetName,
 		EvolutionFactor: evolutionFactor,
 		Time:            time,
 		Pollution:       pollution,
 		SpawnerKills:    spawnerKills,
+	}, nil
+}
+
+func (s *ConsoleService) CommandEvolution(ctx context.Context, req *v2.CommandEvolutionRequest) (*v2.CommandEvolutionResponse, error) {
+	resp, err := s.rcon.Execute(ctx, "/evolution")
+	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
+		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
+	}
+
+	lines := strings.Split(resp, "\n")
+
+	lines = lo.Map(lines, func(item string, _ int) string {
+		return strings.ReplaceAll(strings.ReplaceAll(strings.TrimSpace(item), "\r", ""), "\n", "")
+	})
+	lines = lo.Filter(lines, func(item string, _ int) bool {
+		return item != ""
+	})
+
+	evolutions := make([]*v2.Evolution, 0, len(lines))
+	for _, line := range lines {
+		evolution, err := parseEvolutionFactorLine(line)
+		if err != nil {
+			return nil, err
+		}
+
+		evolutions = append(evolutions, evolution)
+	}
+
+	return &v2.CommandEvolutionResponse{
+		Evolutions: evolutions,
+	}, nil
+}
+
+func (s *ConsoleService) CommandEvolutionGet(ctx context.Context, req *v2.CommandEvolutionGetRequest) (*v2.CommandEvolutionGetResponse, error) {
+	resp, err := s.rcon.Execute(ctx, "/evolution "+req.SurfaceName)
+	if err != nil {
+		if errors.Is(err, rcon.ErrTimeout) {
+			return nil, apierrors.NewErrTimeout().WithDetail("RCON connection is not established within deadline threshold").AsStatus()
+		}
+
+		return nil, apierrors.NewErrBadRequest().WithDetail(err.Error()).AsStatus()
+	}
+	if strings.Contains(resp, "does not exist") {
+		return nil, apierrors.NewErrNotFound().WithDetailf("surface %s does not exist", req.SurfaceName).AsStatus()
+	}
+
+	evolution, err := parseEvolutionFactorLine(resp)
+	if err != nil {
+		return nil, err
+	}
+
+	return &v2.CommandEvolutionGetResponse{
+		Evolution: evolution,
 	}, nil
 }
 

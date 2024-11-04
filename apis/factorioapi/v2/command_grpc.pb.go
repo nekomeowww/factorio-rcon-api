@@ -35,6 +35,7 @@ const (
 	ConsoleService_CommandPermissionsRenameGroup_FullMethodName               = "/apis.factorioapi.v2.ConsoleService/CommandPermissionsRenameGroup"
 	ConsoleService_CommandResetTips_FullMethodName                            = "/apis.factorioapi.v2.ConsoleService/CommandResetTips"
 	ConsoleService_CommandEvolution_FullMethodName                            = "/apis.factorioapi.v2.ConsoleService/CommandEvolution"
+	ConsoleService_CommandEvolutionGet_FullMethodName                         = "/apis.factorioapi.v2.ConsoleService/CommandEvolutionGet"
 	ConsoleService_CommandSeed_FullMethodName                                 = "/apis.factorioapi.v2.ConsoleService/CommandSeed"
 	ConsoleService_CommandTime_FullMethodName                                 = "/apis.factorioapi.v2.ConsoleService/CommandTime"
 	ConsoleService_CommandToggleActionLogging_FullMethodName                  = "/apis.factorioapi.v2.ConsoleService/CommandToggleActionLogging"
@@ -84,6 +85,7 @@ type ConsoleServiceClient interface {
 	CommandPermissionsRenameGroup(ctx context.Context, in *CommandPermissionsRenameGroupRequest, opts ...grpc.CallOption) (*CommandPermissionsRenameGroupResponse, error)
 	CommandResetTips(ctx context.Context, in *CommandResetTipsRequest, opts ...grpc.CallOption) (*CommandResetTipsResponse, error)
 	CommandEvolution(ctx context.Context, in *CommandEvolutionRequest, opts ...grpc.CallOption) (*CommandEvolutionResponse, error)
+	CommandEvolutionGet(ctx context.Context, in *CommandEvolutionGetRequest, opts ...grpc.CallOption) (*CommandEvolutionGetResponse, error)
 	CommandSeed(ctx context.Context, in *CommandSeedRequest, opts ...grpc.CallOption) (*CommandSeedResponse, error)
 	CommandTime(ctx context.Context, in *CommandTimeRequest, opts ...grpc.CallOption) (*CommandTimeResponse, error)
 	CommandToggleActionLogging(ctx context.Context, in *CommandToggleActionLoggingRequest, opts ...grpc.CallOption) (*CommandToggleActionLoggingResponse, error)
@@ -259,6 +261,15 @@ func (c *consoleServiceClient) CommandResetTips(ctx context.Context, in *Command
 func (c *consoleServiceClient) CommandEvolution(ctx context.Context, in *CommandEvolutionRequest, opts ...grpc.CallOption) (*CommandEvolutionResponse, error) {
 	out := new(CommandEvolutionResponse)
 	err := c.cc.Invoke(ctx, ConsoleService_CommandEvolution_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *consoleServiceClient) CommandEvolutionGet(ctx context.Context, in *CommandEvolutionGetRequest, opts ...grpc.CallOption) (*CommandEvolutionGetResponse, error) {
+	out := new(CommandEvolutionGetResponse)
+	err := c.cc.Invoke(ctx, ConsoleService_CommandEvolutionGet_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -528,6 +539,7 @@ type ConsoleServiceServer interface {
 	CommandPermissionsRenameGroup(context.Context, *CommandPermissionsRenameGroupRequest) (*CommandPermissionsRenameGroupResponse, error)
 	CommandResetTips(context.Context, *CommandResetTipsRequest) (*CommandResetTipsResponse, error)
 	CommandEvolution(context.Context, *CommandEvolutionRequest) (*CommandEvolutionResponse, error)
+	CommandEvolutionGet(context.Context, *CommandEvolutionGetRequest) (*CommandEvolutionGetResponse, error)
 	CommandSeed(context.Context, *CommandSeedRequest) (*CommandSeedResponse, error)
 	CommandTime(context.Context, *CommandTimeRequest) (*CommandTimeResponse, error)
 	CommandToggleActionLogging(context.Context, *CommandToggleActionLoggingRequest) (*CommandToggleActionLoggingResponse, error)
@@ -609,6 +621,9 @@ func (UnimplementedConsoleServiceServer) CommandResetTips(context.Context, *Comm
 }
 func (UnimplementedConsoleServiceServer) CommandEvolution(context.Context, *CommandEvolutionRequest) (*CommandEvolutionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandEvolution not implemented")
+}
+func (UnimplementedConsoleServiceServer) CommandEvolutionGet(context.Context, *CommandEvolutionGetRequest) (*CommandEvolutionGetResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CommandEvolutionGet not implemented")
 }
 func (UnimplementedConsoleServiceServer) CommandSeed(context.Context, *CommandSeedRequest) (*CommandSeedResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CommandSeed not implemented")
@@ -988,6 +1003,24 @@ func _ConsoleService_CommandEvolution_Handler(srv interface{}, ctx context.Conte
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ConsoleServiceServer).CommandEvolution(ctx, req.(*CommandEvolutionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ConsoleService_CommandEvolutionGet_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CommandEvolutionGetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ConsoleServiceServer).CommandEvolutionGet(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ConsoleService_CommandEvolutionGet_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ConsoleServiceServer).CommandEvolutionGet(ctx, req.(*CommandEvolutionGetRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1548,6 +1581,10 @@ var ConsoleService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CommandEvolution",
 			Handler:    _ConsoleService_CommandEvolution_Handler,
+		},
+		{
+			MethodName: "CommandEvolutionGet",
+			Handler:    _ConsoleService_CommandEvolutionGet_Handler,
 		},
 		{
 			MethodName: "CommandSeed",

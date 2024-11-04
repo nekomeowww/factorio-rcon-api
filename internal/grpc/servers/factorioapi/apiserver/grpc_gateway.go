@@ -37,7 +37,7 @@ type NewGatewayServerParams struct {
 	Register  *grpcpkg.Register
 	Logger    *logger.Logger
 	Otel      *libs.Otel
-	RCON      *rcon.RCON
+	RCON      rcon.RCON
 }
 
 type GatewayServer struct {
@@ -62,7 +62,7 @@ func NewGatewayServer() func(params NewGatewayServerParams) (*GatewayServer, err
 			health.WithCheck(health.Check{
 				Name: "factorio rcon connection",
 				Check: func(ctx context.Context) error {
-					return lo.Ternary(params.RCON.Conn != nil, nil, fmt.Errorf("rcon connection is not available"))
+					return lo.Ternary(params.RCON.IsReady(), nil, fmt.Errorf("rcon connection is not available"))
 				},
 			}),
 		))

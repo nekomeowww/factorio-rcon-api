@@ -23,14 +23,14 @@ type NewConsoleServiceParams struct {
 	fx.In
 
 	Logger *logger.Logger
-	RCON   *rcon.RCON
+	RCON   rcon.RCON
 }
 
 type ConsoleService struct {
 	v1.UnimplementedConsoleServiceServer
 
 	logger *logger.Logger
-	rcon   *rcon.RCON
+	rcon   rcon.RCON
 }
 
 func NewConsoleService() func(NewConsoleServiceParams) *ConsoleService {

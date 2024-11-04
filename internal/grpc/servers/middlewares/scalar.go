@@ -1,6 +1,8 @@
 package middlewares
 
 import (
+	"net/http"
+
 	"github.com/MarceloPetrucio/go-scalar-api-reference"
 	"github.com/labstack/echo/v4"
 	v1 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1"
@@ -19,9 +21,6 @@ func ScalarDocumentation(title string) echo.HandlerFunc {
 			return apierrors.NewErrInternal().WithError(err).WithDetailf("failed to generate API documentation: %s", err.Error()).AsEchoResponse(c)
 		}
 
-		c.Response().Header().Set("Content-Type", "text/html")
-		c.Response().Write([]byte(content))
-
-		return nil
+		return c.HTML(http.StatusOK, content)
 	}
 }

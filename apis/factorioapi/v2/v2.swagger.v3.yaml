@@ -434,30 +434,11 @@ components:
       type: object
     factorioapiv2CommandEvolutionResponse:
       properties:
-        evolutionFactor:
-          description: The current alien evolution factor.
-          example: 0.1
-          format: double
-          type: number
-        planetName:
-          description: The current planet name.
-          example: Nauvis
-          type: string
-        pollution:
-          example: 10
-          format: double
-          title: in percentage
-          type: number
-        spawnerKills:
-          example: 10
-          format: double
-          title: in percentage
-          type: number
-        time:
-          example: 10
-          format: double
-          title: in percentage
-          type: number
+        evolutions:
+          description: The list of evolutions.
+          items:
+            $ref: '#/components/schemas/v2Evolution'
+          type: array
       type: object
     factorioapiv2CommandIgnoreRequest:
       properties:
@@ -977,6 +958,38 @@ components:
             Schemes other than `http`, `https` (or the empty scheme) might be
             used with implementation specific semantics.
           type: string
+      type: object
+    v2CommandEvolutionGetResponse:
+      properties:
+        evolution:
+          $ref: '#/components/schemas/v2Evolution'
+      type: object
+    v2Evolution:
+      properties:
+        evolutionFactor:
+          description: The current alien evolution factor.
+          example: 0.1
+          format: double
+          type: number
+        pollution:
+          example: 10
+          format: double
+          title: in percentage
+          type: number
+        spawnerKills:
+          example: 10
+          format: double
+          title: in percentage
+          type: number
+        surfaceName:
+          example: Nauvis
+          title: The surface name
+          type: string
+        time:
+          example: 10
+          format: double
+          title: in percentage
+          type: number
       type: object
 info:
   description: API wrapper over Factorio's RCON protocol. **This is the v1 version of the API, made for Factorio <2.x. For players and developers on Factorio 2.x (especially with Space Age DLC), you should use v2 endpoints.**
@@ -2519,6 +2532,39 @@ paths:
                 $ref: '#/components/schemas/jsonapiErrorObject'
           description: Service Unavailable
       summary: Get info about the alien evolution factor.
+      tags:
+        - Console
+  /api/v2/factorio/console/command/evolution/{surfaceName}:
+    get:
+      description: Get info about the alien evolution factor by sepecific surface name. Equavalent to `/evolution <surface_name>` command in Factorio.
+      operationId: ConsoleService_CommandEvolutionGet
+      parameters:
+        - description: The surface name
+          in: path
+          name: surfaceName
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/v2CommandEvolutionGetResponse'
+          description: A successful response.
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/jsonapiErrorObject'
+          description: Internal Server Error
+        "503":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/jsonapiErrorObject'
+          description: Service Unavailable
+      summary: Alien evolution factor by surface name.
       tags:
         - Console
   /api/v2/factorio/console/command/ignore:

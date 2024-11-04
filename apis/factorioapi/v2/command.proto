@@ -117,12 +117,24 @@ message CommandResetTipsResponse {
 message CommandEvolutionRequest {
 }
 
-message CommandEvolutionResponse {
+message Evolution {
   double evolution_factor = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "0.1"}]; // The current alien evolution factor.
   double time = 2 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
   double pollution = 3 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
   double spawner_kills = 4 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "10"}]; // in percentage
-  string planet_name = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Nauvis\""}]; // The current planet name.
+  string surface_name = 5 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Nauvis\""}]; // The surface name
+}
+
+message CommandEvolutionResponse {
+  repeated Evolution evolutions = 1; // The list of evolutions.
+}
+
+message CommandEvolutionGetRequest {
+  string surface_name = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {example: "\"Nauvis\""}]; // The surface name
+}
+
+message CommandEvolutionGetResponse {
+  Evolution evolution = 1; // The evolution.
 }
 
 message CommandTimeRequest {
@@ -501,6 +513,17 @@ service ConsoleService {
     option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
       summary: "Get info about the alien evolution factor.";
       description: "Get info about the alien evolution factor.";
+      tags: "Console";
+    };
+  }
+
+  rpc CommandEvolutionGet(CommandEvolutionGetRequest) returns (CommandEvolutionGetResponse) {
+    option (google.api.http) = {
+      get: "/api/v2/factorio/console/command/evolution/{surface_name}"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Alien evolution factor by surface name.";
+      description: "Get info about the alien evolution factor by sepecific surface name. Equavalent to `/evolution <surface_name>` command in Factorio.";
       tags: "Console";
     };
   }
