@@ -4,7 +4,7 @@ import (
 	"context"
 	"runtime/debug"
 
-	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
+	"github.com/nekomeowww/factorio-rcon-api/v2/pkg/apierrors"
 	"github.com/nekomeowww/xo/logger"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"

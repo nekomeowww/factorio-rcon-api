@@ -5,8 +5,8 @@ import (
 
 	"github.com/MarceloPetrucio/go-scalar-api-reference"
 	"github.com/labstack/echo/v4"
-	v1 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1"
-	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
+	v1 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v1"
+	"github.com/nekomeowww/factorio-rcon-api/v2/pkg/apierrors"
 )
 
 func ScalarDocumentation(title string) echo.HandlerFunc {

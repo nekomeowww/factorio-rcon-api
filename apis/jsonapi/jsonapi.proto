@@ -5,7 +5,7 @@ package apis.jsonapi;
 import "google/protobuf/any.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 
-option go_package = "github.com/nekomeowww/factorio-rcon-api/apis/jsonapi";
+option go_package = "github.com/nekomeowww/factorio-rcon-api/v2/apis/jsonapi";
 
 // Where specified, a links member can be used to represent links.
 message Links {

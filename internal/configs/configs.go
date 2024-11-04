@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/mitchellh/mapstructure"
-	"github.com/nekomeowww/factorio-rcon-api/internal/meta"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/meta"
 	"github.com/nekomeowww/xo"
 	"github.com/samber/lo"
 	"github.com/spf13/viper"

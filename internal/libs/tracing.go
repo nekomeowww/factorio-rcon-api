@@ -19,7 +19,7 @@ import (
 	"go.uber.org/fx"
 	"go.uber.org/zap"
 
-	"github.com/nekomeowww/factorio-rcon-api/internal/configs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
 	"github.com/nekomeowww/xo/logger"
 )
 

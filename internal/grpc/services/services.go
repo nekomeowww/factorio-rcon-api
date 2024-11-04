@@ -4,8 +4,8 @@ import (
 	"go.uber.org/fx"
 	"google.golang.org/grpc/reflection"
 
-	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/services/factorioapi"
-	grpcpkg "github.com/nekomeowww/factorio-rcon-api/pkg/grpc"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/services/factorioapi"
+	grpcpkg "github.com/nekomeowww/factorio-rcon-api/v2/pkg/grpc"
 )
 
 func Modules() fx.Option {

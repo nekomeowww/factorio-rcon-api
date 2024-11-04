@@ -20,13 +20,13 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/nekomeowww/factorio-rcon-api/internal/configs"
-	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/interceptors"
-	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/middlewares"
-	"github.com/nekomeowww/factorio-rcon-api/internal/libs"
-	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"
-	grpcpkg "github.com/nekomeowww/factorio-rcon-api/pkg/grpc"
-	httppkg "github.com/nekomeowww/factorio-rcon-api/pkg/http"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/servers/interceptors"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/servers/middlewares"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/libs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/rcon"
+	grpcpkg "github.com/nekomeowww/factorio-rcon-api/v2/pkg/grpc"
+	httppkg "github.com/nekomeowww/factorio-rcon-api/v2/pkg/http"
 )
 
 type NewGatewayServerParams struct {

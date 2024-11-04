@@ -5,7 +5,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
+	"github.com/nekomeowww/factorio-rcon-api/v2/pkg/apierrors"
 	"google.golang.org/grpc/metadata"
 )
 

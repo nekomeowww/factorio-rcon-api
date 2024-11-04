@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/rcon"
 )
 
 type FakeRCON struct {

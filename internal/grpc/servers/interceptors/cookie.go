@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
+	"github.com/nekomeowww/factorio-rcon-api/v2/pkg/apierrors"
 	"github.com/nekomeowww/fo"
 	"google.golang.org/grpc/metadata"
 )

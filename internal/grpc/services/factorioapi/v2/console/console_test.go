@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	v2 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v2"
-	"github.com/nekomeowww/factorio-rcon-api/internal/libs"
-	"github.com/nekomeowww/factorio-rcon-api/internal/rcon/fake"
+	v2 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v2"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/libs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/rcon/fake"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/status"

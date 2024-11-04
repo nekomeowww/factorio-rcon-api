@@ -10,9 +10,9 @@ import (
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 
-	"github.com/nekomeowww/factorio-rcon-api/internal/configs"
-	"github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/interceptors"
-	grpcpkg "github.com/nekomeowww/factorio-rcon-api/pkg/grpc"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/servers/interceptors"
+	grpcpkg "github.com/nekomeowww/factorio-rcon-api/v2/pkg/grpc"
 )
 
 type NewGRPCServerParams struct {

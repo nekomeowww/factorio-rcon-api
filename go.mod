@@ -1,4 +1,4 @@
-module github.com/nekomeowww/factorio-rcon-api
+module github.com/nekomeowww/factorio-rcon-api/v2
 
 go 1.23
 

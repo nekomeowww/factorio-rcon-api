@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	v1 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1"
-	v2 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v2"
-	"github.com/nekomeowww/factorio-rcon-api/pkg/apierrors"
+	v1 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v1"
+	v2 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v2"
+	"github.com/nekomeowww/factorio-rcon-api/v2/pkg/apierrors"
 	"github.com/samber/lo"
 )
 

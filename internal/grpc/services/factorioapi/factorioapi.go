@@ -1,11 +1,11 @@
 package factorioapi
 
 import (
-	factorioapiv1 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v1"
-	factorioapiv2 "github.com/nekomeowww/factorio-rcon-api/apis/factorioapi/v2"
-	consolev1 "github.com/nekomeowww/factorio-rcon-api/internal/grpc/services/factorioapi/v1/console"
-	consolev2 "github.com/nekomeowww/factorio-rcon-api/internal/grpc/services/factorioapi/v2/console"
-	grpcpkg "github.com/nekomeowww/factorio-rcon-api/pkg/grpc"
+	factorioapiv1 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v1"
+	factorioapiv2 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v2"
+	consolev1 "github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/services/factorioapi/v1/console"
+	consolev2 "github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/services/factorioapi/v2/console"
+	grpcpkg "github.com/nekomeowww/factorio-rcon-api/v2/pkg/grpc"
 	"go.uber.org/fx"
 	"google.golang.org/grpc/reflection"
 )

@@ -6,7 +6,7 @@ import (
 
 	"github.com/bufbuild/protovalidate-go"
 	"github.com/labstack/echo/v4"
-	"github.com/nekomeowww/factorio-rcon-api/apis/jsonapi"
+	"github.com/nekomeowww/factorio-rcon-api/v2/apis/jsonapi"
 	"github.com/samber/lo"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

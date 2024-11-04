@@ -7,12 +7,12 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/nekomeowww/factorio-rcon-api/internal/configs"
-	grpcservers "github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers"
-	apiserver "github.com/nekomeowww/factorio-rcon-api/internal/grpc/servers/factorioapi/apiserver"
-	grpcservices "github.com/nekomeowww/factorio-rcon-api/internal/grpc/services"
-	"github.com/nekomeowww/factorio-rcon-api/internal/libs"
-	"github.com/nekomeowww/factorio-rcon-api/internal/rcon"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
+	grpcservers "github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/servers"
+	apiserver "github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/servers/factorioapi/apiserver"
+	grpcservices "github.com/nekomeowww/factorio-rcon-api/v2/internal/grpc/services"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/libs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/rcon"
 	"github.com/spf13/cobra"
 )
 

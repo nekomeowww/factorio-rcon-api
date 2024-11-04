@@ -12,7 +12,7 @@ import (
 
 	"github.com/cenkalti/backoff/v4"
 	"github.com/gorcon/rcon"
-	"github.com/nekomeowww/factorio-rcon-api/internal/configs"
+	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
 	"github.com/nekomeowww/fo"
 	"github.com/nekomeowww/xo/logger"
 	"github.com/samber/lo"
