@@ -3,6 +3,7 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - apierrors
   - apiserver
   - cenkalti
   - Factorio
@@ -17,6 +18,7 @@ words:
   - Otel
   - otelgrpc
   - otelhttp
+  - protovalidate
   - RCON
   - samber
 ignoreWords: []

@@ -65,7 +65,6 @@ jobs:
         uses: golangci/golangci-lint-action@v3.4.0
         with:
           # Optional: golangci-lint command line arguments.
-          version: v1.60.3
           args: "--timeout=10m"
 
   unittest:

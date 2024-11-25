@@ -77,9 +77,9 @@ func (e *Error) WithValidationError(err error) *Error {
 		return e.WithDetail(err.Error())
 	}
 
-	fieldPath := validationErrProto.Violations[0].FieldPath
-	forKey := validationErrProto.Violations[0].ForKey
-	message := validationErrProto.Violations[0].Message
+	fieldPath := lo.FromPtrOr(validationErrProto.Violations[0].FieldPath, "")
+	forKey := lo.FromPtrOr(validationErrProto.Violations[0].ForKey, false)
+	message := lo.FromPtrOr(validationErrProto.Violations[0].Message, "")
 
 	if forKey {
 		e.WithDetail(message).WithSourceParameter(fieldPath)
@@ -192,9 +192,9 @@ func (e *ErrResponse) WithValidationError(err error) *ErrResponse {
 	}
 
 	for _, violation := range validationErrProto.Violations {
-		fieldPath := violation.FieldPath
-		forKey := violation.ForKey
-		message := violation.Message
+		fieldPath := lo.FromPtrOr(violation.FieldPath, "")
+		forKey := lo.FromPtrOr(violation.ForKey, false)
+		message := lo.FromPtrOr(violation.Message, "")
 
 		if forKey {
 			e.WithError(NewErrInvalidArgument().WithDetail(message).WithSourceParameter(fieldPath))
