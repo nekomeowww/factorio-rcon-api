@@ -1,5 +1,5 @@
 # --- builder ---
-FROM golang:1.23 as builder
+FROM golang:1.23@sha256:73f06be4578c9987ce560087e2e2ea6485fb605e3910542cadd8fa09fc5f3e31 as builder
 
 ARG BUILD_VERSION
 ARG BUILD_LAST_COMMIT
@@ -25,7 +25,7 @@ RUN go build \
     "./cmd/api-server"
 
 # --- runner ---
-FROM debian as runner
+FROM debian@sha256:10901ccd8d249047f9761845b4594f121edef079cfd8224edebd9ea726f0a7f6 as runner
 
 RUN apt update && apt upgrade -y && apt install -y ca-certificates curl && update-ca-certificates
 
