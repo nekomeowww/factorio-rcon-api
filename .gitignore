@@ -70,3 +70,6 @@ temp/
 
 # Debug
 __debug*
+
+# Local factorio dir
+.factorio/

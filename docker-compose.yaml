@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  factorio:
+    image: factoriotools/factorio
+    restart: unless-stopped
+    ports:
+      - "34197:34197/udp"  # Game port
+      - "27015:27015/tcp"  # RCON port
+    volumes:
+      - ./.factorio:/factorio
