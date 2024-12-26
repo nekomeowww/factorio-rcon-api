@@ -37,6 +37,18 @@ func StringListToPlayers(list string) ([]*v1.Player, error) {
 	return players, nil
 }
 
+func PrefixedStringCommaSeparatedListToPlayers(list string, prefix string) ([]*v1.Player, error) {
+	// output:
+	// SomePrefix: NekoMeow, NekoMeow2\n
+	withoutPrefix := strings.TrimPrefix(list, prefix+": ")
+	split := strings.Split(withoutPrefix, ",")
+	split = lo.Map(split, func(item string, _ int) string { return strings.TrimSpace(item) })
+
+	return lo.Map(split, func(item string, _ int) *v1.Player {
+		return &v1.Player{Username: item}
+	}), nil
+}
+
 func MapV1PlayerToV2Player(v1Player *v1.Player) *v2.Player {
 	return &v2.Player{
 		Username: v1Player.Username,

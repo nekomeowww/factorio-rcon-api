@@ -361,7 +361,11 @@ func (s *ConsoleService) CommandBans(ctx context.Context, req *v2.CommandBansReq
 		return nil, apierrors.NewErrInternal().WithDetail(err.Error()).WithError(err).WithCaller().AsStatus()
 	}
 
-	bans, err := utils.StringListToPlayers(resp)
+	// Cannot get banlist after ban via API · Issue #20 · nekomeowww/factorio-rcon-api
+	// https://github.com/nekomeowww/factorio-rcon-api/issues/20
+	// Example resp:
+	// Banned players: user\n
+	bans, err := utils.PrefixedStringCommaSeparatedListToPlayers(resp, "Banned players:")
 	if err != nil {
 		return nil, err
 	}
