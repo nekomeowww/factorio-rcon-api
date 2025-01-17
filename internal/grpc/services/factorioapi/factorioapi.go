@@ -36,7 +36,7 @@ func NewFactorioAPI() func(params NewFactorioAPIParams) *FactorioAPI {
 }
 
 func (c *FactorioAPI) Register(r *grpcpkg.Register) {
-	r.RegisterHttpHandlers([]grpcpkg.HttpHandler{
+	r.RegisterHTTPHandlers([]grpcpkg.HTTPHandler{
 		factorioapiv1.RegisterConsoleServiceHandler,
 		factorioapiv2.RegisterConsoleServiceHandler,
 	})

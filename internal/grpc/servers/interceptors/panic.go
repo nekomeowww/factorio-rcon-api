@@ -11,7 +11,7 @@ import (
 )
 
 func PanicInterceptor(logger *logger.Logger) grpc.UnaryServerInterceptor {
-	return func(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp any, err error) {
+	return func(ctx context.Context, req any, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp any, err error) { //nolint:nonamedreturns
 		defer func() {
 			r := recover()
 			if r != nil {

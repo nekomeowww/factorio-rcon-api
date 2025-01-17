@@ -35,8 +35,8 @@ func handleStatusError(s *status.Status, logger *logger.Logger, err error) *apie
 
 		fields := []zap.Field{zap.Error(err)}
 		if errorCaller != nil {
-			fields = append(fields, zap.String("file", fmt.Sprintf("%s:%d", errorCaller.File, errorCaller.Line)))
-			fields = append(fields, zap.String("function", errorCaller.Function))
+			fields = append(fields, zap.String("file", fmt.Sprintf("%s:%d", errorCaller.GetFile(), errorCaller.GetLine())))
+			fields = append(fields, zap.String("function", errorCaller.GetFunction()))
 		}
 
 		logger.Error("internal error", fields...)
@@ -83,7 +83,7 @@ func handleError(logger *logger.Logger, err error) *apierrors.ErrResponse {
 	return apierrors.NewErrInternal().AsResponse()
 }
 
-func HttpErrorHandler(logger *logger.Logger) func(ctx context.Context, _ *runtime.ServeMux, _ runtime.Marshaler, writer http.ResponseWriter, _ *http.Request, err error) {
+func HTTPErrorHandler(logger *logger.Logger) func(ctx context.Context, _ *runtime.ServeMux, _ runtime.Marshaler, writer http.ResponseWriter, _ *http.Request, err error) {
 	return func(ctx context.Context, _ *runtime.ServeMux, _ runtime.Marshaler, writer http.ResponseWriter, _ *http.Request, err error) {
 		if err != nil {
 			errResp := handleError(logger, err)

@@ -8,6 +8,7 @@ words:
   - Ayaka
   - cenkalti
   - Factorio
+  - fatcontext
   - gorcon
   - grpcotel
   - grpcpkg
@@ -16,6 +17,8 @@ words:
   - labstack
   - Neko
   - nekomeowww
+  - nolint
+  - nonamedreturns
   - opentelemetry
   - Otel
   - otelgrpc

@@ -12,7 +12,7 @@ func HealthCheck(checkOptions ...health.CheckerOption) echo.HandlerFunc {
 		opts := make([]health.CheckerOption, 0)
 		opts = append(opts,
 			health.WithCacheDuration(time.Second),
-			health.WithTimeout(time.Second*10),
+			health.WithTimeout(time.Second*10), //nolint:mnd
 		)
 
 		checker := health.NewChecker(opts...)

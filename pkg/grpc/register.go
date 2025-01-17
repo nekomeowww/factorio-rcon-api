@@ -9,29 +9,29 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-type HttpHandler = func(ctx context.Context, serveMux *runtime.ServeMux, clientConn *grpc.ClientConn) error
+type HTTPHandler = func(ctx context.Context, serveMux *runtime.ServeMux, clientConn *grpc.ClientConn) error
 type GRPCServiceRegister func(s reflection.GRPCServer)
 
 type Register struct {
-	HttpHandlers []HttpHandler
+	HTTPHandlers []HTTPHandler
 	GrpcServices []GRPCServiceRegister
 	EchoHandlers map[string]map[string]echo.HandlerFunc
 }
 
 func NewRegister() *Register {
 	return &Register{
-		HttpHandlers: make([]HttpHandler, 0),
+		HTTPHandlers: make([]HTTPHandler, 0),
 		GrpcServices: make([]GRPCServiceRegister, 0),
 		EchoHandlers: make(map[string]map[string]echo.HandlerFunc),
 	}
 }
 
-func (r *Register) RegisterHttpHandler(handler HttpHandler) {
-	r.HttpHandlers = append(r.HttpHandlers, handler)
+func (r *Register) RegisterHTTPHandler(handler HTTPHandler) {
+	r.HTTPHandlers = append(r.HTTPHandlers, handler)
 }
 
-func (r *Register) RegisterHttpHandlers(handlers []HttpHandler) {
-	r.HttpHandlers = append(r.HttpHandlers, handlers...)
+func (r *Register) RegisterHTTPHandlers(handlers []HTTPHandler) {
+	r.HTTPHandlers = append(r.HTTPHandlers, handlers...)
 }
 
 func (r *Register) RegisterGrpcService(serviceRegister GRPCServiceRegister) {
