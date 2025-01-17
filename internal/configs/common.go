@@ -49,7 +49,7 @@ func tryToMatchConfigPathForUnitTest(configFilePath string) string {
 		stat, err := os.Stat(filepath.Join(xo.RelativePathOf("../../config"), path))
 		if err == nil {
 			if stat.IsDir() {
-				panic(fmt.Sprintf("config file path is a directory: %s", path))
+				panic("config file path is a directory: " + path)
 			}
 
 			return path
@@ -92,14 +92,14 @@ func readConfig(path string) error {
 
 	err := viper.ReadInConfig()
 	if err != nil {
-		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
+		if _, ok := err.(viper.ConfigFileNotFoundError); ok { //nolint:errorlint
 			return nil
 		}
 		if os.IsNotExist(err) {
 			return nil
 		}
 
-		return fmt.Errorf("error occurred when read in config, error is: %T, err: %w", err, err)
+		return fmt.Errorf("error occurred when read in config, error is: %s, err: %w", fmt.Sprintf("%T", err), err)
 	}
 
 	return nil

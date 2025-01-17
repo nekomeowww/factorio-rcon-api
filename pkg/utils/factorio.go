@@ -5,6 +5,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/golang-module/carbon"
 	v1 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v1"
 	v2 "github.com/nekomeowww/factorio-rcon-api/v2/apis/factorioapi/v2"
 	"github.com/nekomeowww/factorio-rcon-api/v2/pkg/apierrors"
@@ -17,17 +18,19 @@ func StringListToPlayers(list string) ([]*v1.Player, error) {
 	//   NekoMeow2 (offline)\n
 	split := strings.Split(strings.TrimSuffix(list, "\n"), "\n")
 	players := make([]*v1.Player, 0, len(split))
+
 	for _, line := range split {
 		line = strings.TrimSpace(line)
+
 		parts := strings.Split(line, " ")
-		if len(parts) > 2 {
+		if len(parts) > 2 { //nolint:mnd
 			return nil, apierrors.NewErrBadRequest().WithDetailf("failed to parse admins: %s due to parts not equals 2", line).AsStatus()
 		}
 
 		player := &v1.Player{
 			Username: parts[0],
 		}
-		if len(parts) == 2 {
+		if len(parts) == 2 { //nolint:mnd
 			player.Online = parts[1] == "(online)"
 		}
 
@@ -51,8 +54,8 @@ func PrefixedStringCommaSeparatedListToPlayers(list string, prefix string) ([]*v
 
 func MapV1PlayerToV2Player(v1Player *v1.Player) *v2.Player {
 	return &v2.Player{
-		Username: v1Player.Username,
-		Online:   v1Player.Online,
+		Username: v1Player.GetUsername(),
+		Online:   v1Player.GetOnline(),
 	}
 }
 
@@ -68,7 +71,7 @@ func ParseDuration(input string) (time.Duration, error) {
 	var totalDuration time.Duration
 
 	// Iterate over the parts and parse the time values
-	for i := 0; i < len(parts); i++ {
+	for i := range parts {
 		switch parts[i] {
 		case "days":
 			if i > 0 {
@@ -77,7 +80,7 @@ func ParseDuration(input string) (time.Duration, error) {
 					return 0, err
 				}
 
-				totalDuration += time.Duration(days) * 24 * time.Hour
+				totalDuration += time.Duration(days) * carbon.HoursPerDay
 			}
 		case "hours":
 			if i > 0 {

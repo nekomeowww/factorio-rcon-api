@@ -13,7 +13,7 @@ import (
 
 type APIServer struct {
 	GrpcServerAddr string `json:"grpc_server_addr" yaml:"grpc_server_addr"`
-	HttpServerAddr string `json:"http_server_addr" yaml:"http_server_addr"`
+	HTTPServerAddr string `json:"http_server_addr" yaml:"http_server_addr"`
 }
 
 type Tracing struct {
@@ -44,7 +44,7 @@ func defaultConfig() Config {
 		},
 		APIServer: APIServer{
 			GrpcServerAddr: ":24181",
-			HttpServerAddr: ":24180",
+			HTTPServerAddr: ":24180",
 		},
 		Factorio: Factorio{
 			RCONHost:     "127.0.0.1",
@@ -90,9 +90,9 @@ func NewConfig(namespace string, app string, configFilePath string, envFilePath 
 		}
 
 		// For debugging for users, otherwise it's hard to know what's wrong with the config
-		fmt.Println("read config:")
+		fmt.Println("read config:") //nolint:forbidigo
 		xo.PrintJSON(config)
-		fmt.Println("")
+		fmt.Println("") //nolint:forbidigo
 
 		meta.Env = config.Env
 		if meta.Env == "" {

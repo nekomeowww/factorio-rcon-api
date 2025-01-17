@@ -36,8 +36,8 @@ func NewLogger() func() (*logger.Logger, error) {
 			logger.WithFormat(logFormat),
 			logger.WithLokiRemoteConfig(lo.Ternary(os.Getenv("LOG_LOKI_REMOTE_URL") != "", &loki.Config{
 				Url:          os.Getenv("LOG_LOKI_REMOTE_URL"),
-				BatchMaxSize: 2000,
-				BatchMaxWait: 10 * time.Second,
+				BatchMaxSize: 2000,             //nolint:mnd
+				BatchMaxWait: 10 * time.Second, //nolint:mnd
 				PrintErrors:  true,
 				Labels:       map[string]string{},
 			}, nil)),

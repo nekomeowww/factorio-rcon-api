@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 
@@ -18,7 +17,7 @@ func MetadataCookie() func(context.Context, *http.Request) metadata.MD {
 		md := metadata.MD{}
 
 		for _, cookie := range r.Cookies() {
-			md.Append(fmt.Sprintf("header-cookie-%s", cookie.Name), string(fo.May(json.Marshal(http.Cookie{
+			md.Append("header-cookie-"+cookie.Name, string(fo.May(json.Marshal(http.Cookie{
 				Name:       cookie.Name,
 				Value:      cookie.Value,
 				Path:       cookie.Path,
