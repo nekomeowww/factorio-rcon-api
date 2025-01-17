@@ -5,10 +5,10 @@ Generated TypeScript SDK client for [https://github.com/nekomeowww/factorio-rcon
 ## Getting started
 
 ```shell
-ni factorio-rcon-api-client -D # from @antfu/ni, can be installed via `npm i -g @antfu/ni`
-pnpm i factorio-rcon-api-client -D
-yarn i factorio-rcon-api-client -D
-npm i factorio-rcon-api-client -D
+ni factorio-rcon-api-client # from @antfu/ni, can be installed via `npm i -g @antfu/ni`
+pnpm i factorio-rcon-api-client
+yarn i factorio-rcon-api-client
+npm i factorio-rcon-api-client
 ```
 
 ## Usage

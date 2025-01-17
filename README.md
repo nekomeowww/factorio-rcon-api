@@ -186,8 +186,48 @@ Alternatively, we ship the OpenAPI v2 and v3 spec in the repository:
 - OpenAPI v2 spec: [v2.swagger.json](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v2/v2.swagger.json)
 - OpenAPI v3 spec: [v2.swagger.v3.yaml](https://github.com/nekomeowww/factorio-rcon-api/blob/main/apis/factorioapi/v2/v2.swagger.v3.yaml)
 
+### SDKs
+
+#### TypeScript / JavaScript
+
+We are now shipping the SDKs for TypeScript for easier integration with the APIs.
+
+##### Installation
+
+```shell
+ni factorio-rcon-api-client # from @antfu/ni, can be installed via `npm i -g @antfu/ni`
+pnpm i factorio-rcon-api-client
+yarn i factorio-rcon-api-client
+npm i factorio-rcon-api-client
+```
+
+##### Usage
+
+```typescript
+// Import the client and the API functions
+import { client, v2FactorioConsoleCommandRawPost } from 'factorio-rcon-api-client'
+
+async function main() {
+  // Set the base URL of the API
+  client.setConfig({
+    baseUrl: 'http://localhost:3000',
+  })
+
+  // Call POST /api/v2/factorio/console/command/raw
+  const res = await v2FactorioConsoleCommandRawPost({
+    body: {
+      input: '/help', // The command to run
+    },
+  })
+
+  console.log(res) // The response from the API
+}
+
+main().catch(console.error)
+```
+
 > [!TIP]
-> Additionally, we can ship the SDKs for Lua, TypeScript and Python (widely used for mods, admin panels, bots) in the future, you are welcome to contribute to the project.
+> Additionally, we can ship the SDKs for Lua, and Python (widely used for mods, admin panels, bots) in the future, you are welcome to contribute to the project.
 
 For developers working with the APIs from Factorio RCON API, you can either use the above OpenAPI specs or use Protobuf files to generate types for TypeScript, Python, Go, and many more languages' SDKs with code generators. We are not going to cover all of these in this README, but you can find more information on the internet:
 
