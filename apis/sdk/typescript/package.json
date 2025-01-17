@@ -1,7 +1,7 @@
 {
   "name": "factorio-rcon-api-client",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.4",
   "private": false,
   "description": "Generated TypeScript SDK client for https://github.com/nekomeowww/factorio-rcon-api",
   "author": {
@@ -15,8 +15,25 @@
     "url": "https://github.com/nekomeowww/factorio-rcon-api.git",
     "directory": "apis/sdk/typescript"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist",
+    "package.json"
+  ],
   "scripts": {
-    "openapi-ts": "openapi-ts"
+    "openapi-ts": "openapi-ts",
+    "build": "unbuild",
+    "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
   },
   "dependencies": {
     "@hey-api/client-fetch": "^0.7.0"
@@ -25,6 +42,7 @@
     "@antfu/eslint-config": "^3.14.0",
     "@hey-api/openapi-ts": "^0.62.1",
     "eslint": "^9.18.0",
-    "eslint-plugin-format": "^1.0.1"
+    "eslint-plugin-format": "^1.0.1",
+    "unbuild": "^3.3.1"
   }
 }
