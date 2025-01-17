@@ -77,7 +77,7 @@ func (e *Error) WithValidationError(err error) *Error {
 		return e.WithDetail(err.Error())
 	}
 
-	fieldPath := lo.FromPtrOr(validationErrProto.Violations[0].FieldPath, "")
+	fieldPath := validationErrProto.Violations[0].Field.String()
 	forKey := lo.FromPtrOr(validationErrProto.Violations[0].ForKey, false)
 	message := lo.FromPtrOr(validationErrProto.Violations[0].Message, "")
 
@@ -192,7 +192,7 @@ func (e *ErrResponse) WithValidationError(err error) *ErrResponse {
 	}
 
 	for _, violation := range validationErrProto.Violations {
-		fieldPath := lo.FromPtrOr(violation.FieldPath, "")
+		fieldPath := violation.Field.String()
 		forKey := lo.FromPtrOr(violation.ForKey, false)
 		message := lo.FromPtrOr(violation.Message, "")
 

@@ -5,6 +5,7 @@ dictionaries: []
 words:
   - apierrors
   - apiserver
+  - Ayaka
   - cenkalti
   - Factorio
   - gorcon
@@ -13,6 +14,7 @@ words:
   - healthz
   - httppkg
   - labstack
+  - Neko
   - nekomeowww
   - opentelemetry
   - Otel
@@ -21,5 +23,6 @@ words:
   - protovalidate
   - RCON
   - samber
+  - Unmute
 ignoreWords: []
 import: []

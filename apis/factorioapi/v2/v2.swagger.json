@@ -16,7 +16,7 @@
       "get": {
         "summary": "Get the list of admins.",
         "description": "Get the list of admins.",
-        "operationId": "ConsoleService_CommandAdmins",
+        "operationId": "v1_factorio_console_command_admins_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -46,7 +46,7 @@
       "get": {
         "summary": "Get the list of alerts.",
         "description": "Get the list of alerts.",
-        "operationId": "ConsoleService_CommandAlerts",
+        "operationId": "v1_factorio_console_command_alerts_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -76,7 +76,7 @@
       "post": {
         "summary": "Ban a player.",
         "description": "Ban a player.",
-        "operationId": "ConsoleService_CommandBan",
+        "operationId": "v1_factorio_console_command_ban_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -116,7 +116,7 @@
       "get": {
         "summary": "Get the list of bans.",
         "description": "Get the list of bans.",
-        "operationId": "ConsoleService_CommandBans",
+        "operationId": "v1_factorio_console_command_bans_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -146,7 +146,7 @@
       "post": {
         "summary": "Demote a player.",
         "description": "Demote a player.",
-        "operationId": "ConsoleService_CommandDemote",
+        "operationId": "v1_factorio_console_command_demote_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -186,7 +186,7 @@
       "post": {
         "summary": "Enable the research queue.",
         "description": "Enable the research queue.",
-        "operationId": "ConsoleService_CommandEnableResearchQueue",
+        "operationId": "v1_factorio_console_command_enableResearch_queue_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -226,7 +226,7 @@
       "get": {
         "summary": "Get info about the alien evolution factor.",
         "description": "Get info about the alien evolution factor.",
-        "operationId": "ConsoleService_CommandEvolution",
+        "operationId": "v1_factorio_console_command_evolution_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -256,7 +256,7 @@
       "post": {
         "summary": "Ignore a player.",
         "description": "Ignore a player.",
-        "operationId": "ConsoleService_CommandIgnore",
+        "operationId": "v1_factorio_console_command_ignore_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -296,7 +296,7 @@
       "post": {
         "summary": "Kick a player.",
         "description": "Kick a player.",
-        "operationId": "ConsoleService_CommandKick",
+        "operationId": "v1_factorio_console_command_kick_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -336,7 +336,7 @@
       "post": {
         "summary": "Send a message to all players.",
         "description": "Send a message to all players.",
-        "operationId": "ConsoleService_CommandMessage",
+        "operationId": "v1_factorio_console_command_message_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -376,7 +376,7 @@
       "post": {
         "summary": "Mute a player.",
         "description": "Mute a player.",
-        "operationId": "ConsoleService_CommandMute",
+        "operationId": "v1_factorio_console_command_mute_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -416,7 +416,7 @@
       "post": {
         "summary": "Mute all programmable speakers.",
         "description": "Mute all programmable speakers.",
-        "operationId": "ConsoleService_CommandMuteProgrammableSpeakerForEveryone",
+        "operationId": "v1_factorio_console_command_muteProgrammableSpeakerForEveryone_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -456,7 +456,7 @@
       "get": {
         "summary": "Get the list of mutes.",
         "description": "Get the list of mutes.",
-        "operationId": "ConsoleService_CommandMutes",
+        "operationId": "v1_factorio_console_command_mutes_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -486,7 +486,7 @@
       "get": {
         "summary": "Get the list of permissions.",
         "description": "Get the list of permissions.",
-        "operationId": "ConsoleService_CommandPermissions",
+        "operationId": "v1_factorio_console_command_permissions_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -516,7 +516,7 @@
       "delete": {
         "summary": "Delete a group.",
         "description": "Delete a group.",
-        "operationId": "ConsoleService_CommandPermissionsDeleteGroup",
+        "operationId": "v1_factorio_console_command_permissionsGroup_delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -554,7 +554,7 @@
       "post": {
         "summary": "Create a group.",
         "description": "Create a group.",
-        "operationId": "ConsoleService_CommandPermissionsCreateGroup",
+        "operationId": "v1_factorio_console_command_permissionsGroup_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -592,7 +592,7 @@
       "put": {
         "summary": "Rename a group.",
         "description": "Rename a group.",
-        "operationId": "ConsoleService_CommandPermissionsRenameGroup",
+        "operationId": "v1_factorio_console_command_permissionsGroup_put",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -630,7 +630,7 @@
       "patch": {
         "summary": "Edit a group.",
         "description": "Edit a group.",
-        "operationId": "ConsoleService_CommandPermissionsEditGroup",
+        "operationId": "v1_factorio_console_command_permissionsGroup_patch",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -670,7 +670,7 @@
       "delete": {
         "summary": "Remove a player from a group.",
         "description": "Remove a player from a group.",
-        "operationId": "ConsoleService_CommandPermissionsRemovePlayerGroup",
+        "operationId": "v1_factorio_console_command_permissionsGroupPlayer_delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -708,7 +708,7 @@
       "post": {
         "summary": "Add a player to a group.",
         "description": "Add a player to a group.",
-        "operationId": "ConsoleService_CommandPermissionsAddPlayer",
+        "operationId": "v1_factorio_console_command_permissionsGroupPlayer_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -748,7 +748,7 @@
       "get": {
         "summary": "Get the groups for a player.",
         "description": "Get the groups for a player.",
-        "operationId": "ConsoleService_CommandPermissionsGetPlayerGroup",
+        "operationId": "v1_factorio_console_command_permissionsGroupPlayers_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -787,7 +787,7 @@
       "get": {
         "summary": "Get the list of players.",
         "description": "Get the list of players.",
-        "operationId": "ConsoleService_CommandPlayers",
+        "operationId": "v1_factorio_console_command_players_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -817,7 +817,7 @@
       "post": {
         "summary": "Promote a player.",
         "description": "Promote a player.",
-        "operationId": "ConsoleService_CommandPromote",
+        "operationId": "v1_factorio_console_command_promote_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -857,7 +857,7 @@
       "post": {
         "summary": "Purge a player.",
         "description": "Purge a player.",
-        "operationId": "ConsoleService_CommandPurge",
+        "operationId": "v1_factorio_console_command_purge_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -897,7 +897,7 @@
       "post": {
         "summary": "Executes a Lua command (if allowed).",
         "description": "Executes a Lua command (if allowed).",
-        "operationId": "ConsoleService_CommandRaw",
+        "operationId": "v1_factorio_console_command_raw_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -937,7 +937,7 @@
       "post": {
         "summary": "Reset the tips.",
         "description": "Reset the tips.",
-        "operationId": "ConsoleService_CommandResetTips",
+        "operationId": "v1_factorio_console_command_resetTips_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -977,7 +977,7 @@
       "get": {
         "summary": "Get the map seed.",
         "description": "Get the map seed.",
-        "operationId": "ConsoleService_CommandSeed",
+        "operationId": "v1_factorio_console_command_seed_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1007,7 +1007,7 @@
       "post": {
         "summary": "Save the game.",
         "description": "Save the game.",
-        "operationId": "ConsoleService_CommandServerSave",
+        "operationId": "v1_factorio_console_command_serverSave_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1047,7 +1047,7 @@
       "get": {
         "summary": "Get the current game time.",
         "description": "Get the current game time.",
-        "operationId": "ConsoleService_CommandTime",
+        "operationId": "v1_factorio_console_command_time_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1077,7 +1077,7 @@
       "post": {
         "summary": "Toggle the action logging.",
         "description": "Toggle the action logging.",
-        "operationId": "ConsoleService_CommandToggleActionLogging",
+        "operationId": "v1_factorio_console_command_toggleActionLogging_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1117,7 +1117,7 @@
       "post": {
         "summary": "Toggle the heavy mode.",
         "description": "Toggle the heavy mode.",
-        "operationId": "ConsoleService_CommandToggleHeavyMode",
+        "operationId": "v1_factorio_console_command_toggleHeavyMode_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1157,7 +1157,7 @@
       "post": {
         "summary": "Unban a player.",
         "description": "Unban a player.",
-        "operationId": "ConsoleService_CommandUnban",
+        "operationId": "v1_factorio_console_command_unban_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1197,7 +1197,7 @@
       "post": {
         "summary": "Unignore a player.",
         "description": "Unignore a player.",
-        "operationId": "ConsoleService_CommandUnignore",
+        "operationId": "v1_factorio_console_command_unignore_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1237,7 +1237,7 @@
       "post": {
         "summary": "Unlock the shortcut bar.",
         "description": "Unlock the shortcut bar.",
-        "operationId": "ConsoleService_CommandUnlockShortcutBar",
+        "operationId": "v1_factorio_console_command_unlockShortcutBar_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1277,7 +1277,7 @@
       "post": {
         "summary": "Unlock the tips.",
         "description": "Unlock the tips.",
-        "operationId": "ConsoleService_CommandUnlockTips",
+        "operationId": "v1_factorio_console_command_unlockTips_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1317,7 +1317,7 @@
       "post": {
         "summary": "Unmute a player.",
         "description": "Unmute a player.",
-        "operationId": "ConsoleService_CommandUnmute",
+        "operationId": "v1_factorio_console_command_unmute_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1357,7 +1357,7 @@
       "post": {
         "summary": "Unmute all programmable speakers.",
         "description": "Unmute all programmable speakers.",
-        "operationId": "ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone",
+        "operationId": "v1_factorio_console_command_unmuteProgrammableSpeakerForEveryone_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1397,7 +1397,7 @@
       "get": {
         "summary": "Get the version of the current Factorio game server.",
         "description": "Get the version of the current Factorio game server.",
-        "operationId": "ConsoleService_CommandVersion",
+        "operationId": "v1_factorio_console_command_version_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1427,7 +1427,7 @@
       "post": {
         "summary": "Whisper a message.",
         "description": "Whisper a message.",
-        "operationId": "ConsoleService_CommandWhisper",
+        "operationId": "v1_factorio_console_command_whisper_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1467,7 +1467,7 @@
       "get": {
         "summary": "Get the list of whitelist.",
         "description": "Get the list of whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistGet",
+        "operationId": "v1_factorio_console_command_whitelist_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1495,7 +1495,7 @@
       "delete": {
         "summary": "Clear the whitelist.",
         "description": "Clear the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistClear",
+        "operationId": "v1_factorio_console_command_whitelist_delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1533,7 +1533,7 @@
       "post": {
         "summary": "Add a player to the whitelist.",
         "description": "Add a player to the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistAdd",
+        "operationId": "v1_factorio_console_command_whitelist_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1571,7 +1571,7 @@
       "patch": {
         "summary": "Remove a player from the whitelist.",
         "description": "Remove a player from the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistRemove",
+        "operationId": "v1_factorio_console_command_whitelist_patch",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1611,7 +1611,7 @@
       "get": {
         "summary": "Get the list of admins.",
         "description": "Get the list of admins.",
-        "operationId": "ConsoleService_CommandAdmins",
+        "operationId": "v2_factorio_console_command_admins_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1641,7 +1641,7 @@
       "get": {
         "summary": "Get the list of alerts.",
         "description": "Get the list of alerts.",
-        "operationId": "ConsoleService_CommandAlerts",
+        "operationId": "v2_factorio_console_command_alerts_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1671,7 +1671,7 @@
       "post": {
         "summary": "Ban a player.",
         "description": "Ban a player.",
-        "operationId": "ConsoleService_CommandBan",
+        "operationId": "v2_factorio_console_command_ban_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1711,7 +1711,7 @@
       "get": {
         "summary": "Get the list of bans.",
         "description": "Get the list of bans.",
-        "operationId": "ConsoleService_CommandBans",
+        "operationId": "v2_factorio_console_command_bans_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1741,7 +1741,7 @@
       "post": {
         "summary": "Demote a player.",
         "description": "Demote a player.",
-        "operationId": "ConsoleService_CommandDemote",
+        "operationId": "v2_factorio_console_command_demote_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1781,7 +1781,7 @@
       "post": {
         "summary": "Enable the research queue.",
         "description": "Enable the research queue.",
-        "operationId": "ConsoleService_CommandEnableResearchQueue",
+        "operationId": "v2_factorio_console_command_enableResearchQueue_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1821,7 +1821,7 @@
       "get": {
         "summary": "Get info about the alien evolution factor.",
         "description": "Get info about the alien evolution factor.",
-        "operationId": "ConsoleService_CommandEvolution",
+        "operationId": "v2_factorio_console_command_evolution_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1851,7 +1851,7 @@
       "get": {
         "summary": "Alien evolution factor by surface name.",
         "description": "Get info about the alien evolution factor by sepecific surface name. Equavalent to `/evolution \u003csurface_name\u003e` command in Factorio.",
-        "operationId": "ConsoleService_CommandEvolutionGet",
+        "operationId": "v2_factorio_console_command_evolution_surface_name_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1890,7 +1890,7 @@
       "post": {
         "summary": "Ignore a player.",
         "description": "Ignore a player.",
-        "operationId": "ConsoleService_CommandIgnore",
+        "operationId": "v2_factorio_console_command_ignore_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1930,7 +1930,7 @@
       "post": {
         "summary": "Kick a player.",
         "description": "Kick a player.",
-        "operationId": "ConsoleService_CommandKick",
+        "operationId": "v2_factorio_console_command_kick_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -1970,7 +1970,7 @@
       "post": {
         "summary": "Send a message to all players.",
         "description": "Send a message to all players.",
-        "operationId": "ConsoleService_CommandMessage",
+        "operationId": "v2_factorio_console_command_message_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2010,7 +2010,7 @@
       "post": {
         "summary": "Mute a player.",
         "description": "Mute a player.",
-        "operationId": "ConsoleService_CommandMute",
+        "operationId": "v2_factorio_console_command_mute_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2050,7 +2050,7 @@
       "post": {
         "summary": "Mute all programmable speakers.",
         "description": "Mute all programmable speakers.",
-        "operationId": "ConsoleService_CommandMuteProgrammableSpeakerForEveryone",
+        "operationId": "v2_factorio_console_command_muteProgrammableSpeakerForEveryone_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2090,7 +2090,7 @@
       "get": {
         "summary": "Get the list of mutes.",
         "description": "Get the list of mutes.",
-        "operationId": "ConsoleService_CommandMutes",
+        "operationId": "v2_factorio_console_command_mutes_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2120,7 +2120,7 @@
       "get": {
         "summary": "Get the list of permissions.",
         "description": "Get the list of permissions.",
-        "operationId": "ConsoleService_CommandPermissions",
+        "operationId": "v2_factorio_console_command_permissions_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2150,7 +2150,7 @@
       "delete": {
         "summary": "Delete a group.",
         "description": "Delete a group.",
-        "operationId": "ConsoleService_CommandPermissionsDeleteGroup",
+        "operationId": "v2_factorio_console_command_permissions_group_delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2188,7 +2188,7 @@
       "post": {
         "summary": "Create a group.",
         "description": "Create a group.",
-        "operationId": "ConsoleService_CommandPermissionsCreateGroup",
+        "operationId": "v2_factorio_console_command_permissions_group_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2226,7 +2226,7 @@
       "put": {
         "summary": "Rename a group.",
         "description": "Rename a group.",
-        "operationId": "ConsoleService_CommandPermissionsRenameGroup",
+        "operationId": "v2_factorio_console_command_permissions_group_put",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2264,7 +2264,7 @@
       "patch": {
         "summary": "Edit a group.",
         "description": "Edit a group.",
-        "operationId": "ConsoleService_CommandPermissionsEditGroup",
+        "operationId": "v2_factorio_console_command_permissions_group_patch",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2304,7 +2304,7 @@
       "delete": {
         "summary": "Remove a player from a group.",
         "description": "Remove a player from a group.",
-        "operationId": "ConsoleService_CommandPermissionsRemovePlayerGroup",
+        "operationId": "v2_factorio_console_command_permissions_group_player_delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2342,7 +2342,7 @@
       "post": {
         "summary": "Add a player to a group.",
         "description": "Add a player to a group.",
-        "operationId": "ConsoleService_CommandPermissionsAddPlayer",
+        "operationId": "v2_factorio_console_command_permissions_group_player_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2382,7 +2382,7 @@
       "get": {
         "summary": "Get the groups for a player.",
         "description": "Get the groups for a player.",
-        "operationId": "ConsoleService_CommandPermissionsGetPlayerGroup",
+        "operationId": "v2_factorio_console_command_permissions_group_players_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2421,7 +2421,7 @@
       "get": {
         "summary": "Get the list of players.",
         "description": "Get the list of players.",
-        "operationId": "ConsoleService_CommandPlayers",
+        "operationId": "v2_factorio_console_command_players_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2451,7 +2451,7 @@
       "post": {
         "summary": "Promote a player.",
         "description": "Promote a player.",
-        "operationId": "ConsoleService_CommandPromote",
+        "operationId": "v2_factorio_console_command_promote_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2491,7 +2491,7 @@
       "post": {
         "summary": "Purge a player.",
         "description": "Purge a player.",
-        "operationId": "ConsoleService_CommandPurge",
+        "operationId": "v2_factorio_console_command_purge_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2531,7 +2531,7 @@
       "post": {
         "summary": "Executes a Lua command (if allowed).",
         "description": "Executes a Lua command (if allowed).",
-        "operationId": "ConsoleService_CommandRaw",
+        "operationId": "v2_factorio_console_command_raw_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2571,7 +2571,7 @@
       "post": {
         "summary": "Reset the tips.",
         "description": "Reset the tips.",
-        "operationId": "ConsoleService_CommandResetTips",
+        "operationId": "v2_factorio_console_command_resetTips_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2611,7 +2611,7 @@
       "get": {
         "summary": "Get the map seed.",
         "description": "Get the map seed.",
-        "operationId": "ConsoleService_CommandSeed",
+        "operationId": "v2_factorio_console_command_seed_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2641,7 +2641,7 @@
       "post": {
         "summary": "Save the game.",
         "description": "Save the game.",
-        "operationId": "ConsoleService_CommandServerSave",
+        "operationId": "v2_factorio_console_command_serverSave_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2681,7 +2681,7 @@
       "get": {
         "summary": "Get the current game time.",
         "description": "Get the current game time.",
-        "operationId": "ConsoleService_CommandTime",
+        "operationId": "v2_factorio_console_command_time_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2711,7 +2711,7 @@
       "post": {
         "summary": "Toggle the action logging.",
         "description": "Toggle the action logging.",
-        "operationId": "ConsoleService_CommandToggleActionLogging",
+        "operationId": "v2_factorio_console_command_toggleActionLogging_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2751,7 +2751,7 @@
       "post": {
         "summary": "Toggle the heavy mode.",
         "description": "Toggle the heavy mode.",
-        "operationId": "ConsoleService_CommandToggleHeavyMode",
+        "operationId": "v2_factorio_console_command_toggleHeavyMode_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2791,7 +2791,7 @@
       "post": {
         "summary": "Unban a player.",
         "description": "Unban a player.",
-        "operationId": "ConsoleService_CommandUnban",
+        "operationId": "v2_factorio_console_command_unban_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2831,7 +2831,7 @@
       "post": {
         "summary": "Unignore a player.",
         "description": "Unignore a player.",
-        "operationId": "ConsoleService_CommandUnignore",
+        "operationId": "v2_factorio_console_command_unignore_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2871,7 +2871,7 @@
       "post": {
         "summary": "Unlock the shortcut bar.",
         "description": "Unlock the shortcut bar.",
-        "operationId": "ConsoleService_CommandUnlockShortcutBar",
+        "operationId": "v2_factorio_console_command_unlockShortcutBar_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2911,7 +2911,7 @@
       "post": {
         "summary": "Unlock the tips.",
         "description": "Unlock the tips.",
-        "operationId": "ConsoleService_CommandUnlockTips",
+        "operationId": "v2_factorio_console_command_unlockTips_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2951,7 +2951,7 @@
       "post": {
         "summary": "Unmute a player.",
         "description": "Unmute a player.",
-        "operationId": "ConsoleService_CommandUnmute",
+        "operationId": "v2_factorio_console_command_unmute_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -2991,7 +2991,7 @@
       "post": {
         "summary": "Unmute all programmable speakers.",
         "description": "Unmute all programmable speakers.",
-        "operationId": "ConsoleService_CommandUnmuteProgrammableSpeakerForEveryone",
+        "operationId": "v2_factorio_console_command_unmuteProgrammableSpeakerForEveryone_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -3031,7 +3031,7 @@
       "get": {
         "summary": "Get the version of the current Factorio game server.",
         "description": "Get the version of the current Factorio game server.",
-        "operationId": "ConsoleService_CommandVersion",
+        "operationId": "v2_factorio_console_command_version_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -3061,7 +3061,7 @@
       "post": {
         "summary": "Whisper a message.",
         "description": "Whisper a message.",
-        "operationId": "ConsoleService_CommandWhisper",
+        "operationId": "v2_factorio_console_command_whisper_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -3101,7 +3101,7 @@
       "get": {
         "summary": "Get the list of whitelist.",
         "description": "Get the list of whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistGet",
+        "operationId": "v2_factorio_console_command_whitelist_get",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -3129,7 +3129,7 @@
       "delete": {
         "summary": "Clear the whitelist.",
         "description": "Clear the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistClear",
+        "operationId": "v2_factorio_console_command_whitelist_delete",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -3167,7 +3167,7 @@
       "post": {
         "summary": "Add a player to the whitelist.",
         "description": "Add a player to the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistAdd",
+        "operationId": "v2_factorio_console_command_whitelist_post",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -3205,7 +3205,7 @@
       "patch": {
         "summary": "Remove a player from the whitelist.",
         "description": "Remove a player from the whitelist.",
-        "operationId": "ConsoleService_CommandWhitelistRemove",
+        "operationId": "v2_factorio_console_command_whitelist_patch",
         "responses": {
           "200": {
             "description": "A successful response.",
