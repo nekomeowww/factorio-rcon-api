@@ -16,6 +16,7 @@ import (
 	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
 	"github.com/nekomeowww/fo"
 	"github.com/nekomeowww/xo/logger"
+	"github.com/samber/lo"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
 )
@@ -105,6 +106,7 @@ func NewRCON() func(NewRCONParams) (RCON, error) {
 					if connWrapper.Conn != nil {
 						return connWrapper.Conn.Close()
 					}
+
 					return nil
 				})
 			},
@@ -123,6 +125,10 @@ func (r *RCONConn) connectionManager() {
 			return
 		case <-r.reconnectChan:
 			r.ready.Store(false)
+
+			r.mutex.Lock()
+			r.Conn = nil
+			r.mutex.Unlock()
 
 			conn, err := fo.Invoke(r.ctx, func() (*rcon.Conn, error) {
 				var err error
@@ -203,7 +209,8 @@ func (r *RCONConn) Execute(ctx context.Context, command string) (string, error) 
 		r.mutex.RLock()
 		conn := r.Conn
 		r.mutex.RUnlock()
-		if conn == nil {
+
+		if lo.IsNil(conn) {
 			return r.Execute(ctx, command)
 		}
 
