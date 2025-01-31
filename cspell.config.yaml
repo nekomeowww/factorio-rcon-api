@@ -8,13 +8,17 @@ words:
   - Ayaka
   - cenkalti
   - Factorio
+  - factorioapi
   - fatcontext
   - gorcon
   - grpcotel
   - grpcpkg
+  - grpcservers
+  - grpcservices
   - healthz
   - httppkg
   - labstack
+  - maxbrunsfeld
   - Neko
   - nekomeowww
   - nolint

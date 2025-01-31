@@ -16,6 +16,7 @@ import (
 	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
 	"github.com/nekomeowww/fo"
 	"github.com/nekomeowww/xo/logger"
+	"github.com/samber/lo"
 	"go.uber.org/fx"
 	"go.uber.org/zap"
 )
@@ -105,6 +106,7 @@ func NewRCON() func(NewRCONParams) (RCON, error) {
 					if connWrapper.Conn != nil {
 						return connWrapper.Conn.Close()
 					}
+
 					return nil
 				})
 			},
@@ -124,16 +126,37 @@ func (r *RCONConn) connectionManager() {
 		case <-r.reconnectChan:
 			r.ready.Store(false)
 
-			err := fo.Invoke0(r.ctx, func() error {
-				return backoff.Retry(func() error {
-					return r.establishConnection(r.ctx)
+			r.mutex.Lock()
+			r.Conn = nil
+			r.mutex.Unlock()
+
+			conn, err := fo.Invoke(r.ctx, func() (*rcon.Conn, error) {
+				var err error
+				var rconConn *rcon.Conn
+
+				err = backoff.Retry(func() error {
+					rconConn, err = r.establishConnection(r.ctx)
+					if err != nil {
+						return err
+					}
+
+					return nil
 				}, backoffStrategy)
+				if err != nil {
+					return nil, err
+				}
+
+				return rconConn, err
 			})
 
 			if err != nil {
 				r.logger.Error("failed to establish RCON connection after retries", zap.Error(err))
 				continue
 			}
+
+			r.mutex.Lock()
+			r.Conn = conn
+			r.mutex.Unlock()
 
 			r.ready.Store(true)
 
@@ -145,8 +168,8 @@ func (r *RCONConn) connectionManager() {
 	}
 }
 
-func (r *RCONConn) establishConnection(ctx context.Context) error {
-	return fo.Invoke0(ctx, func() error {
+func (r *RCONConn) establishConnection(ctx context.Context) (*rcon.Conn, error) {
+	return fo.Invoke(ctx, func() (*rcon.Conn, error) {
 		r.mutex.Lock()
 		defer r.mutex.Unlock()
 
@@ -157,21 +180,19 @@ func (r *RCONConn) establishConnection(ctx context.Context) error {
 		conn, err := rcon.Dial(net.JoinHostPort(r.host, r.port), r.password)
 		if err != nil {
 			r.logger.Error("failed to connect to RCON", zap.Error(err))
-			return err
+			return nil, err
 		}
 
-		r.Conn = conn
-
 		// Test the connection
-		_, err = r.Conn.Execute("/help")
+		_, err = conn.Execute("/help")
 		if err != nil {
 			r.logger.Error("failed to ping RCON", zap.Error(err))
-			return err
+			return nil, err
 		}
 
 		r.logger.Info("RCON connection established successfully")
 
-		return nil
+		return conn, nil
 	})
 }
 
@@ -188,7 +209,8 @@ func (r *RCONConn) Execute(ctx context.Context, command string) (string, error) 
 		r.mutex.RLock()
 		conn := r.Conn
 		r.mutex.RUnlock()
-		if conn == nil {
+
+		if lo.IsNil(conn) {
 			return r.Execute(ctx, command)
 		}
 
