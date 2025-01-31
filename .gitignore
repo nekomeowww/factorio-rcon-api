@@ -69,6 +69,10 @@ temp/
 # Local pgSQL db
 .postgres/
 
+# Local Factorio
+.factorio/
+factorio/
+
 # Debug
 __debug*
 
