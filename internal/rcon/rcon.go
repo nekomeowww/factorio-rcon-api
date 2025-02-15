@@ -82,7 +82,7 @@ func NewRCON() func(NewRCONParams) (RCON, error) {
 		}
 
 		ctx, cancel := context.WithCancel(context.Background())
-		connWrapper.ctx = ctx //nolint:fatcontext
+		connWrapper.ctx = ctx
 		connWrapper.cancel = cancel
 
 		// Start the connection manager
