@@ -10,6 +10,7 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
+	"syscall"
 
 	"github.com/cenkalti/backoff/v4"
 	"github.com/gorcon/rcon"
@@ -81,7 +82,7 @@ func NewRCON() func(NewRCONParams) (RCON, error) {
 		}
 
 		ctx, cancel := context.WithCancel(context.Background())
-		connWrapper.ctx = ctx //nolint:fatcontext
+		connWrapper.ctx = ctx
 		connWrapper.cancel = cancel
 
 		// Start the connection manager
@@ -218,6 +219,7 @@ func (r *RCONConn) Execute(ctx context.Context, command string) (string, error) 
 		if err != nil {
 			if !strings.Contains(err.Error(), "use of closed network connection") &&
 				!strings.Contains(err.Error(), "connection reset by peer") &&
+				!errors.Is(err, syscall.EPIPE) &&
 				!errors.Is(err, io.EOF) {
 				return "", err
 			}
