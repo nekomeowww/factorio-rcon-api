@@ -3,10 +3,10 @@ name: Release SDK
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 env:
-  STORE_PATH: ''
+  STORE_PATH: ""
 
 jobs:
   release:
@@ -22,12 +22,13 @@ jobs:
           node-version: 22.x
           # registry-url required. Learn more at
           # https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
 
       - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
           run_install: false
+          package_json_file: ./apis/sdk/typescript/package.json
 
       - name: Get pnpm store directory
         shell: bash
