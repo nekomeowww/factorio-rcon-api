@@ -28,6 +28,7 @@ RUN go build \
 FROM debian as runner
 
 RUN apt update && apt upgrade -y && apt install -y ca-certificates curl && update-ca-certificates
+RUN apt install -y lsof net-tools iproute2 telnet procps
 
 COPY --from=builder /app/api-server/release/api-server /app/api-server/release/api-server
 
