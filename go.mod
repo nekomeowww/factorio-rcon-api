@@ -11,7 +11,7 @@ require (
 	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/cenkalti/backoff/v5 v5.0.2
 	github.com/getkin/kin-openapi v0.128.1-0.20241224102021-cea0a13b906a
-	github.com/golang-module/carbon v1.7.3
+	github.com/golang-module/carbon/v2 v2.5.2
 	github.com/gorcon/rcon v1.4.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.25.1
 	github.com/joho/godotenv v1.5.1
