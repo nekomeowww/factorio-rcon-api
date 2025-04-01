@@ -105,7 +105,7 @@ func NewRCON() func(NewRCONParams) (RCON, error) {
 					defer connWrapper.mutex.Unlock()
 
 					if connWrapper.Conn != nil {
-						return connWrapper.Conn.Close()
+						return connWrapper.Conn.Close() //nolint:staticcheck
 					}
 
 					return nil
@@ -175,7 +175,7 @@ func (r *RCONConn) establishConnection(ctx context.Context) (*rcon.Conn, error) 
 		defer r.mutex.Unlock()
 
 		if r.Conn != nil {
-			_ = r.Conn.Close()
+			_ = r.Conn.Close() //nolint:staticcheck
 		}
 
 		conn, err := rcon.Dial(net.JoinHostPort(r.host, r.port), r.password)

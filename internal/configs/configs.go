@@ -99,9 +99,9 @@ func NewConfig(namespace string, app string, configFilePath string, envFilePath 
 			meta.Env = os.Getenv("ENV")
 		}
 
-		config.Meta.Env = config.Env
-		config.Meta.App = app
-		config.Meta.Namespace = namespace
+		config.Env = meta.Env
+		config.App = app
+		config.Namespace = namespace
 
 		return &config, nil
 	}
