@@ -16,10 +16,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node.js 22.x
+      - name: Install Node.js 23.x
         uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 23.x
           # registry-url required. Learn more at
           # https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
           registry-url: "https://registry.npmjs.org"
