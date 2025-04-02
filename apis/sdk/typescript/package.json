@@ -36,13 +36,13 @@
     "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
   },
   "dependencies": {
-    "@hey-api/client-fetch": "^0.7.0"
+    "@hey-api/client-fetch": "^0.9.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.0.0",
-    "@hey-api/openapi-ts": "^0.62.1",
-    "eslint": "^9.18.0",
+    "@antfu/eslint-config": "^4.11.0",
+    "@hey-api/openapi-ts": "^0.66.0",
+    "eslint": "^9.23.0",
     "eslint-plugin-format": "^1.0.1",
-    "unbuild": "^3.3.1"
+    "unbuild": "^3.5.0"
   }
 }

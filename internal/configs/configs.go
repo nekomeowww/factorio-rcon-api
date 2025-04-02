@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mitchellh/mapstructure"
+	"github.com/go-viper/mapstructure/v2"
 	"github.com/nekomeowww/factorio-rcon-api/v2/internal/meta"
 	"github.com/nekomeowww/xo"
 	"github.com/samber/lo"
