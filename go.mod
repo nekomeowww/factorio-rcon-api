@@ -7,6 +7,7 @@ require (
 	github.com/alexliesenfeld/health v0.8.0
 	github.com/bufbuild/protovalidate-go v0.9.2
 	github.com/cenkalti/backoff/v4 v4.3.0
+	github.com/cenkalti/backoff/v5 v5.0.2
 	github.com/getkin/kin-openapi v0.131.0
 	github.com/go-viper/mapstructure/v2 v2.2.1
 	github.com/golang-module/carbon v1.7.3
