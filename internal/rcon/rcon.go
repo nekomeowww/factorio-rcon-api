@@ -117,6 +117,51 @@ func NewRCON() func(NewRCONParams) (RCON, error) {
 	}
 }
 
+func (r *RCONConn) Execute(ctx context.Context, command string) (string, error) {
+	return fo.Invoke(ctx, func() (string, error) {
+		if !r.IsReady() {
+			select {
+			case <-ctx.Done():
+				return "", ctx.Err()
+			case <-r.readyChan:
+			}
+		}
+
+		r.mutex.RLock()
+		conn := r.Conn
+		r.mutex.RUnlock()
+
+		if lo.IsNil(conn) {
+			return r.Execute(ctx, command)
+		}
+
+		resp, err := conn.Execute(command)
+		if err != nil {
+			if !strings.Contains(err.Error(), "use of closed network connection") &&
+				!strings.Contains(err.Error(), "connection reset by peer") &&
+				!errors.Is(err, syscall.EPIPE) &&
+				!errors.Is(err, io.EOF) {
+				return "", err
+			}
+
+			r.logger.Warn("RCON connection lost, reconnecting...")
+
+			select {
+			case r.reconnectChan <- struct{}{}:
+			default:
+			}
+
+			return r.Execute(ctx, command)
+		}
+
+		return resp, nil
+	})
+}
+
+func (r *RCONConn) IsReady() bool {
+	return r.ready.Load()
+}
+
 func (r *RCONConn) connectionManager() {
 	backoffStrategy := backoff.NewExponentialBackOff()
 
@@ -195,49 +240,4 @@ func (r *RCONConn) establishConnection(ctx context.Context) (*rcon.Conn, error) 
 
 		return conn, nil
 	})
-}
-
-func (r *RCONConn) Execute(ctx context.Context, command string) (string, error) {
-	return fo.Invoke(ctx, func() (string, error) {
-		if !r.IsReady() {
-			select {
-			case <-ctx.Done():
-				return "", ctx.Err()
-			case <-r.readyChan:
-			}
-		}
-
-		r.mutex.RLock()
-		conn := r.Conn
-		r.mutex.RUnlock()
-
-		if lo.IsNil(conn) {
-			return r.Execute(ctx, command)
-		}
-
-		resp, err := conn.Execute(command)
-		if err != nil {
-			if !strings.Contains(err.Error(), "use of closed network connection") &&
-				!strings.Contains(err.Error(), "connection reset by peer") &&
-				!errors.Is(err, syscall.EPIPE) &&
-				!errors.Is(err, io.EOF) {
-				return "", err
-			}
-
-			r.logger.Warn("RCON connection lost, reconnecting...")
-
-			select {
-			case r.reconnectChan <- struct{}{}:
-			default:
-			}
-
-			return r.Execute(ctx, command)
-		}
-
-		return resp, nil
-	})
-}
-
-func (r *RCONConn) IsReady() bool {
-	return r.ready.Load()
 }

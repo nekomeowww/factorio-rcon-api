@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/bufbuild/protovalidate-go"
+	"buf.build/go/protovalidate"
 	"github.com/labstack/echo/v4"
 	"github.com/nekomeowww/factorio-rcon-api/v2/apis/jsonapi"
 	"github.com/samber/lo"
