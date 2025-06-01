@@ -7,6 +7,7 @@ require (
 	github.com/MarceloPetrucio/go-scalar-api-reference v0.0.0-20240521013641-ce5d2efe0e06
 	github.com/alexliesenfeld/health v0.8.0
 	github.com/cenkalti/backoff/v4 v4.3.0
+	github.com/cenkalti/backoff/v5 v5.0.2
 	github.com/getkin/kin-openapi v0.132.0
 	github.com/go-viper/mapstructure/v2 v2.2.1
 	github.com/golang-module/carbon v1.7.3
