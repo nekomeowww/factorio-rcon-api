@@ -65,6 +65,7 @@ func CookiesFromMetadata(md metadata.MD) (Cookies, error) {
 		if len(v) == 0 {
 			continue
 		}
+
 		if strings.HasPrefix(k, "header-cookie-") {
 			var cookie http.Cookie
 

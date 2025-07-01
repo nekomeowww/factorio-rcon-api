@@ -61,6 +61,7 @@ func handleStatusError(s *status.Status, logger *logger.Logger, err error) *apie
 	}
 
 	errResp := apierrors.NewErrResponse()
+
 	if len(s.Details()) > 0 {
 		detail, ok := s.Details()[0].(*jsonapi.ErrorObject)
 		if ok {

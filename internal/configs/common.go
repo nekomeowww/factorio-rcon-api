@@ -54,6 +54,7 @@ func tryToMatchConfigPathForUnitTest(configFilePath string) string {
 
 			return path
 		}
+
 		if errors.Is(err, os.ErrNotExist) {
 			continue
 		} else {
@@ -95,6 +96,7 @@ func readConfig(path string) error {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok { //nolint:errorlint
 			return nil
 		}
+
 		if os.IsNotExist(err) {
 			return nil
 		}

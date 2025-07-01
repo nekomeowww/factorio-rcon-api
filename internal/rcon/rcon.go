@@ -128,6 +128,7 @@ func (r *RCONConn) Execute(ctx context.Context, command string) (string, error) 
 		}
 
 		r.mutex.RLock()
+
 		conn := r.Conn
 		r.mutex.RUnlock()
 
@@ -173,11 +174,13 @@ func (r *RCONConn) connectionManager() {
 			r.ready.Store(false)
 
 			r.mutex.Lock()
+
 			r.Conn = nil
 			r.mutex.Unlock()
 
 			conn, err := fo.Invoke(r.ctx, func() (*rcon.Conn, error) {
 				var err error
+
 				var rconConn *rcon.Conn
 
 				err = backoff.Retry(func() error {
@@ -194,13 +197,13 @@ func (r *RCONConn) connectionManager() {
 
 				return rconConn, err
 			})
-
 			if err != nil {
 				r.logger.Error("failed to establish RCON connection after retries", zap.Error(err))
 				continue
 			}
 
 			r.mutex.Lock()
+
 			r.Conn = conn
 			r.mutex.Unlock()
 

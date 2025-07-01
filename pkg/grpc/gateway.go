@@ -43,7 +43,8 @@ func NewGateway(
 	mux := runtime.NewServeMux(opts.serverMuxOptions...)
 
 	for _, f := range opts.handlers {
-		if err := f(ctx, mux, conn); err != nil {
+		err := f(ctx, mux, conn)
+		if err != nil {
 			return nil, err
 		}
 	}

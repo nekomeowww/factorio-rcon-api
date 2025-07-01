@@ -16,6 +16,7 @@ func PanicInterceptor(logger *logger.Logger) grpc.UnaryServerInterceptor {
 			r := recover()
 			if r != nil {
 				logger.Error("panicked", zap.Any("err", r), zap.Stack(string(debug.Stack())))
+
 				err = apierrors.NewErrInternal().AsStatus()
 				resp = nil
 			}

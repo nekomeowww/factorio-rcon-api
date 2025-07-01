@@ -45,9 +45,11 @@ func NewLogger() func() (*logger.Logger, error) {
 		if err != nil {
 			return nil, fmt.Errorf("failed to create logger: %w", err)
 		}
+
 		if isFatalLevel {
 			logger.Error("fatal log level is unacceptable, fallbacks to info level")
 		}
+
 		if readFormatError != nil {
 			logger.Error("failed to read log format from env, fallbacks to json")
 		}
