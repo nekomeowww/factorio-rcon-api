@@ -39,7 +39,7 @@
     "@hey-api/client-fetch": "^0.13.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.11.0",
+    "@antfu/eslint-config": "^5.0.0",
     "@hey-api/openapi-ts": "^0.77.0",
     "eslint": "^9.23.0",
     "eslint-plugin-format": "^1.0.1",
