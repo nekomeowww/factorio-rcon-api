@@ -6,8 +6,7 @@ require (
 	buf.build/go/protovalidate v1.0.0
 	github.com/MarceloPetrucio/go-scalar-api-reference v0.0.0-20240521013641-ce5d2efe0e06
 	github.com/alexliesenfeld/health v0.8.1
-	github.com/cenkalti/backoff/v5 v5.0.3
-	github.com/cenkalti/backoff/v5 v5.0.3
+	github.com/cenkalti/backoff/v4 v4.3.0
 	github.com/getkin/kin-openapi v0.133.0
 	github.com/go-viper/mapstructure/v2 v2.4.0
 	github.com/golang-module/carbon v1.7.3
@@ -46,6 +45,7 @@ require (
 	cel.dev/expr v0.24.0 // indirect
 	entgo.io/ent v0.14.4 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.1 // indirect
+	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
