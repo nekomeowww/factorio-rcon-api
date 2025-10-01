@@ -19,12 +19,13 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           run_install: false
-          package_json_file: ./apis/sdk/typescript/package.json
+          package_json_file: apis/sdk/typescript/package.json
       - uses: actions/setup-node@v5
         with:
           cache: pnpm
           node-version: latest
           registry-url: https://registry.npmjs.org
+          cache-dependency-path: 'apis/sdk/typescript/pnpm-lock.yaml'
       - working-directory: apis/sdk/typescript
         run: pnpm install --frozen-lockfile
       - working-directory: apis/sdk/typescript
