@@ -18,12 +18,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "README.md",
@@ -32,17 +32,14 @@
   ],
   "scripts": {
     "openapi-ts": "openapi-ts",
-    "build": "unbuild",
+    "build": "pnpm run openapi-ts && tsdown",
     "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
   },
-  "dependencies": {
-    "@hey-api/client-fetch": "^0.13.0"
-  },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.0.0",
-    "@hey-api/openapi-ts": "^0.84.0",
-    "eslint": "^9.23.0",
-    "eslint-plugin-format": "^1.0.1",
-    "unbuild": "^3.5.0"
+    "@antfu/eslint-config": "^5.4.1",
+    "@hey-api/openapi-ts": "^0.84.4",
+    "eslint": "^9.36.0",
+    "eslint-plugin-format": "^1.0.2",
+    "tsdown": "^0.15.6"
   }
 }

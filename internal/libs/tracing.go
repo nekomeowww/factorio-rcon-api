@@ -117,6 +117,7 @@ func NewOtel() func(params NewOtelParams) (*Otel, error) {
 
 					meterProvider := metric.NewMeterProvider(metric.WithReader(metric.NewPeriodicReader(metricExporter)))
 					otel.SetMeterProvider(meterProvider)
+
 					o.Metric = meterProvider
 
 					params.Lifecycle.Append(fx.Hook{
