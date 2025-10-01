@@ -3,53 +3,35 @@ name: Release SDK
 on:
   push:
     tags:
-      - "v*"
+      - 'v*'
+  workflow_dispatch:
 
-env:
-  STORE_PATH: ""
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-24.04
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install Node.js 23.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 23.x
-          # registry-url required. Learn more at
-          # https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-          registry-url: "https://registry.npmjs.org"
-
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-        name: Install pnpm
         with:
           run_install: false
-          package_json_file: ./apis/sdk/typescript/package.json
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
+          package_json_file: apis/sdk/typescript/package.json
+      - uses: actions/setup-node@v5
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
+          cache: pnpm
+          node-version: latest
+          registry-url: https://registry.npmjs.org
+          cache-dependency-path: 'apis/sdk/typescript/pnpm-lock.yaml'
+      - working-directory: apis/sdk/typescript
         run: pnpm install --frozen-lockfile
-
-      - name: Packages build
+      - working-directory: apis/sdk/typescript
         run: pnpm run build
-
-      - name: Packages publish
-        run: pnpm run packages:publish
+      - working-directory: apis/sdk/typescript
+        run: pnpm publish -r --no-git-checks --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
