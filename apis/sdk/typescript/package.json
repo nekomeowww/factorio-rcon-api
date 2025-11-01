@@ -36,7 +36,7 @@
     "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/eslint-config": "^6.0.0",
     "@hey-api/openapi-ts": "^0.84.4",
     "eslint": "^9.36.0",
     "eslint-plugin-format": "^1.0.2",
