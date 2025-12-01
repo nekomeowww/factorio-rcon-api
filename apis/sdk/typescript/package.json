@@ -2,7 +2,7 @@
   "name": "factorio-rcon-api-client",
   "type": "module",
   "version": "2.1.4",
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.24.0",
   "description": "Generated TypeScript SDK client for https://github.com/nekomeowww/factorio-rcon-api",
   "author": {
     "name": "Neko Ayaka",
@@ -37,9 +37,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.0.0",
-    "@hey-api/openapi-ts": "^0.86.0",
+    "@hey-api/openapi-ts": "^0.88.0",
     "eslint": "^9.36.0",
     "eslint-plugin-format": "^1.0.2",
-    "tsdown": "^0.15.6"
+    "tsdown": "^0.16.0"
   }
 }
