@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"syscall"
 
-	"github.com/cenkalti/backoff/v4"
+	"github.com/cenkalti/backoff/v5"
 	"github.com/gorcon/rcon"
 	"github.com/nekomeowww/factorio-rcon-api/v2/internal/configs"
 	"github.com/nekomeowww/fo"
@@ -178,25 +178,14 @@ func (r *RCONConn) connectionManager() {
 			r.Conn = nil
 			r.mutex.Unlock()
 
-			conn, err := fo.Invoke(r.ctx, func() (*rcon.Conn, error) {
-				var err error
-
-				var rconConn *rcon.Conn
-
-				err = backoff.Retry(func() error {
-					rconConn, err = r.establishConnection(r.ctx)
-					if err != nil {
-						return err
-					}
-
-					return nil
-				}, backoffStrategy)
+			conn, err := backoff.Retry(r.ctx, func() (*rcon.Conn, error) {
+				rconConn, err := r.establishConnection(r.ctx)
 				if err != nil {
 					return nil, err
 				}
 
-				return rconConn, err
-			})
+				return rconConn, nil
+			}, backoff.WithBackOff(backoffStrategy))
 			if err != nil {
 				r.logger.Error("failed to establish RCON connection after retries", zap.Error(err))
 				continue
